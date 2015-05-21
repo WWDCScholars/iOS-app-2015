@@ -18,18 +18,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        // [Optional] Power your app with Local Datastore. For more info, go to
-        // https://parse.com/docs/ios_guide#localdatastore/iOS
         Parse.enableLocalDatastore()
         
-        // Initialize Parse.
         Parse.setApplicationId("16ktYTkz6kuPyT81SZtxP4CXDV0POwVV5szF7kYP",
             clientKey: "Ev89WaE9EVFmNXh6HB6LXLlJArnsG74PwiF8gbMT")
         
-        // [Optional] Track statistics around application opens.
+        // Track statistics around application opens.
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
+        // Load all dem scholarship winners! :D
         DataManager.sharedInstance.loadStudents()
+        
         // Override point for customization after application launch.
         return true
     }

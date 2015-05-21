@@ -10,14 +10,14 @@ import Foundation
 
 class Scholar:NSObject{
     var name : String?
-    var age : String?
+    var age : Int?
     var birthdate : String?
     var gender : String?
     var longitude : Double
     var latitude : Double
     var email : String?
     var picture : String?
-    var numberOfWWDCAttend : String?
+    var numberOfWWDCAttend : Int?
     var appDemo : String?
     var githubLinkToApp : String?
     var twitter : String?
@@ -26,7 +26,7 @@ class Scholar:NSObject{
     var linkedIn : String?
     var website : String?
     
-    init(name:String,age:String,birthdate:String,gender:String,latitude:Double,longitude:Double,email:String,picture:String,numberOfWWDCAttend:String,appDemo:String,githubLinkToApp:String,twitter:String,facebook:String,github:String,linkedIn:String,website:String){
+    init(name:String?,age:Int,birthdate:String?,gender:String?,latitude:Double,longitude:Double,email:String?,picture:String?,numberOfWWDCAttend:Int?,appDemo:String?,githubLinkToApp:String?,twitter:String?,facebook:String?,github:String?,linkedIn:String?,website:String?){
             self.name = name
             self.age = age
             self.birthdate = birthdate
