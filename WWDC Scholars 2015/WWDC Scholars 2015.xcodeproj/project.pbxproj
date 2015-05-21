@@ -29,11 +29,9 @@
 		408211721B0E292300D567AC /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4082116C1B0E292300D567AC /* ParseFacebookUtils.framework */; };
 		408211731B0E292300D567AC /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4082116D1B0E292300D567AC /* ParseFacebookUtilsV4.framework */; };
 		408211761B0E296A00D567AC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408211751B0E296A00D567AC /* DataManager.swift */; };
-		409A24621B0E3346005509AF /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408211681B0E292300D567AC /* Parse.framework */; };
 		C00C27401B0D5C9C008C19AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C273F1B0D5C9C008C19AE /* AppDelegate.swift */; };
 		C00C27421B0D5C9C008C19AE /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C27411B0D5C9C008C19AE /* LocationViewController.swift */; };
 		C00C27451B0D5C9C008C19AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C00C27431B0D5C9C008C19AE /* Main.storyboard */; };
-		C00C27471B0D5C9C008C19AE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C00C27461B0D5C9C008C19AE /* Images.xcassets */; };
 		C00C274A1B0D5C9C008C19AE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C00C27481B0D5C9C008C19AE /* LaunchScreen.xib */; };
 		C00C27561B0D5C9C008C19AE /* WWDC_Scholars_2015Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C27551B0D5C9C008C19AE /* WWDC_Scholars_2015Tests.swift */; };
 		C00C276E1B0D5CEC008C19AE /* QCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = C00C27641B0D5CEC008C19AE /* QCluster.m */; };
@@ -43,6 +41,8 @@
 		C00C27781B0D5D9E008C19AE /* ClusterAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C00C27761B0D5D9E008C19AE /* ClusterAnnotationView.m */; };
 		C00C277B1B0D63CD008C19AE /* Scholar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C277A1B0D63CD008C19AE /* Scholar.swift */; };
 		C00C277E1B0D6A8D008C19AE /* ScholarAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C277D1B0D6A8D008C19AE /* ScholarAnnotation.swift */; };
+		C0B7F78B1B0E4D3F00E74458 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408211681B0E292300D567AC /* Parse.framework */; };
+		C0B7F78D1B0E682600E74458 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0B7F78C1B0E682600E74458 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,7 +84,6 @@
 		C00C273F1B0D5C9C008C19AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C00C27411B0D5C9C008C19AE /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		C00C27441B0D5C9C008C19AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C00C27461B0D5C9C008C19AE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C00C27491B0D5C9C008C19AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C00C274F1B0D5C9C008C19AE /* WWDC Scholars 2015Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WWDC Scholars 2015Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C00C27541B0D5C9C008C19AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,6 +102,7 @@
 		C00C27771B0D5D9E008C19AE /* ClusterAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClusterAnnotationView.h; sourceTree = "<group>"; };
 		C00C277A1B0D63CD008C19AE /* Scholar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scholar.swift; sourceTree = "<group>"; };
 		C00C277D1B0D6A8D008C19AE /* ScholarAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScholarAnnotation.swift; sourceTree = "<group>"; };
+		C0B7F78C1B0E682600E74458 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,11 +119,11 @@
 				407911C51B0E2B2A00A582FF /* SystemConfiguration.framework in Frameworks */,
 				407911B71B0E2AFC00A582FF /* QuartzCore.framework in Frameworks */,
 				407911B51B0E2AF500A582FF /* MobileCoreServices.framework in Frameworks */,
+				C0B7F78B1B0E4D3F00E74458 /* Parse.framework in Frameworks */,
 				407911B11B0E2AEE00A582FF /* CFNetwork.framework in Frameworks */,
 				407911B21B0E2AEE00A582FF /* CoreGraphics.framework in Frameworks */,
 				407911B31B0E2AEE00A582FF /* CoreLocation.framework in Frameworks */,
 				407911AD1B0E2AC400A582FF /* AudioToolbox.framework in Frameworks */,
-				409A24621B0E3346005509AF /* Parse.framework in Frameworks */,
 				4082116F1B0E292300D567AC /* ParseUI.framework in Frameworks */,
 				408211701B0E292300D567AC /* ParseCrashReporting.framework in Frameworks */,
 				408211731B0E292300D567AC /* ParseFacebookUtilsV4.framework in Frameworks */,
@@ -237,9 +237,9 @@
 			isa = PBXGroup;
 			children = (
 				C00C273F1B0D5C9C008C19AE /* AppDelegate.swift */,
+				C0B7F78C1B0E682600E74458 /* Images.xcassets */,
 				C00C27431B0D5C9C008C19AE /* Main.storyboard */,
 				C00C27751B0D5D37008C19AE /* Header.h */,
-				C00C27461B0D5C9C008C19AE /* Images.xcassets */,
 				C00C27481B0D5C9C008C19AE /* LaunchScreen.xib */,
 				C00C273E1B0D5C9C008C19AE /* Info.plist */,
 			);
@@ -381,6 +381,7 @@
 				TargetAttributes = {
 					C00C27391B0D5C9C008C19AE = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = MA3FRWNL5H;
 					};
 					C00C274E1B0D5C9C008C19AE = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -413,9 +414,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C00C27451B0D5C9C008C19AE /* Main.storyboard in Resources */,
+				C0B7F78D1B0E682600E74458 /* Images.xcassets in Resources */,
 				C00C274A1B0D5C9C008C19AE /* LaunchScreen.xib in Resources */,
 				408211671B0E254400D567AC /* 11358626_821050244645510_1909173720_n.jpg in Resources */,
-				C00C27471B0D5C9C008C19AE /* Images.xcassets in Resources */,
 				40560B3A1B0DA16A00C3EFB4 /* wwdc2015-top-logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -573,8 +574,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/WWDC",
+					Scholars,
+					2015,
 					"$(PROJECT_DIR)/WWDC",
 					Scholars,
 					2015,
@@ -590,8 +595,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/WWDC",
+					Scholars,
+					2015,
 					"$(PROJECT_DIR)/WWDC",
 					Scholars,
 					2015,

@@ -11,7 +11,7 @@ import MapKit
 import CoreLocation
 
 
-class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelegate {
+class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelegate,UITableViewDataSource,UITableViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
@@ -23,7 +23,7 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
         Scholar(name: "Michigan", age: 0, birthdate: "", gender: "", latitude: 43.6867, longitude: -85.0102, email: "", picture: "", numberOfWWDCAttend: 0, appDemo: "", githubLinkToApp: "", twitter: "", facebook: "", github: "", linkedIn: "", website: ""),
         Scholar(name: "UIUC", age: 0, birthdate: "", gender: "", latitude: 40.1105, longitude: -88.2284, email: "", picture: "", numberOfWWDCAttend: 0, appDemo: "", githubLinkToApp: "", twitter: "", facebook: "", github: "", linkedIn: "", website: "")]
     var currentScholar:Scholar?
-    
+    let imageArray = ["1","2","3","4","5"]
     var qTree = QTree()
     var myLocation : CLLocationCoordinate2D?
     
@@ -43,6 +43,7 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
         mapView.showsUserLocation = true
         mapView.delegate = self
         
+        /*
         //The "Find me" button
         let button = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
         button.frame = CGRectMake(UIScreen.mainScreen().bounds.width - 70, self.view.frame.height - 90, 50, 50)
@@ -52,6 +53,7 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
         button.layer.shadowOffset = CGSizeMake(0, 0)
         button.layer.shadowRadius = 2
         self.view.addSubview(button)
+        */
         
         for scholar in scholarArray {
             
@@ -138,6 +140,29 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
             */
         }
         
+    }
+    
+    
+    //tableview delegate & datasource
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.scholarArray.count
+    }
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
+        cell.textLabel?.text = scholarArray[indexPath.row].name
+        cell.detailTextLabel?.text = String(stringInterpolationSegment: scholarArray[indexPath.row].age!)
+        cell.imageView?.image = UIImage(named: self.imageArray[indexPath.row])
+        return cell
+        
+    }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 60
     }
     
 }
