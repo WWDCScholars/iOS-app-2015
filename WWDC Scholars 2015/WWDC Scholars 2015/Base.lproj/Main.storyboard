@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E11f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tYb-zB-5ZJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E17e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tYb-zB-5ZJ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -98,7 +98,7 @@
                                             <fragment content="Scholars">
                                                 <attributes>
                                                     <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="25" name="HelveticaNeue-Light"/>
+                                                    <font key="NSFont" size="26" name="HelveticaNeue-Thin"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                         <tabStops/>
                                                     </paragraphStyle>
@@ -108,8 +108,8 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where we are from" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kP-gp-PL0">
-                                        <rect key="frame" x="15" y="74" width="180" height="26"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                        <rect key="frame" x="15" y="76" width="164" height="24"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" red="0.7603753306878307" green="0.7603753306878307" blue="0.7603753306878307" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -127,19 +127,53 @@
                                 </constraints>
                             </view>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bfV-JA-UJ0">
-                                <rect key="frame" x="0.0" y="115" width="600" height="580"/>
+                                <rect key="frame" x="0.0" y="115" width="600" height="185"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="185" id="QZc-J8-SQJ"/>
+                                </constraints>
                             </mapView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WO0-05-mmK">
+                                <rect key="frame" x="0.0" y="300" width="600" height="300"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ICt-l1-GGj">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ov6-RS-DB2">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="bfV-JA-UJ0" firstAttribute="top" secondItem="7LT-ui-cWd" secondAttribute="bottom" id="2iC-aH-r75"/>
                             <constraint firstItem="bfV-JA-UJ0" firstAttribute="leading" secondItem="phv-PG-Wg8" secondAttribute="leading" id="4dS-LA-rDG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7LT-ui-cWd" secondAttribute="trailing" constant="-16" id="8DR-O2-HGl"/>
+                            <constraint firstItem="WO0-05-mmK" firstAttribute="leading" secondItem="phv-PG-Wg8" secondAttribute="leading" id="9YA-Ar-sZE"/>
+                            <constraint firstItem="WO0-05-mmK" firstAttribute="top" secondItem="bfV-JA-UJ0" secondAttribute="bottom" id="HWh-SD-VT4"/>
+                            <constraint firstItem="ENm-xb-5ot" firstAttribute="top" secondItem="WO0-05-mmK" secondAttribute="bottom" id="LKh-Da-uzA"/>
                             <constraint firstAttribute="trailing" secondItem="bfV-JA-UJ0" secondAttribute="trailing" id="LyC-vL-fn2"/>
                             <constraint firstItem="7LT-ui-cWd" firstAttribute="leading" secondItem="phv-PG-Wg8" secondAttribute="leadingMargin" constant="-16" id="NW6-CU-irL"/>
+                            <constraint firstItem="WO0-05-mmK" firstAttribute="top" secondItem="bfV-JA-UJ0" secondAttribute="bottom" id="Rzz-9e-Y39"/>
                             <constraint firstAttribute="bottomMargin" secondItem="bfV-JA-UJ0" secondAttribute="bottom" constant="-95" id="UhW-uT-Al2"/>
+                            <constraint firstAttribute="trailing" secondItem="WO0-05-mmK" secondAttribute="trailing" id="Z0w-BT-EZQ"/>
                             <constraint firstItem="7LT-ui-cWd" firstAttribute="top" secondItem="phv-PG-Wg8" secondAttribute="topMargin" id="r7h-qm-74X"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="UhW-uT-Al2"/>
+                                <exclude reference="Rzz-9e-Y39"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRI-aw-yvu" userLabel="First Responder" sceneMemberID="firstResponder"/>
