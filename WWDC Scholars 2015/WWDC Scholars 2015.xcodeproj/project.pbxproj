@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		40560B3A1B0DA16A00C3EFB4 /* wwdc2015-top-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 40560B391B0DA16A00C3EFB4 /* wwdc2015-top-logo.png */; };
+		408211651B0E034B00D567AC /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408211641B0E034B00D567AC /* MainScreenViewController.swift */; };
+		408211671B0E254400D567AC /* 11358626_821050244645510_1909173720_n.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 408211661B0E254400D567AC /* 11358626_821050244645510_1909173720_n.jpg */; };
 		C00C27401B0D5C9C008C19AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C273F1B0D5C9C008C19AE /* AppDelegate.swift */; };
 		C00C27421B0D5C9C008C19AE /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C27411B0D5C9C008C19AE /* LocationViewController.swift */; };
 		C00C27451B0D5C9C008C19AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C00C27431B0D5C9C008C19AE /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		40560B391B0DA16A00C3EFB4 /* wwdc2015-top-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wwdc2015-top-logo.png"; sourceTree = "<group>"; };
+		408211641B0E034B00D567AC /* MainScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		408211661B0E254400D567AC /* 11358626_821050244645510_1909173720_n.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11358626_821050244645510_1909173720_n.jpg; sourceTree = "<group>"; };
 		C00C273A1B0D5C9C008C19AE /* WWDC Scholars 2015.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WWDC Scholars 2015.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C00C273E1B0D5C9C008C19AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C00C273F1B0D5C9C008C19AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,9 +86,18 @@
 		40560B381B0DA16100C3EFB4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				408211661B0E254400D567AC /* 11358626_821050244645510_1909173720_n.jpg */,
 				40560B391B0DA16A00C3EFB4 /* wwdc2015-top-logo.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		408211631B0E032C00D567AC /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				408211641B0E034B00D567AC /* MainScreenViewController.swift */,
+			);
+			name = MainScreen;
 			sourceTree = "<group>";
 		};
 		C00C27311B0D5C9C008C19AE = {
@@ -192,6 +205,7 @@
 		C00C27791B0D5E10008C19AE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				408211631B0E032C00D567AC /* MainScreen */,
 				C0C6CBB31B0D6AA500A00796 /* MapViewController */,
 			);
 			name = Controller;
@@ -296,6 +310,7 @@
 			files = (
 				C00C27451B0D5C9C008C19AE /* Main.storyboard in Resources */,
 				C00C274A1B0D5C9C008C19AE /* LaunchScreen.xib in Resources */,
+				408211671B0E254400D567AC /* 11358626_821050244645510_1909173720_n.jpg in Resources */,
 				C00C27471B0D5C9C008C19AE /* Images.xcassets in Resources */,
 				40560B3A1B0DA16A00C3EFB4 /* wwdc2015-top-logo.png in Resources */,
 			);
@@ -320,6 +335,7 @@
 				C00C27421B0D5C9C008C19AE /* LocationViewController.swift in Sources */,
 				C00C27781B0D5D9E008C19AE /* ClusterAnnotationView.m in Sources */,
 				C00C277E1B0D6A8D008C19AE /* ScholarAnnotation.swift in Sources */,
+				408211651B0E034B00D567AC /* MainScreenViewController.swift in Sources */,
 				C00C277B1B0D63CD008C19AE /* Scholar.swift in Sources */,
 				C00C27701B0D5CEC008C19AE /* QTree.m in Sources */,
 				C00C27401B0D5C9C008C19AE /* AppDelegate.swift in Sources */,

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E17e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tYb-zB-5ZJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E17e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2fS-oi-cWY">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -39,10 +38,10 @@
             </objects>
             <point key="canvasLocation" x="1153" y="1060"/>
         </scene>
-        <!--View Controller-->
+        <!--Main Screen View Controller-->
         <scene sceneID="8Iw-4L-evm">
             <objects>
-                <viewController id="tYb-zB-5ZJ" sceneMemberID="viewController">
+                <viewController id="tYb-zB-5ZJ" customClass="MainScreenViewController" customModule="WWDC_Scholars_2015" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="I7c-5g-PcP"/>
                         <viewControllerLayoutGuide type="bottom" id="ENm-xb-5ot"/>
@@ -51,130 +50,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7LT-ui-cWd">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="115"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wwdc2015-top-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="3va-Fo-2z1">
-                                        <rect key="frame" x="507" y="25" width="85" height="85"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="3va-Fo-2z1" secondAttribute="height" multiplier="1:1" id="kSb-gF-dYZ"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9b6-Tb-M3i">
-                                        <rect key="frame" x="15" y="30" width="222" height="38"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="32" name="HelveticaNeue"/>
-                                                    <real key="NSKern" value="0.0"/>
-                                                    <font key="NSOriginalFont" size="14" name="ArialMT"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                        <tabStops/>
-                                                    </paragraphStyle>
-                                                    <color key="NSStrokeColor" red="0.043137254901960784" green="0.33333333333333331" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content=" ">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="14" name="ArialMT"/>
-                                                    <real key="NSKern" value="0.0"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                        <tabStops/>
-                                                    </paragraphStyle>
-                                                    <color key="NSStrokeColor" red="0.043137254901960784" green="0.33333333333333331" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="WWDC">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="30" name="HelveticaNeue"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                        <tabStops/>
-                                                    </paragraphStyle>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="Scholars">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="26" name="HelveticaNeue-Thin"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                        <tabStops/>
-                                                    </paragraphStyle>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where we are from" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kP-gp-PL0">
-                                        <rect key="frame" x="15" y="76" width="164" height="24"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
-                                        <color key="textColor" red="0.7603753306878307" green="0.7603753306878307" blue="0.7603753306878307" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="3va-Fo-2z1" secondAttribute="bottom" constant="5" id="4sa-Wh-C92"/>
-                                    <constraint firstItem="3va-Fo-2z1" firstAttribute="top" secondItem="7LT-ui-cWd" secondAttribute="top" constant="25" id="6Th-7R-8fw"/>
-                                    <constraint firstItem="9b6-Tb-M3i" firstAttribute="leading" secondItem="7LT-ui-cWd" secondAttribute="leading" constant="15" id="GBv-gh-fNm"/>
-                                    <constraint firstAttribute="bottom" secondItem="9kP-gp-PL0" secondAttribute="bottom" constant="15" id="Ily-4e-LBE"/>
-                                    <constraint firstAttribute="trailing" secondItem="3va-Fo-2z1" secondAttribute="trailing" constant="8" id="Oha-mF-GCe"/>
-                                    <constraint firstItem="9kP-gp-PL0" firstAttribute="leading" secondItem="7LT-ui-cWd" secondAttribute="leading" constant="15" id="Sc4-Aj-MWF"/>
-                                    <constraint firstItem="9b6-Tb-M3i" firstAttribute="top" secondItem="7LT-ui-cWd" secondAttribute="top" constant="30" id="mQU-Rr-Cg6"/>
-                                    <constraint firstAttribute="height" constant="115" id="wHu-Xh-2pg"/>
-                                </constraints>
-                            </view>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bfV-JA-UJ0">
-                                <rect key="frame" x="0.0" y="115" width="600" height="185"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="185" id="QZc-J8-SQJ"/>
-                                </constraints>
-                            </mapView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WO0-05-mmK">
-                                <rect key="frame" x="0.0" y="300" width="600" height="300"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ICt-l1-GGj">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="100" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ov6-RS-DB2">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ScholarshipCell" id="Ov6-RS-DB2">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="11358626_821050244645510_1909173720_n.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dGR-dG-3vr">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="euW-ib-40b">
+                                                    <rect key="frame" x="0.0" y="75" width="100" height="25"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matthijs Logemann" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="xuQ-xm-zw0">
+                                                            <rect key="frame" x="8" y="0.0" width="84" height="25"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="0.75" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="xuQ-xm-zw0" firstAttribute="top" secondItem="euW-ib-40b" secondAttribute="top" id="6go-5K-fQU"/>
+                                                        <constraint firstAttribute="height" constant="25" id="99K-Gz-DY5"/>
+                                                        <constraint firstAttribute="trailing" secondItem="xuQ-xm-zw0" secondAttribute="trailing" constant="8" id="G3D-zj-cX9"/>
+                                                        <constraint firstAttribute="bottom" secondItem="xuQ-xm-zw0" secondAttribute="bottom" id="JHh-vT-nvq"/>
+                                                        <constraint firstItem="xuQ-xm-zw0" firstAttribute="leading" secondItem="euW-ib-40b" secondAttribute="leading" constant="8" id="hR5-Zl-MsN"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="dGR-dG-3vr" firstAttribute="leading" secondItem="Ov6-RS-DB2" secondAttribute="leading" id="Awf-9y-sqj"/>
+                                            <constraint firstAttribute="bottom" secondItem="dGR-dG-3vr" secondAttribute="bottom" id="Hr2-Ce-RVd"/>
+                                            <constraint firstAttribute="bottom" secondItem="euW-ib-40b" secondAttribute="bottom" id="Lik-K9-t1J"/>
+                                            <constraint firstItem="euW-ib-40b" firstAttribute="leading" secondItem="Ov6-RS-DB2" secondAttribute="leading" id="VRE-cz-owd"/>
+                                            <constraint firstItem="dGR-dG-3vr" firstAttribute="top" secondItem="Ov6-RS-DB2" secondAttribute="top" id="YRa-oQ-N1N"/>
+                                            <constraint firstAttribute="trailing" secondItem="euW-ib-40b" secondAttribute="trailing" id="r33-wo-k2D"/>
+                                            <constraint firstAttribute="trailing" secondItem="dGR-dG-3vr" secondAttribute="trailing" id="soV-o7-67e"/>
+                                        </constraints>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="tYb-zB-5ZJ" id="cLn-L8-kfP"/>
+                                    <outlet property="delegate" destination="tYb-zB-5ZJ" id="Mb2-CF-hjY"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bfV-JA-UJ0" firstAttribute="top" secondItem="7LT-ui-cWd" secondAttribute="bottom" id="2iC-aH-r75"/>
-                            <constraint firstItem="bfV-JA-UJ0" firstAttribute="leading" secondItem="phv-PG-Wg8" secondAttribute="leading" id="4dS-LA-rDG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="7LT-ui-cWd" secondAttribute="trailing" constant="-16" id="8DR-O2-HGl"/>
                             <constraint firstItem="WO0-05-mmK" firstAttribute="leading" secondItem="phv-PG-Wg8" secondAttribute="leading" id="9YA-Ar-sZE"/>
-                            <constraint firstItem="WO0-05-mmK" firstAttribute="top" secondItem="bfV-JA-UJ0" secondAttribute="bottom" id="HWh-SD-VT4"/>
+                            <constraint firstItem="WO0-05-mmK" firstAttribute="top" secondItem="I7c-5g-PcP" secondAttribute="bottom" constant="-20" id="AJr-us-eZh"/>
                             <constraint firstItem="ENm-xb-5ot" firstAttribute="top" secondItem="WO0-05-mmK" secondAttribute="bottom" id="LKh-Da-uzA"/>
-                            <constraint firstAttribute="trailing" secondItem="bfV-JA-UJ0" secondAttribute="trailing" id="LyC-vL-fn2"/>
-                            <constraint firstItem="7LT-ui-cWd" firstAttribute="leading" secondItem="phv-PG-Wg8" secondAttribute="leadingMargin" constant="-16" id="NW6-CU-irL"/>
-                            <constraint firstItem="WO0-05-mmK" firstAttribute="top" secondItem="bfV-JA-UJ0" secondAttribute="bottom" id="Rzz-9e-Y39"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="bfV-JA-UJ0" secondAttribute="bottom" constant="-95" id="UhW-uT-Al2"/>
                             <constraint firstAttribute="trailing" secondItem="WO0-05-mmK" secondAttribute="trailing" id="Z0w-BT-EZQ"/>
-                            <constraint firstItem="7LT-ui-cWd" firstAttribute="top" secondItem="phv-PG-Wg8" secondAttribute="topMargin" id="r7h-qm-74X"/>
+                            <constraint firstItem="WO0-05-mmK" firstAttribute="top" secondItem="phv-PG-Wg8" secondAttribute="topMargin" id="hmH-HS-DgD"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="UhW-uT-Al2"/>
-                                <exclude reference="Rzz-9e-Y39"/>
+                                <exclude reference="AJr-us-eZh"/>
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="1Ur-Ti-Ge8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRI-aw-yvu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -191,7 +140,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6NZ-f2-pSo"/>
+                        <segue destination="tYb-zB-5ZJ" kind="relationship" relationship="rootViewController" id="6Kv-jO-dM8"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nGJ-iH-qCL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -200,6 +149,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="wwdc2015-top-logo.png" width="300" height="300"/>
+        <image name="11358626_821050244645510_1909173720_n.jpg" width="632" height="673"/>
     </resources>
 </document>
