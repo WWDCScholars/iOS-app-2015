@@ -50,7 +50,6 @@ class DataManager: NSObject {
                             linkedIn: object.objectForKey("linkedin") as? String,
                             website: object.objectForKey("website") as? String)
                         self.scholarArray.addObject(scholar)
-                        println("Loaded " + scholar.name!)
                     }
                 }
             } else {
