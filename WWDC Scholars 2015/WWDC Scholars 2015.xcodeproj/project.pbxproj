@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		C00C27401B0D5C9C008C19AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C273F1B0D5C9C008C19AE /* AppDelegate.swift */; };
-		C00C27421B0D5C9C008C19AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C27411B0D5C9C008C19AE /* ViewController.swift */; };
+		C00C27421B0D5C9C008C19AE /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C27411B0D5C9C008C19AE /* LocationViewController.swift */; };
 		C00C27451B0D5C9C008C19AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C00C27431B0D5C9C008C19AE /* Main.storyboard */; };
 		C00C27471B0D5C9C008C19AE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C00C27461B0D5C9C008C19AE /* Images.xcassets */; };
 		C00C274A1B0D5C9C008C19AE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C00C27481B0D5C9C008C19AE /* LaunchScreen.xib */; };
 		C00C27561B0D5C9C008C19AE /* WWDC_Scholars_2015Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C27551B0D5C9C008C19AE /* WWDC_Scholars_2015Tests.swift */; };
-		C00C276D1B0D5CEC008C19AE /* LICENSE.md in Sources */ = {isa = PBXBuildFile; fileRef = C00C27601B0D5CEB008C19AE /* LICENSE.md */; };
 		C00C276E1B0D5CEC008C19AE /* QCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = C00C27641B0D5CEC008C19AE /* QCluster.m */; };
 		C00C276F1B0D5CEC008C19AE /* QNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C00C27661B0D5CEC008C19AE /* QNode.m */; };
 		C00C27701B0D5CEC008C19AE /* QTree.m in Sources */ = {isa = PBXBuildFile; fileRef = C00C27681B0D5CEC008C19AE /* QTree.m */; };
 		C00C27711B0D5CEC008C19AE /* QTreeGeometryUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C00C276A1B0D5CEC008C19AE /* QTreeGeometryUtils.m */; };
-		C00C27721B0D5CEC008C19AE /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C00C276C1B0D5CEC008C19AE /* README.md */; };
 		C00C27781B0D5D9E008C19AE /* ClusterAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C00C27761B0D5D9E008C19AE /* ClusterAnnotationView.m */; };
+		C00C277B1B0D63CD008C19AE /* Scholar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C277A1B0D63CD008C19AE /* Scholar.swift */; };
+		C00C277E1B0D6A8D008C19AE /* ScholarAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C277D1B0D6A8D008C19AE /* ScholarAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +36,13 @@
 		C00C273A1B0D5C9C008C19AE /* WWDC Scholars 2015.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WWDC Scholars 2015.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C00C273E1B0D5C9C008C19AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C00C273F1B0D5C9C008C19AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C00C27411B0D5C9C008C19AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C00C27411B0D5C9C008C19AE /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		C00C27441B0D5C9C008C19AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C00C27461B0D5C9C008C19AE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C00C27491B0D5C9C008C19AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C00C274F1B0D5C9C008C19AE /* WWDC Scholars 2015Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WWDC Scholars 2015Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C00C27541B0D5C9C008C19AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C00C27551B0D5C9C008C19AE /* WWDC_Scholars_2015Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDC_Scholars_2015Tests.swift; sourceTree = "<group>"; };
-		C00C27601B0D5CEB008C19AE /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		C00C27631B0D5CEB008C19AE /* QCluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCluster.h; sourceTree = "<group>"; };
 		C00C27641B0D5CEC008C19AE /* QCluster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCluster.m; sourceTree = "<group>"; };
 		C00C27651B0D5CEC008C19AE /* QNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNode.h; sourceTree = "<group>"; };
@@ -53,10 +52,11 @@
 		C00C27691B0D5CEC008C19AE /* QTreeGeometryUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTreeGeometryUtils.h; sourceTree = "<group>"; };
 		C00C276A1B0D5CEC008C19AE /* QTreeGeometryUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTreeGeometryUtils.m; sourceTree = "<group>"; };
 		C00C276B1B0D5CEC008C19AE /* QTreeInsertable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTreeInsertable.h; sourceTree = "<group>"; };
-		C00C276C1B0D5CEC008C19AE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C00C27751B0D5D37008C19AE /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Header.h; path = ../Header.h; sourceTree = "<group>"; };
 		C00C27761B0D5D9E008C19AE /* ClusterAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClusterAnnotationView.m; sourceTree = "<group>"; };
 		C00C27771B0D5D9E008C19AE /* ClusterAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClusterAnnotationView.h; sourceTree = "<group>"; };
+		C00C277A1B0D63CD008C19AE /* Scholar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scholar.swift; sourceTree = "<group>"; };
+		C00C277D1B0D6A8D008C19AE /* ScholarAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScholarAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				C00C27731B0D5CF1008C19AE /* Library */,
+				C00C277C1B0D63D6008C19AE /* Model */,
 				C00C27791B0D5E10008C19AE /* Controller */,
 				C00C273D1B0D5C9C008C19AE /* Supporting Files */,
 			);
@@ -138,9 +139,7 @@
 		C00C275F1B0D5CEB008C19AE /* QTree-objc */ = {
 			isa = PBXGroup;
 			children = (
-				C00C27601B0D5CEB008C19AE /* LICENSE.md */,
 				C00C27611B0D5CEB008C19AE /* QTree */,
-				C00C276C1B0D5CEC008C19AE /* README.md */,
 			);
 			path = "QTree-objc";
 			sourceTree = "<group>";
@@ -182,9 +181,26 @@
 		C00C27791B0D5E10008C19AE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C00C27411B0D5C9C008C19AE /* ViewController.swift */,
+				C0C6CBB31B0D6AA500A00796 /* MapViewController */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		C00C277C1B0D63D6008C19AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C00C277A1B0D63CD008C19AE /* Scholar.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C0C6CBB31B0D6AA500A00796 /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C00C27411B0D5C9C008C19AE /* LocationViewController.swift */,
+				C00C277D1B0D6A8D008C19AE /* ScholarAnnotation.swift */,
+			);
+			name = MapViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,12 +305,12 @@
 			files = (
 				C00C276E1B0D5CEC008C19AE /* QCluster.m in Sources */,
 				C00C27711B0D5CEC008C19AE /* QTreeGeometryUtils.m in Sources */,
-				C00C27421B0D5C9C008C19AE /* ViewController.swift in Sources */,
-				C00C276D1B0D5CEC008C19AE /* LICENSE.md in Sources */,
+				C00C27421B0D5C9C008C19AE /* LocationViewController.swift in Sources */,
 				C00C27781B0D5D9E008C19AE /* ClusterAnnotationView.m in Sources */,
+				C00C277E1B0D6A8D008C19AE /* ScholarAnnotation.swift in Sources */,
+				C00C277B1B0D63CD008C19AE /* Scholar.swift in Sources */,
 				C00C27701B0D5CEC008C19AE /* QTree.m in Sources */,
 				C00C27401B0D5C9C008C19AE /* AppDelegate.swift in Sources */,
-				C00C27721B0D5CEC008C19AE /* README.md in Sources */,
 				C00C276F1B0D5CEC008C19AE /* QNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,6 +511,7 @@
 				C00C275B1B0D5C9C008C19AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C00C275C1B0D5C9C008C19AE /* Build configuration list for PBXNativeTarget "WWDC Scholars 2015Tests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +520,7 @@
 				C00C275E1B0D5C9C008C19AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
