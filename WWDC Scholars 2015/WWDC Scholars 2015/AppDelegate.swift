@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
         // Load all dem scholarship winners! :D
-        DataManager.sharedInstance.loadStudents()
+        //DataManager.sharedInstance.loadStudents()
         
         // Override point for customization after application launch.
         return true
