@@ -17,7 +17,11 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
     let locationManager = CLLocationManager()
     
     //init the model
-    var scholarArray:[Scholar] = [Scholar(name: "Gelei Chen", age: "19", birthdate: "", gender: "", latitude: 40.4240, longitude: -86.9290, email: "", picture: "", numberOfWWDCAttend: "", appDemo: "", githubLinkToApp: "", twitter: "", facebook: "", github: "", linkedIn: "", website: ""),Scholar(name: "IU", age: "", birthdate: "", gender: "", latitude: 39.1768, longitude: -86.5197, email: "", picture: "", numberOfWWDCAttend: "", appDemo: "", githubLinkToApp: "", twitter: "", facebook: "", github: "", linkedIn: "", website: ""),Scholar(name: "Michigan", age: "", birthdate: "", gender: "", latitude: 43.6867, longitude: -85.0102, email: "", picture: "", numberOfWWDCAttend: "", appDemo: "", githubLinkToApp: "", twitter: "", facebook: "", github: "", linkedIn: "", website: ""),Scholar(name: "UIUC", age: "", birthdate: "", gender: "", latitude: 40.1105, longitude: -88.2284, email: "", picture: "", numberOfWWDCAttend: "", appDemo: "", githubLinkToApp: "", twitter: "", facebook: "", github: "", linkedIn: "", website: "")]
+    var scholarArray:[Scholar] = [
+        Scholar(name: "Gelei Chen", age: 19, birthdate: "", gender: "", latitude: 40.4240, longitude: -86.9290, email: "", picture: "", numberOfWWDCAttend: 0, appDemo: "", githubLinkToApp: "", twitter: "", facebook: "", github: "", linkedIn: "", website: ""),
+        Scholar(name: "IU", age: 0, birthdate: "", gender: "", latitude: 39.1768, longitude: -86.5197, email: "", picture: "", numberOfWWDCAttend: 0, appDemo: "", githubLinkToApp: "", twitter: "", facebook: "", github: "", linkedIn: "", website: ""),
+        Scholar(name: "Michigan", age: 0, birthdate: "", gender: "", latitude: 43.6867, longitude: -85.0102, email: "", picture: "", numberOfWWDCAttend: 0, appDemo: "", githubLinkToApp: "", twitter: "", facebook: "", github: "", linkedIn: "", website: ""),
+        Scholar(name: "UIUC", age: 0, birthdate: "", gender: "", latitude: 40.1105, longitude: -88.2284, email: "", picture: "", numberOfWWDCAttend: 0, appDemo: "", githubLinkToApp: "", twitter: "", facebook: "", github: "", linkedIn: "", website: "")]
     var currentScholar:Scholar?
     
     var qTree = QTree()

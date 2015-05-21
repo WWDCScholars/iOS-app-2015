@@ -23,13 +23,13 @@
 		407911C51B0E2B2A00A582FF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407911BE1B0E2B2A00A582FF /* SystemConfiguration.framework */; };
 		408211651B0E034B00D567AC /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408211641B0E034B00D567AC /* MainScreenViewController.swift */; };
 		408211671B0E254400D567AC /* 11358626_821050244645510_1909173720_n.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 408211661B0E254400D567AC /* 11358626_821050244645510_1909173720_n.jpg */; };
-		4082116E1B0E292300D567AC /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408211681B0E292300D567AC /* Parse.framework */; };
 		4082116F1B0E292300D567AC /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408211691B0E292300D567AC /* ParseUI.framework */; };
 		408211701B0E292300D567AC /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4082116A1B0E292300D567AC /* ParseCrashReporting.framework */; };
 		408211711B0E292300D567AC /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4082116B1B0E292300D567AC /* Bolts.framework */; };
 		408211721B0E292300D567AC /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4082116C1B0E292300D567AC /* ParseFacebookUtils.framework */; };
 		408211731B0E292300D567AC /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4082116D1B0E292300D567AC /* ParseFacebookUtilsV4.framework */; };
 		408211761B0E296A00D567AC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408211751B0E296A00D567AC /* DataManager.swift */; };
+		409A24621B0E3346005509AF /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408211681B0E292300D567AC /* Parse.framework */; };
 		C00C27401B0D5C9C008C19AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C273F1B0D5C9C008C19AE /* AppDelegate.swift */; };
 		C00C27421B0D5C9C008C19AE /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C27411B0D5C9C008C19AE /* LocationViewController.swift */; };
 		C00C27451B0D5C9C008C19AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C00C27431B0D5C9C008C19AE /* Main.storyboard */; };
@@ -123,10 +123,10 @@
 				407911B21B0E2AEE00A582FF /* CoreGraphics.framework in Frameworks */,
 				407911B31B0E2AEE00A582FF /* CoreLocation.framework in Frameworks */,
 				407911AD1B0E2AC400A582FF /* AudioToolbox.framework in Frameworks */,
+				409A24621B0E3346005509AF /* Parse.framework in Frameworks */,
 				4082116F1B0E292300D567AC /* ParseUI.framework in Frameworks */,
 				408211701B0E292300D567AC /* ParseCrashReporting.framework in Frameworks */,
 				408211731B0E292300D567AC /* ParseFacebookUtilsV4.framework in Frameworks */,
-				4082116E1B0E292300D567AC /* Parse.framework in Frameworks */,
 				408211721B0E292300D567AC /* ParseFacebookUtils.framework in Frameworks */,
 				408211711B0E292300D567AC /* Bolts.framework in Frameworks */,
 			);
