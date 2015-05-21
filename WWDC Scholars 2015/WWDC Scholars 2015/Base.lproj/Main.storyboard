@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E17e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2fS-oi-cWY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E11f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tYb-zB-5ZJ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -38,6 +39,113 @@
             </objects>
             <point key="canvasLocation" x="1153" y="1060"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="8Iw-4L-evm">
+            <objects>
+                <viewController id="tYb-zB-5ZJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I7c-5g-PcP"/>
+                        <viewControllerLayoutGuide type="bottom" id="ENm-xb-5ot"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="phv-PG-Wg8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7LT-ui-cWd">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="115"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wwdc2015-top-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="3va-Fo-2z1">
+                                        <rect key="frame" x="507" y="25" width="85" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="3va-Fo-2z1" secondAttribute="height" multiplier="1:1" id="kSb-gF-dYZ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9b6-Tb-M3i">
+                                        <rect key="frame" x="15" y="30" width="222" height="38"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="32" name="HelveticaNeue"/>
+                                                    <real key="NSKern" value="0.0"/>
+                                                    <font key="NSOriginalFont" size="14" name="ArialMT"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                    <color key="NSStrokeColor" red="0.043137254901960784" green="0.33333333333333331" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" ">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="14" name="ArialMT"/>
+                                                    <real key="NSKern" value="0.0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                    <color key="NSStrokeColor" red="0.043137254901960784" green="0.33333333333333331" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="WWDC">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="30" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="Scholars">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="25" name="HelveticaNeue-Light"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where we are from" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kP-gp-PL0">
+                                        <rect key="frame" x="15" y="74" width="180" height="26"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                        <color key="textColor" red="0.7603753306878307" green="0.7603753306878307" blue="0.7603753306878307" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="3va-Fo-2z1" secondAttribute="bottom" constant="5" id="4sa-Wh-C92"/>
+                                    <constraint firstItem="3va-Fo-2z1" firstAttribute="top" secondItem="7LT-ui-cWd" secondAttribute="top" constant="25" id="6Th-7R-8fw"/>
+                                    <constraint firstItem="9b6-Tb-M3i" firstAttribute="leading" secondItem="7LT-ui-cWd" secondAttribute="leading" constant="15" id="GBv-gh-fNm"/>
+                                    <constraint firstAttribute="bottom" secondItem="9kP-gp-PL0" secondAttribute="bottom" constant="15" id="Ily-4e-LBE"/>
+                                    <constraint firstAttribute="trailing" secondItem="3va-Fo-2z1" secondAttribute="trailing" constant="8" id="Oha-mF-GCe"/>
+                                    <constraint firstItem="9kP-gp-PL0" firstAttribute="leading" secondItem="7LT-ui-cWd" secondAttribute="leading" constant="15" id="Sc4-Aj-MWF"/>
+                                    <constraint firstItem="9b6-Tb-M3i" firstAttribute="top" secondItem="7LT-ui-cWd" secondAttribute="top" constant="30" id="mQU-Rr-Cg6"/>
+                                    <constraint firstAttribute="height" constant="115" id="wHu-Xh-2pg"/>
+                                </constraints>
+                            </view>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bfV-JA-UJ0">
+                                <rect key="frame" x="0.0" y="115" width="600" height="580"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bfV-JA-UJ0" firstAttribute="top" secondItem="7LT-ui-cWd" secondAttribute="bottom" id="2iC-aH-r75"/>
+                            <constraint firstItem="bfV-JA-UJ0" firstAttribute="leading" secondItem="phv-PG-Wg8" secondAttribute="leading" id="4dS-LA-rDG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7LT-ui-cWd" secondAttribute="trailing" constant="-16" id="8DR-O2-HGl"/>
+                            <constraint firstAttribute="trailing" secondItem="bfV-JA-UJ0" secondAttribute="trailing" id="LyC-vL-fn2"/>
+                            <constraint firstItem="7LT-ui-cWd" firstAttribute="leading" secondItem="phv-PG-Wg8" secondAttribute="leadingMargin" constant="-16" id="NW6-CU-irL"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="bfV-JA-UJ0" secondAttribute="bottom" constant="-95" id="UhW-uT-Al2"/>
+                            <constraint firstItem="7LT-ui-cWd" firstAttribute="top" secondItem="phv-PG-Wg8" secondAttribute="topMargin" id="r7h-qm-74X"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SRI-aw-yvu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1778" y="1060"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="3SO-3a-R1S">
             <objects>
@@ -57,4 +165,7 @@
             <point key="canvasLocation" x="305" y="1060"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="wwdc2015-top-logo.png" width="300" height="300"/>
+    </resources>
 </document>

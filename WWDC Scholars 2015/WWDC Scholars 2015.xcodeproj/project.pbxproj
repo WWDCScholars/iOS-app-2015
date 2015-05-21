@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40560B3A1B0DA16A00C3EFB4 /* wwdc2015-top-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 40560B391B0DA16A00C3EFB4 /* wwdc2015-top-logo.png */; };
 		C00C27401B0D5C9C008C19AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C273F1B0D5C9C008C19AE /* AppDelegate.swift */; };
 		C00C27421B0D5C9C008C19AE /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C27411B0D5C9C008C19AE /* LocationViewController.swift */; };
 		C00C27451B0D5C9C008C19AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C00C27431B0D5C9C008C19AE /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		40560B391B0DA16A00C3EFB4 /* wwdc2015-top-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wwdc2015-top-logo.png"; sourceTree = "<group>"; };
 		C00C273A1B0D5C9C008C19AE /* WWDC Scholars 2015.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WWDC Scholars 2015.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C00C273E1B0D5C9C008C19AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C00C273F1B0D5C9C008C19AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40560B381B0DA16100C3EFB4 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				40560B391B0DA16A00C3EFB4 /* wwdc2015-top-logo.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		C00C27311B0D5C9C008C19AE = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +108,7 @@
 		C00C273C1B0D5C9C008C19AE /* WWDC Scholars 2015 */ = {
 			isa = PBXGroup;
 			children = (
+				40560B381B0DA16100C3EFB4 /* Images */,
 				C00C27731B0D5CF1008C19AE /* Library */,
 				C00C277C1B0D63D6008C19AE /* Model */,
 				C00C27791B0D5E10008C19AE /* Controller */,
@@ -286,6 +297,7 @@
 				C00C27451B0D5C9C008C19AE /* Main.storyboard in Resources */,
 				C00C274A1B0D5C9C008C19AE /* LaunchScreen.xib in Resources */,
 				C00C27471B0D5C9C008C19AE /* Images.xcassets in Resources */,
+				40560B3A1B0DA16A00C3EFB4 /* wwdc2015-top-logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
