@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E17e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KXk-jL-aak">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2fS-oi-cWY">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -72,7 +72,7 @@
                     <navigationItem key="navigationItem" id="lC6-sg-O5W">
                         <nil key="title"/>
                         <view key="titleView" contentMode="scaleToFill" id="w4m-C8-G5S">
-                            <rect key="frame" x="180" y="5.5" width="240" height="33"/>
+                            <rect key="frame" x="180" y="6" width="240" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WWDC" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFP-mS-GRC">
@@ -364,7 +364,7 @@ Two times at WWDC!</string>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ICt-l1-GGj">
                                     <size key="itemSize" width="100" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="50" height="300"/>
                                     <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
@@ -411,6 +411,24 @@ Two times at WWDC!</string>
                                         </constraints>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageFooter" id="kTC-QG-S85" customClass="MainScreenFooter" customModule="WWDC_Scholars_2015" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="184" width="600" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WallpaperWWDC.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="8ns-yk-nWL">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="8ns-yk-nWL" secondAttribute="bottom" id="9nH-We-AqP"/>
+                                        <constraint firstItem="8ns-yk-nWL" firstAttribute="top" secondItem="kTC-QG-S85" secondAttribute="top" id="BY9-ZF-u7L"/>
+                                        <constraint firstAttribute="trailing" secondItem="8ns-yk-nWL" secondAttribute="trailing" id="EeX-re-sWC"/>
+                                        <constraint firstItem="8ns-yk-nWL" firstAttribute="leading" secondItem="kTC-QG-S85" secondAttribute="leading" id="z8Y-M1-fsP"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="backgroundImage" destination="8ns-yk-nWL" id="czv-l4-ShS"/>
+                                    </connections>
+                                </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="tYb-zB-5ZJ" id="cLn-L8-kfP"/>
                                     <outlet property="delegate" destination="tYb-zB-5ZJ" id="Mb2-CF-hjY"/>
@@ -476,6 +494,7 @@ Two times at WWDC!</string>
     </scenes>
     <resources>
         <image name="11358626_821050244645510_1909173720_n.jpg" width="632" height="673"/>
+        <image name="WallpaperWWDC.jpg" width="5535" height="3690"/>
         <image name="facebook_test_icn.png" width="60" height="60"/>
         <image name="github_test_icn.png" width="60" height="60"/>
         <image name="mail_test_icn.png" width="60" height="60"/>
