@@ -48,7 +48,8 @@ class DataManager: NSObject {
                             facebook: object.objectForKey("facebook") as? String,
                             github: object.objectForKey("github") as? String,
                             linkedIn: object.objectForKey("linkedin") as? String,
-                            website: object.objectForKey("website") as? String)
+                            website: object.objectForKey("website") as? String,
+                            location:"")
                         self.scholarArray.addObject(scholar)
                     }
                 }
