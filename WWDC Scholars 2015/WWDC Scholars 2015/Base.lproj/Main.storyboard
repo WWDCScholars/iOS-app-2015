@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2fS-oi-cWY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E17e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2fS-oi-cWY">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -18,13 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dLX-Aa-vJZ">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dLX-Aa-vJZ">
                                 <rect key="frame" x="0.0" y="64" width="600" height="234"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="215" id="JdW-wQ-L0d"/>
+                                    <constraint firstAttribute="height" constant="234" id="gvz-8d-9Ta"/>
                                 </constraints>
                             </mapView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="rmP-RX-aEL">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="rmP-RX-aEL">
                                 <rect key="frame" x="0.0" y="306" width="600" height="294"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -36,13 +36,13 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="abK-Jv-huB">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nae-AQ-rrF">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -60,19 +60,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="rmP-RX-aEL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="42a-4d-MY6"/>
-                            <constraint firstItem="rmP-RX-aEL" firstAttribute="leading" secondItem="dLX-Aa-vJZ" secondAttribute="leading" id="50D-Xh-pIp"/>
-                            <constraint firstAttribute="trailing" secondItem="dLX-Aa-vJZ" secondAttribute="trailing" id="8fx-u9-mZX"/>
-                            <constraint firstItem="rmP-RX-aEL" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="N94-va-OYk"/>
-                            <constraint firstItem="rmP-RX-aEL" firstAttribute="trailing" secondItem="dLX-Aa-vJZ" secondAttribute="trailing" id="Xqp-ut-mu9"/>
-                            <constraint firstItem="rmP-RX-aEL" firstAttribute="top" secondItem="dLX-Aa-vJZ" secondAttribute="bottom" constant="3" id="caN-vP-SAn"/>
-                            <constraint firstItem="dLX-Aa-vJZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="oSo-g4-Hrv"/>
+                            <constraint firstAttribute="trailing" secondItem="rmP-RX-aEL" secondAttribute="trailing" id="69F-4a-BXX"/>
+                            <constraint firstItem="rmP-RX-aEL" firstAttribute="trailing" secondItem="dLX-Aa-vJZ" secondAttribute="trailing" id="6gB-T2-LBb"/>
+                            <constraint firstItem="rmP-RX-aEL" firstAttribute="leading" secondItem="dLX-Aa-vJZ" secondAttribute="leading" id="MlF-oA-aIf"/>
+                            <constraint firstItem="rmP-RX-aEL" firstAttribute="top" secondItem="dLX-Aa-vJZ" secondAttribute="bottom" constant="8" symbolic="YES" id="dxO-OP-2Yg"/>
+                            <constraint firstItem="rmP-RX-aEL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hTw-2J-zgZ"/>
+                            <constraint firstItem="rmP-RX-aEL" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="hrx-n9-Neb"/>
+                            <constraint firstItem="dLX-Aa-vJZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="leA-2q-HWI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lC6-sg-O5W">
                         <nil key="title"/>
                         <view key="titleView" contentMode="scaleToFill" id="w4m-C8-G5S">
-                            <rect key="frame" x="180" y="6" width="240" height="33"/>
+                            <rect key="frame" x="180" y="5.5" width="240" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WWDC" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFP-mS-GRC">
@@ -96,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1933" y="1744"/>
+            <point key="canvasLocation" x="1785" y="748"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="tko-eN-D8Z">
@@ -113,66 +113,66 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ER-Z7-hhi">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="1600"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xfa-C7-60u">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="1292"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xfa-C7-60u">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="1288.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nicola Giancecchi" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHz-g9-HMz">
-                                                <rect key="frame" x="20" y="310" width="560" height="34"/>
+                                                <rect key="frame" x="20" y="310" width="560" height="33.5"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="28"/>
                                                 <color key="textColor" red="0.9882352941176471" green="0.4392156862745098" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wwdc15-hero_2x-4.png" translatesAutoresizingMaskIntoConstraints="NO" id="0Le-Zf-2Nh">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wwdc15-hero_2x-4" translatesAutoresizingMaskIntoConstraints="NO" id="0Le-Zf-2Nh">
                                                 <rect key="frame" x="155" y="15" width="290" height="290"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="290" id="gqz-vD-AqE"/>
                                                     <constraint firstAttribute="width" constant="290" id="x8b-iK-ejo"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ngiancecchi_test_profile.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="H6X-sB-zaV">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ngiancecchi_test_profile" translatesAutoresizingMaskIntoConstraints="NO" id="H6X-sB-zaV">
                                                 <rect key="frame" x="225" y="85" width="150" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="vY4-nG-3gC"/>
                                                     <constraint firstAttribute="height" constant="150" id="w8p-AZ-YvP"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3EH-OW-tHe">
-                                                <rect key="frame" x="20" y="359" width="560" height="39"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3EH-OW-tHe">
+                                                <rect key="frame" x="20" y="358.5" width="560" height="38"/>
                                                 <string key="text">22 from San Marino (SMR)
 Two times at WWDC!</string>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="16"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="98X-rR-rGb">
-                                                <rect key="frame" x="160" y="418" width="280" height="1"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="98X-rR-rGb">
+                                                <rect key="frame" x="160" y="416.5" width="280" height="1"/>
                                                 <color key="backgroundColor" red="0.97647058823529409" green="0.69803921568627447" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="qMm-7Y-Y8y"/>
                                                     <constraint firstAttribute="width" constant="280" id="te6-Ds-0Zg"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVk-bB-TP0">
-                                                <rect key="frame" x="20" y="439" width="560" height="77"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVk-bB-TP0">
+                                                <rect key="frame" x="20" y="437.5" width="560" height="76"/>
                                                 <string key="text">I am a Mobile App Developer from San Marino (SMR). I'm 22. Currently studying Computer Science &amp; Engineering at the University of Bologna (Italy) and working at Mr. APPs srl as iOS Developer. My main interests are programming, design and music.</string>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="16"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="EyY-My-XWY">
-                                                <rect key="frame" x="0.0" y="536" width="600" height="270"/>
+                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="EyY-My-XWY">
+                                                <rect key="frame" x="0.0" y="533.5" width="600" height="270"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="EyY-My-XWY" secondAttribute="height" multiplier="20:9" id="tfO-3m-zdJ"/>
                                                 </constraints>
                                             </mapView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="My App for WWDC15" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGm-2d-Z5D">
-                                                <rect key="frame" x="20" y="826" width="560" height="27"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My App for WWDC15" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGm-2d-Z5D">
+                                                <rect key="frame" x="20" y="823.5" width="560" height="26.5"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
                                                 <color key="textColor" red="0.12941176470588237" green="0.36470588235294116" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0G2-3n-h8O">
-                                                <rect key="frame" x="0.0" y="934" width="600" height="200"/>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0G2-3n-h8O">
+                                                <rect key="frame" x="0.0" y="931" width="600" height="200"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="0G2-3n-h8O" secondAttribute="height" multiplier="600:200" id="vxF-Lh-aFH"/>
@@ -190,7 +190,7 @@ Two times at WWDC!</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="oTe-UY-VcK">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="oTe-UY-VcK">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -201,30 +201,30 @@ Two times at WWDC!</string>
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Contact me!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksv-i0-RVu">
-                                                <rect key="frame" x="20" y="1154" width="560" height="27"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact me!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksv-i0-RVu">
+                                                <rect key="frame" x="20" y="1151" width="560" height="26.5"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
                                                 <color key="textColor" red="0.79607843137254897" green="0.17647058823529413" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y7B-LT-qDD">
-                                                <rect key="frame" x="160" y="1201" width="280" height="1"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y7B-LT-qDD">
+                                                <rect key="frame" x="160" y="1197.5" width="280" height="1"/>
                                                 <color key="backgroundColor" red="0.9882352941176471" green="0.36862745098039218" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="VFa-bz-pks"/>
                                                     <constraint firstAttribute="width" constant="280" id="bsj-Em-2My"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q28-Bd-sKf">
-                                                <rect key="frame" x="160" y="913" width="280" height="1"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q28-Bd-sKf">
+                                                <rect key="frame" x="160" y="910" width="280" height="1"/>
                                                 <color key="backgroundColor" red="0.28627450980392155" green="0.88627450980392153" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="gu4-Ct-dE4"/>
                                                     <constraint firstAttribute="width" constant="280" id="s8D-ke-P9L"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VwC-uX-F27">
-                                                <rect key="frame" x="200" y="868" width="200" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VwC-uX-F27">
+                                                <rect key="frame" x="200" y="865" width="200" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="fgM-BU-yjK"/>
                                                     <constraint firstAttribute="width" constant="200" id="lXW-gJ-caS"/>
@@ -235,30 +235,30 @@ Two times at WWDC!</string>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                             </button>
-                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DDv-xM-ulj">
-                                                <rect key="frame" x="213" y="1232" width="175" height="30"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DDv-xM-ulj">
+                                                <rect key="frame" x="213" y="1228.5" width="175" height="30"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJJ-c0-YIG">
-                                                        <rect key="frame" x="92" y="0.0" width="30" height="30"/>
-                                                        <state key="normal" image="facebook_test_icn.png">
+                                                        <rect key="frame" x="-213" y="-1228.5" width="60" height="60"/>
+                                                        <state key="normal" image="facebook_test_icn">
                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irG-ar-xyy">
-                                                        <rect key="frame" x="132" y="0.0" width="30" height="30"/>
-                                                        <state key="normal" image="twitter_test_icn.png">
+                                                        <rect key="frame" x="-213" y="-1228.5" width="60" height="60"/>
+                                                        <state key="normal" image="twitter_test_icn">
                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5A-y6-a8T">
-                                                        <rect key="frame" x="55" y="0.0" width="30" height="30"/>
-                                                        <state key="normal" image="github_test_icn.png">
+                                                        <rect key="frame" x="-213" y="-1228.5" width="60" height="60"/>
+                                                        <state key="normal" image="github_test_icn">
                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5j-9b-vZx">
-                                                        <rect key="frame" x="12" y="0.0" width="30" height="30"/>
-                                                        <state key="normal" image="mail_test_icn.png">
+                                                        <rect key="frame" x="-213" y="-1228.5" width="60" height="60"/>
+                                                        <state key="normal" image="mail_test_icn">
                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                     </button>
@@ -270,7 +270,7 @@ Two times at WWDC!</string>
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="0Le-Zf-2Nh" firstAttribute="top" secondItem="Xfa-C7-60u" secondAttribute="top" constant="15" id="2Zl-Un-o7h"/>
                                             <constraint firstItem="VGm-2d-Z5D" firstAttribute="leading" secondItem="Xfa-C7-60u" secondAttribute="leading" constant="20" id="39v-xh-7gt"/>
@@ -344,7 +344,7 @@ Two times at WWDC!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x4p-dT-fAk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2624" y="1744"/>
+            <point key="canvasLocation" x="2872" y="772"/>
         </scene>
         <!--Main Screen View Controller-->
         <scene sceneID="8Iw-4L-evm">
@@ -375,7 +375,7 @@ Two times at WWDC!</string>
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="11358626_821050244645510_1909173720_n.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dGR-dG-3vr">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="11358626_821050244645510_1909173720_n" translatesAutoresizingMaskIntoConstraints="NO" id="dGR-dG-3vr">
                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="euW-ib-40b">
@@ -415,7 +415,7 @@ Two times at WWDC!</string>
                                     <rect key="frame" x="0.0" y="184" width="600" height="300"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WallpaperWWDC.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bEt-E8-fdz">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WallpaperWWDC" translatesAutoresizingMaskIntoConstraints="NO" id="bEt-E8-fdz">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
                                         </imageView>
                                     </subviews>
@@ -449,11 +449,17 @@ Two times at WWDC!</string>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="1Ur-Ti-Ge8"/>
+                    <navigationItem key="navigationItem" id="1Ur-Ti-Ge8">
+                        <barButtonItem key="rightBarButtonItem" title="Map" id="dT9-eQ-3Ea">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="showMap" id="Ens-XS-CZr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRI-aw-yvu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1778" y="1060"/>
+            <point key="canvasLocation" x="1441" y="1782"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3SO-3a-R1S">
@@ -471,35 +477,17 @@ Two times at WWDC!</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nGJ-iH-qCL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="1060"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="fn3-0z-rVr">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KXk-jL-aak" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VmI-2e-CTk">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="NSb-Ya-8XG"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2sC-zN-lK6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1121" y="1744"/>
+            <point key="canvasLocation" x="603" y="1782"/>
         </scene>
     </scenes>
     <resources>
-        <image name="11358626_821050244645510_1909173720_n.jpg" width="632" height="673"/>
-        <image name="WallpaperWWDC.jpg" width="5535" height="3690"/>
-        <image name="facebook_test_icn.png" width="60" height="60"/>
-        <image name="github_test_icn.png" width="60" height="60"/>
-        <image name="mail_test_icn.png" width="60" height="60"/>
-        <image name="ngiancecchi_test_profile.jpg" width="960" height="960"/>
-        <image name="twitter_test_icn.png" width="60" height="60"/>
-        <image name="wwdc15-hero_2x-4.png" width="1250" height="1250"/>
+        <image name="11358626_821050244645510_1909173720_n" width="632" height="673"/>
+        <image name="WallpaperWWDC" width="2048" height="1365"/>
+        <image name="facebook_test_icn" width="60" height="60"/>
+        <image name="github_test_icn" width="60" height="60"/>
+        <image name="mail_test_icn" width="60" height="60"/>
+        <image name="ngiancecchi_test_profile" width="960" height="960"/>
+        <image name="twitter_test_icn" width="60" height="60"/>
+        <image name="wwdc15-hero_2x-4" width="1250" height="1250"/>
     </resources>
 </document>
