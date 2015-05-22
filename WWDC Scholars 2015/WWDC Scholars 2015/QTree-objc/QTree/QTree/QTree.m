@@ -50,7 +50,7 @@
 	return [self.rootNode getObjectsInRegion:region minNonClusteredSpan:span];
 }
 
--(NSArray*)neighboursForLocation:(CLLocationCoordinate2D)location limitCount:(NSUInteger)limit
+-(NSArray*)neighboursForLocation:(CLLocationCoordinate2D)location limitCount:(NSInteger)limit
 {
   NSArray* nodesPath = [self nodesPathForLocation:location];
   for( QNode* node in nodesPath.reverseObjectEnumerator ) {
