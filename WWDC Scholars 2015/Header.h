@@ -12,5 +12,6 @@
 #import "QCluster.h"
 #import "ClusterAnnotationView.h"
 #import <Parse/Parse.h>
+#import "AsyncImageView.h"
 
 #endif
