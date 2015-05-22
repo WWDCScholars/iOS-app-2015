@@ -72,4 +72,9 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
     func updateCollectionView(){
         scholarsCollectionView.reloadData()
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var dest = segue.destinationViewController as! DetailViewController
+        dest.currentScholar = DataManager.sharedInstance.scholarAtLocation(scholarsCollectionView.indexPathsForSelectedItems()[0].row)
+    }
 }

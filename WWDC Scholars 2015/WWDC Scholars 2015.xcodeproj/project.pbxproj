@@ -600,28 +600,7 @@
 				CODE_SIGN_ENTITLEMENTS = "WWDC Scholars 2015/WWDC Scholars 2015.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/WWDC",
-					Scholars,
-					2015,
-					"$(PROJECT_DIR)/WWDC",
-					Scholars,
-					2015,
-					"$(PROJECT_DIR)/WWDC",
-					Scholars,
-					2015,
-					"$(PROJECT_DIR)/WWDC",
-					Scholars,
-					2015,
-					"$(PROJECT_DIR)/WWDC",
-					Scholars,
-					2015,
-					"$(PROJECT_DIR)/WWDC",
-					Scholars,
-					"./**",
-					2015,
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "WWDC Scholars 2015/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -637,28 +616,7 @@
 				CODE_SIGN_ENTITLEMENTS = "WWDC Scholars 2015/WWDC Scholars 2015.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/WWDC",
-					Scholars,
-					2015,
-					"$(PROJECT_DIR)/WWDC",
-					Scholars,
-					2015,
-					"$(PROJECT_DIR)/WWDC",
-					Scholars,
-					2015,
-					"$(PROJECT_DIR)/WWDC",
-					Scholars,
-					2015,
-					"$(PROJECT_DIR)/WWDC",
-					Scholars,
-					2015,
-					"$(PROJECT_DIR)/WWDC",
-					Scholars,
-					"./**",
-					2015,
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "WWDC Scholars 2015/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
