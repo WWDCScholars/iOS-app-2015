@@ -52,12 +52,19 @@ class DataManager: NSObject {
                             location:"")
                         self.scholarArray.addObject(scholar)
                     }
+                    
+                    NSNotificationCenter.defaultCenter().postNotificationName("onScholarsLoadedNotification", object: self)
+
                 }
             } else {
                 // Log details of the failure
                 println("Error: \(error!) \(error!.userInfo!)")
             }
         }
+    }
+    
+    func scholarAtLocation(pos: Int) -> Scholar?{
+        return scholarArray.objectAtIndex(pos) as? Scholar
     }
     
 }
