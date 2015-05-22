@@ -74,7 +74,8 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var dest = segue.destinationViewController as! DetailViewController
-        dest.currentScholar = DataManager.sharedInstance.scholarAtLocation(scholarsCollectionView.indexPathsForSelectedItems()[0].row)
+        if let dest = segue.destinationViewController as? DetailViewController {
+            dest.currentScholar = DataManager.sharedInstance.scholarAtLocation(scholarsCollectionView.indexPathsForSelectedItems()[0].row)
+        }
     }
 }
