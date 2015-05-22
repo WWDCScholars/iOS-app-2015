@@ -39,7 +39,7 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if !CLLocationManager.locationServicesEnabled() {
+        if CLLocationManager.locationServicesEnabled() {
             self.locationManager.requestWhenInUseAuthorization()
         }
         
