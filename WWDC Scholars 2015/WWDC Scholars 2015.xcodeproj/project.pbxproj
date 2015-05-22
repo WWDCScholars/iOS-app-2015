@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		40560B3A1B0DA16A00C3EFB4 /* wwdc2015-top-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 40560B391B0DA16A00C3EFB4 /* wwdc2015-top-logo.png */; };
 		407911AD1B0E2AC400A582FF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407911AC1B0E2AC400A582FF /* AudioToolbox.framework */; };
 		407911B11B0E2AEE00A582FF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407911AE1B0E2AEE00A582FF /* CFNetwork.framework */; };
 		407911B21B0E2AEE00A582FF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407911AF1B0E2AEE00A582FF /* CoreGraphics.framework */; };
@@ -22,23 +21,14 @@
 		407911C41B0E2B2A00A582FF /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407911BD1B0E2B2A00A582FF /* StoreKit.framework */; };
 		407911C51B0E2B2A00A582FF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407911BE1B0E2B2A00A582FF /* SystemConfiguration.framework */; };
 		408211651B0E034B00D567AC /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408211641B0E034B00D567AC /* MainScreenViewController.swift */; };
-		408211671B0E254400D567AC /* 11358626_821050244645510_1909173720_n.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 408211661B0E254400D567AC /* 11358626_821050244645510_1909173720_n.jpg */; };
 		4082116F1B0E292300D567AC /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408211691B0E292300D567AC /* ParseUI.framework */; };
 		408211701B0E292300D567AC /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4082116A1B0E292300D567AC /* ParseCrashReporting.framework */; };
 		408211711B0E292300D567AC /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4082116B1B0E292300D567AC /* Bolts.framework */; };
 		408211721B0E292300D567AC /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4082116C1B0E292300D567AC /* ParseFacebookUtils.framework */; };
 		408211731B0E292300D567AC /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4082116D1B0E292300D567AC /* ParseFacebookUtilsV4.framework */; };
 		408211761B0E296A00D567AC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408211751B0E296A00D567AC /* DataManager.swift */; };
-		6EEA0A121B0ED42700B99130 /* WWDCFooter.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EEA0A0E1B0ED42700B99130 /* WWDCFooter.png */; };
 		6EEA0A151B0ED45900B99130 /* MainScreenFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA0A141B0ED45900B99130 /* MainScreenFooter.swift */; };
-		7C00D58A1B0E82B300F9B3E7 /* wwdc15-hero_2x-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C00D5891B0E82B300F9B3E7 /* wwdc15-hero_2x-4.png */; };
-		7C00D58C1B0E85E900F9B3E7 /* ngiancecchi_test_profile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C00D58B1B0E85E900F9B3E7 /* ngiancecchi_test_profile.jpg */; };
 		7C00D58F1B0E867A00F9B3E7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C00D58E1B0E867A00F9B3E7 /* DetailViewController.swift */; };
-		7C00D5941B0E8B0F00F9B3E7 /* github_test_icn.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C00D5901B0E8B0F00F9B3E7 /* github_test_icn.png */; };
-		7C00D5951B0E8B0F00F9B3E7 /* twitter_test_icn.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C00D5911B0E8B0F00F9B3E7 /* twitter_test_icn.png */; };
-		7C00D5961B0E8B0F00F9B3E7 /* mail_test_icn.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C00D5921B0E8B0F00F9B3E7 /* mail_test_icn.png */; };
-		7C00D5971B0E8B0F00F9B3E7 /* facebook_test_icn.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C00D5931B0E8B0F00F9B3E7 /* facebook_test_icn.png */; };
-		A7BC33FE1B0F74FF00F60FEB /* WallpaperWWDC.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A7BC33FD1B0F74FF00F60FEB /* WallpaperWWDC.jpg */; };
 		C00C27401B0D5C9C008C19AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C273F1B0D5C9C008C19AE /* AppDelegate.swift */; };
 		C00C27421B0D5C9C008C19AE /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C27411B0D5C9C008C19AE /* LocationViewController.swift */; };
 		C00C27451B0D5C9C008C19AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C00C27431B0D5C9C008C19AE /* Main.storyboard */; };
@@ -66,7 +56,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		40560B391B0DA16A00C3EFB4 /* wwdc2015-top-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wwdc2015-top-logo.png"; sourceTree = "<group>"; };
 		407911AC1B0E2AC400A582FF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		407911AE1B0E2AEE00A582FF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		407911AF1B0E2AEE00A582FF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -81,24 +70,15 @@
 		407911BD1B0E2B2A00A582FF /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		407911BE1B0E2B2A00A582FF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		408211641B0E034B00D567AC /* MainScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
-		408211661B0E254400D567AC /* 11358626_821050244645510_1909173720_n.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11358626_821050244645510_1909173720_n.jpg; sourceTree = "<group>"; };
 		408211691B0E292300D567AC /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		4082116A1B0E292300D567AC /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
 		4082116B1B0E292300D567AC /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		4082116C1B0E292300D567AC /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		4082116D1B0E292300D567AC /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		408211751B0E296A00D567AC /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		6EEA0A0E1B0ED42700B99130 /* WWDCFooter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WWDCFooter.png; sourceTree = "<group>"; };
 		6EEA0A141B0ED45900B99130 /* MainScreenFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenFooter.swift; sourceTree = "<group>"; };
-		7C00D5891B0E82B300F9B3E7 /* wwdc15-hero_2x-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wwdc15-hero_2x-4.png"; sourceTree = "<group>"; };
-		7C00D58B1B0E85E900F9B3E7 /* ngiancecchi_test_profile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ngiancecchi_test_profile.jpg; sourceTree = "<group>"; };
 		7C00D58E1B0E867A00F9B3E7 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = Controller/DetailViewController.swift; sourceTree = "<group>"; };
-		7C00D5901B0E8B0F00F9B3E7 /* github_test_icn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = github_test_icn.png; sourceTree = "<group>"; };
-		7C00D5911B0E8B0F00F9B3E7 /* twitter_test_icn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter_test_icn.png; sourceTree = "<group>"; };
-		7C00D5921B0E8B0F00F9B3E7 /* mail_test_icn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail_test_icn.png; sourceTree = "<group>"; };
-		7C00D5931B0E8B0F00F9B3E7 /* facebook_test_icn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook_test_icn.png; sourceTree = "<group>"; };
 		7C1A22C41B0E99A400662775 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		A7BC33FD1B0F74FF00F60FEB /* WallpaperWWDC.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WallpaperWWDC.jpg; sourceTree = "<group>"; };
 		C00C273A1B0D5C9C008C19AE /* WWDC Scholars 2015.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WWDC Scholars 2015.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C00C273E1B0D5C9C008C19AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C00C273F1B0D5C9C008C19AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -163,23 +143,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		40560B381B0DA16100C3EFB4 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				408211661B0E254400D567AC /* 11358626_821050244645510_1909173720_n.jpg */,
-				40560B391B0DA16A00C3EFB4 /* wwdc2015-top-logo.png */,
-				7C00D5901B0E8B0F00F9B3E7 /* github_test_icn.png */,
-				7C00D5911B0E8B0F00F9B3E7 /* twitter_test_icn.png */,
-				7C00D5921B0E8B0F00F9B3E7 /* mail_test_icn.png */,
-				7C00D5931B0E8B0F00F9B3E7 /* facebook_test_icn.png */,
-				7C00D58B1B0E85E900F9B3E7 /* ngiancecchi_test_profile.jpg */,
-				A7BC33FD1B0F74FF00F60FEB /* WallpaperWWDC.jpg */,
-				6EEA0A0E1B0ED42700B99130 /* WWDCFooter.png */,
-				7C00D5891B0E82B300F9B3E7 /* wwdc15-hero_2x-4.png */,
-			);
-			name = Images;
-			sourceTree = "<group>";
-		};
 		407911AB1B0E29CC00A582FF /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,7 +225,6 @@
 			isa = PBXGroup;
 			children = (
 				C068DC261B0F5D890066221E /* WWDC Scholars 2015.entitlements */,
-				40560B381B0DA16100C3EFB4 /* Images */,
 				C00C27731B0D5CF1008C19AE /* Library */,
 				C00C277C1B0D63D6008C19AE /* Model */,
 				C00C27791B0D5E10008C19AE /* Controller */,
@@ -459,18 +421,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C00C27451B0D5C9C008C19AE /* Main.storyboard in Resources */,
-				7C00D58A1B0E82B300F9B3E7 /* wwdc15-hero_2x-4.png in Resources */,
-				7C00D5941B0E8B0F00F9B3E7 /* github_test_icn.png in Resources */,
 				C0B7F78D1B0E682600E74458 /* Images.xcassets in Resources */,
-				7C00D58C1B0E85E900F9B3E7 /* ngiancecchi_test_profile.jpg in Resources */,
-				6EEA0A121B0ED42700B99130 /* WWDCFooter.png in Resources */,
 				C00C274A1B0D5C9C008C19AE /* LaunchScreen.xib in Resources */,
-				408211671B0E254400D567AC /* 11358626_821050244645510_1909173720_n.jpg in Resources */,
-				7C00D5971B0E8B0F00F9B3E7 /* facebook_test_icn.png in Resources */,
-				40560B3A1B0DA16A00C3EFB4 /* wwdc2015-top-logo.png in Resources */,
-				7C00D5951B0E8B0F00F9B3E7 /* twitter_test_icn.png in Resources */,
-				A7BC33FE1B0F74FF00F60FEB /* WallpaperWWDC.jpg in Resources */,
-				7C00D5961B0E8B0F00F9B3E7 /* mail_test_icn.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
