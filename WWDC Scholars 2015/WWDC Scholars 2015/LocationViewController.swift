@@ -121,6 +121,7 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
         if self.isViewLoaded() == false {
             return
         }
+        self.cacheArray.removeAll(keepCapacity: false)
         let mapRegion = self.mapView.region
         let minNonClusteredSpan = min(mapRegion.span.latitudeDelta, mapRegion.span.longitudeDelta) / 5
         let objects = self.qTree.getObjectsInRegion(mapRegion, minNonClusteredSpan: minNonClusteredSpan) as NSArray
@@ -149,7 +150,6 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
         }
         self.tableView.clearsContextBeforeDrawing = true
         self.tableView.reloadData()
-        
         
         let annotationsToRemove = (self.mapView.annotations as NSArray).mutableCopy() as! NSMutableArray
         annotationsToRemove.removeObject(self.mapView.userLocation)
