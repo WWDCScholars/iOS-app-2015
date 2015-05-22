@@ -91,6 +91,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="dLX-Aa-vJZ" id="hRV-k0-Ush"/>
+                        <outlet property="tableView" destination="rmP-RX-aEL" id="qRJ-Tq-mK8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

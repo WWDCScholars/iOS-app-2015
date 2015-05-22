@@ -26,12 +26,15 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
         Scholar(name: "Boston", age: 0, birthdate: "", gender: "", latitude: 42.3601, longitude: -71.0589, email: "", picture: "", numberOfWWDCAttend: 0, appDemo: "", githubLinkToApp: "", twitter: "", facebook: "", github: "", linkedIn: "", website: ""),
         Scholar(name: "CMU", age: 0, birthdate: "", gender: "", latitude: 40.4433, longitude: -79.9436, email: "", picture: "", numberOfWWDCAttend: 0, appDemo: "", githubLinkToApp: "", twitter: "", facebook: "", github: "", linkedIn: "", website: "")]
     
+    var cacheArray : [Scholar] = []
+    var viewChanged = false
     var currentScholar:Scholar?
     let imageArray = ["1","2","3","4","5"]
     var qTree = QTree()
     var myLocation : CLLocationCoordinate2D?
     
     
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -121,7 +124,7 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
         let mapRegion = self.mapView.region
         let minNonClusteredSpan = min(mapRegion.span.latitudeDelta, mapRegion.span.longitudeDelta) / 5
         let objects = self.qTree.getObjectsInRegion(mapRegion, minNonClusteredSpan: minNonClusteredSpan) as NSArray
-        println("objects")
+        //println("objects")
         for object in objects {
             if object.isKindOfClass(QCluster){
                 let c = object as? QCluster
@@ -129,11 +132,25 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
                 for nei in neihgbours {
                     //println((nei.title)!!)
                     
+                    let tmp = self.scholarArray.filter({
+                        return $0.name == (nei.title)!!
+                    })
+                    self.cacheArray.insert(tmp[0], atIndex: self.cacheArray.count)
+                    //println(self.cacheArray)
+
                 }
             } else {
                 //println((object.title)!!)
+                let tmp = self.scholarArray.filter({
+                    return $0.name == (object.title)!!
+                })
+                self.cacheArray.insert(tmp[0], atIndex: self.cacheArray.count)
             }
         }
+        self.tableView.clearsContextBeforeDrawing = true
+        self.tableView.reloadData()
+        
+        
         let annotationsToRemove = (self.mapView.annotations as NSArray).mutableCopy() as! NSMutableArray
         annotationsToRemove.removeObject(self.mapView.userLocation)
         annotationsToRemove.removeObjectsInArray(objects as [AnyObject])
@@ -146,6 +163,7 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
         
     }
     func mapView(mapView: MKMapView!, regionDidChangeAnimated animated: Bool) {
+        viewChanged = true
         self.reloadAnnotations()
     }
     
@@ -165,13 +183,26 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
         return 1
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.scholarArray.count
+        if viewChanged {
+            return self.cacheArray.count
+        } else {
+            return self.scholarArray.count
+        }
+        
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
-        cell.textLabel?.text = scholarArray[indexPath.row].name
-        cell.detailTextLabel?.text = String(stringInterpolationSegment: scholarArray[indexPath.row].age!)
-        cell.imageView?.image = UIImage(named: self.imageArray[indexPath.row % self.imageArray.count])
+        if viewChanged {
+            cell.textLabel?.text = cacheArray[indexPath.row].name
+            cell.detailTextLabel?.text = String(stringInterpolationSegment: cacheArray[indexPath.row].age!)
+            //cell.imageView?.image = UIImage(named: self.imageArray[indexPath.row % self.cacheArray.count])
+            
+        } else {
+            cell.textLabel?.text = scholarArray[indexPath.row].name
+            cell.detailTextLabel?.text = String(stringInterpolationSegment: scholarArray[indexPath.row].age!)
+            cell.imageView?.image = UIImage(named: self.imageArray[indexPath.row % self.scholarArray.count])
+        }
+       
         return cell
         
     }
