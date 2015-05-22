@@ -127,7 +127,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="11358626_821050244645510_1909173720_n" translatesAutoresizingMaskIntoConstraints="NO" id="dGR-dG-3vr">
+                                                <imageView userInteractionEnabled="NO" tag="202" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no-profile" translatesAutoresizingMaskIntoConstraints="NO" id="dGR-dG-3vr" customClass="AsyncImageView">
                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="euW-ib-40b">
@@ -501,12 +501,12 @@ Two times at WWDC!</string>
         </scene>
     </scenes>
     <resources>
-        <image name="11358626_821050244645510_1909173720_n" width="632" height="673"/>
         <image name="WallpaperWWDC" width="2048" height="1365"/>
         <image name="facebook_test_icn" width="60" height="60"/>
         <image name="github_test_icn" width="60" height="60"/>
         <image name="mail_test_icn" width="60" height="60"/>
         <image name="ngiancecchi_test_profile" width="960" height="960"/>
+        <image name="no-profile" width="632" height="673"/>
         <image name="twitter_test_icn" width="60" height="60"/>
         <image name="wwdc15-hero_2x-4" width="1250" height="1250"/>
     </resources>
