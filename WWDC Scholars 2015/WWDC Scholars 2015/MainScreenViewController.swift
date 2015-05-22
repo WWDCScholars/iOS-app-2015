@@ -15,9 +15,15 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ScholarshipCell", forIndexPath: indexPath) as! UICollectionViewCell
         
-        let nameTextView = cell.viewWithTag(201) as! UILabel
-        nameTextView.text = DataManager.sharedInstance.scholarAtLocation(indexPath.row)?.name
-        cell.backgroundColor = UIColor.orangeColor()
+        if let scholar = DataManager.sharedInstance.scholarAtLocation(indexPath.row) {
+            
+            let nameTextView = cell.viewWithTag(201) as! UILabel
+            nameTextView.text = scholar.name
+            
+            let profileImageView = cell.viewWithTag(202) as! AsyncImageView
+            profileImageView.image = UIImage(named: "no-profile")
+            profileImageView.imageURL = NSURL(string: scholar.picture!)
+        }
         
         cell.layer.cornerRadius = 10
         cell.layer.masksToBounds = true
@@ -60,7 +66,7 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
         super.viewDidLoad()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateCollectionView", name: "onScholarsLoadedNotification", object: nil)
-
+        
     }
     
     func updateCollectionView(){
