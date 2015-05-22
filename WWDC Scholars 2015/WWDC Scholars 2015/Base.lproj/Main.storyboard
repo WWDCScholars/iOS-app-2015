@@ -161,6 +161,9 @@
                                             <constraint firstAttribute="trailing" secondItem="euW-ib-40b" secondAttribute="trailing" id="r33-wo-k2D"/>
                                             <constraint firstAttribute="trailing" secondItem="dGR-dG-3vr" secondAttribute="trailing" id="soV-o7-67e"/>
                                         </constraints>
+                                        <connections>
+                                            <segue destination="ixk-1w-ECw" kind="show" id="Dzz-cG-8L0"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageFooter" id="sDU-rv-tc5" customClass="MainScreenFooter" customModule="WWDC_Scholars_2015" customModuleProvider="target">
@@ -249,8 +252,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3kj-hO-W41">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="1600"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K2Y-8a-qLP">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="1292"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K2Y-8a-qLP">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="1289"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nicola Giancecchi" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVB-pe-aV2">
                                                 <rect key="frame" x="20" y="310" width="560" height="33.5"/>
@@ -265,50 +268,50 @@
                                                     <constraint firstAttribute="height" constant="290" id="cts-wD-65g"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ngiancecchi_test_profile" translatesAutoresizingMaskIntoConstraints="NO" id="Qum-6W-Alm">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ngiancecchi_test_profile" translatesAutoresizingMaskIntoConstraints="NO" id="Qum-6W-Alm" customClass="AsyncImageView">
                                                 <rect key="frame" x="225" y="85" width="150" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="RFV-oD-kjL"/>
                                                     <constraint firstAttribute="width" constant="150" id="k2Y-fV-XL8"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5W-GY-yiC">
-                                                <rect key="frame" x="20" y="359" width="560" height="39"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5W-GY-yiC">
+                                                <rect key="frame" x="20" y="359" width="560" height="38"/>
                                                 <string key="text">22 from San Marino (SMR)
 Two times at WWDC!</string>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="16"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vwB-O9-vEU">
-                                                <rect key="frame" x="160" y="418" width="280" height="1"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vwB-O9-vEU">
+                                                <rect key="frame" x="160" y="417" width="280" height="1"/>
                                                 <color key="backgroundColor" red="0.97647058819999999" green="0.69803921570000005" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="acg-jU-6t1"/>
                                                     <constraint firstAttribute="width" constant="280" id="ws0-hV-uGd"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jU-u9-izq">
-                                                <rect key="frame" x="20" y="439" width="560" height="77"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jU-u9-izq">
+                                                <rect key="frame" x="20" y="438" width="560" height="76"/>
                                                 <string key="text">I am a Mobile App Developer from San Marino (SMR). I'm 22. Currently studying Computer Science &amp; Engineering at the University of Bologna (Italy) and working at Mr. APPs srl as iOS Developer. My main interests are programming, design and music.</string>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="16"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ebs-QW-EAg">
-                                                <rect key="frame" x="0.0" y="536" width="600" height="270"/>
+                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ebs-QW-EAg">
+                                                <rect key="frame" x="0.0" y="534" width="600" height="270"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="ebs-QW-EAg" secondAttribute="height" multiplier="20:9" id="BHm-QR-Pgb"/>
                                                 </constraints>
                                             </mapView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My App for WWDC15" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wv4-RX-X9v">
-                                                <rect key="frame" x="20" y="823.5" width="560" height="26.5"/>
+                                                <rect key="frame" x="20" y="824" width="560" height="26.5"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
                                                 <color key="textColor" red="0.12941176469999999" green="0.36470588240000001" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xx6-iB-pwC">
-                                                <rect key="frame" x="0.0" y="934" width="600" height="200"/>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xx6-iB-pwC">
+                                                <rect key="frame" x="0.0" y="931.5" width="600" height="200"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="xx6-iB-pwC" secondAttribute="height" multiplier="600:200" id="ZiM-y0-AP9"/>
@@ -337,30 +340,30 @@ Two times at WWDC!</string>
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Contact me!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXg-Tg-DLf">
-                                                <rect key="frame" x="20" y="1154" width="560" height="27"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact me!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXg-Tg-DLf">
+                                                <rect key="frame" x="20" y="1151.5" width="560" height="26.5"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
                                                 <color key="textColor" red="0.79607843140000001" green="0.1764705882" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dfY-G6-jEd">
-                                                <rect key="frame" x="160" y="1201" width="280" height="1"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfY-G6-jEd">
+                                                <rect key="frame" x="160" y="1198" width="280" height="1"/>
                                                 <color key="backgroundColor" red="0.98823529409999999" green="0.36862745099999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="280" id="ThW-lw-3Hb"/>
                                                     <constraint firstAttribute="height" constant="1" id="qOO-PE-FKS"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bPU-ZA-2M8">
-                                                <rect key="frame" x="160" y="913" width="280" height="1"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bPU-ZA-2M8">
+                                                <rect key="frame" x="160" y="910.5" width="280" height="1"/>
                                                 <color key="backgroundColor" red="0.28627450980000002" green="0.8862745098" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="280" id="eXg-wC-O2C"/>
                                                     <constraint firstAttribute="height" constant="1" id="poS-4u-hoD"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQm-Db-mKb">
-                                                <rect key="frame" x="200" y="868" width="200" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQm-Db-mKb">
+                                                <rect key="frame" x="200" y="865.5" width="200" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="4o6-uQ-Wfw"/>
                                                     <constraint firstAttribute="height" constant="30" id="ahj-GG-T3X"/>
@@ -374,11 +377,11 @@ Two times at WWDC!</string>
                                                     <action selector="toGithub:" destination="ixk-1w-ECw" eventType="touchUpInside" id="YIZ-SB-tGs"/>
                                                 </connections>
                                             </button>
-                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7mi-NS-L7i">
-                                                <rect key="frame" x="213" y="1232" width="175" height="30"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7mi-NS-L7i">
+                                                <rect key="frame" x="213" y="1229" width="175" height="30"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ijt-iV-lnk">
-                                                        <rect key="frame" x="92" y="0.0" width="30" height="30"/>
+                                                        <rect key="frame" x="-213" y="-1229" width="60" height="60"/>
                                                         <state key="normal" image="facebook_test_icn">
                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
@@ -387,13 +390,13 @@ Two times at WWDC!</string>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUj-k4-RuS">
-                                                        <rect key="frame" x="132" y="0.0" width="30" height="30"/>
+                                                        <rect key="frame" x="-213" y="-1229" width="60" height="60"/>
                                                         <state key="normal" image="twitter_test_icn">
                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eh-Hh-ADw">
-                                                        <rect key="frame" x="55" y="0.0" width="30" height="30"/>
+                                                        <rect key="frame" x="-213" y="-1229" width="60" height="60"/>
                                                         <state key="normal" image="github_test_icn">
                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
@@ -402,7 +405,7 @@ Two times at WWDC!</string>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhS-ZP-JYi">
-                                                        <rect key="frame" x="12" y="0.0" width="30" height="30"/>
+                                                        <rect key="frame" x="-213" y="-1229" width="60" height="60"/>
                                                         <state key="normal" image="mail_test_icn">
                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
@@ -501,7 +504,7 @@ Two times at WWDC!</string>
         </scene>
     </scenes>
     <resources>
-        <image name="WallpaperWWDC" width="2048" height="1365"/>
+        <image name="WallpaperWWDC" width="5535" height="3690"/>
         <image name="facebook_test_icn" width="60" height="60"/>
         <image name="github_test_icn" width="60" height="60"/>
         <image name="mail_test_icn" width="60" height="60"/>
@@ -510,4 +513,7 @@ Two times at WWDC!</string>
         <image name="twitter_test_icn" width="60" height="60"/>
         <image name="wwdc15-hero_2x-4" width="1250" height="1250"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Dzz-cG-8L0"/>
+    </inferredMetricsTieBreakers>
 </document>
