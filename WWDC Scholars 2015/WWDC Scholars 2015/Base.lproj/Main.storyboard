@@ -311,7 +311,7 @@ Two times at WWDC!</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xx6-iB-pwC">
-                                                <rect key="frame" x="0.0" y="931.5" width="600" height="200"/>
+                                                <rect key="frame" x="0.0" y="931" width="600" height="200"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="xx6-iB-pwC" secondAttribute="height" multiplier="600:200" id="ZiM-y0-AP9"/>
@@ -341,7 +341,7 @@ Two times at WWDC!</string>
                                                 </cells>
                                             </collectionView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact me!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXg-Tg-DLf">
-                                                <rect key="frame" x="20" y="1151.5" width="560" height="26.5"/>
+                                                <rect key="frame" x="20" y="1151" width="560" height="26.5"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
                                                 <color key="textColor" red="0.79607843140000001" green="0.1764705882" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -355,7 +355,7 @@ Two times at WWDC!</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bPU-ZA-2M8">
-                                                <rect key="frame" x="160" y="910.5" width="280" height="1"/>
+                                                <rect key="frame" x="160" y="910" width="280" height="1"/>
                                                 <color key="backgroundColor" red="0.28627450980000002" green="0.8862745098" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="280" id="eXg-wC-O2C"/>
@@ -363,7 +363,7 @@ Two times at WWDC!</string>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQm-Db-mKb">
-                                                <rect key="frame" x="200" y="865.5" width="200" height="30"/>
+                                                <rect key="frame" x="200" y="865" width="200" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="4o6-uQ-Wfw"/>
                                                     <constraint firstAttribute="height" constant="30" id="ahj-GG-T3X"/>
@@ -380,8 +380,11 @@ Two times at WWDC!</string>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7mi-NS-L7i">
                                                 <rect key="frame" x="213" y="1229" width="175" height="30"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ijt-iV-lnk">
-                                                        <rect key="frame" x="-213" y="-1229" width="60" height="60"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ijt-iV-lnk">
+                                                        <rect key="frame" x="12" y="0.0" width="30" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="Ijt-iV-lnk" secondAttribute="height" multiplier="1:1" id="FrD-36-ZYM"/>
+                                                        </constraints>
                                                         <state key="normal" image="facebook_test_icn">
                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
@@ -389,23 +392,11 @@ Two times at WWDC!</string>
                                                             <action selector="facebookClied:" destination="ixk-1w-ECw" eventType="touchUpInside" id="mxW-QL-cG5"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUj-k4-RuS">
-                                                        <rect key="frame" x="-213" y="-1229" width="60" height="60"/>
-                                                        <state key="normal" image="twitter_test_icn">
-                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eh-Hh-ADw">
-                                                        <rect key="frame" x="-213" y="-1229" width="60" height="60"/>
-                                                        <state key="normal" image="github_test_icn">
-                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="toGithub:" destination="ixk-1w-ECw" eventType="touchUpInside" id="wYg-r8-nfH"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhS-ZP-JYi">
-                                                        <rect key="frame" x="-213" y="-1229" width="60" height="60"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhS-ZP-JYi">
+                                                        <rect key="frame" x="96" y="0.0" width="30" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="BhS-ZP-JYi" secondAttribute="height" multiplier="1:1" id="HEk-9S-Gsa"/>
+                                                        </constraints>
                                                         <state key="normal" image="mail_test_icn">
                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
@@ -413,11 +404,44 @@ Two times at WWDC!</string>
                                                             <action selector="emailClicked:" destination="ixk-1w-ECw" eventType="touchUpInside" id="H5A-NI-zIc"/>
                                                         </connections>
                                                     </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUj-k4-RuS">
+                                                        <rect key="frame" x="54" y="0.0" width="30" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="XUj-k4-RuS" secondAttribute="height" multiplier="1:1" id="8la-fO-DVp"/>
+                                                        </constraints>
+                                                        <state key="normal" image="twitter_test_icn">
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eh-Hh-ADw">
+                                                        <rect key="frame" x="138" y="0.0" width="30" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="2eh-Hh-ADw" secondAttribute="height" multiplier="1:1" id="gxt-5V-mD3"/>
+                                                        </constraints>
+                                                        <state key="normal" image="github_test_icn">
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="toGithub:" destination="ixk-1w-ECw" eventType="touchUpInside" id="wYg-r8-nfH"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
+                                                    <constraint firstItem="BhS-ZP-JYi" firstAttribute="leading" secondItem="XUj-k4-RuS" secondAttribute="trailing" constant="12" id="5wv-q8-RLW"/>
+                                                    <constraint firstItem="XUj-k4-RuS" firstAttribute="height" secondItem="BhS-ZP-JYi" secondAttribute="height" id="GU1-1B-Ay8"/>
                                                     <constraint firstAttribute="height" constant="30" id="QAc-OK-DRa"/>
                                                     <constraint firstAttribute="width" constant="175" id="RbZ-bB-2x8"/>
+                                                    <constraint firstItem="BhS-ZP-JYi" firstAttribute="top" secondItem="7mi-NS-L7i" secondAttribute="top" id="T06-xE-pea"/>
+                                                    <constraint firstItem="XUj-k4-RuS" firstAttribute="top" secondItem="7mi-NS-L7i" secondAttribute="top" id="Vc7-zO-m8G"/>
+                                                    <constraint firstAttribute="height" secondItem="Ijt-iV-lnk" secondAttribute="height" id="Xww-xz-E8B"/>
+                                                    <constraint firstItem="XUj-k4-RuS" firstAttribute="height" secondItem="7mi-NS-L7i" secondAttribute="height" id="bFz-1e-gqJ"/>
+                                                    <constraint firstItem="Ijt-iV-lnk" firstAttribute="top" secondItem="7mi-NS-L7i" secondAttribute="top" id="bpC-se-pkc"/>
+                                                    <constraint firstItem="Ijt-iV-lnk" firstAttribute="leading" secondItem="7mi-NS-L7i" secondAttribute="leading" constant="12" id="jgh-ga-Fl9"/>
+                                                    <constraint firstItem="2eh-Hh-ADw" firstAttribute="leading" secondItem="BhS-ZP-JYi" secondAttribute="trailing" constant="12" id="kW6-S9-gdU"/>
+                                                    <constraint firstItem="2eh-Hh-ADw" firstAttribute="top" secondItem="7mi-NS-L7i" secondAttribute="top" id="kjF-A2-iYX"/>
+                                                    <constraint firstItem="XUj-k4-RuS" firstAttribute="leading" secondItem="Ijt-iV-lnk" secondAttribute="trailing" constant="12" id="mZk-sg-3mF"/>
+                                                    <constraint firstAttribute="height" secondItem="2eh-Hh-ADw" secondAttribute="height" id="uWJ-Wy-tBP"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
