@@ -29,9 +29,7 @@
 		408211721B0E292300D567AC /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4082116C1B0E292300D567AC /* ParseFacebookUtils.framework */; };
 		408211731B0E292300D567AC /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4082116D1B0E292300D567AC /* ParseFacebookUtilsV4.framework */; };
 		408211761B0E296A00D567AC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408211751B0E296A00D567AC /* DataManager.swift */; };
-		6EEA0A101B0ED42700B99130 /* GradientFooter.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EEA0A0C1B0ED42700B99130 /* GradientFooter.png */; };
 		6EEA0A121B0ED42700B99130 /* WWDCFooter.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EEA0A0E1B0ED42700B99130 /* WWDCFooter.png */; };
-		6EEA0A131B0ED42700B99130 /* WWDCFooter.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EEA0A0F1B0ED42700B99130 /* WWDCFooter.png */; };
 		6EEA0A151B0ED45900B99130 /* MainScreenFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA0A141B0ED45900B99130 /* MainScreenFooter.swift */; };
 		7C00D58A1B0E82B300F9B3E7 /* wwdc15-hero_2x-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C00D5891B0E82B300F9B3E7 /* wwdc15-hero_2x-4.png */; };
 		7C00D58C1B0E85E900F9B3E7 /* ngiancecchi_test_profile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C00D58B1B0E85E900F9B3E7 /* ngiancecchi_test_profile.jpg */; };
@@ -90,9 +88,7 @@
 		4082116C1B0E292300D567AC /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		4082116D1B0E292300D567AC /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		408211751B0E296A00D567AC /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		6EEA0A0C1B0ED42700B99130 /* GradientFooter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GradientFooter.png; path = ../../../../../Desktop/GradientFooter.png; sourceTree = "<group>"; };
-		6EEA0A0E1B0ED42700B99130 /* WWDCFooter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WWDCFooter.png; path = ../../../../../Desktop/WWDCFooter.png; sourceTree = "<group>"; };
-		6EEA0A0F1B0ED42700B99130 /* WWDCFooter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WWDCFooter.png; path = ../../../../../Desktop/WWDCFooter.png; sourceTree = "<group>"; };
+		6EEA0A0E1B0ED42700B99130 /* WWDCFooter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WWDCFooter.png; sourceTree = "<group>"; };
 		6EEA0A141B0ED45900B99130 /* MainScreenFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenFooter.swift; sourceTree = "<group>"; };
 		7C00D5891B0E82B300F9B3E7 /* wwdc15-hero_2x-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wwdc15-hero_2x-4.png"; sourceTree = "<group>"; };
 		7C00D58B1B0E85E900F9B3E7 /* ngiancecchi_test_profile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ngiancecchi_test_profile.jpg; sourceTree = "<group>"; };
@@ -177,10 +173,8 @@
 				7C00D5921B0E8B0F00F9B3E7 /* mail_test_icn.png */,
 				7C00D5931B0E8B0F00F9B3E7 /* facebook_test_icn.png */,
 				7C00D58B1B0E85E900F9B3E7 /* ngiancecchi_test_profile.jpg */,
-				6EEA0A0C1B0ED42700B99130 /* GradientFooter.png */,
 				A7BC33FD1B0F74FF00F60FEB /* WallpaperWWDC.jpg */,
 				6EEA0A0E1B0ED42700B99130 /* WWDCFooter.png */,
-				6EEA0A0F1B0ED42700B99130 /* WWDCFooter.png */,
 				7C00D5891B0E82B300F9B3E7 /* wwdc15-hero_2x-4.png */,
 			);
 			name = Images;
@@ -474,10 +468,8 @@
 				408211671B0E254400D567AC /* 11358626_821050244645510_1909173720_n.jpg in Resources */,
 				7C00D5971B0E8B0F00F9B3E7 /* facebook_test_icn.png in Resources */,
 				40560B3A1B0DA16A00C3EFB4 /* wwdc2015-top-logo.png in Resources */,
-				6EEA0A131B0ED42700B99130 /* WWDCFooter.png in Resources */,
 				7C00D5951B0E8B0F00F9B3E7 /* twitter_test_icn.png in Resources */,
 				A7BC33FE1B0F74FF00F60FEB /* WallpaperWWDC.jpg in Resources */,
-				6EEA0A101B0ED42700B99130 /* GradientFooter.png in Resources */,
 				7C00D5961B0E8B0F00F9B3E7 /* mail_test_icn.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
