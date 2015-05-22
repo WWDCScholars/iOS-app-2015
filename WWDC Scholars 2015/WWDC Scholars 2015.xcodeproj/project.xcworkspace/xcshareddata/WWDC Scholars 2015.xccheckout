@@ -7,18 +7,18 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>FA9929F8-5AD3-4DAF-BB73-F9287A86DE4B</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>WWDC Scholars 2015</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>460F8EC5B8D49DFD95C1A22D1C4D2476EF9257AC</key>
 		<string>https://github.com/Oliver-Binns/WWDC-Scholars-iOS-2015.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>WWDC Scholars 2015/WWDC Scholars 2015.xcodeproj/project.xcworkspace</string>
+	<string>WWDC Scholars 2015/WWDC Scholars 2015.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>460F8EC5B8D49DFD95C1A22D1C4D2476EF9257AC</key>
-		<string>../../..</string>
+		<string>../../../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/Oliver-Binns/WWDC-Scholars-iOS-2015.git</string>
@@ -28,6 +28,14 @@
 	<string>460F8EC5B8D49DFD95C1A22D1C4D2476EF9257AC</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>460F8EC5B8D49DFD95C1A22D1C4D2476EF9257AC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>..</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
