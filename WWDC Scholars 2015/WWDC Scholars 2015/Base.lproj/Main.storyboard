@@ -367,6 +367,9 @@ Two times at WWDC!</string>
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="toGithub:" destination="ixk-1w-ECw" eventType="touchUpInside" id="YIZ-SB-tGs"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7mi-NS-L7i">
                                                 <rect key="frame" x="213" y="1232" width="175" height="30"/>
@@ -376,6 +379,9 @@ Two times at WWDC!</string>
                                                         <state key="normal" image="facebook_test_icn">
                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="facebookClied:" destination="ixk-1w-ECw" eventType="touchUpInside" id="mxW-QL-cG5"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUj-k4-RuS">
                                                         <rect key="frame" x="132" y="0.0" width="30" height="30"/>
@@ -388,12 +394,18 @@ Two times at WWDC!</string>
                                                         <state key="normal" image="github_test_icn">
                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="toGithub:" destination="ixk-1w-ECw" eventType="touchUpInside" id="wYg-r8-nfH"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhS-ZP-JYi">
                                                         <rect key="frame" x="12" y="0.0" width="30" height="30"/>
                                                         <state key="normal" image="mail_test_icn">
                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="emailClicked:" destination="ixk-1w-ECw" eventType="touchUpInside" id="H5A-NI-zIc"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -472,7 +484,12 @@ Two times at WWDC!</string>
                     <size key="freeformSize" width="600" height="1600"/>
                     <connections>
                         <outlet property="btnGithubRepo" destination="UQm-Db-mKb" id="g3k-Va-pY3"/>
+                        <outlet property="descriptionLabel" destination="8jU-u9-izq" id="NBS-gU-eSb"/>
                         <outlet property="imgScholar" destination="Qum-6W-Alm" id="dI6-Er-Unt"/>
+                        <outlet property="mapView" destination="ebs-QW-EAg" id="url-qp-WN5"/>
+                        <outlet property="nameLabel" destination="hVB-pe-aV2" id="uQt-gc-566"/>
+                        <outlet property="shortBioLabel" destination="T5W-GY-yiC" id="cr6-3d-aKM"/>
+                        <outlet property="twitterClicked" destination="XUj-k4-RuS" id="4gp-my-VJv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6pL-Qy-WJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
