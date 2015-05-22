@@ -217,6 +217,7 @@
 		408211631B0E032C00D567AC /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
+				6EEA0A141B0ED45900B99130 /* MainScreenFooter.swift */,
 				408211641B0E034B00D567AC /* MainScreenViewController.swift */,
 			);
 			name = MainScreen;
@@ -240,7 +241,6 @@
 			isa = PBXGroup;
 			children = (
 				7C00D58E1B0E867A00F9B3E7 /* DetailViewController.swift */,
-				6EEA0A141B0ED45900B99130 /* MainScreenFooter.swift */,
 			);
 			name = DetailView;
 			sourceTree = "<group>";
@@ -650,6 +650,7 @@
 					2015,
 					"$(PROJECT_DIR)/WWDC",
 					Scholars,
+					"./**",
 					2015,
 				);
 				INFOPLIST_FILE = "WWDC Scholars 2015/Info.plist";
@@ -683,6 +684,7 @@
 					2015,
 					"$(PROJECT_DIR)/WWDC",
 					Scholars,
+					"./**",
 					2015,
 				);
 				INFOPLIST_FILE = "WWDC Scholars 2015/Info.plist";
