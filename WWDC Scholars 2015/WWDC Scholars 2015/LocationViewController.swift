@@ -21,7 +21,11 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
         Scholar(name: "Gelei Chen", age: 19, birthdate: "", gender: "", latitude: 40.4240, longitude: -86.9290, email: "", picture: "", numberOfWWDCAttend: 0, appDemo: "", githubLinkToApp: "", twitter: "", facebook: "", github: "", linkedIn: "", website: ""),
         Scholar(name: "IU", age: 0, birthdate: "", gender: "", latitude: 39.1768, longitude: -86.5197, email: "", picture: "", numberOfWWDCAttend: 0, appDemo: "", githubLinkToApp: "", twitter: "", facebook: "", github: "", linkedIn: "", website: ""),
         Scholar(name: "Michigan", age: 0, birthdate: "", gender: "", latitude: 43.6867, longitude: -85.0102, email: "", picture: "", numberOfWWDCAttend: 0, appDemo: "", githubLinkToApp: "", twitter: "", facebook: "", github: "", linkedIn: "", website: ""),
-        Scholar(name: "UIUC", age: 0, birthdate: "", gender: "", latitude: 40.1105, longitude: -88.2284, email: "", picture: "", numberOfWWDCAttend: 0, appDemo: "", githubLinkToApp: "", twitter: "", facebook: "", github: "", linkedIn: "", website: "")]
+        Scholar(name: "UIUC", age: 0, birthdate: "", gender: "", latitude: 40.1105, longitude: -88.2284, email: "", picture: "", numberOfWWDCAttend: 0, appDemo: "", githubLinkToApp: "", twitter: "", facebook: "", github: "", linkedIn: "", website: ""),Scholar(name: "Stanford", age: 19, birthdate: "", gender: "", latitude: 37.4300, longitude: -122.1700, email: "", picture: "", numberOfWWDCAttend: 0, appDemo: "", githubLinkToApp: "", twitter: "", facebook: "", github: "", linkedIn: "", website: ""),
+        Scholar(name: "Berkely", age: 0, birthdate: "", gender: "", latitude: 37.8717, longitude: -122.2728, email: "", picture: "", numberOfWWDCAttend: 0, appDemo: "", githubLinkToApp: "", twitter: "", facebook: "", github: "", linkedIn: "", website: ""),
+        Scholar(name: "Boston", age: 0, birthdate: "", gender: "", latitude: 42.3601, longitude: -71.0589, email: "", picture: "", numberOfWWDCAttend: 0, appDemo: "", githubLinkToApp: "", twitter: "", facebook: "", github: "", linkedIn: "", website: ""),
+        Scholar(name: "CMU", age: 0, birthdate: "", gender: "", latitude: 40.4433, longitude: -79.9436, email: "", picture: "", numberOfWWDCAttend: 0, appDemo: "", githubLinkToApp: "", twitter: "", facebook: "", github: "", linkedIn: "", website: "")]
+    
     var currentScholar:Scholar?
     let imageArray = ["1","2","3","4","5"]
     var qTree = QTree()
@@ -117,6 +121,19 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
         let mapRegion = self.mapView.region
         let minNonClusteredSpan = min(mapRegion.span.latitudeDelta, mapRegion.span.longitudeDelta) / 5
         let objects = self.qTree.getObjectsInRegion(mapRegion, minNonClusteredSpan: minNonClusteredSpan) as NSArray
+        println("objects")
+        for object in objects {
+            if object.isKindOfClass(QCluster){
+                let c = object as? QCluster
+                let neihgbours = self.qTree.neighboursForLocation((c?.coordinate)!, limitCount: NSInteger((c?.objectsCount)!)) as NSArray
+                for nei in neihgbours {
+                    //println((nei.title)!!)
+                    
+                }
+            } else {
+                //println((object.title)!!)
+            }
+        }
         let annotationsToRemove = (self.mapView.annotations as NSArray).mutableCopy() as! NSMutableArray
         annotationsToRemove.removeObject(self.mapView.userLocation)
         annotationsToRemove.removeObjectsInArray(objects as [AnyObject])
@@ -154,7 +171,7 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
         cell.textLabel?.text = scholarArray[indexPath.row].name
         cell.detailTextLabel?.text = String(stringInterpolationSegment: scholarArray[indexPath.row].age!)
-        cell.imageView?.image = UIImage(named: self.imageArray[indexPath.row])
+        cell.imageView?.image = UIImage(named: self.imageArray[indexPath.row % self.imageArray.count])
         return cell
         
     }

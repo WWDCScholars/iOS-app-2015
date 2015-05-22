@@ -36,7 +36,6 @@
 		7C00D5951B0E8B0F00F9B3E7 /* twitter_test_icn.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C00D5911B0E8B0F00F9B3E7 /* twitter_test_icn.png */; };
 		7C00D5961B0E8B0F00F9B3E7 /* mail_test_icn.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C00D5921B0E8B0F00F9B3E7 /* mail_test_icn.png */; };
 		7C00D5971B0E8B0F00F9B3E7 /* facebook_test_icn.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C00D5931B0E8B0F00F9B3E7 /* facebook_test_icn.png */; };
-		7C1A22C51B0E99A400662775 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C1A22C41B0E99A400662775 /* Parse.framework */; };
 		C00C27401B0D5C9C008C19AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C273F1B0D5C9C008C19AE /* AppDelegate.swift */; };
 		C00C27421B0D5C9C008C19AE /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C27411B0D5C9C008C19AE /* LocationViewController.swift */; };
 		C00C27451B0D5C9C008C19AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C00C27431B0D5C9C008C19AE /* Main.storyboard */; };
@@ -49,6 +48,7 @@
 		C00C27781B0D5D9E008C19AE /* ClusterAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C00C27761B0D5D9E008C19AE /* ClusterAnnotationView.m */; };
 		C00C277B1B0D63CD008C19AE /* Scholar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C277A1B0D63CD008C19AE /* Scholar.swift */; };
 		C00C277E1B0D6A8D008C19AE /* ScholarAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C277D1B0D6A8D008C19AE /* ScholarAnnotation.swift */; };
+		C06A66B41B0EAACB009C4FC4 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C1A22C41B0E99A400662775 /* Parse.framework */; };
 		C0B7F78D1B0E682600E74458 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0B7F78C1B0E682600E74458 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -137,8 +137,8 @@
 				407911B21B0E2AEE00A582FF /* CoreGraphics.framework in Frameworks */,
 				407911B31B0E2AEE00A582FF /* CoreLocation.framework in Frameworks */,
 				407911AD1B0E2AC400A582FF /* AudioToolbox.framework in Frameworks */,
-				7C1A22C51B0E99A400662775 /* Parse.framework in Frameworks */,
 				4082116F1B0E292300D567AC /* ParseUI.framework in Frameworks */,
+				C06A66B41B0EAACB009C4FC4 /* Parse.framework in Frameworks */,
 				408211701B0E292300D567AC /* ParseCrashReporting.framework in Frameworks */,
 				408211731B0E292300D567AC /* ParseFacebookUtilsV4.framework in Frameworks */,
 				408211721B0E292300D567AC /* ParseFacebookUtils.framework in Frameworks */,
@@ -628,6 +628,9 @@
 					"$(PROJECT_DIR)/WWDC",
 					Scholars,
 					2015,
+					"$(PROJECT_DIR)/WWDC",
+					Scholars,
+					2015,
 				);
 				INFOPLIST_FILE = "WWDC Scholars 2015/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -643,6 +646,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/WWDC",
+					Scholars,
+					2015,
 					"$(PROJECT_DIR)/WWDC",
 					Scholars,
 					2015,
