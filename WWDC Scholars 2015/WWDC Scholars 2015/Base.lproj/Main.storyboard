@@ -133,7 +133,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="euW-ib-40b">
                                                     <rect key="frame" x="0.0" y="75" width="100" height="25"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matthijs Logemann" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="xuQ-xm-zw0">
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="201" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matthijs Logemann" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="xuQ-xm-zw0">
                                                             <rect key="frame" x="8" y="0.0" width="84" height="25"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -208,6 +208,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="scholarsCollectionView" destination="WO0-05-mmK" id="K52-4k-oZi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRI-aw-yvu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -274,7 +277,7 @@
                                                 <string key="text">22 from San Marino (SMR)
 Two times at WWDC!</string>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="16"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vwB-O9-vEU">
@@ -289,7 +292,7 @@ Two times at WWDC!</string>
                                                 <rect key="frame" x="20" y="439" width="560" height="77"/>
                                                 <string key="text">I am a Mobile App Developer from San Marino (SMR). I'm 22. Currently studying Computer Science &amp; Engineering at the University of Bologna (Italy) and working at Mr. APPs srl as iOS Developer. My main interests are programming, design and music.</string>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="16"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ebs-QW-EAg">
@@ -415,7 +418,7 @@ Two times at WWDC!</string>
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="8jU-u9-izq" firstAttribute="top" secondItem="vwB-O9-vEU" secondAttribute="bottom" constant="20" id="0A7-PZ-e84"/>
                                             <constraint firstAttribute="centerX" secondItem="vwB-O9-vEU" secondAttribute="centerX" id="25c-wC-A9o"/>

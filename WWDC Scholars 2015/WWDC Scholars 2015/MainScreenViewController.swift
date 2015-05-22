@@ -10,8 +10,13 @@ import UIKit
 
 class MainScreenViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
+    @IBOutlet var scholarsCollectionView: UICollectionView!
+    
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ScholarshipCell", forIndexPath: indexPath) as! UICollectionViewCell
+        
+        let nameTextView = cell.viewWithTag(201) as! UILabel
+        nameTextView.text = DataManager.sharedInstance.scholarAtLocation(indexPath.row)?.name
         cell.backgroundColor = UIColor.orangeColor()
         
         cell.layer.cornerRadius = 10
@@ -21,7 +26,7 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 100
+        return DataManager.sharedInstance.scholarArray.count
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
@@ -49,5 +54,16 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
         UIView.animateWithDuration(0.45, delay: 0, options: UIViewAnimationOptions.AllowUserInteraction, animations: {
             cell.alpha = 1
             }, completion: nil)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateCollectionView", name: "onScholarsLoadedNotification", object: nil)
+
+    }
+    
+    func updateCollectionView(){
+        scholarsCollectionView.reloadData()
     }
 }
