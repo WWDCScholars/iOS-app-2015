@@ -66,7 +66,7 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
             
             //self.mapView.addAnnotation(annotation)
         }
-        self.reloadAnnotations()
+        //self.reloadAnnotations()
         
         
         // Do any additional setup after loading the view.
@@ -133,8 +133,12 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
                     let tmp = self.scholarArray.filter({
                         return $0.name == (nei.title)!!
                     })
-                    self.cacheArray.insert(tmp[0], atIndex: self.cacheArray.count)
-                    //println(self.cacheArray)
+                  
+                    if find(self.cacheArray, tmp[0]) == nil {
+                        self.cacheArray.insert(tmp[0], atIndex: self.cacheArray.count)
+                    }
+                    
+                    
 
                 }
             } else {
@@ -142,7 +146,12 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
                 let tmp = self.scholarArray.filter({
                     return $0.name == (object.title)!!
                 })
-                self.cacheArray.insert(tmp[0], atIndex: self.cacheArray.count)
+                
+                if find(self.cacheArray, tmp[0]) == nil {
+                    self.cacheArray.insert(tmp[0], atIndex: self.cacheArray.count)
+                }
+
+              
             }
         }
         self.tableView.clearsContextBeforeDrawing = true
@@ -192,15 +201,10 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
         if viewChanged{
             cell.name.text = cacheArray[indexPath.row].name
             cell.location.text = cacheArray[indexPath.row].location
-            
-         
-            
-            
         } else {
             cell.name.text = scholarArray[indexPath.row].name
             cell.location.text = scholarArray[indexPath.row].location
         }
-        
         if let scholar = DataManager.sharedInstance.getScholarByName(cell.name.text!){
             let profileImageView = cell.viewWithTag(202) as! AsyncImageView
             profileImageView.image = UIImage(named: "no-profile")
