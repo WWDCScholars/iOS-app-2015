@@ -500,7 +500,7 @@
                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="facebookClied:" destination="ixk-1w-ECw" eventType="touchUpInside" id="mxW-QL-cG5"/>
+                                                            <action selector="facebookClicked:" destination="ixk-1w-ECw" eventType="touchUpInside" id="lDH-CP-F5u"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhS-ZP-JYi">
@@ -523,6 +523,9 @@
                                                         <state key="normal" image="twitter_test_icn">
                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="twitterClicked:" destination="ixk-1w-ECw" eventType="touchUpInside" id="ql6-4E-IaV"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eh-Hh-ADw">
                                                         <rect key="frame" x="138" y="0.0" width="30" height="30"/>
@@ -672,7 +675,6 @@ Two times at WWDC!</string>
                         <outlet property="imgScholar" destination="Qum-6W-Alm" id="dI6-Er-Unt"/>
                         <outlet property="mapView" destination="ebs-QW-EAg" id="url-qp-WN5"/>
                         <outlet property="shortBioLabel" destination="T5W-GY-yiC" id="cr6-3d-aKM"/>
-                        <outlet property="twitterClicked" destination="XUj-k4-RuS" id="4gp-my-VJv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6pL-Qy-WJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
