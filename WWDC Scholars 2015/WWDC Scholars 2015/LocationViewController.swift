@@ -206,19 +206,12 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
             cell.location.text = scholarArray[indexPath.row].location
         }
         if let scholar = DataManager.sharedInstance.getScholarByName(cell.name.text!){
-            let profileImageView = cell.viewWithTag(202) as! AsyncImageView
-            profileImageView.image = UIImage(named: "no-profile")
-            profileImageView.imageURL = NSURL(string: scholar.picture!)
-            
-  
+            //let profileImageView = cell.viewWithTag(202) as! AsyncImageView
+            //profileImageView.image = UIImage(named: "no-profile")
+            //profileImageView.imageURL = NSURL(string: scholar.picture!)
+            cell.imageView?.image = UIImage(named: "no-profile")
+            cell.imageView?.imageURL = NSURL(string: scholar.picture!)
         }
-
-
-        
-        
-
-        
-       
         return cell
         
     }
