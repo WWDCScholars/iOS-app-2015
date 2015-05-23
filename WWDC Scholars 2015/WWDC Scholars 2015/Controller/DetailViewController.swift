@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var currentScholar : Scholar?
     
@@ -46,7 +46,7 @@ class DetailViewController: UIViewController {
 
         nameLabel.text = currentScholar?.name
         if currentScholar?.numberOfWWDCAttend == 1 {
-            shortBioLabel.text = "\((currentScholar?.age?.description)!) from \(currentScholar?.location)!)\nFirst time at WWDC!"
+            shortBioLabel.text = "\((currentScholar?.age?.description)!) from \((currentScholar?.location)!)\nFirst time at WWDC!"
         } else {
             shortBioLabel.text = "\((currentScholar?.age?.description)!) from \((currentScholar?.location)!)\nHas attended WWDC \((currentScholar?.numberOfWWDCAttend?.description)!) times"
         }
@@ -78,6 +78,36 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! UICollectionViewCell
+        
+        if let screenshots = currentScholar?.appScreenshots{
+            
+//            let nameTextView = cell.viewWithTag(201) as! UILabel
+//            nameTextView.text = scholar.name
+//            
+//            let profileImageView = cell.viewWithTag(202) as! AsyncImageView
+//            profileImageView.image = UIImage(named: "no-profile")
+//            profileImageView.imageURL = NSURL(string: scholar.picture!)
+        }
+        
+        cell.layer.cornerRadius = 10
+        cell.layer.masksToBounds = true
+        
+        return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if let screenshots = currentScholar?.appScreenshots{
+            return screenshots.count
+        }else{
+            return 0
+        }
+    }
+
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return CGSizeMake(collectionView.frame.height/2, collectionView.frame.height)
+    }
     //    override func viewDidAppear(animated: Bool) {
     //        super.viewDidAppear(animated)
     //
