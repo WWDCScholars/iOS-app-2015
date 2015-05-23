@@ -72,7 +72,6 @@
                                         <connections>
                                             <outlet property="location" destination="QLJ-ug-yi6" id="dRu-42-ORT"/>
                                             <outlet property="name" destination="Ufb-qH-pEt" id="dKf-DJ-Lxh"/>
-                                            <segue destination="ixk-1w-ECw" kind="show" id="RZf-oj-EkP"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -116,6 +115,7 @@
                     <connections>
                         <outlet property="mapView" destination="dLX-Aa-vJZ" id="hRV-k0-Ush"/>
                         <outlet property="tableView" destination="rmP-RX-aEL" id="qRJ-Tq-mK8"/>
+                        <segue destination="ixk-1w-ECw" kind="show" identifier="transformToScholarDetail" id="067-Ti-Q9O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -369,7 +369,7 @@
                                                     <constraint firstAttribute="height" constant="290" id="cts-wD-65g"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ngiancecchi_test_profile" translatesAutoresizingMaskIntoConstraints="NO" id="Qum-6W-Alm" customClass="AsyncImageView">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no-profile" translatesAutoresizingMaskIntoConstraints="NO" id="Qum-6W-Alm" customClass="AsyncImageView">
                                                 <rect key="frame" x="225" y="85" width="150" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="RFV-oD-kjL"/>
@@ -634,12 +634,11 @@ Two times at WWDC!</string>
         <image name="facebook_test_icn" width="60" height="60"/>
         <image name="github_test_icn" width="60" height="60"/>
         <image name="mail_test_icn" width="60" height="60"/>
-        <image name="ngiancecchi_test_profile" width="960" height="960"/>
         <image name="no-profile" width="632" height="673"/>
         <image name="twitter_test_icn" width="60" height="60"/>
         <image name="wwdc15-hero_2x-4" width="1250" height="1250"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="RZf-oj-EkP"/>
+        <segue reference="067-Ti-Q9O"/>
     </inferredMetricsTieBreakers>
 </document>
