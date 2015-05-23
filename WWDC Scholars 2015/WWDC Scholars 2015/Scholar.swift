@@ -11,12 +11,14 @@ import Foundation
 class Scholar:NSObject{
     var name : String?
     var age : Int?
-    var birthdate : String?
+    var birthdate : NSDate?
     var gender : String?
     var longitude : Double
     var latitude : Double
     var email : String?
+    var shortBio : String?
     var picture : String?
+    var appScreenshots: [String]?
     var numberOfWWDCAttend : Int?
     var appDemo : String?
     var githubLinkToApp : String?
@@ -27,25 +29,27 @@ class Scholar:NSObject{
     var website : String?
     var location : String?
     
-    // still need shortBio,videoLink,github,githubToApp,birthday,4 screenShot pictures
+    // still need shortBio,videoLink,birthday,4 screenShot pictures
     
-    init(name:String?,age:Int,birthdate:String?,gender:String?,latitude:Double,longitude:Double,email:String?,picture:String?,numberOfWWDCAttend:Int?,appDemo:String?,githubLinkToApp:String?,twitter:String?,facebook:String?,github:String?,linkedIn:String?,website:String?,location:String?){
-            self.name = name
-            self.age = age
-            self.birthdate = birthdate
-            self.gender = gender
-            self.longitude = longitude
-            self.latitude = latitude
-            self.email = email
-            self.picture = picture
-            self.numberOfWWDCAttend = numberOfWWDCAttend
-            self.appDemo = appDemo
-            self.githubLinkToApp = githubLinkToApp
-            self.twitter = twitter
-            self.facebook = facebook
-            self.github = github
-            self.linkedIn = linkedIn
-            self.website = website
-            self.location = location
-        }
+    init(name:String?,age:Int,birthdate:NSDate?,gender:String?,latitude:Double,longitude:Double,email:String?,picture:String?, appScreenshots:[String]?,shortBio:String?,numberOfWWDCAttend:Int?,appDemo:String?,githubLinkToApp:String?,twitter:String?,facebook:String?,github:String?,linkedIn:String?,website:String?,location:String?){
+        self.name = name
+        self.age = age
+        self.birthdate = birthdate
+        self.gender = gender
+        self.longitude = longitude
+        self.latitude = latitude
+        self.email = email
+        self.picture = picture
+        self.appScreenshots = appScreenshots
+        self.shortBio = shortBio
+        self.numberOfWWDCAttend = numberOfWWDCAttend
+        self.appDemo = appDemo
+        self.githubLinkToApp = githubLinkToApp
+        self.twitter = twitter
+        self.facebook = facebook
+        self.github = github
+        self.linkedIn = linkedIn
+        self.website = website
+        self.location = location
+    }
 }
