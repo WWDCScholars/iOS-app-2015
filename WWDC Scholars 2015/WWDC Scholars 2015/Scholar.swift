@@ -26,8 +26,8 @@ class Scholar:NSObject{
     var linkedIn : String?
     var website : String?
     var location : String?
-    
-    init(name:String?,age:Int,birthdate:String?,gender:String?,latitude:Double,longitude:Double,email:String?,picture:String?,numberOfWWDCAttend:Int?,appDemo:String?,githubLinkToApp:String?,twitter:String?,facebook:String?,github:String?,linkedIn:String?,website:String?,location:String?){
+    var user : PFUser?
+    init(name:String?,age:Int,birthdate:String?,gender:String?,latitude:Double,longitude:Double,email:String?,picture:String?,numberOfWWDCAttend:Int?,appDemo:String?,githubLinkToApp:String?,twitter:String?,facebook:String?,github:String?,linkedIn:String?,website:String?,location:String?,user:PFUser?){
             self.name = name
             self.age = age
             self.birthdate = birthdate
@@ -45,5 +45,6 @@ class Scholar:NSObject{
             self.linkedIn = linkedIn
             self.website = website
             self.location = location
+            self.user = user
         }
 }

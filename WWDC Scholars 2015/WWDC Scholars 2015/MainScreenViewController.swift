@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import ParseUI
 
-class MainScreenViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class MainScreenViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate {
     
     @IBOutlet var scholarsCollectionView: UICollectionView!
     
@@ -67,6 +68,55 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateCollectionView", name: "onScholarsLoadedNotification", object: nil)
         
+    }
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        if (PFUser.currentUser() == nil) {
+            var loginViewController = PFLogInViewController()
+            loginViewController.delegate = self
+            var signupViewController = PFSignUpViewController()
+            signupViewController.delegate = self
+            loginViewController.signUpController = signupViewController
+            self.presentViewController(loginViewController, animated: true, completion: nil)
+        }
+    }
+    
+    func logInViewController(logInController: PFLogInViewController, shouldBeginLogInWithUsername username: String, password: String) -> Bool {
+        if ((count(username) != 0) && (count(password) != 0)) {
+            return true
+        } else {
+            var alert = UIAlertView(title: "Empty field", message: "Some of the fields are empty. Please fill them in to log in.", delegate: nil, cancelButtonTitle: "Ok")
+            alert.show()
+            return false
+        }
+    }
+    func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func logInViewControllerDidCancelLogIn(logInController: PFLogInViewController) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func signUpViewControllerDidCancelSignUp(signUpController: PFSignUpViewController) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func signUpViewController(signUpController: PFSignUpViewController, shouldBeginSignUp info: [NSObject : AnyObject]) -> Bool {
+        var ok = true
+        for (key, object) in info {
+            var string = object as? String
+            if let newString = string {
+                if count(newString) == 0 {
+                    ok = false
+                }
+            }
+        }
+        return ok
     }
     
     func updateCollectionView(){
