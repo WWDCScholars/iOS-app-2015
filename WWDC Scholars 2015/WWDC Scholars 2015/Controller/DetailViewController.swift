@@ -99,15 +99,13 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if let screenshots = currentScholar?.appScreenshots{
-            return screenshots.count
+            return 4
         }else{
             return 0
         }
     }
 
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSizeMake(collectionView.frame.height/2, collectionView.frame.height)
-    }
+    
     //    override func viewDidAppear(animated: Bool) {
     //        super.viewDidAppear(animated)
     //

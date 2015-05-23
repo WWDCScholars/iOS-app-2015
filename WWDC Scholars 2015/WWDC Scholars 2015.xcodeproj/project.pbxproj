@@ -18,7 +18,6 @@
 		407911C11B0E2B2A00A582FF /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 407911BA1B0E2B2A00A582FF /* libz.dylib */; };
 		407911C21B0E2B2A00A582FF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407911BB1B0E2B2A00A582FF /* Security.framework */; };
 		407911C31B0E2B2A00A582FF /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407911BC1B0E2B2A00A582FF /* Social.framework */; };
-		407911C41B0E2B2A00A582FF /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407911BD1B0E2B2A00A582FF /* StoreKit.framework */; };
 		407911C51B0E2B2A00A582FF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407911BE1B0E2B2A00A582FF /* SystemConfiguration.framework */; };
 		407CDD951B0FBE4100350500 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 407CDD941B0FBE4100350500 /* AsyncImageView.m */; };
 		408211651B0E034B00D567AC /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408211641B0E034B00D567AC /* MainScreenViewController.swift */; };
@@ -69,7 +68,6 @@
 		407911BA1B0E2B2A00A582FF /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		407911BB1B0E2B2A00A582FF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		407911BC1B0E2B2A00A582FF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		407911BD1B0E2B2A00A582FF /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		407911BE1B0E2B2A00A582FF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		407CDD931B0FBE4100350500 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
 		407CDD941B0FBE4100350500 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
@@ -121,7 +119,6 @@
 				407911C11B0E2B2A00A582FF /* libz.dylib in Frameworks */,
 				407911C21B0E2B2A00A582FF /* Security.framework in Frameworks */,
 				407911C31B0E2B2A00A582FF /* Social.framework in Frameworks */,
-				407911C41B0E2B2A00A582FF /* StoreKit.framework in Frameworks */,
 				407911C51B0E2B2A00A582FF /* SystemConfiguration.framework in Frameworks */,
 				407911B71B0E2AFC00A582FF /* QuartzCore.framework in Frameworks */,
 				407911B51B0E2AF500A582FF /* MobileCoreServices.framework in Frameworks */,
@@ -164,7 +161,6 @@
 				407911BA1B0E2B2A00A582FF /* libz.dylib */,
 				407911BB1B0E2B2A00A582FF /* Security.framework */,
 				407911BC1B0E2B2A00A582FF /* Social.framework */,
-				407911BD1B0E2B2A00A582FF /* StoreKit.framework */,
 				407911BE1B0E2B2A00A582FF /* SystemConfiguration.framework */,
 				407911B61B0E2AFC00A582FF /* QuartzCore.framework */,
 				407911B41B0E2AF500A582FF /* MobileCoreServices.framework */,
@@ -399,15 +395,18 @@
 				TargetAttributes = {
 					C00C27391B0D5C9C008C19AE = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = MA3FRWNL5H;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
 							};
 						};
 					};
 					C00C274E1B0D5C9C008C19AE = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = YQ3FQN6Z53;
 						TestTargetID = C00C27391B0D5C9C008C19AE;
 					};
 				};
@@ -604,8 +603,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Developer: quanlan huang (FPV5RP366Y)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: quanlan huang (FPV5RP366Y)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Johan Logemann (9RK2MKZQ3T)";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "WWDC Scholars 2015/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -620,8 +619,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Developer: quanlan huang (FPV5RP366Y)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: quanlan huang (FPV5RP366Y)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Johan Logemann (YQ3FQN6Z53)";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "WWDC Scholars 2015/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -635,7 +634,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: quanlan huang (FPV5RP366Y)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -647,6 +647,7 @@
 				INFOPLIST_FILE = "WWDC Scholars 2015Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WWDC Scholars 2015.app/WWDC Scholars 2015";
 			};
 			name = Debug;
@@ -655,7 +656,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: quanlan huang (FPV5RP366Y)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -663,6 +665,7 @@
 				INFOPLIST_FILE = "WWDC Scholars 2015Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WWDC Scholars 2015.app/WWDC Scholars 2015";
 			};
 			name = Release;
