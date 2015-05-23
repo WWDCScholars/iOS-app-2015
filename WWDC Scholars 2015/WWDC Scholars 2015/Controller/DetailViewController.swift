@@ -16,8 +16,6 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     @IBOutlet private weak var btnGithubRepo: UIButton!
     
-    @IBOutlet weak var nameLabel: UILabel!
-    
     @IBOutlet weak var shortBioLabel: UILabel!
     
     
@@ -44,7 +42,12 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        nameLabel.text = currentScholar?.name
+        let attributes = [NSFontAttributeName : UIFont(name: "HelveticaNeue-Medium", size: 19)!, NSForegroundColorAttributeName : UIColor(red: 0.30980392156862746, green: 0.69411764705882351, blue: 0.90196078431372551, alpha: 1)]
+        
+        self.navigationController?.navigationBar.titleTextAttributes = attributes
+        
+        self.navigationItem.title = currentScholar?.name
+        
         if currentScholar?.numberOfWWDCAttend == 1 {
             shortBioLabel.text = "\((currentScholar?.age?.description)!) from \((currentScholar?.location)!)\nFirst time at WWDC!"
         } else {
@@ -68,7 +71,7 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         btnGithubRepo.layer.borderColor = UIColor.blackColor().CGColor
         btnGithubRepo.layer.borderWidth = 1.0
         
-        self.navigationItem.title = "Scholar detail"
+        //self.navigationItem.title = "Scholar detail"
         
         // Do any additional setup after loading the view.
     }

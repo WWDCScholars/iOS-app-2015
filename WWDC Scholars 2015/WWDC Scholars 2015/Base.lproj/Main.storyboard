@@ -111,7 +111,7 @@
                             <rect key="frame" x="180" y="6" width="240" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gbx-0T-Rgf">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gbx-0T-Rgf">
                                     <rect key="frame" x="44" y="4" width="154" height="27"/>
                                     <attributedString key="attributedText">
                                         <fragment content="WWDC">
@@ -396,64 +396,69 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="1600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K2Y-8a-qLP">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="1289"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="1016"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nicola Giancecchi" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVB-pe-aV2">
-                                                <rect key="frame" x="20" y="310" width="560" height="34"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="28"/>
-                                                <color key="textColor" red="0.29019607843137257" green="0.6588235294117647" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wwdc15-hero_2x-4" translatesAutoresizingMaskIntoConstraints="NO" id="zhT-xG-oQN">
-                                                <rect key="frame" x="155" y="15" width="290" height="290"/>
+                                                <rect key="frame" x="15" y="15" width="120" height="120"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="290" id="aNk-GA-GdE"/>
-                                                    <constraint firstAttribute="height" constant="290" id="cts-wD-65g"/>
+                                                    <constraint firstAttribute="width" constant="120" id="aNk-GA-GdE"/>
+                                                    <constraint firstAttribute="height" constant="120" id="cts-wD-65g"/>
+                                                    <constraint firstAttribute="width" secondItem="zhT-xG-oQN" secondAttribute="height" multiplier="1:1" id="zSv-eh-PlM"/>
                                                 </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="cts-wD-65g"/>
+                                                    </mask>
+                                                </variation>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5W-GY-yiC">
-                                                <rect key="frame" x="20" y="359" width="560" height="38"/>
-                                                <string key="text">22 from San Marino (SMR)
-Two times at WWDC!</string>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="16"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no-profile" translatesAutoresizingMaskIntoConstraints="NO" id="Qum-6W-Alm" customClass="AsyncImageView">
+                                                <rect key="frame" x="44" y="44" width="62" height="62"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="62" id="RFV-oD-kjL"/>
+                                                    <constraint firstAttribute="width" secondItem="Qum-6W-Alm" secondAttribute="height" multiplier="1:1" id="bce-OJ-8CI"/>
+                                                    <constraint firstAttribute="width" constant="62" id="k2Y-fV-XL8"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="RFV-oD-kjL"/>
+                                                    </mask>
+                                                </variation>
+                                            </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vwB-O9-vEU">
-                                                <rect key="frame" x="160" y="417" width="280" height="1"/>
+                                                <rect key="frame" x="160" y="144" width="280" height="1"/>
                                                 <color key="backgroundColor" red="0.66274509803921566" green="0.74901960784313726" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="acg-jU-6t1"/>
                                                     <constraint firstAttribute="width" constant="280" id="ws0-hV-uGd"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jU-u9-izq">
-                                                <rect key="frame" x="20" y="438" width="560" height="76"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jU-u9-izq">
+                                                <rect key="frame" x="20" y="165" width="560" height="75"/>
                                                 <string key="text">I am a Mobile App Developer from San Marino (SMR). I'm 22. Currently studying Computer Science &amp; Engineering at the University of Bologna (Italy) and working at Mr. APPs srl as iOS Developer. My main interests are programming, design and music.</string>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ebs-QW-EAg">
-                                                <rect key="frame" x="0.0" y="534" width="600" height="270"/>
+                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ebs-QW-EAg">
+                                                <rect key="frame" x="0.0" y="260" width="600" height="270"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="ebs-QW-EAg" secondAttribute="height" multiplier="20:9" id="BHm-QR-Pgb"/>
                                                 </constraints>
                                             </mapView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="My App for WWDC15" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wv4-RX-X9v">
-                                                <rect key="frame" x="20" y="824" width="560" height="27"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My App for WWDC15" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wv4-RX-X9v">
+                                                <rect key="frame" x="20" y="550" width="560" height="27"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
                                                 <color key="textColor" red="0.098039215686274508" green="0.44705882352941179" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact me!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXg-Tg-DLf">
-                                                <rect key="frame" x="20" y="1151" width="560" height="27"/>
+                                                <rect key="frame" x="20" y="878" width="560" height="27"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
                                                 <color key="textColor" red="0.070588235294117646" green="0.27450980392156865" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfY-G6-jEd">
-                                                <rect key="frame" x="160" y="1198" width="280" height="1"/>
+                                                <rect key="frame" x="160" y="925" width="280" height="1"/>
                                                 <color key="backgroundColor" red="0.66274509803921566" green="0.74901960784313726" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="280" id="ThW-lw-3Hb"/>
@@ -461,7 +466,7 @@ Two times at WWDC!</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bPU-ZA-2M8">
-                                                <rect key="frame" x="160" y="910" width="280" height="1"/>
+                                                <rect key="frame" x="160" y="637" width="280" height="1"/>
                                                 <color key="backgroundColor" red="0.66274509803921566" green="0.74901960784313726" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="280" id="eXg-wC-O2C"/>
@@ -469,7 +474,7 @@ Two times at WWDC!</string>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQm-Db-mKb">
-                                                <rect key="frame" x="200" y="865" width="200" height="30"/>
+                                                <rect key="frame" x="200" y="592" width="200" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="4o6-uQ-Wfw"/>
                                                     <constraint firstAttribute="height" constant="30" id="ahj-GG-T3X"/>
@@ -484,7 +489,7 @@ Two times at WWDC!</string>
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7mi-NS-L7i">
-                                                <rect key="frame" x="213" y="1229" width="175" height="30"/>
+                                                <rect key="frame" x="213" y="956" width="175" height="30"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ijt-iV-lnk">
                                                         <rect key="frame" x="12" y="0.0" width="30" height="30"/>
@@ -551,7 +556,7 @@ Two times at WWDC!</string>
                                                 </constraints>
                                             </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xx6-iB-pwC">
-                                                <rect key="frame" x="0.0" y="931" width="600" height="200"/>
+                                                <rect key="frame" x="0.0" y="658" width="600" height="200"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="xx6-iB-pwC" secondAttribute="height" multiplier="600:200" id="ZiM-y0-AP9"/>
@@ -579,13 +584,14 @@ Two times at WWDC!</string>
                                                     <outlet property="delegate" destination="K2Y-8a-qLP" id="Kvl-lP-Gep"/>
                                                 </connections>
                                             </collectionView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no-profile" translatesAutoresizingMaskIntoConstraints="NO" id="Qum-6W-Alm" customClass="AsyncImageView">
-                                                <rect key="frame" x="225" y="85" width="150" height="150"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="150" id="RFV-oD-kjL"/>
-                                                    <constraint firstAttribute="width" constant="150" id="k2Y-fV-XL8"/>
-                                                </constraints>
-                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5W-GY-yiC">
+                                                <rect key="frame" x="150" y="56" width="430" height="38"/>
+                                                <string key="text">22 from San Marino (SMR)
+Two times at WWDC!</string>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="16"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="8jU-u9-izq" firstAttribute="top" secondItem="vwB-O9-vEU" secondAttribute="bottom" constant="20" id="0A7-PZ-e84"/>
@@ -597,19 +603,19 @@ Two times at WWDC!</string>
                                             <constraint firstAttribute="centerX" secondItem="Qum-6W-Alm" secondAttribute="centerX" id="6Io-fr-ghL"/>
                                             <constraint firstItem="xx6-iB-pwC" firstAttribute="leading" secondItem="K2Y-8a-qLP" secondAttribute="leading" id="6gY-li-zAB"/>
                                             <constraint firstAttribute="bottom" secondItem="7mi-NS-L7i" secondAttribute="bottom" constant="30" id="78M-BT-h8f"/>
-                                            <constraint firstItem="hVB-pe-aV2" firstAttribute="top" secondItem="zhT-xG-oQN" secondAttribute="bottom" constant="5" id="APz-iN-oYk"/>
-                                            <constraint firstAttribute="trailing" secondItem="hVB-pe-aV2" secondAttribute="trailing" constant="20" id="HBc-JB-tLs"/>
+                                            <constraint firstItem="Qum-6W-Alm" firstAttribute="centerY" secondItem="zhT-xG-oQN" secondAttribute="centerY" id="9Td-kx-SEg"/>
+                                            <constraint firstItem="T5W-GY-yiC" firstAttribute="centerY" secondItem="zhT-xG-oQN" secondAttribute="centerY" id="DTS-0M-nLX"/>
+                                            <constraint firstItem="T5W-GY-yiC" firstAttribute="leading" secondItem="zhT-xG-oQN" secondAttribute="trailing" constant="15" id="E0a-aJ-mu5"/>
                                             <constraint firstItem="zhT-xG-oQN" firstAttribute="top" secondItem="K2Y-8a-qLP" secondAttribute="top" constant="15" id="IDZ-dW-GSZ"/>
                                             <constraint firstAttribute="trailing" secondItem="xx6-iB-pwC" secondAttribute="trailing" id="IcO-kF-0Ol"/>
                                             <constraint firstItem="UQm-Db-mKb" firstAttribute="top" secondItem="Wv4-RX-X9v" secondAttribute="bottom" constant="15" id="NI1-hZ-y98"/>
-                                            <constraint firstItem="hVB-pe-aV2" firstAttribute="leading" secondItem="K2Y-8a-qLP" secondAttribute="leading" constant="20" id="OYj-mB-uTo"/>
                                             <constraint firstItem="T5W-GY-yiC" firstAttribute="leading" secondItem="K2Y-8a-qLP" secondAttribute="leading" constant="20" id="Sdh-di-H2Q"/>
                                             <constraint firstAttribute="trailing" secondItem="T5W-GY-yiC" secondAttribute="trailing" constant="20" id="Tas-XK-4fu"/>
                                             <constraint firstItem="vwB-O9-vEU" firstAttribute="top" secondItem="T5W-GY-yiC" secondAttribute="bottom" constant="20" id="X1K-Wg-cx4"/>
                                             <constraint firstAttribute="centerX" secondItem="dfY-G6-jEd" secondAttribute="centerX" id="XHR-Yp-0dK"/>
                                             <constraint firstAttribute="centerX" secondItem="zhT-xG-oQN" secondAttribute="centerX" id="bip-P0-Fcm"/>
                                             <constraint firstItem="xx6-iB-pwC" firstAttribute="top" secondItem="bPU-ZA-2M8" secondAttribute="bottom" constant="20" id="bnh-uT-3bm"/>
-                                            <constraint firstItem="T5W-GY-yiC" firstAttribute="top" secondItem="hVB-pe-aV2" secondAttribute="bottom" constant="15" id="cIZ-b0-x0k"/>
+                                            <constraint firstItem="Qum-6W-Alm" firstAttribute="centerX" secondItem="zhT-xG-oQN" secondAttribute="centerX" id="c1F-Kv-jRx"/>
                                             <constraint firstAttribute="trailing" secondItem="8jU-u9-izq" secondAttribute="trailing" constant="20" id="cer-j1-6j8"/>
                                             <constraint firstItem="8jU-u9-izq" firstAttribute="leading" secondItem="K2Y-8a-qLP" secondAttribute="leading" constant="20" id="dIb-Z9-4H4"/>
                                             <constraint firstItem="cXg-Tg-DLf" firstAttribute="leading" secondItem="K2Y-8a-qLP" secondAttribute="leading" constant="20" id="gdL-1C-VfY"/>
@@ -619,15 +625,22 @@ Two times at WWDC!</string>
                                             <constraint firstItem="Qum-6W-Alm" firstAttribute="centerY" secondItem="zhT-xG-oQN" secondAttribute="centerY" id="kBq-X0-Oh1"/>
                                             <constraint firstAttribute="bottom" secondItem="xx6-iB-pwC" secondAttribute="bottom" constant="26" id="kb1-j2-qWG"/>
                                             <constraint firstAttribute="centerX" secondItem="UQm-Db-mKb" secondAttribute="centerX" id="kue-rj-oGM"/>
+                                            <constraint firstItem="zhT-xG-oQN" firstAttribute="leading" secondItem="K2Y-8a-qLP" secondAttribute="leading" constant="15" id="mg8-3f-j2M"/>
                                             <constraint firstAttribute="trailing" secondItem="cXg-Tg-DLf" secondAttribute="trailing" constant="20" id="oVD-i0-8SS"/>
                                             <constraint firstItem="cXg-Tg-DLf" firstAttribute="top" secondItem="xx6-iB-pwC" secondAttribute="bottom" constant="20" id="pCP-39-6Z2"/>
                                             <constraint firstItem="bPU-ZA-2M8" firstAttribute="top" secondItem="UQm-Db-mKb" secondAttribute="bottom" constant="15" id="prO-rC-dWL"/>
+                                            <constraint firstItem="vwB-O9-vEU" firstAttribute="bottom" secondItem="zhT-xG-oQN" secondAttribute="bottom" constant="10" id="rTC-P1-1J3"/>
                                             <constraint firstAttribute="centerX" secondItem="bPU-ZA-2M8" secondAttribute="centerX" id="vUO-nR-YUl"/>
                                             <constraint firstItem="ebs-QW-EAg" firstAttribute="top" secondItem="8jU-u9-izq" secondAttribute="bottom" constant="20" id="xDG-Ja-dqr"/>
                                             <constraint firstAttribute="centerX" secondItem="7mi-NS-L7i" secondAttribute="centerX" id="yA3-NX-fDe"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
+                                                <exclude reference="bip-P0-Fcm"/>
+                                                <exclude reference="6Io-fr-ghL"/>
+                                                <exclude reference="9Td-kx-SEg"/>
+                                                <exclude reference="Sdh-di-H2Q"/>
+                                                <exclude reference="X1K-Wg-cx4"/>
                                                 <exclude reference="kb1-j2-qWG"/>
                                             </mask>
                                         </variation>
@@ -658,7 +671,6 @@ Two times at WWDC!</string>
                         <outlet property="descriptionLabel" destination="8jU-u9-izq" id="NBS-gU-eSb"/>
                         <outlet property="imgScholar" destination="Qum-6W-Alm" id="dI6-Er-Unt"/>
                         <outlet property="mapView" destination="ebs-QW-EAg" id="url-qp-WN5"/>
-                        <outlet property="nameLabel" destination="hVB-pe-aV2" id="uQt-gc-566"/>
                         <outlet property="shortBioLabel" destination="T5W-GY-yiC" id="cr6-3d-aKM"/>
                         <outlet property="twitterClicked" destination="XUj-k4-RuS" id="4gp-my-VJv"/>
                     </connections>
