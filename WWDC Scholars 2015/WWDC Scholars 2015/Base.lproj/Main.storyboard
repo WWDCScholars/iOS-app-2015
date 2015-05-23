@@ -60,7 +60,7 @@
                                                         <constraint firstAttribute="height" constant="29" id="zGx-J1-b1O"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
@@ -108,7 +108,7 @@
                     <navigationItem key="navigationItem" id="lC6-sg-O5W">
                         <nil key="title"/>
                         <view key="titleView" contentMode="scaleToFill" id="w4m-C8-G5S">
-                            <rect key="frame" x="180" y="5.5" width="240" height="33"/>
+                            <rect key="frame" x="180" y="6" width="240" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gbx-0T-Rgf">
@@ -224,7 +224,7 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WallpaperWWDC" translatesAutoresizingMaskIntoConstraints="NO" id="bEt-E8-fdz">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOF-KV-6fm">
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOF-KV-6fm">
                                             <rect key="frame" x="8" y="223" width="584" height="71"/>
                                             <state key="normal" title="Credits">
                                                 <color key="titleColor" white="1" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
@@ -241,6 +241,7 @@
                                         <constraint firstAttribute="trailing" secondItem="bEt-E8-fdz" secondAttribute="trailing" id="NG8-aO-lGt"/>
                                         <constraint firstAttribute="bottom" secondItem="bEt-E8-fdz" secondAttribute="bottom" id="PH1-EA-Ahg"/>
                                         <constraint firstItem="hOF-KV-6fm" firstAttribute="centerX" secondItem="bEt-E8-fdz" secondAttribute="centerX" id="XWY-yw-7Vr"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="hOF-KV-6fm" secondAttribute="bottom" id="yyD-X8-gJN"/>
                                     </constraints>
                                     <connections>
                                         <outlet property="backgroundImage" destination="bEt-E8-fdz" id="8V2-yZ-ewW"/>
@@ -272,18 +273,32 @@
                             <rect key="frame" x="180" y="5.5" width="240" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WWDC" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryh-4W-hzL">
-                                    <rect key="frame" x="33" y="4" width="87" height="27"/>
-                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scholars" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDs-ic-SPl">
-                                    <rect key="frame" x="122" y="3" width="86" height="27"/>
-                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="22"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrb-Du-ggb">
+                                    <rect key="frame" x="43" y="3" width="154" height="27"/>
+                                    <attributedString key="attributedText">
+                                        <fragment content="WWDC">
+                                            <attributes>
+                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <font key="NSFont" size="22" name="HelveticaNeue-Medium"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="Scholars">
+                                            <attributes>
+                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <font key="NSFont" size="22" name="HelveticaNeue-Thin"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                             <color key="backgroundColor" white="0.96795782342657344" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="centerX" secondItem="rrb-Du-ggb" secondAttribute="centerX" id="78v-4J-57V"/>
+                                <constraint firstAttribute="centerY" secondItem="rrb-Du-ggb" secondAttribute="centerY" id="gyY-es-jCd"/>
+                            </constraints>
                         </view>
                         <barButtonItem key="rightBarButtonItem" image="Map Icon" id="dT9-eQ-3Ea">
                             <connections>
@@ -666,6 +681,6 @@ Two times at WWDC!</string>
         <image name="wwdc15-hero_2x-4" width="1250" height="1250"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="067-Ti-Q9O"/>
+        <segue reference="Dzz-cG-8L0"/>
     </inferredMetricsTieBreakers>
 </document>
