@@ -18,7 +18,6 @@
 		407911C11B0E2B2A00A582FF /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 407911BA1B0E2B2A00A582FF /* libz.dylib */; };
 		407911C21B0E2B2A00A582FF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407911BB1B0E2B2A00A582FF /* Security.framework */; };
 		407911C31B0E2B2A00A582FF /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407911BC1B0E2B2A00A582FF /* Social.framework */; };
-		407911C41B0E2B2A00A582FF /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407911BD1B0E2B2A00A582FF /* StoreKit.framework */; };
 		407911C51B0E2B2A00A582FF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407911BE1B0E2B2A00A582FF /* SystemConfiguration.framework */; };
 		407CDD951B0FBE4100350500 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 407CDD941B0FBE4100350500 /* AsyncImageView.m */; };
 		408211651B0E034B00D567AC /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408211641B0E034B00D567AC /* MainScreenViewController.swift */; };
@@ -43,6 +42,7 @@
 		C00C277B1B0D63CD008C19AE /* Scholar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C277A1B0D63CD008C19AE /* Scholar.swift */; };
 		C00C277E1B0D6A8D008C19AE /* ScholarAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C277D1B0D6A8D008C19AE /* ScholarAnnotation.swift */; };
 		C06A66B41B0EAACB009C4FC4 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C1A22C41B0E99A400662775 /* Parse.framework */; };
+		C099FF4F1B10163D00ECAEE7 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C099FF4E1B10163D00ECAEE7 /* CustomTableViewCell.swift */; };
 		C0B7F78D1B0E682600E74458 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0B7F78C1B0E682600E74458 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -68,7 +68,6 @@
 		407911BA1B0E2B2A00A582FF /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		407911BB1B0E2B2A00A582FF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		407911BC1B0E2B2A00A582FF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		407911BD1B0E2B2A00A582FF /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		407911BE1B0E2B2A00A582FF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		407CDD931B0FBE4100350500 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
 		407CDD941B0FBE4100350500 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
@@ -106,6 +105,7 @@
 		C00C277A1B0D63CD008C19AE /* Scholar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scholar.swift; sourceTree = "<group>"; };
 		C00C277D1B0D6A8D008C19AE /* ScholarAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScholarAnnotation.swift; sourceTree = "<group>"; };
 		C068DC261B0F5D890066221E /* WWDC Scholars 2015.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "WWDC Scholars 2015.entitlements"; sourceTree = "<group>"; };
+		C099FF4E1B10163D00ECAEE7 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		C0B7F78C1B0E682600E74458 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,7 +119,6 @@
 				407911C11B0E2B2A00A582FF /* libz.dylib in Frameworks */,
 				407911C21B0E2B2A00A582FF /* Security.framework in Frameworks */,
 				407911C31B0E2B2A00A582FF /* Social.framework in Frameworks */,
-				407911C41B0E2B2A00A582FF /* StoreKit.framework in Frameworks */,
 				407911C51B0E2B2A00A582FF /* SystemConfiguration.framework in Frameworks */,
 				407911B71B0E2AFC00A582FF /* QuartzCore.framework in Frameworks */,
 				407911B51B0E2AF500A582FF /* MobileCoreServices.framework in Frameworks */,
@@ -162,7 +161,6 @@
 				407911BA1B0E2B2A00A582FF /* libz.dylib */,
 				407911BB1B0E2B2A00A582FF /* Security.framework */,
 				407911BC1B0E2B2A00A582FF /* Social.framework */,
-				407911BD1B0E2B2A00A582FF /* StoreKit.framework */,
 				407911BE1B0E2B2A00A582FF /* SystemConfiguration.framework */,
 				407911B61B0E2AFC00A582FF /* QuartzCore.framework */,
 				407911B41B0E2AF500A582FF /* MobileCoreServices.framework */,
@@ -342,6 +340,7 @@
 			isa = PBXGroup;
 			children = (
 				C00C27411B0D5C9C008C19AE /* LocationViewController.swift */,
+				C099FF4E1B10163D00ECAEE7 /* CustomTableViewCell.swift */,
 				C00C277D1B0D6A8D008C19AE /* ScholarAnnotation.swift */,
 			);
 			name = MapViewController;
@@ -396,15 +395,18 @@
 				TargetAttributes = {
 					C00C27391B0D5C9C008C19AE = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = XP2V9X75F2;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
 							};
 						};
 					};
 					C00C274E1B0D5C9C008C19AE = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = YQ3FQN6Z53;
 						TestTargetID = C00C27391B0D5C9C008C19AE;
 					};
 				};
@@ -459,6 +461,7 @@
 				7C00D58F1B0E867A00F9B3E7 /* DetailViewController.swift in Sources */,
 				C00C27781B0D5D9E008C19AE /* ClusterAnnotationView.m in Sources */,
 				C00C277E1B0D6A8D008C19AE /* ScholarAnnotation.swift in Sources */,
+				C099FF4F1B10163D00ECAEE7 /* CustomTableViewCell.swift in Sources */,
 				408211651B0E034B00D567AC /* MainScreenViewController.swift in Sources */,
 				6EEA0A151B0ED45900B99130 /* MainScreenFooter.swift in Sources */,
 				C00C277B1B0D63CD008C19AE /* Scholar.swift in Sources */,
@@ -599,7 +602,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = "WWDC Scholars 2015/WWDC Scholars 2015.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -615,7 +618,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = "WWDC Scholars 2015/WWDC Scholars 2015.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -631,6 +634,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Gelei Chen (MA3FRWNL5H)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Gelei Chen (MA3FRWNL5H)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -642,6 +647,7 @@
 				INFOPLIST_FILE = "WWDC Scholars 2015Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WWDC Scholars 2015.app/WWDC Scholars 2015";
 			};
 			name = Debug;
@@ -650,6 +656,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Gelei Chen (MA3FRWNL5H)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Gelei Chen (MA3FRWNL5H)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -657,6 +665,7 @@
 				INFOPLIST_FILE = "WWDC Scholars 2015Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WWDC Scholars 2015.app/WWDC Scholars 2015";
 			};
 			name = Release;

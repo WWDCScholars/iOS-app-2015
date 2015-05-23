@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var currentScholar : Scholar?
     
@@ -43,13 +43,12 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        currentScholar = Scholar(name: "Gelei Chen", age: 19, birthdate: "", gender: "", latitude: 40.4240, longitude: -86.9290, email: "", picture: "", numberOfWWDCAttend: 1, appDemo: "", githubLinkToApp: "", twitter: "", facebook: "", github: "", linkedIn: "", website: "",location:"Purdue University, West Lafayette")
-        
+
         nameLabel.text = currentScholar?.name
         if currentScholar?.numberOfWWDCAttend == 1 {
-            shortBioLabel.text = (currentScholar?.age?.description)! + " from " + (currentScholar?.location)! + "\n" + "First time at WWDC!"
+            shortBioLabel.text = "\((currentScholar?.age?.description)!) from \((currentScholar?.location)!)\nFirst time at WWDC!"
         } else {
-            shortBioLabel.text = (currentScholar?.age?.description)! + " from " + (currentScholar?.location)! + "\n" + " Has attended WWDC " + (currentScholar?.numberOfWWDCAttend?.description)! + " times"
+            shortBioLabel.text = "\((currentScholar?.age?.description)!) from \((currentScholar?.location)!)\nHas attended WWDC \((currentScholar?.numberOfWWDCAttend?.description)!) times"
         }
         
         //descriptionLabel.text = currentScholar?.description
@@ -59,6 +58,10 @@ class DetailViewController: UIViewController {
         imgScholar.layer.cornerRadius = 30
         imgScholar.layer.masksToBounds = true
         imgScholar.imageURL = NSURL(string: currentScholar!.picture!)
+        
+        if let shortBio = currentScholar?.shortBio{
+            descriptionLabel.text = shortBio
+        }
         
         btnGithubRepo.layer.cornerRadius = 5
         btnGithubRepo.layer.masksToBounds = true
@@ -85,6 +88,34 @@ class DetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! UICollectionViewCell
+        
+        if let screenshots = currentScholar?.appScreenshots{
+            
+//            let nameTextView = cell.viewWithTag(201) as! UILabel
+//            nameTextView.text = scholar.name
+//            
+//            let profileImageView = cell.viewWithTag(202) as! AsyncImageView
+//            profileImageView.image = UIImage(named: "no-profile")
+//            profileImageView.imageURL = NSURL(string: scholar.picture!)
+        }
+        
+        cell.layer.cornerRadius = 10
+        cell.layer.masksToBounds = true
+        
+        return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if let screenshots = currentScholar?.appScreenshots{
+            return 4
+        }else{
+            return 0
+        }
+    }
+
     
     //    override func viewDidAppear(animated: Bool) {
     //        super.viewDidAppear(animated)
