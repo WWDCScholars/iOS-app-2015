@@ -64,10 +64,21 @@ class DetailViewController: UIViewController {
         btnGithubRepo.layer.masksToBounds = true
         btnGithubRepo.layer.borderColor = UIColor.blackColor().CGColor
         btnGithubRepo.layer.borderWidth = 1.0
-        
-        self.navigationItem.title = "Scholar detail"
-        
+        self.navigationItem.title = "Scholar Detail"
+        if let user = PFUser.currentUser() {
+            if (user.username == currentScholar?.user?.username) {
+                self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Edit, target: self, action: Selector("edit"))
+            }
+        }
         // Do any additional setup after loading the view.
+    }
+    func edit() {
+        //show edit view
+    }
+    
+    func saveEdits() {
+        //close edit view
+        //update scholar object
     }
     
     override func didReceiveMemoryWarning() {
