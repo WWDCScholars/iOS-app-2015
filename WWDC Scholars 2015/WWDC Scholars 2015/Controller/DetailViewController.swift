@@ -59,6 +59,10 @@ class DetailViewController: UIViewController {
         imgScholar.layer.masksToBounds = true
         imgScholar.imageURL = NSURL(string: currentScholar!.picture!)
         
+        if let shortBio = currentScholar?.shortBio{
+            descriptionLabel.text = shortBio
+        }
+        
         btnGithubRepo.layer.cornerRadius = 5
         btnGithubRepo.layer.masksToBounds = true
         btnGithubRepo.layer.borderColor = UIColor.blackColor().CGColor
