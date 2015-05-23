@@ -119,6 +119,7 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
             return
         }
         self.cacheArray.removeAll(keepCapacity: false)
+        //self.cacheImage?.removeAll(keepCapacity: false)
         let mapRegion = self.mapView.region
         let minNonClusteredSpan = min(mapRegion.span.latitudeDelta, mapRegion.span.longitudeDelta) / 5
         let objects = self.qTree.getObjectsInRegion(mapRegion, minNonClusteredSpan: minNonClusteredSpan) as NSArray
@@ -136,6 +137,7 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
                   
                     if find(self.cacheArray, tmp[0]) == nil {
                         self.cacheArray.insert(tmp[0], atIndex: self.cacheArray.count)
+                        //self.cacheImage?[tmp[0].picture!] = false
                     }
                     
                     
@@ -149,6 +151,8 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
                 
                 if find(self.cacheArray, tmp[0]) == nil {
                     self.cacheArray.insert(tmp[0], atIndex: self.cacheArray.count)
+                    //self.cacheImage?[tmp[0].picture!] = false
+                    
                 }
 
               
@@ -198,6 +202,10 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! CustomTableViewCell
+   
+        let profileImageView = cell.viewWithTag(202) as! UIImageView
+        profileImageView.image = UIImage(named: "no-profile")
+        
         if viewChanged{
             cell.name.text = cacheArray[indexPath.row].name
             cell.location.text = cacheArray[indexPath.row].location
@@ -206,11 +214,35 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
             cell.location.text = scholarArray[indexPath.row].location
         }
         if let scholar = DataManager.sharedInstance.getScholarByName(cell.name.text!){
-            //let profileImageView = cell.viewWithTag(202) as! AsyncImageView
-            //profileImageView.image = UIImage(named: "no-profile")
-            //profileImageView.imageURL = NSURL(string: scholar.picture!)
-            cell.imageView?.image = UIImage(named: "no-profile")
-            cell.imageView?.imageURL = NSURL(string: scholar.picture!)
+            profileImageView.imageURL = NSURL(string: scholar.picture!)
+            /*
+            let qos = Int(QOS_CLASS_USER_INITIATED.value)
+            dispatch_async(dispatch_get_global_queue(qos, 0)) { () -> Void in
+                var imageData : NSData?
+                if self.cacheImage?[scholar.picture!] == false {
+                    imageData = NSData(contentsOfURL: NSURL(string: scholar.picture!)!)
+                    dispatch_async(dispatch_get_main_queue()) {
+                       
+                            if imageData != nil {
+                                profileImageView.image = UIImage(data: imageData!)
+                            } else {
+                                profileImageView.image = UIImage(named: "no-picture")
+                            }
+                        }
+                    
+                    self.cacheImage?[scholar.picture!] = true
+                } else {
+                    if imageData != nil {
+                        profileImageView.image = UIImage(data: imageData!)
+                    } else {
+                        profileImageView.image = UIImage(named: "no-picture")
+                    }
+ 
+                }
+                
+                
+            }*/
+
         }
         return cell
         
