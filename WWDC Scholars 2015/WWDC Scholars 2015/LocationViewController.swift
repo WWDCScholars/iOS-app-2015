@@ -43,17 +43,21 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
         mapView.showsUserLocation = true
         mapView.delegate = self
         
-        /*
+        
         //The "Find me" button
         let button = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
-        button.frame = CGRectMake(UIScreen.mainScreen().bounds.width - 70, self.view.frame.height - 90, 50, 50)
+        //println(self.tableView.frame.maxY)
+        button.frame = CGRectMake(UIScreen.mainScreen().bounds.width - 50,70, 50, 50)
         button.setImage(UIImage(named: "MyLocation"), forState: .Normal)
         button.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
         button.layer.shadowOpacity = 0.5
         button.layer.shadowOffset = CGSizeMake(0, 0)
         button.layer.shadowRadius = 2
         self.view.addSubview(button)
-        */
+        
+        
+        
+        
         
         for scholar in scholarArray {
             
@@ -78,7 +82,7 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
     func buttonAction(sender:UIButton!)
     {
         let myLocation = mapView.userLocation.coordinate as CLLocationCoordinate2D
-        let zoomRegion = MKCoordinateRegionMakeWithDistance(myLocation,10000,10000)
+        let zoomRegion = MKCoordinateRegionMakeWithDistance(myLocation,5000000,5000000)
         self.mapView.setRegion(zoomRegion, animated: true)
     }
     
