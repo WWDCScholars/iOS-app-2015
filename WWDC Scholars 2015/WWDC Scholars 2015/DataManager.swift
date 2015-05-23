@@ -11,7 +11,7 @@ import Bolts
 
 class DataManager: NSObject {
     
-    var scholarArray = NSMutableArray()
+    var scholarArray : [Scholar] = []
     
     class var sharedInstance: DataManager {
         struct Static {
@@ -26,7 +26,7 @@ class DataManager: NSObject {
             (objects: [AnyObject]?, error: NSError?) -> Void in
             
             if error == nil {
-                self.scholarArray.removeAllObjects()
+                self.scholarArray.removeAll(keepCapacity: false)
                 // The find succeeded.
                 println("Successfully retrieved \(objects!.count) scholars.")
                 // Do something with the found objects
@@ -37,8 +37,8 @@ class DataManager: NSObject {
                             age: object.objectForKey("age") as! Int,
                             birthdate: "",
                             gender: object.objectForKey("gender") as? String,
-                            latitude: 0.0,
-                            longitude: 0.0,
+                            latitude: (object.objectForKey("latitude") as? Double)!,
+                            longitude: (object.objectForKey("longtitude") as? Double)!,
                             email: object.objectForKey("email") as? String,
                             picture: (object.objectForKey("profilePic") as! PFFile).url!,
                             numberOfWWDCAttend: object.objectForKey("numberOfTimesWWDCScholar") as? Int,
@@ -49,8 +49,11 @@ class DataManager: NSObject {
                             github: object.objectForKey("github") as? String,
                             linkedIn: object.objectForKey("linkedin") as? String,
                             website: object.objectForKey("website") as? String,
-                            location:"")
-                        self.scholarArray.addObject(scholar)
+                            location:object.objectForKey("location") as? String)
+                        
+                        
+                            // still need shortBio,videoLink,github,githubToApp,birthday,4 screenShot pictures
+                        self.scholarArray.append(scholar)
                     }
                     
                     NSNotificationCenter.defaultCenter().postNotificationName("onScholarsLoadedNotification", object: self)
@@ -64,7 +67,15 @@ class DataManager: NSObject {
     }
     
     func scholarAtLocation(pos: Int) -> Scholar?{
-        return scholarArray.objectAtIndex(pos) as? Scholar
+        return scholarArray[pos]
+    }
+    
+    func getScholarByName(name:String) ->Scholar?{
+        
+        let result = self.scholarArray.filter({
+            $0.name == name
+        })
+        return result[0]
     }
     
 }

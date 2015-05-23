@@ -17,19 +17,12 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
     let locationManager = CLLocationManager()
     
     //init the model
-    var scholarArray:[Scholar] = [
-        Scholar(name: "Gelei Chen", age: 19, birthdate: "", gender: "", latitude: 40.4240, longitude: -86.9290, email: "", picture: "", numberOfWWDCAttend: 0, appDemo: "", githubLinkToApp: "", twitter: "", facebook: "", github: "", linkedIn: "", website: "",location:""),
-        Scholar(name: "IU", age: 0, birthdate: "", gender: "", latitude: 39.1768, longitude: -86.5197, email: "", picture: "", numberOfWWDCAttend: 0, appDemo: "", githubLinkToApp: "", twitter: "", facebook: "", github: "", linkedIn: "", website: "",location:""),
-        Scholar(name: "Michigan", age: 0, birthdate: "", gender: "", latitude: 43.6867, longitude: -85.0102, email: "", picture: "", numberOfWWDCAttend: 0, appDemo: "", githubLinkToApp: "", twitter: "", facebook: "", github: "", linkedIn: "", website: "",location:""),
-        Scholar(name: "UIUC", age: 0, birthdate: "", gender: "", latitude: 40.1105, longitude: -88.2284, email: "", picture: "", numberOfWWDCAttend: 0, appDemo: "", githubLinkToApp: "", twitter: "", facebook: "", github: "", linkedIn: "", website: "",location:""),Scholar(name: "Stanford", age: 19, birthdate: "", gender: "", latitude: 37.4300, longitude: -122.1700, email: "", picture: "", numberOfWWDCAttend: 0, appDemo: "", githubLinkToApp: "", twitter: "", facebook: "", github: "", linkedIn: "", website: "",location:""),
-        Scholar(name: "Berkely", age: 0, birthdate: "", gender: "", latitude: 37.8717, longitude: -122.2728, email: "", picture: "", numberOfWWDCAttend: 0, appDemo: "", githubLinkToApp: "", twitter: "", facebook: "", github: "", linkedIn: "", website: "",location:""),
-        Scholar(name: "Boston", age: 0, birthdate: "", gender: "", latitude: 42.3601, longitude: -71.0589, email: "", picture: "", numberOfWWDCAttend: 0, appDemo: "", githubLinkToApp: "", twitter: "", facebook: "", github: "", linkedIn: "", website: "",location:""),
-        Scholar(name: "CMU", age: 0, birthdate: "", gender: "", latitude: 40.4433, longitude: -79.9436, email: "", picture: "", numberOfWWDCAttend: 0, appDemo: "", githubLinkToApp: "", twitter: "", facebook: "", github: "", linkedIn: "", website: "",location:"")]
+    var scholarArray:[Scholar] = ((DataManager.sharedInstance.scholarArray) as NSArray) as! [Scholar]
     
     var cacheArray : [Scholar] = []
     var viewChanged = false
     var currentScholar:Scholar?
-    let imageArray = ["1","2","3","4","5"]
+    
     var qTree = QTree()
     var myLocation : CLLocationCoordinate2D?
     
@@ -191,26 +184,41 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
         
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
-        if viewChanged {
-            cell.textLabel?.text = cacheArray[indexPath.row].name
-            cell.detailTextLabel?.text = String(stringInterpolationSegment: cacheArray[indexPath.row].age!)
-            //cell.imageView?.image = UIImage(named: self.imageArray[indexPath.row % self.cacheArray.count])
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! CustomTableViewCell
+        if viewChanged{
+            cell.name.text = cacheArray[indexPath.row].name
+            cell.location.text = cacheArray[indexPath.row].location
+            
+         
+            
             
         } else {
-            cell.textLabel?.text = scholarArray[indexPath.row].name
-            cell.detailTextLabel?.text = String(stringInterpolationSegment: scholarArray[indexPath.row].age!)
-            cell.imageView?.image = UIImage(named: self.imageArray[indexPath.row % self.scholarArray.count])
+            cell.name.text = scholarArray[indexPath.row].name
+            cell.location.text = scholarArray[indexPath.row].location
         }
+        
+        if let scholar = DataManager.sharedInstance.getScholarByName(cell.name.text!){
+            let profileImageView = cell.viewWithTag(202) as! AsyncImageView
+            profileImageView.image = UIImage(named: "no-profile")
+            profileImageView.imageURL = NSURL(string: scholar.picture!)
+            
+            //println(scholar)
+        }
+
+
+        
+        
+
+        
        
         return cell
         
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        tableView.deselectRowAtIndexPath(indexPath, animated: false)
     }
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 60
+        return 80
     }
     
 }

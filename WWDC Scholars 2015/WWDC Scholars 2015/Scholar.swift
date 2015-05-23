@@ -27,6 +27,8 @@ class Scholar:NSObject{
     var website : String?
     var location : String?
     
+    // still need shortBio,videoLink,github,githubToApp,birthday,4 screenShot pictures
+    
     init(name:String?,age:Int,birthdate:String?,gender:String?,latitude:Double,longitude:Double,email:String?,picture:String?,numberOfWWDCAttend:Int?,appDemo:String?,githubLinkToApp:String?,twitter:String?,facebook:String?,github:String?,linkedIn:String?,website:String?,location:String?){
             self.name = name
             self.age = age
