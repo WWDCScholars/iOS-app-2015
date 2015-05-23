@@ -57,7 +57,7 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
         
         for scholar in scholarArray {
             
-            let annotation = scholarAnnotation(coordinate: CLLocationCoordinate2DMake(scholar.latitude, scholar.longitude), title: scholar.name!,subtitle:"test")
+            let annotation = scholarAnnotation(coordinate: CLLocationCoordinate2DMake(scholar.latitude, scholar.longitude), title: scholar.name!,subtitle:scholar.location!)
             self.qTree.insertObject(annotation)
             
             //self.mapView.addAnnotation(annotation)
@@ -162,10 +162,10 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "transformToScholarDetail" {
-            /*
-            let viewController = segue.destinationViewController as! JobDetailViewController
-            viewController.currentJob = currentJob
-            */
+            
+            let viewController = segue.destinationViewController as! DetailViewController
+            viewController.currentScholar = currentScholar
+            //println(currentScholar?.name)
         }
         
     }
@@ -202,7 +202,7 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
             profileImageView.image = UIImage(named: "no-profile")
             profileImageView.imageURL = NSURL(string: scholar.picture!)
             
-            //println(scholar)
+  
         }
 
 
@@ -216,6 +216,9 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as! CustomTableViewCell
+        currentScholar = DataManager.sharedInstance.getScholarByName(cell.name.text!)
+        self.performSegueWithIdentifier("transformToScholarDetail", sender: self)
     }
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 80
