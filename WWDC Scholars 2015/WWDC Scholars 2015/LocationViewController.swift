@@ -128,7 +128,7 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
                 let c = object as? QCluster
                 let neihgbours = self.qTree.neighboursForLocation((c?.coordinate)!, limitCount: NSInteger((c?.objectsCount)!)) as NSArray
                 for nei in neihgbours {
-                    //println((nei.title)!!)
+                    println((nei.title)!!)
                     
                     let tmp = self.scholarArray.filter({
                         return $0.name == (nei.title)!!
@@ -138,7 +138,7 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
 
                 }
             } else {
-                //println((object.title)!!)
+                println((object.title)!!)
                 let tmp = self.scholarArray.filter({
                     return $0.name == (object.title)!!
                 })
