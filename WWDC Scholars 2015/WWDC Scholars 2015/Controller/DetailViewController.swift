@@ -8,9 +8,10 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class DetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     var currentScholar : Scholar?
+    
     
     @IBOutlet private weak var imgScholar: AsyncImageView!
     
@@ -45,6 +46,8 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         super.viewDidLoad()
 
         nameLabel.text = currentScholar?.name
+        descriptionLabel.text = currentScholar?.shortBio
+        
         if currentScholar?.numberOfWWDCAttend == 1 {
             shortBioLabel.text = "\((currentScholar?.age?.description)!) from \((currentScholar?.location)!)\nFirst time at WWDC!"
         } else {
@@ -70,6 +73,8 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         self.navigationItem.title = "Scholar detail"
         
+        
+        
         // Do any additional setup after loading the view.
     }
     
@@ -81,54 +86,46 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! UICollectionViewCell
         
-        if let screenshots = currentScholar?.appScreenshots{
+        let imageView : AsyncImageView = cell.viewWithTag(100) as! AsyncImageView
+        
+        if (currentScholar?.appDemo != nil && indexPath.item == 0) {
+            imageView.imageURL = NSURL(string: "https://s-media-cache-ak0.pinimg.com/736x/5d/ad/1f/5dad1f8ba4815a4c2df7a2c6acd62e5b.jpg") //temp!!
+        } else if let screenshots : [String] = currentScholar?.appScreenshots{
+            let url : String = screenshots[indexPath.item-1]
+            imageView.imageURL = NSURL(string: url)
             
-//            let nameTextView = cell.viewWithTag(201) as! UILabel
-//            nameTextView.text = scholar.name
-//            
-//            let profileImageView = cell.viewWithTag(202) as! AsyncImageView
-//            profileImageView.image = UIImage(named: "no-profile")
-//            profileImageView.imageURL = NSURL(string: scholar.picture!)
         }
         
-        cell.layer.cornerRadius = 10
-        cell.layer.masksToBounds = true
         
         return cell
     }
     
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return CGSizeMake(collectionView.frame.size.height, collectionView.frame.size.height)
+    }
+    
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if let screenshots = currentScholar?.appScreenshots{
-            return 4
-        }else{
+        
+        if (currentScholar?.appScreenshots != nil){
+            var count : Int = currentScholar!.appScreenshots!.count
+            if (currentScholar?.appDemo != nil) {
+                count++
+            }
+            return count
+        } else {
             return 0
         }
     }
 
-    
-    //    override func viewDidAppear(animated: Bool) {
-    //        super.viewDidAppear(animated)
-    //
-    //        nameLabel.text = currentScholar?.name
-    //        if currentScholar?.numberOfWWDCAttend == 1 {
-    //            shortBioLabel.text = (currentScholar?.age?.description)! + " from " + (currentScholar?.location)! + "\n" + "First time at WWDC!"
-    //        } else {
-    //            shortBioLabel.text = (currentScholar?.age?.description)! + " from " + (currentScholar?.location)! + "\n" + " Has attended WWDC " + (currentScholar?.numberOfWWDCAttend?.description)! + " times"
-    //        }
-    //
-    //        //descriptionLabel.text = currentScholar?.description
-    //        let zoomRegion = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D(latitude: (currentScholar!.latitude), longitude: (currentScholar!.longitude)), 100000, 100000)
-    //        mapView.setRegion(zoomRegion, animated: true)
-    //    }
-    
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        
+        if (currentScholar?.appDemo != nil && indexPath.item == 0) {
+            let browser : NGBrowserViewController = NGBrowserViewController(url: currentScholar!.appDemo!)
+            self.navigationController?.pushViewController(browser, animated: true)
+        } else {
+            //open in photo browser
+        }
     }
-    */
     
 }

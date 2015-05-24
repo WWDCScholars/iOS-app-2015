@@ -29,6 +29,8 @@
 		408211761B0E296A00D567AC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408211751B0E296A00D567AC /* DataManager.swift */; };
 		6EEA0A151B0ED45900B99130 /* MainScreenFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA0A141B0ED45900B99130 /* MainScreenFooter.swift */; };
 		7C00D58F1B0E867A00F9B3E7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C00D58E1B0E867A00F9B3E7 /* DetailViewController.swift */; };
+		7C10849F1B11526E00DCC52E /* NGBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C10849D1B11526E00DCC52E /* NGBrowserViewController.swift */; };
+		7C1084A01B11526E00DCC52E /* NGBrowserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C10849E1B11526E00DCC52E /* NGBrowserViewController.xib */; };
 		C00C27401B0D5C9C008C19AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C273F1B0D5C9C008C19AE /* AppDelegate.swift */; };
 		C00C27421B0D5C9C008C19AE /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C27411B0D5C9C008C19AE /* LocationViewController.swift */; };
 		C00C27451B0D5C9C008C19AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C00C27431B0D5C9C008C19AE /* Main.storyboard */; };
@@ -80,6 +82,8 @@
 		408211751B0E296A00D567AC /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		6EEA0A141B0ED45900B99130 /* MainScreenFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenFooter.swift; sourceTree = "<group>"; };
 		7C00D58E1B0E867A00F9B3E7 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = Controller/DetailViewController.swift; sourceTree = "<group>"; };
+		7C10849D1B11526E00DCC52E /* NGBrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NGBrowserViewController.swift; sourceTree = "<group>"; };
+		7C10849E1B11526E00DCC52E /* NGBrowserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NGBrowserViewController.xib; sourceTree = "<group>"; };
 		7C1A22C41B0E99A400662775 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		C00C273A1B0D5C9C008C19AE /* WWDC Scholars 2015.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WWDC Scholars 2015.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C00C273E1B0D5C9C008C19AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -213,6 +217,15 @@
 			name = DetailView;
 			sourceTree = "<group>";
 		};
+		7C1084A11B11527200DCC52E /* Browser */ = {
+			isa = PBXGroup;
+			children = (
+				7C10849D1B11526E00DCC52E /* NGBrowserViewController.swift */,
+				7C10849E1B11526E00DCC52E /* NGBrowserViewController.xib */,
+			);
+			name = Browser;
+			sourceTree = "<group>";
+		};
 		C00C27311B0D5C9C008C19AE = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +334,7 @@
 		C00C27791B0D5E10008C19AE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7C1084A11B11527200DCC52E /* Browser */,
 				7C00D58D1B0E860A00F9B3E7 /* DetailView */,
 				408211631B0E032C00D567AC /* MainScreen */,
 				C0C6CBB31B0D6AA500A00796 /* MapViewController */,
@@ -435,6 +449,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C1084A01B11526E00DCC52E /* NGBrowserViewController.xib in Resources */,
 				C00C27451B0D5C9C008C19AE /* Main.storyboard in Resources */,
 				C0B7F78D1B0E682600E74458 /* Images.xcassets in Resources */,
 				C00C274A1B0D5C9C008C19AE /* LaunchScreen.xib in Resources */,
@@ -455,6 +470,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C10849F1B11526E00DCC52E /* NGBrowserViewController.swift in Sources */,
 				C00C276E1B0D5CEC008C19AE /* QCluster.m in Sources */,
 				C00C27711B0D5CEC008C19AE /* QTreeGeometryUtils.m in Sources */,
 				C00C27421B0D5C9C008C19AE /* LocationViewController.swift in Sources */,
