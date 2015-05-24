@@ -77,7 +77,9 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         // Do any additional setup after loading the view.
     }
-    
+    override func prefersStatusBarHidden() -> Bool {
+        return false
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
