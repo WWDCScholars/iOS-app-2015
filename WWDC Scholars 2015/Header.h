@@ -13,5 +13,6 @@
 #import "ClusterAnnotationView.h"
 #import <Parse/Parse.h>
 #import "AsyncImageView.h"
+#import <MWPhotoBrowser/MWPhotoBrowser.h>
 
 #endif
