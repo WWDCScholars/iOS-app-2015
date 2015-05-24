@@ -12,7 +12,7 @@ import QuickLook
 class DetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     var currentScholar : Scholar?
-    
+    private var social : Dictionary<String,String> = Dictionary<String,String>()
     
     @IBOutlet private weak var imgScholar: AsyncImageView!
     
@@ -23,6 +23,7 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     @IBOutlet weak var shortBioLabel: UILabel!
     
+    @IBOutlet weak var viewSocial: UIView!
     
     @IBOutlet weak var descriptionLabel: UILabel!
     
@@ -30,17 +31,6 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     @IBAction func toGithub(sender: UIButton) {
     }
-    
-    @IBAction func emailClicked(sender: UIButton) {
-    }
-    
-    
-    @IBAction func facebookClied(sender: UIButton) {
-    }
-    
-    @IBOutlet weak var twitterClicked: UIButton!
-    
-    
     
     
     override func viewDidLoad() {
@@ -80,8 +70,57 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         self.navigationItem.title = "More about " + currentScholar!.name!
         
         
-        // Do any additional setup after loading the view.
+        
+        if(currentScholar?.email != nil){
+            social["mail"] = currentScholar!.email!
+        }
+        
+        if(currentScholar?.github != nil){
+            social["gh"] = currentScholar!.github!
+        }
+        
+        if(currentScholar?.facebook != nil){
+            social["fb"] = currentScholar!.facebook!
+        }
+        
+        if(currentScholar?.twitter != nil){
+            social["tw"] = currentScholar!.twitter!
+        }
+        
+        let totalWidth : CGFloat = CGFloat((social.count*30)+((social.count-1)*10))
+        let viewWidth : CGFloat = CGFloat(viewSocial.frame.size.width)
+        var startingX : CGFloat = (viewWidth-totalWidth) / 2
+        
+        for key : String in social.keys {
+            let value : String = social[key]!
+            let btn : UIButton = UIButton()
+            btn.frame = CGRectMake(startingX, CGFloat(0), CGFloat(30), CGFloat(30))
+            btn.setImage(UIImage(named: key + "_logo"), forState: .Normal)
+            btn.addTarget(self, action: Selector("open_"+key) , forControlEvents: UIControlEvents.TouchUpInside)
+            viewSocial.addSubview(btn)
+            startingX+=40.0
+        }
+    
+        
+        
     }
+    
+    func open_fb() {
+        UIApplication.sharedApplication().openURL(NSURL(string:currentScholar!.facebook!)!)
+    }
+    
+    func open_tw() {
+        MRSocial.openTwitterProfile(currentScholar!.twitter!.lastPathComponent)
+    }
+    
+    func open_gh() {
+        UIApplication.sharedApplication().openURL(NSURL(string:currentScholar!.github!)!)
+    }
+    
+    func open_mail() {
+        UIApplication.sharedApplication().openURL(NSURL(string:"mailto:"+currentScholar!.email!)!)
+    }
+    
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
