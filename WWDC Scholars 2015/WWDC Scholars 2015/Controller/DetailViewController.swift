@@ -13,6 +13,7 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     var currentScholar : Scholar?
     private var social : Dictionary<String,String> = Dictionary<String,String>()
+    var selectedImageView : String?
     
     @IBOutlet private weak var imgScholar: AsyncImageView!
     
@@ -29,8 +30,7 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     @IBOutlet weak var mapView: MKMapView!
     
-    @IBAction func toGithub(sender: UIButton) {
-    }
+
     
     
     override func viewDidLoad() {
@@ -130,7 +130,10 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     }
     
     @IBAction func didOpenGithubRepo(sender: AnyObject) {
-        self.openBrowserWithURL(currentScholar!.githubLinkToApp!)
+        if let url = currentScholar!.githubLinkToApp {
+            self.openBrowserWithURL(currentScholar!.githubLinkToApp!)
+        }
+        
     }
     
     
@@ -180,13 +183,54 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         if (currentScholar?.appDemo != nil && indexPath.item == 0) {
             self.openBrowserWithURL(currentScholar!.appDemo!)
         } else {
-            var idx : UInt = UInt(indexPath.item)
-            if (currentScholar?.appDemo != nil) {
-                idx--
+            var idx : Int = indexPath.item
+            if(currentScholar?.appDemo != nil){
+                idx = idx - 1
             }
             
             //code for opening photogallery here!
+            if let screenshots : [String] = currentScholar?.appScreenshots{
+                let url : String = screenshots[idx]
+                self.selectedImageView = url
+            }
             
+            
+            self.performSegueWithIdentifier("toPopup", sender: self)
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "toPopup" {
+            let vc = segue.destinationViewController as! PopupViewController
+            vc.imageURL = selectedImageView
+            
+            let popupSegue = segue as! CCMPopupSegue
+            
+            
+            if (self.view.bounds.size.height < 420) {
+                
+                popupSegue.destinationBounds = CGRectMake(0, 0, 300, 400)
+                //6 plus
+            } else if (self.view.bounds.size.height == 736) {
+                popupSegue.destinationBounds = CGRectMake(0, 0, (UIScreen.mainScreen().bounds.size.height-200) * 0.6, UIScreen.mainScreen().bounds.size.height-150)
+                // 6
+            } else if (self.view.bounds.size.height == 667) {
+                popupSegue.destinationBounds = CGRectMake(0, 0, (UIScreen.mainScreen().bounds.size.height-150) * 0.65, UIScreen.mainScreen().bounds.size.height-150)
+                // 5s / 5
+            } else if (self.view.bounds.size.height == 568) {
+                popupSegue.destinationBounds = CGRectMake(0, 0, (UIScreen.mainScreen().bounds.size.height-150) * 0.7, UIScreen.mainScreen().bounds.size.height-150)
+                // 4s
+            } else if (self.view.bounds.size.height == 480) {
+                popupSegue.destinationBounds = CGRectMake(0, 0, (UIScreen.mainScreen().bounds.size.height-100) * 0.76, UIScreen.mainScreen().bounds.size.height-150)
+                // ipad
+            } else {
+                popupSegue.destinationBounds = CGRectMake(0, 0, (UIScreen.mainScreen().bounds.size.height-100) * 0.7, UIScreen.mainScreen().bounds.size.height-150)
+            }
+            popupSegue.backgroundBlurRadius = 7
+            popupSegue.backgroundViewAlpha = 0.3
+            popupSegue.backgroundViewColor = UIColor.blackColor()
+            popupSegue.dismissableByTouchingBackground = true
+
         }
     }
     
