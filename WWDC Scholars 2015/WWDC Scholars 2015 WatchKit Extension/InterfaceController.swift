@@ -15,13 +15,27 @@ class InterfaceController: WKInterfaceController {
     
     let swiftBlogs = ["Ray Wenderlich", "NSHipster", "iOS Developer Tips", "Jameson Quave", "Natasha The Robot", "Coding Explorer", "That Thing In Swift", "Andrew Bancroft", "iAchieved.it", "Airspeed Velocity"]
 
+    var scholars = NSMutableArray()
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
         var defaults = NSUserDefaults(suiteName: "group.wwdcscholars.2015")
         
         var allScholarsJson = defaults?.objectForKey("scholars") as! NSArray
-        println(allScholarsJson)
+        for dict: NSDictionary in allScholarsJson as! [NSDictionary]{
+            var scholar = Scholar(name: dict.objectForKey("name") as? String,
+                age: dict.objectForKey("age") as! Int,
+                latitude: dict.objectForKey("latitude") as! Double,
+                longitude: dict.objectForKey("longitude") as! Double,
+                picture: dict.objectForKey("picture") as? String,
+                shortBio: dict.objectForKey("shortBio") as? String,
+                numberOfWWDCAttend: dict.objectForKey("numberOfWWDCAttend") as? Int,
+                location: dict.objectForKey("location") as? String)
+            scholars.addObject(scholar)
+            println(scholar)
+        }
+        println("Loaded \(allScholarsJson.count) scholars")
+
         loadTableData()
 
         // Configure interface objects here.
@@ -39,12 +53,14 @@ class InterfaceController: WKInterfaceController {
     }
     
     func loadTableData() {
-        scholarTable.setNumberOfRows(swiftBlogs.count, withRowType: "scholarCell")
+        scholarTable.setNumberOfRows(scholars.count, withRowType: "scholarCell")
         
-        for (index, blogName) in enumerate(swiftBlogs) {
+        for (index, scholar) in enumerate((scholars as NSArray) as! [Scholar]) {
             if let row = scholarTable.rowControllerAtIndex(index) as? ScholarTableRow {
-                row.scholarName.setText(blogName)
-                row.scholarImage=row.scholarImage.setImageWithUrl("http://ktyreapple.typepad.com/.a/6a0133f1e8b013970b0133f1f3cbda970b-pi")
+                row.scholarName.setText(scholar.name)
+                if let profilePic = scholar.picture{
+                    row.scholarImage=row.scholarImage.setImageWithUrl(profilePic)
+                }
             }
         }
     }
