@@ -40,11 +40,11 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="201" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matthijs Logemann" lineBreakMode="tailTruncation" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Ufb-qH-pEt">
-                                                    <rect key="frame" x="88" y="4" width="476" height="38"/>
+                                                    <rect key="frame" x="88" y="9" width="476" height="41"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="182" id="3se-au-btV"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
@@ -53,12 +53,12 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLJ-ug-yi6">
-                                                    <rect key="frame" x="88" y="55" width="476" height="29"/>
+                                                    <rect key="frame" x="88" y="50" width="476" height="29"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="176" id="EKL-fz-YxD"/>
                                                         <constraint firstAttribute="height" constant="29" id="SND-fs-vhn"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
@@ -72,13 +72,13 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="Ufb-qH-pEt" secondAttribute="trailing" constant="-5" id="B03-9w-G6n"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="bSY-48-Hud" secondAttribute="bottom" constant="-4" id="FTZ-QJ-dNh"/>
                                                 <constraint firstItem="QLJ-ug-yi6" firstAttribute="leading" secondItem="Ufb-qH-pEt" secondAttribute="leading" id="IIe-pR-goj"/>
-                                                <constraint firstItem="Ufb-qH-pEt" firstAttribute="top" secondItem="bSY-48-Hud" secondAttribute="top" id="Q7i-AN-3Lg"/>
+                                                <constraint firstItem="Ufb-qH-pEt" firstAttribute="top" secondItem="bSY-48-Hud" secondAttribute="top" constant="5" id="Q7i-AN-3Lg"/>
                                                 <constraint firstItem="Ufb-qH-pEt" firstAttribute="leading" secondItem="bSY-48-Hud" secondAttribute="trailing" constant="8" id="TtM-Vg-Spj"/>
                                                 <constraint firstItem="Ufb-qH-pEt" firstAttribute="trailing" secondItem="QLJ-ug-yi6" secondAttribute="trailing" id="eae-YC-G39"/>
                                                 <constraint firstItem="bSY-48-Hud" firstAttribute="top" secondItem="ci1-lQ-WKV" secondAttribute="topMargin" constant="-4" id="fyh-eo-LbV"/>
-                                                <constraint firstItem="QLJ-ug-yi6" firstAttribute="bottom" secondItem="bSY-48-Hud" secondAttribute="bottom" id="hxt-H4-lhh"/>
+                                                <constraint firstItem="QLJ-ug-yi6" firstAttribute="bottom" secondItem="bSY-48-Hud" secondAttribute="bottom" constant="-5" id="hxt-H4-lhh"/>
                                                 <constraint firstItem="bSY-48-Hud" firstAttribute="leading" secondItem="ci1-lQ-WKV" secondAttribute="leadingMargin" constant="-8" id="tBL-VW-1Sn"/>
-                                                <constraint firstItem="QLJ-ug-yi6" firstAttribute="top" secondItem="Ufb-qH-pEt" secondAttribute="bottom" constant="13" id="tdc-Np-OlU"/>
+                                                <constraint firstItem="QLJ-ug-yi6" firstAttribute="top" secondItem="Ufb-qH-pEt" secondAttribute="bottom" id="tdc-Np-OlU"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -692,8 +692,8 @@
                                                 <rect key="frame" x="20" y="359" width="560" height="38"/>
                                                 <string key="text">22 from San Marino (SMR)
 Two times at WWDC!</string>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="16"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                <color key="textColor" red="0.2901960784" green="0.6588235294" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vwB-O9-vEU">
@@ -751,9 +751,9 @@ Two times at WWDC!</string>
                                                     <constraint firstAttribute="width" constant="200" id="4o6-uQ-Wfw"/>
                                                     <constraint firstAttribute="height" constant="30" id="ahj-GG-T3X"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                 <state key="normal" title="See the repo on Github!">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" red="0.098039215690000001" green="0.44705882349999998" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
@@ -944,6 +944,7 @@ Two times at WWDC!</string>
                     <size key="freeformSize" width="600" height="1600"/>
                     <connections>
                         <outlet property="btnGithubRepo" destination="UQm-Db-mKb" id="g3k-Va-pY3"/>
+                        <outlet property="cntGithubRepo" destination="ahj-GG-T3X" id="52h-h7-aKb"/>
                         <outlet property="descriptionLabel" destination="8jU-u9-izq" id="NBS-gU-eSb"/>
                         <outlet property="imgScholar" destination="Qum-6W-Alm" id="dI6-Er-Unt"/>
                         <outlet property="mapView" destination="ebs-QW-EAg" id="url-qp-WN5"/>
@@ -980,6 +981,6 @@ Two times at WWDC!</string>
         <image name="wwdc15-hero_2x-4" width="1250" height="1250"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Dzz-cG-8L0"/>
+        <segue reference="067-Ti-Q9O"/>
     </inferredMetricsTieBreakers>
 </document>
