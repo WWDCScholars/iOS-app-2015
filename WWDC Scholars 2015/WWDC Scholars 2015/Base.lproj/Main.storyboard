@@ -107,7 +107,7 @@
                     <navigationItem key="navigationItem" id="lC6-sg-O5W">
                         <nil key="title"/>
                         <view key="titleView" contentMode="scaleToFill" id="w4m-C8-G5S">
-                            <rect key="frame" x="180" y="6" width="240" height="33"/>
+                            <rect key="frame" x="180" y="5.5" width="240" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gbx-0T-Rgf">
@@ -211,9 +211,6 @@
                                             <constraint firstAttribute="trailing" secondItem="euW-ib-40b" secondAttribute="trailing" id="r33-wo-k2D"/>
                                             <constraint firstAttribute="trailing" secondItem="dGR-dG-3vr" secondAttribute="trailing" id="soV-o7-67e"/>
                                         </constraints>
-                                        <connections>
-                                            <segue destination="ixk-1w-ECw" kind="show" id="Dzz-cG-8L0"/>
-                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageFooter" id="sDU-rv-tc5" customClass="MainScreenFooter" customModule="WWDC_Scholars_2015" customModuleProvider="target">
@@ -276,7 +273,7 @@
                     <navigationItem key="navigationItem" id="1Ur-Ti-Ge8">
                         <nil key="title"/>
                         <view key="titleView" contentMode="scaleToFill" id="A4q-SD-fmz">
-                            <rect key="frame" x="180" y="6" width="240" height="33"/>
+                            <rect key="frame" x="180" y="5.5" width="240" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrb-Du-ggb">
@@ -314,6 +311,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="scholarsCollectionView" destination="WO0-05-mmK" id="K52-4k-oZi"/>
+                        <segue destination="ixk-1w-ECw" kind="presentation" identifier="toDetail" id="KC4-fE-5Gl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRI-aw-yvu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -605,7 +603,7 @@
                     <navigationItem key="navigationItem" id="koe-BG-fxw">
                         <nil key="title"/>
                         <view key="titleView" contentMode="scaleToFill" id="uVc-Qc-A49">
-                            <rect key="frame" x="180" y="6" width="240" height="33"/>
+                            <rect key="frame" x="180" y="5.5" width="240" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOU-Yv-lXu">
@@ -981,6 +979,6 @@ Two times at WWDC!</string>
         <image name="wwdc15-hero_2x-4" width="1250" height="1250"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="067-Ti-Q9O"/>
+        <segue reference="KC4-fE-5Gl"/>
     </inferredMetricsTieBreakers>
 </document>

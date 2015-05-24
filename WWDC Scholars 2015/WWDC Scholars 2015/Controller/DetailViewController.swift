@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class DetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, MWPhotoBrowserDelegate {
     
     var currentScholar : Scholar?
     
@@ -21,6 +21,8 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     @IBOutlet weak var nameLabel: UILabel!
     
     @IBOutlet weak var shortBioLabel: UILabel!
+    
+    private var photos : Array<MWPhoto> = Array<MWPhoto>()
     
     
     
@@ -79,9 +81,19 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         self.navigationItem.title = "More about " + currentScholar!.name!
         
+        let screenshots : [String] = currentScholar!.appScreenshots!
+        for string : String in screenshots {
+            photos.append(MWPhoto(URL: NSURL(string: string)))
+        }
+        
+    
+        
+        
         // Do any additional setup after loading the view.
     }
-    
+    override func prefersStatusBarHidden() -> Bool {
+        return false
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -138,8 +150,29 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         if (currentScholar?.appDemo != nil && indexPath.item == 0) {
             self.openBrowserWithURL(currentScholar!.appDemo!)
         } else {
+            var idx : UInt = UInt(indexPath.item)
+            if (currentScholar?.appDemo == nil) {
+                idx--
+            }
+            
+            let picBrowser : MWPhotoBrowser = MWPhotoBrowser(delegate: self)
+            picBrowser.displayActionButton = false
+            picBrowser.setCurrentPhotoIndex(idx)
+            self.navigationController?.pushViewController(picBrowser, animated: true)
+            
             //open in photo browser
         }
+    }
+    
+    func numberOfPhotosInPhotoBrowser(photoBrowser: MWPhotoBrowser!) -> UInt {
+        return UInt(photos.count)
+    }
+    
+    func photoBrowser(photoBrowser: MWPhotoBrowser!, photoAtIndex index: UInt) -> MWPhotoProtocol! {
+        if(index < UInt(photos.count)){
+            return photos[Int(index)]
+        }
+        return nil
     }
     
     private func openBrowserWithURL(url : String){
