@@ -9,7 +9,7 @@
 import UIKit
 import QuickLook
 
-class DetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, QLPreviewControllerDelegate, QLPreviewControllerDataSource {
+class DetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     var currentScholar : Scholar?
     
@@ -101,7 +101,7 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         let imageView : AsyncImageView = cell.viewWithTag(100) as! AsyncImageView
         
         if (currentScholar?.appDemo != nil && indexPath.item == 0) {
-            imageView.imageURL = NSURL(string: "https://s-media-cache-ak0.pinimg.com/736x/5d/ad/1f/5dad1f8ba4815a4c2df7a2c6acd62e5b.jpg") //temp!!
+            imageView.image = UIImage(named: "video_placeholder.png")
         } else if let screenshots : [String] = currentScholar?.appScreenshots{
             
             var idx : Int = indexPath.item
@@ -154,7 +154,8 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     private func openBrowserWithURL(url : String){
         let browser : NGBrowserViewController = NGBrowserViewController(url: url)
-        self.navigationController?.pushViewController(browser, animated: true)
+        let nav : UINavigationController = UINavigationController(rootViewController: browser)
+        self.presentViewController(nav, animated: true, completion: nil)
     }
     
 }
