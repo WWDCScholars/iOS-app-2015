@@ -94,4 +94,11 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
             dest.transitioningDelegate = transition
         }
     }
+    
+    /* REQUIRED, do not connect to any Outlet.
+    BUG DETECTED? Exit segue doesn't dismiss automatically, so we have to dismiss it manually.
+    */
+    @IBAction func unwindToMainViewController (sender: UIStoryboardSegue){
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 }

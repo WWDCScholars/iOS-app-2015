@@ -22,6 +22,9 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
     var cacheArray : [Scholar] = []
     var viewChanged = false
     var currentScholar:Scholar?
+    /*Create your transition manager instance*/
+    var transition = QZCircleSegue()
+    
     
     var qTree = QTree()
     var myLocation : CLLocationCoordinate2D?
@@ -116,17 +119,7 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
         return nil
     }
     
-    
-    func mapView(mapView: MKMapView!, didSelectAnnotationView view: MKAnnotationView!) {
-        for scholar in scholarArray {
-            /*
-            if job.title == (view.annotation as! JobAnnotation).title {
-                self.currentJob = job
-                self.performSegueWithIdentifier("transformToScholarDetail", sender: self)
-            }
-            */
-        }
-    }
+
     
     func reloadAnnotations(){
         if self.isViewLoaded() == false {
@@ -194,8 +187,17 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "transformToScholarDetail" {
             
-            let viewController = segue.destinationViewController as! DetailViewController
-            viewController.currentScholar = currentScholar
+            let dest = segue.destinationViewController as! DetailViewController
+            dest.currentScholar = currentScholar
+            /* Send the button to your transition manager */
+            self.transition.animationChild = self.mapView
+            /* Set the color to your transition manager*/
+            self.transition.animationColor = UIColor(red: 46/255, green: 195/255, blue: 179/255, alpha: 1.0)
+            /* Set both, the origin and destination to your transition manager*/
+            self.transition.fromViewController = self
+            self.transition.toViewController = dest
+            /* Add the transition manager to your transitioningDelegate View Controller*/
+            dest.transitioningDelegate = transition
             //println(currentScholar?.name)
         }
         
@@ -271,6 +273,12 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
     }
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 80
+    }
+    /* REQUIRED, do not connect to any Outlet.
+    BUG DETECTED? Exit segue doesn't dismiss automatically, so we have to dismiss it manually.
+    */
+    @IBAction func unwindToMainViewController (sender: UIStoryboardSegue){
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
 }
