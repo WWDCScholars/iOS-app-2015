@@ -33,6 +33,7 @@
 		7C9A052D1B121EA700EC1F11 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C9A052B1B121EA700EC1F11 /* ParseFacebookUtils.framework */; };
 		7C9A052E1B121EA700EC1F11 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C9A052C1B121EA700EC1F11 /* ParseFacebookUtilsV4.framework */; };
 		7C9A05D71B1226B800EC1F11 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C9A05D51B12268B00EC1F11 /* QuickLook.framework */; };
+		7C9A06961B12325E00EC1F11 /* video_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9A06951B12325E00EC1F11 /* video_placeholder.png */; };
 		C004F5831B12113300A1AF27 /* QZCircleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004F5821B12113300A1AF27 /* QZCircleSegue.swift */; };
 		C00C27401B0D5C9C008C19AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C273F1B0D5C9C008C19AE /* AppDelegate.swift */; };
 		C00C27421B0D5C9C008C19AE /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C27411B0D5C9C008C19AE /* LocationViewController.swift */; };
@@ -92,6 +93,7 @@
 		7C9A052C1B121EA700EC1F11 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		7C9A052F1B121FCC00EC1F11 /* libPods-WWDC Scholars 2015.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-WWDC Scholars 2015.a"; path = "Pods/../build/Debug-iphoneos/libPods-WWDC Scholars 2015.a"; sourceTree = "<group>"; };
 		7C9A05D51B12268B00EC1F11 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
+		7C9A06951B12325E00EC1F11 /* video_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video_placeholder.png; sourceTree = "<group>"; };
 		C004F5821B12113300A1AF27 /* QZCircleSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QZCircleSegue.swift; sourceTree = "<group>"; };
 		C00C273A1B0D5C9C008C19AE /* WWDC Scholars 2015.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WWDC Scholars 2015.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C00C273E1B0D5C9C008C19AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 		C00C273D1B0D5C9C008C19AE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7C9A06951B12325E00EC1F11 /* video_placeholder.png */,
 				C00C273F1B0D5C9C008C19AE /* AppDelegate.swift */,
 				C0B7F78C1B0E682600E74458 /* Images.xcassets */,
 				C00C27431B0D5C9C008C19AE /* Main.storyboard */,
@@ -491,6 +494,7 @@
 			files = (
 				7C1084A01B11526E00DCC52E /* NGBrowserViewController.xib in Resources */,
 				C00C27451B0D5C9C008C19AE /* Main.storyboard in Resources */,
+				7C9A06961B12325E00EC1F11 /* video_placeholder.png in Resources */,
 				C0B7F78D1B0E682600E74458 /* Images.xcassets in Resources */,
 				C00C274A1B0D5C9C008C19AE /* LaunchScreen.xib in Resources */,
 			);
