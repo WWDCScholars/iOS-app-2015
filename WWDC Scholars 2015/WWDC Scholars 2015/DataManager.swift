@@ -67,9 +67,17 @@ class DataManager: NSObject {
                             location:object.objectForKey("location") as? String,
                             itunes:object.objectForKey("itunes") as? String)
                         
+                        
                             self.scholarArray.append(scholar)
                     }
                     
+                    var defaults = NSUserDefaults(suiteName: "group.wwdcscholars.2015")
+                    
+                    var allScholarsJson = NSMutableArray()
+                    for scholar: Scholar in self.scholarArray{
+                        allScholarsJson.addObject(scholar.generateSimpleJson())
+                    }
+                    defaults?.setObject(allScholarsJson, forKey: "scholars")
                     NSNotificationCenter.defaultCenter().postNotificationName("onScholarsLoadedNotification", object: self)
 
                 }

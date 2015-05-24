@@ -17,6 +17,11 @@ class InterfaceController: WKInterfaceController {
 
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+        
+        var defaults = NSUserDefaults(suiteName: "group.wwdcscholars.2015")
+        
+        var allScholarsJson = defaults?.objectForKey("scholars") as! NSArray
+        println(allScholarsJson)
         loadTableData()
 
         // Configure interface objects here.

@@ -42,6 +42,9 @@ class Scholar:NSObject{
         self.picture = picture
         self.appScreenshots = appScreenshots
         self.shortBio = shortBio
+        if shortBio == nil {
+            self.shortBio = ""
+        }
         self.numberOfWWDCAttend = numberOfWWDCAttend
         self.appDemo = appDemo
         self.githubLinkToApp = githubLinkToApp
@@ -62,7 +65,9 @@ class Scholar:NSObject{
         dict.setObject(self.numberOfWWDCAttend!, forKey: "numberOfWWDCAttend")
         dict.setObject(self.latitude, forKey: "latitude")
         dict.setObject(self.longitude, forKey: "longitude")
+        dict.setObject(self.picture!, forKey: "picture")
         dict.setObject(self.shortBio!, forKey: "shortBio")
+        dict.setObject(self.location!, forKey: "location")
 
         return dict as NSDictionary
     }
