@@ -83,6 +83,12 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func didOpenGithubRepo(sender: AnyObject) {
+        //TODO: check nil -- if scholar doesn't have a github repo for the project, remove the button
+        self.openBrowserWithURL(currentScholar!.githubLinkToApp!)
+    }
+    
+    
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! UICollectionViewCell
         
@@ -91,7 +97,13 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         if (currentScholar?.appDemo != nil && indexPath.item == 0) {
             imageView.imageURL = NSURL(string: "https://s-media-cache-ak0.pinimg.com/736x/5d/ad/1f/5dad1f8ba4815a4c2df7a2c6acd62e5b.jpg") //temp!!
         } else if let screenshots : [String] = currentScholar?.appScreenshots{
-            let url : String = screenshots[indexPath.item-1]
+            
+            var idx : Int = indexPath.item
+            if(currentScholar?.appDemo != nil){
+                idx = idx - 1
+            }
+            
+            let url : String = screenshots[idx]
             imageView.imageURL = NSURL(string: url)
             
         }
@@ -121,11 +133,15 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         
         if (currentScholar?.appDemo != nil && indexPath.item == 0) {
-            let browser : NGBrowserViewController = NGBrowserViewController(url: currentScholar!.appDemo!)
-            self.navigationController?.pushViewController(browser, animated: true)
+            self.openBrowserWithURL(currentScholar!.appDemo!)
         } else {
             //open in photo browser
         }
+    }
+    
+    private func openBrowserWithURL(url : String){
+        let browser : NGBrowserViewController = NGBrowserViewController(url: url)
+        self.navigationController?.pushViewController(browser, animated: true)
     }
     
 }
