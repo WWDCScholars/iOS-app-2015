@@ -13,5 +13,8 @@
 #import "ClusterAnnotationView.h"
 #import <Parse/Parse.h>
 #import "AsyncImageView.h"
+#import "CCMPopupSegue.h"
+#import "CCMBorderView.h"
+#import "CCMPopupTransitioning.h"
 
 #endif

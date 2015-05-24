@@ -761,7 +761,6 @@ Two times at WWDC!</string>
                                                 </state>
                                                 <connections>
                                                     <action selector="didOpenGithubRepo:" destination="ixk-1w-ECw" eventType="touchUpInside" id="5t7-LR-3hO"/>
-                                                    <action selector="toGithub:" destination="ixk-1w-ECw" eventType="touchUpInside" id="YIZ-SB-tGs"/>
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7mi-NS-L7i">
@@ -904,12 +903,73 @@ Two times at WWDC!</string>
                         <outlet property="nameLabel" destination="hVB-pe-aV2" id="uQt-gc-566"/>
                         <outlet property="shortBioLabel" destination="T5W-GY-yiC" id="cr6-3d-aKM"/>
                         <outlet property="viewSocial" destination="7mi-NS-L7i" id="pmu-D2-RUK"/>
+                        <segue destination="pJM-eB-8hW" kind="custom" identifier="toPopup" customClass="CCMPopupSegue" id="R7R-Ap-0Q0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6pL-Qy-WJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Dyj-yD-7Un" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2632" y="1218"/>
+        </scene>
+        <!--Popup View Controller-->
+        <scene sceneID="OGv-TE-DpI">
+            <objects>
+                <viewController storyboardIdentifier="popupController" extendedLayoutIncludesOpaqueBars="YES" id="pJM-eB-8hW" customClass="PopupViewController" customModule="WWDC_Scholars_2015" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b2a-ek-anX"/>
+                        <viewControllerLayoutGuide type="bottom" id="eee-DG-kKb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RBx-Sm-ZhF" customClass="CCMBorderView">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2OX-QM-NHC">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no-profile" translatesAutoresizingMaskIntoConstraints="NO" id="Bd6-fZ-KJn" customClass="AsyncImageView">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Bd6-fZ-KJn" firstAttribute="top" secondItem="2OX-QM-NHC" secondAttribute="top" id="LvR-2I-wV0"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bd6-fZ-KJn" secondAttribute="trailing" id="QcH-K9-RA0"/>
+                                    <constraint firstItem="Bd6-fZ-KJn" firstAttribute="centerY" secondItem="2OX-QM-NHC" secondAttribute="centerY" id="aZx-uu-sHv"/>
+                                    <constraint firstAttribute="bottom" secondItem="Bd6-fZ-KJn" secondAttribute="bottom" id="ihI-9q-2Eb"/>
+                                    <constraint firstItem="Bd6-fZ-KJn" firstAttribute="centerX" secondItem="2OX-QM-NHC" secondAttribute="centerX" id="nf8-rS-zqc"/>
+                                    <constraint firstItem="Bd6-fZ-KJn" firstAttribute="leading" secondItem="2OX-QM-NHC" secondAttribute="leading" id="ogA-7u-gl5"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="2OX-QM-NHC" secondAttribute="trailing" id="1Wf-Py-wtp"/>
+                            <constraint firstItem="2OX-QM-NHC" firstAttribute="top" secondItem="b2a-ek-anX" secondAttribute="bottom" id="1zb-BI-pfY"/>
+                            <constraint firstItem="2OX-QM-NHC" firstAttribute="bottom" secondItem="eee-DG-kKb" secondAttribute="top" id="Vqb-L1-P1A"/>
+                            <constraint firstItem="2OX-QM-NHC" firstAttribute="leading" secondItem="RBx-Sm-ZhF" secondAttribute="leading" id="iii-ys-Nr2"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="300" height="400"/>
+                    <connections>
+                        <outlet property="imageView" destination="Bd6-fZ-KJn" id="u37-bA-vVE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RP1-6q-Tap" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Upm-1N-NUZ" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="VYW-ga-VYO">
+                    <connections>
+                        <segue destination="Upm-1N-NUZ" kind="unwind" unwindAction="didDismissSegue:" id="vrK-lo-07s"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="3231" y="1315"/>
         </scene>
     </scenes>
     <resources>

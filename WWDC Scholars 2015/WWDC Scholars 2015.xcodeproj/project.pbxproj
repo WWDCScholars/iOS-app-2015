@@ -50,6 +50,16 @@
 		C00C277B1B0D63CD008C19AE /* Scholar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C277A1B0D63CD008C19AE /* Scholar.swift */; };
 		C00C277E1B0D6A8D008C19AE /* ScholarAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C277D1B0D6A8D008C19AE /* ScholarAnnotation.swift */; };
 		C099FF4F1B10163D00ECAEE7 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C099FF4E1B10163D00ECAEE7 /* CustomTableViewCell.swift */; };
+		C0ACA2011B126444009FAAE4 /* CCMBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0ACA1ED1B126444009FAAE4 /* CCMBorderView.m */; };
+		C0ACA2021B126444009FAAE4 /* CCMCustomAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C0ACA1EF1B126444009FAAE4 /* CCMCustomAnimation.m */; };
+		C0ACA2031B126444009FAAE4 /* CCMPopupAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C0ACA1F11B126444009FAAE4 /* CCMPopupAnimation.m */; };
+		C0ACA2041B126444009FAAE4 /* CCMPopupSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = C0ACA1F31B126444009FAAE4 /* CCMPopupSegue.m */; };
+		C0ACA2051B126444009FAAE4 /* CCMPopupTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = C0ACA1F51B126444009FAAE4 /* CCMPopupTransitioning.m */; };
+		C0ACA2061B126444009FAAE4 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0ACA1F81B126444009FAAE4 /* FXBlurView.m */; };
+		C0ACA2071B126444009FAAE4 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = C0ACA1FB1B126444009FAAE4 /* UIImage+ImageEffects.m */; };
+		C0ACA2081B126444009FAAE4 /* UIImage+screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = C0ACA1FE1B126444009FAAE4 /* UIImage+screenshot.m */; };
+		C0ACA2091B126444009FAAE4 /* UIViewController+CCMPopupAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C0ACA2001B126444009FAAE4 /* UIViewController+CCMPopupAnimation.m */; };
+		C0ACA20B1B126500009FAAE4 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0ACA20A1B126500009FAAE4 /* PopupViewController.swift */; };
 		C0B7F78D1B0E682600E74458 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0B7F78C1B0E682600E74458 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +134,25 @@
 		C00C277D1B0D6A8D008C19AE /* ScholarAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScholarAnnotation.swift; sourceTree = "<group>"; };
 		C068DC261B0F5D890066221E /* WWDC Scholars 2015.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "WWDC Scholars 2015.entitlements"; sourceTree = "<group>"; };
 		C099FF4E1B10163D00ECAEE7 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		C0ACA1EC1B126444009FAAE4 /* CCMBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMBorderView.h; sourceTree = "<group>"; };
+		C0ACA1ED1B126444009FAAE4 /* CCMBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCMBorderView.m; sourceTree = "<group>"; };
+		C0ACA1EE1B126444009FAAE4 /* CCMCustomAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMCustomAnimation.h; sourceTree = "<group>"; };
+		C0ACA1EF1B126444009FAAE4 /* CCMCustomAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCMCustomAnimation.m; sourceTree = "<group>"; };
+		C0ACA1F01B126444009FAAE4 /* CCMPopupAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMPopupAnimation.h; sourceTree = "<group>"; };
+		C0ACA1F11B126444009FAAE4 /* CCMPopupAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCMPopupAnimation.m; sourceTree = "<group>"; };
+		C0ACA1F21B126444009FAAE4 /* CCMPopupSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMPopupSegue.h; sourceTree = "<group>"; };
+		C0ACA1F31B126444009FAAE4 /* CCMPopupSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCMPopupSegue.m; sourceTree = "<group>"; };
+		C0ACA1F41B126444009FAAE4 /* CCMPopupTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMPopupTransitioning.h; sourceTree = "<group>"; };
+		C0ACA1F51B126444009FAAE4 /* CCMPopupTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCMPopupTransitioning.m; sourceTree = "<group>"; };
+		C0ACA1F71B126444009FAAE4 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
+		C0ACA1F81B126444009FAAE4 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
+		C0ACA1FA1B126444009FAAE4 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		C0ACA1FB1B126444009FAAE4 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		C0ACA1FD1B126444009FAAE4 /* UIImage+screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+screenshot.h"; sourceTree = "<group>"; };
+		C0ACA1FE1B126444009FAAE4 /* UIImage+screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+screenshot.m"; sourceTree = "<group>"; };
+		C0ACA1FF1B126444009FAAE4 /* UIViewController+CCMPopupAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CCMPopupAnimation.h"; sourceTree = "<group>"; };
+		C0ACA2001B126444009FAAE4 /* UIViewController+CCMPopupAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CCMPopupAnimation.m"; sourceTree = "<group>"; };
+		C0ACA20A1B126500009FAAE4 /* PopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopupViewController.swift; path = Controller/PopupViewController.swift; sourceTree = "<group>"; };
 		C0B7F78C1B0E682600E74458 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -239,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				7C00D58E1B0E867A00F9B3E7 /* DetailViewController.swift */,
+				C0ACA20A1B126500009FAAE4 /* PopupViewController.swift */,
 			);
 			name = DetailView;
 			sourceTree = "<group>";
@@ -371,6 +401,7 @@
 		C00C27731B0D5CF1008C19AE /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				C0ACA1EB1B126444009FAAE4 /* CCMPopup */,
 				7C9A06971B12535B00EC1F11 /* MRSocial.swift */,
 				C004F5841B12113700A1AF27 /* QZCircleSegue */,
 				407CDD921B0FBE4100350500 /* AsyncImageView */,
@@ -397,6 +428,55 @@
 				C00C277A1B0D63CD008C19AE /* Scholar.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		C0ACA1EB1B126444009FAAE4 /* CCMPopup */ = {
+			isa = PBXGroup;
+			children = (
+				C0ACA1EC1B126444009FAAE4 /* CCMBorderView.h */,
+				C0ACA1ED1B126444009FAAE4 /* CCMBorderView.m */,
+				C0ACA1EE1B126444009FAAE4 /* CCMCustomAnimation.h */,
+				C0ACA1EF1B126444009FAAE4 /* CCMCustomAnimation.m */,
+				C0ACA1F01B126444009FAAE4 /* CCMPopupAnimation.h */,
+				C0ACA1F11B126444009FAAE4 /* CCMPopupAnimation.m */,
+				C0ACA1F21B126444009FAAE4 /* CCMPopupSegue.h */,
+				C0ACA1F31B126444009FAAE4 /* CCMPopupSegue.m */,
+				C0ACA1F41B126444009FAAE4 /* CCMPopupTransitioning.h */,
+				C0ACA1F51B126444009FAAE4 /* CCMPopupTransitioning.m */,
+				C0ACA1F61B126444009FAAE4 /* FXBlurView */,
+				C0ACA1F91B126444009FAAE4 /* UIImage+ImageEffects */,
+				C0ACA1FC1B126444009FAAE4 /* UIImage+screenshot */,
+				C0ACA1FF1B126444009FAAE4 /* UIViewController+CCMPopupAnimation.h */,
+				C0ACA2001B126444009FAAE4 /* UIViewController+CCMPopupAnimation.m */,
+			);
+			path = CCMPopup;
+			sourceTree = "<group>";
+		};
+		C0ACA1F61B126444009FAAE4 /* FXBlurView */ = {
+			isa = PBXGroup;
+			children = (
+				C0ACA1F71B126444009FAAE4 /* FXBlurView.h */,
+				C0ACA1F81B126444009FAAE4 /* FXBlurView.m */,
+			);
+			path = FXBlurView;
+			sourceTree = "<group>";
+		};
+		C0ACA1F91B126444009FAAE4 /* UIImage+ImageEffects */ = {
+			isa = PBXGroup;
+			children = (
+				C0ACA1FA1B126444009FAAE4 /* UIImage+ImageEffects.h */,
+				C0ACA1FB1B126444009FAAE4 /* UIImage+ImageEffects.m */,
+			);
+			path = "UIImage+ImageEffects";
+			sourceTree = "<group>";
+		};
+		C0ACA1FC1B126444009FAAE4 /* UIImage+screenshot */ = {
+			isa = PBXGroup;
+			children = (
+				C0ACA1FD1B126444009FAAE4 /* UIImage+screenshot.h */,
+				C0ACA1FE1B126444009FAAE4 /* UIImage+screenshot.m */,
+			);
+			path = "UIImage+screenshot";
 			sourceTree = "<group>";
 		};
 		C0C6CBB31B0D6AA500A00796 /* MapViewController */ = {
@@ -458,7 +538,7 @@
 				TargetAttributes = {
 					C00C27391B0D5C9C008C19AE = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = XP2V9X75F2;
+						DevelopmentTeam = MA3FRWNL5H;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 0;
@@ -524,21 +604,31 @@
 				7C10849F1B11526E00DCC52E /* NGBrowserViewController.swift in Sources */,
 				C00C276E1B0D5CEC008C19AE /* QCluster.m in Sources */,
 				C00C27711B0D5CEC008C19AE /* QTreeGeometryUtils.m in Sources */,
+				C0ACA2051B126444009FAAE4 /* CCMPopupTransitioning.m in Sources */,
 				C00C27421B0D5C9C008C19AE /* LocationViewController.swift in Sources */,
+				C0ACA2061B126444009FAAE4 /* FXBlurView.m in Sources */,
+				C0ACA2071B126444009FAAE4 /* UIImage+ImageEffects.m in Sources */,
 				7C00D58F1B0E867A00F9B3E7 /* DetailViewController.swift in Sources */,
+				C0ACA2021B126444009FAAE4 /* CCMCustomAnimation.m in Sources */,
 				C00C27781B0D5D9E008C19AE /* ClusterAnnotationView.m in Sources */,
 				C00C277E1B0D6A8D008C19AE /* ScholarAnnotation.swift in Sources */,
 				C004F5831B12113300A1AF27 /* QZCircleSegue.swift in Sources */,
+				C0ACA2011B126444009FAAE4 /* CCMBorderView.m in Sources */,
 				C099FF4F1B10163D00ECAEE7 /* CustomTableViewCell.swift in Sources */,
+				C0ACA2091B126444009FAAE4 /* UIViewController+CCMPopupAnimation.m in Sources */,
 				7C9A06981B12535B00EC1F11 /* MRSocial.swift in Sources */,
+				C0ACA2041B126444009FAAE4 /* CCMPopupSegue.m in Sources */,
 				408211651B0E034B00D567AC /* MainScreenViewController.swift in Sources */,
 				6EEA0A151B0ED45900B99130 /* MainScreenFooter.swift in Sources */,
 				C00C277B1B0D63CD008C19AE /* Scholar.swift in Sources */,
 				408211761B0E296A00D567AC /* DataManager.swift in Sources */,
 				C00C27701B0D5CEC008C19AE /* QTree.m in Sources */,
+				C0ACA2031B126444009FAAE4 /* CCMPopupAnimation.m in Sources */,
 				C00C27401B0D5C9C008C19AE /* AppDelegate.swift in Sources */,
 				C00C276F1B0D5CEC008C19AE /* QNode.m in Sources */,
 				407CDD951B0FBE4100350500 /* AsyncImageView.m in Sources */,
+				C0ACA2081B126444009FAAE4 /* UIImage+screenshot.m in Sources */,
+				C0ACA20B1B126500009FAAE4 /* PopupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,8 +762,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Andrew Walker (885Z2MA8CF)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Andrew Walker (885Z2MA8CF)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WWDC",
@@ -726,8 +816,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Andrew Walker (885Z2MA8CF)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Andrew Walker (885Z2MA8CF)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WWDC",
@@ -779,8 +869,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Andrew Walker (885Z2MA8CF)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Andrew Walker (885Z2MA8CF)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Gelei Chen (RTXADYQY59)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Gelei Chen (RTXADYQY59)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -801,8 +891,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Andrew Walker (885Z2MA8CF)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Andrew Walker (885Z2MA8CF)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Gelei Chen (RTXADYQY59)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Gelei Chen (RTXADYQY59)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
