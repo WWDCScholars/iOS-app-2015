@@ -756,7 +756,6 @@ Two times at WWDC!</string>
                                                 </state>
                                                 <connections>
                                                     <action selector="didOpenGithubRepo:" destination="ixk-1w-ECw" eventType="touchUpInside" id="5t7-LR-3hO"/>
-                                                    <action selector="toGithub:" destination="ixk-1w-ECw" eventType="touchUpInside" id="YIZ-SB-tGs"/>
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7mi-NS-L7i">
@@ -988,6 +987,6 @@ Two times at WWDC!</string>
         <image name="wwdc15-hero_2x-4" width="1250" height="1250"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="067-Ti-Q9O"/>
+        <segue reference="KC4-fE-5Gl"/>
     </inferredMetricsTieBreakers>
 </document>

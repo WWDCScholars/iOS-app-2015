@@ -15,7 +15,6 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
     
     /*Create your transition manager instance*/
     var transition = QZCircleSegue()
-    var cell : UICollectionViewCell?
     var index:Int?
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ScholarshipCell", forIndexPath: indexPath) as! UICollectionViewCell
@@ -41,7 +40,7 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        cell = collectionView.cellForItemAtIndexPath(indexPath)
+        //cell = collectionView.cellForItemAtIndexPath(indexPath)
         if indexPath.row % 3 == 0 {
             index = 0
         } else if indexPath.row % 3 == 1 {
@@ -102,7 +101,7 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
         if let dest = segue.destinationViewController as? DetailViewController {
             dest.currentScholar = DataManager.sharedInstance.scholarAtLocation(scholarsCollectionView.indexPathsForSelectedItems()[0].row)
             /* Send the button to your transition manager */
-            self.transition.animationChild = cell
+            self.transition.animationChild = self.view
             /* Set the color to your transition manager*/
             self.transition.animationColor = setColor(index!)
             /* Set both, the origin and destination to your transition manager*/

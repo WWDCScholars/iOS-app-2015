@@ -30,8 +30,7 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     @IBOutlet weak var mapView: MKMapView!
     
-    @IBAction func toGithub(sender: UIButton) {
-    }
+
     
     
     override func viewDidLoad() {
@@ -131,7 +130,10 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     }
     
     @IBAction func didOpenGithubRepo(sender: AnyObject) {
-        self.openBrowserWithURL(currentScholar!.githubLinkToApp!)
+        if let url = currentScholar!.githubLinkToApp {
+            self.openBrowserWithURL(currentScholar!.githubLinkToApp!)
+        }
+        
     }
     
     
