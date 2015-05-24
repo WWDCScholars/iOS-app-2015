@@ -35,6 +35,7 @@
 		40CA93481B126303006F3BEA /* ScholarTableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA93471B126303006F3BEA /* ScholarTableRow.swift */; };
 		40CA93521B126433006F3BEA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40CA93511B126433006F3BEA /* Info.plist */; };
 		40CA93541B126A58006F3BEA /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA93531B126A58006F3BEA /* Utils.swift */; };
+		40CA93571B1275A9006F3BEA /* Scholar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA93561B1275A9006F3BEA /* Scholar.swift */; };
 		6EEA0A151B0ED45900B99130 /* MainScreenFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA0A141B0ED45900B99130 /* MainScreenFooter.swift */; };
 		7C00D58F1B0E867A00F9B3E7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C00D58E1B0E867A00F9B3E7 /* DetailViewController.swift */; };
 		7C10849F1B11526E00DCC52E /* NGBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C10849D1B11526E00DCC52E /* NGBrowserViewController.swift */; };
@@ -134,6 +135,7 @@
 		40CA93511B126433006F3BEA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40CA93531B126A58006F3BEA /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		40CA93551B12712F006F3BEA /* WWDC Scholars 2015 WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "WWDC Scholars 2015 WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		40CA93561B1275A9006F3BEA /* Scholar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scholar.swift; sourceTree = "<group>"; };
 		5FA8DE545F33FC48722F860C /* Pods-WWDC Scholars 2015.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WWDC Scholars 2015.release.xcconfig"; path = "Pods/Target Support Files/Pods-WWDC Scholars 2015/Pods-WWDC Scholars 2015.release.xcconfig"; sourceTree = "<group>"; };
 		6EEA0A141B0ED45900B99130 /* MainScreenFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenFooter.swift; sourceTree = "<group>"; };
 		7C00D58E1B0E867A00F9B3E7 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = Controller/DetailViewController.swift; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 		40CA93221B126186006F3BEA /* WWDC Scholars 2015 WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				40CA93561B1275A9006F3BEA /* Scholar.swift */,
 				40CA93551B12712F006F3BEA /* WWDC Scholars 2015 WatchKit Extension.entitlements */,
 				40CA93471B126303006F3BEA /* ScholarTableRow.swift */,
 				40CA93251B126186006F3BEA /* InterfaceController.swift */,
@@ -393,8 +396,8 @@
 			children = (
 				C068DC261B0F5D890066221E /* WWDC Scholars 2015.entitlements */,
 				C00C27731B0D5CF1008C19AE /* Library */,
-				C00C277C1B0D63D6008C19AE /* Model */,
 				C00C27791B0D5E10008C19AE /* Controller */,
+				C00C277C1B0D63D6008C19AE /* Model */,
 				C00C273D1B0D5C9C008C19AE /* Supporting Files */,
 				407911AB1B0E29CC00A582FF /* Managers */,
 			);
@@ -688,6 +691,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40CA93571B1275A9006F3BEA /* Scholar.swift in Sources */,
 				40CA93481B126303006F3BEA /* ScholarTableRow.swift in Sources */,
 				40CA93261B126186006F3BEA /* InterfaceController.swift in Sources */,
 				40CA93541B126A58006F3BEA /* Utils.swift in Sources */,
