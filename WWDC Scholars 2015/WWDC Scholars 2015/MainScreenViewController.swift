@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainScreenViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class MainScreenViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet var scholarsCollectionView: UICollectionView!
     
@@ -61,6 +61,7 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
 //            cell.alpha = 1
 //            }, completion: nil)
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
