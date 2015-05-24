@@ -146,23 +146,11 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
                 idx--
             }
             
-            
-            let preview : QLPreviewController = QLPreviewController()
-            preview.delegate = self
-            preview.dataSource = self
-            self.presentViewController(preview, animated: true, completion: nil)
-            //self.navigationController?.pushViewController(preview, animated: true)
+            //code for opening photogallery here!
             
         }
     }
     
-    func numberOfPreviewItemsInPreviewController(controller: QLPreviewController!) -> Int {
-        return currentScholar!.appScreenshots!.count
-    }
-    
-    func previewController(controller: QLPreviewController!, previewItemAtIndex index: Int) -> QLPreviewItem! {
-        return NSURL(string:currentScholar!.appScreenshots![index])
-    }
     
     private func openBrowserWithURL(url : String){
         let browser : NGBrowserViewController = NGBrowserViewController(url: url)
