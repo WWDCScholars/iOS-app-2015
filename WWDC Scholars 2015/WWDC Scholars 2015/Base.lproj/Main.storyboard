@@ -141,7 +141,7 @@
                     <connections>
                         <outlet property="mapView" destination="dLX-Aa-vJZ" id="hRV-k0-Ush"/>
                         <outlet property="tableView" destination="rmP-RX-aEL" id="qRJ-Tq-mK8"/>
-                        <segue destination="ixk-1w-ECw" kind="show" identifier="transformToScholarDetail" id="067-Ti-Q9O"/>
+                        <segue destination="ixk-1w-ECw" kind="presentation" identifier="transformToScholarDetail" id="067-Ti-Q9O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -989,6 +989,6 @@ Two times at WWDC!</string>
         <image name="wwdc15-hero_2x-4" width="1250" height="1250"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KC4-fE-5Gl"/>
+        <segue reference="067-Ti-Q9O"/>
     </inferredMetricsTieBreakers>
 </document>
