@@ -55,10 +55,6 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
         button.layer.shadowRadius = 2
         self.view.addSubview(button)
         
-        
-        
-        
-        
         for scholar in scholarArray {
             
             let annotation = scholarAnnotation(coordinate: CLLocationCoordinate2DMake(scholar.latitude, scholar.longitude), title: scholar.name!,subtitle:scholar.location!)
@@ -68,8 +64,26 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
         }
         //self.reloadAnnotations()
         
+        var leftSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
+        var rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
+        
+        leftSwipe.direction = .Left
+        rightSwipe.direction = .Right
+        
+        view.addGestureRecognizer(leftSwipe)
+        view.addGestureRecognizer(rightSwipe)
         
         // Do any additional setup after loading the view.
+    }
+    
+    func handleSwipes(sender:UISwipeGestureRecognizer) {
+        if (sender.direction == .Left) {
+            println("Swipe Left")
+        }
+        
+        if (sender.direction == .Right) {
+            println("Swipe Right")
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -205,8 +219,10 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
    
         let profileImageView = cell.viewWithTag(202) as! UIImageView
         profileImageView.image = UIImage(named: "no-profile")
+        profileImageView.contentMode = .ScaleAspectFill
+        profileImageView.layer.cornerRadius = 10
         
-        if viewChanged{
+        if viewChanged {
             cell.name.text = cacheArray[indexPath.row].name
             cell.location.text = cacheArray[indexPath.row].location
         } else {
