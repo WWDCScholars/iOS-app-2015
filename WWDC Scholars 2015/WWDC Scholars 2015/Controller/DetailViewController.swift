@@ -15,6 +15,7 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     @IBOutlet private weak var imgScholar: AsyncImageView!
     
+    @IBOutlet private weak var cntGithubRepo: NSLayoutConstraint!
     @IBOutlet private weak var btnGithubRepo: UIButton!
     
     @IBOutlet weak var nameLabel: UILabel!
@@ -66,14 +67,17 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
             descriptionLabel.text = shortBio
         }
         
-        btnGithubRepo.layer.cornerRadius = 5
-        btnGithubRepo.layer.masksToBounds = true
-        btnGithubRepo.layer.borderColor = UIColor.blackColor().CGColor
-        btnGithubRepo.layer.borderWidth = 1.0
+        if (currentScholar?.appDemo == nil){
+            btnGithubRepo.setTitle("", forState: .Normal)
+            cntGithubRepo.constant = 0
+        } else {
+            btnGithubRepo.layer.cornerRadius = 5
+            btnGithubRepo.layer.masksToBounds = true
+            btnGithubRepo.layer.borderColor = btnGithubRepo.titleLabel?.textColor.CGColor
+            btnGithubRepo.layer.borderWidth = 1.0
+        }
         
-        self.navigationItem.title = "Scholar detail"
-        
-        
+        self.navigationItem.title = "More about " + currentScholar!.name!
         
         // Do any additional setup after loading the view.
     }
@@ -84,7 +88,6 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     }
     
     @IBAction func didOpenGithubRepo(sender: AnyObject) {
-        //TODO: check nil -- if scholar doesn't have a github repo for the project, remove the button
         self.openBrowserWithURL(currentScholar!.githubLinkToApp!)
     }
     
