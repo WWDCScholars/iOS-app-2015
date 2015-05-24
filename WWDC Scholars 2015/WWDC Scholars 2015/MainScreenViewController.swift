@@ -16,7 +16,7 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
     /*Create your transition manager instance*/
     var transition = QZCircleSegue()
     var cell : UICollectionViewCell?
-    
+    var index:Int?
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ScholarshipCell", forIndexPath: indexPath) as! UICollectionViewCell
         
@@ -42,6 +42,13 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         cell = collectionView.cellForItemAtIndexPath(indexPath)
+        if indexPath.row % 3 == 0 {
+            index = 0
+        } else if indexPath.row % 3 == 1 {
+            index = 1
+        } else {
+            index = 2
+        }
         self.performSegueWithIdentifier("toDetail", sender: self)
     }
     
@@ -80,13 +87,24 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
         scholarsCollectionView.reloadData()
     }
     
+    func setColor(row:Int)->UIColor{
+        if row == 0 {
+            return UIColor(red: 46/255, green: 195/255, blue: 179/255, alpha: 1.0)
+        } else if row == 1{
+            return UIColor(red: 252/255, green: 63/255, blue: 85/255, alpha: 1.0)
+        } else {
+            return UIColor(red: 237/255, green: 204/255, blue: 64/255, alpha: 1.0)
+        }
+    }
+    
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let dest = segue.destinationViewController as? DetailViewController {
             dest.currentScholar = DataManager.sharedInstance.scholarAtLocation(scholarsCollectionView.indexPathsForSelectedItems()[0].row)
             /* Send the button to your transition manager */
             self.transition.animationChild = cell
             /* Set the color to your transition manager*/
-            self.transition.animationColor = UIColor(red: 46/255, green: 195/255, blue: 179/255, alpha: 1.0)
+            self.transition.animationColor = setColor(index!)
             /* Set both, the origin and destination to your transition manager*/
             self.transition.fromViewController = self
             self.transition.toViewController = dest
