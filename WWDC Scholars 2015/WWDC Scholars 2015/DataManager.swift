@@ -51,11 +51,10 @@ class DataManager: NSObject {
                             github: object.objectForKey("github") as? String,
                             linkedIn: object.objectForKey("linkedin") as? String,
                             website: object.objectForKey("website") as? String,
-                            location:object.objectForKey("location") as? String)
+                            location:object.objectForKey("location") as? String,
+                            itunes:object.objectForKey("itunes") as? String)
                         
-                        
-                            // still need shortBio,videoLink,github,githubToApp,birthday,4 screenShot pictures
-                        self.scholarArray.append(scholar)
+                            self.scholarArray.append(scholar)
                     }
                     
                     NSNotificationCenter.defaultCenter().postNotificationName("onScholarsLoadedNotification", object: self)
