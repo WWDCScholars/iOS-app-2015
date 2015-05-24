@@ -9,6 +9,7 @@
 import Foundation
 
 class Scholar:NSObject{
+    
     var name : String?
     var age : Int?
     var birthdate : NSDate?
