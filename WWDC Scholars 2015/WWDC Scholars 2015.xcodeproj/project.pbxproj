@@ -24,14 +24,15 @@
 		4082116F1B0E292300D567AC /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408211691B0E292300D567AC /* ParseUI.framework */; };
 		408211701B0E292300D567AC /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4082116A1B0E292300D567AC /* ParseCrashReporting.framework */; };
 		408211711B0E292300D567AC /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4082116B1B0E292300D567AC /* Bolts.framework */; };
-		408211721B0E292300D567AC /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4082116C1B0E292300D567AC /* ParseFacebookUtils.framework */; };
-		408211731B0E292300D567AC /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4082116D1B0E292300D567AC /* ParseFacebookUtilsV4.framework */; };
 		408211761B0E296A00D567AC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408211751B0E296A00D567AC /* DataManager.swift */; };
 		6EEA0A151B0ED45900B99130 /* MainScreenFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA0A141B0ED45900B99130 /* MainScreenFooter.swift */; };
 		7C00D58F1B0E867A00F9B3E7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C00D58E1B0E867A00F9B3E7 /* DetailViewController.swift */; };
 		7C10849F1B11526E00DCC52E /* NGBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C10849D1B11526E00DCC52E /* NGBrowserViewController.swift */; };
 		7C1084A01B11526E00DCC52E /* NGBrowserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C10849E1B11526E00DCC52E /* NGBrowserViewController.xib */; };
-		BFA5889900EF10E3A65E388C /* libPods-WWDC Scholars 2015.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF48F6F33F46882AFCB4861 /* libPods-WWDC Scholars 2015.a */; };
+		7C9A052A1B121CD300EC1F11 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C9A05291B121CD300EC1F11 /* Parse.framework */; };
+		7C9A052D1B121EA700EC1F11 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C9A052B1B121EA700EC1F11 /* ParseFacebookUtils.framework */; };
+		7C9A052E1B121EA700EC1F11 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C9A052C1B121EA700EC1F11 /* ParseFacebookUtilsV4.framework */; };
+		7C9A05D71B1226B800EC1F11 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C9A05D51B12268B00EC1F11 /* QuickLook.framework */; };
 		C004F5831B12113300A1AF27 /* QZCircleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004F5821B12113300A1AF27 /* QZCircleSegue.swift */; };
 		C00C27401B0D5C9C008C19AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C273F1B0D5C9C008C19AE /* AppDelegate.swift */; };
 		C00C27421B0D5C9C008C19AE /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C27411B0D5C9C008C19AE /* LocationViewController.swift */; };
@@ -45,7 +46,6 @@
 		C00C27781B0D5D9E008C19AE /* ClusterAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C00C27761B0D5D9E008C19AE /* ClusterAnnotationView.m */; };
 		C00C277B1B0D63CD008C19AE /* Scholar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C277A1B0D63CD008C19AE /* Scholar.swift */; };
 		C00C277E1B0D6A8D008C19AE /* ScholarAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C277D1B0D6A8D008C19AE /* ScholarAnnotation.swift */; };
-		C06A66B41B0EAACB009C4FC4 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C1A22C41B0E99A400662775 /* Parse.framework */; };
 		C099FF4F1B10163D00ECAEE7 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C099FF4E1B10163D00ECAEE7 /* CustomTableViewCell.swift */; };
 		C0B7F78D1B0E682600E74458 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0B7F78C1B0E682600E74458 /* Images.xcassets */; };
 /* End PBXBuildFile section */
@@ -81,15 +81,17 @@
 		408211691B0E292300D567AC /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		4082116A1B0E292300D567AC /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
 		4082116B1B0E292300D567AC /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		4082116C1B0E292300D567AC /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
-		4082116D1B0E292300D567AC /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		408211751B0E296A00D567AC /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		5FA8DE545F33FC48722F860C /* Pods-WWDC Scholars 2015.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WWDC Scholars 2015.release.xcconfig"; path = "Pods/Target Support Files/Pods-WWDC Scholars 2015/Pods-WWDC Scholars 2015.release.xcconfig"; sourceTree = "<group>"; };
 		6EEA0A141B0ED45900B99130 /* MainScreenFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenFooter.swift; sourceTree = "<group>"; };
 		7C00D58E1B0E867A00F9B3E7 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = Controller/DetailViewController.swift; sourceTree = "<group>"; };
 		7C10849D1B11526E00DCC52E /* NGBrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NGBrowserViewController.swift; sourceTree = "<group>"; };
 		7C10849E1B11526E00DCC52E /* NGBrowserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NGBrowserViewController.xib; sourceTree = "<group>"; };
-		7C1A22C41B0E99A400662775 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		7C9A05291B121CD300EC1F11 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		7C9A052B1B121EA700EC1F11 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		7C9A052C1B121EA700EC1F11 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		7C9A052F1B121FCC00EC1F11 /* libPods-WWDC Scholars 2015.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-WWDC Scholars 2015.a"; path = "Pods/../build/Debug-iphoneos/libPods-WWDC Scholars 2015.a"; sourceTree = "<group>"; };
+		7C9A05D51B12268B00EC1F11 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
 		C004F5821B12113300A1AF27 /* QZCircleSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QZCircleSegue.swift; sourceTree = "<group>"; };
 		C00C273A1B0D5C9C008C19AE /* WWDC Scholars 2015.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WWDC Scholars 2015.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C00C273E1B0D5C9C008C19AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -124,8 +126,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C9A05D71B1226B800EC1F11 /* QuickLook.framework in Frameworks */,
 				407911BF1B0E2B2A00A582FF /* Accounts.framework in Frameworks */,
 				407911C01B0E2B2A00A582FF /* libsqlite3.dylib in Frameworks */,
+				7C9A052E1B121EA700EC1F11 /* ParseFacebookUtilsV4.framework in Frameworks */,
+				7C9A052D1B121EA700EC1F11 /* ParseFacebookUtils.framework in Frameworks */,
 				407911C11B0E2B2A00A582FF /* libz.dylib in Frameworks */,
 				407911C21B0E2B2A00A582FF /* Security.framework in Frameworks */,
 				407911C31B0E2B2A00A582FF /* Social.framework in Frameworks */,
@@ -137,12 +142,9 @@
 				407911B31B0E2AEE00A582FF /* CoreLocation.framework in Frameworks */,
 				407911AD1B0E2AC400A582FF /* AudioToolbox.framework in Frameworks */,
 				4082116F1B0E292300D567AC /* ParseUI.framework in Frameworks */,
-				C06A66B41B0EAACB009C4FC4 /* Parse.framework in Frameworks */,
+				7C9A052A1B121CD300EC1F11 /* Parse.framework in Frameworks */,
 				408211701B0E292300D567AC /* ParseCrashReporting.framework in Frameworks */,
-				408211731B0E292300D567AC /* ParseFacebookUtilsV4.framework in Frameworks */,
-				408211721B0E292300D567AC /* ParseFacebookUtils.framework in Frameworks */,
 				408211711B0E292300D567AC /* Bolts.framework in Frameworks */,
-				BFA5889900EF10E3A65E388C /* libPods-WWDC Scholars 2015.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +169,7 @@
 		407911C61B0E2B3100A582FF /* iOS libs */ = {
 			isa = PBXGroup;
 			children = (
+				7C9A05D51B12268B00EC1F11 /* QuickLook.framework */,
 				407911B81B0E2B2A00A582FF /* Accounts.framework */,
 				407911B91B0E2B2A00A582FF /* libsqlite3.dylib */,
 				407911BA1B0E2B2A00A582FF /* libz.dylib */,
@@ -205,13 +208,13 @@
 		408211741B0E292800D567AC /* Parse */ = {
 			isa = PBXGroup;
 			children = (
-				7C1A22C41B0E99A400662775 /* Parse.framework */,
+				7C9A052B1B121EA700EC1F11 /* ParseFacebookUtils.framework */,
+				7C9A052C1B121EA700EC1F11 /* ParseFacebookUtilsV4.framework */,
+				7C9A05291B121CD300EC1F11 /* Parse.framework */,
 				407911C61B0E2B3100A582FF /* iOS libs */,
 				408211691B0E292300D567AC /* ParseUI.framework */,
 				4082116A1B0E292300D567AC /* ParseCrashReporting.framework */,
 				4082116B1B0E292300D567AC /* Bolts.framework */,
-				4082116C1B0E292300D567AC /* ParseFacebookUtils.framework */,
-				4082116D1B0E292300D567AC /* ParseFacebookUtilsV4.framework */,
 			);
 			name = Parse;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 		AA58B36BDE81C38F46C9476F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C9A052F1B121FCC00EC1F11 /* libPods-WWDC Scholars 2015.a */,
 				0EF48F6F33F46882AFCB4861 /* libPods-WWDC Scholars 2015.a */,
 			);
 			name = Frameworks;
@@ -402,11 +406,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C00C27591B0D5C9C008C19AE /* Build configuration list for PBXNativeTarget "WWDC Scholars 2015" */;
 			buildPhases = (
-				CF3009C72F1ECEE0A62F5DCE /* Check Pods Manifest.lock */,
 				C00C27361B0D5C9C008C19AE /* Sources */,
 				C00C27371B0D5C9C008C19AE /* Frameworks */,
 				C00C27381B0D5C9C008C19AE /* Resources */,
-				F42A6A49B9F35108510BFB60 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -502,39 +504,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		CF3009C72F1ECEE0A62F5DCE /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		F42A6A49B9F35108510BFB60 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WWDC Scholars 2015/Pods-WWDC Scholars 2015-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C00C27361B0D5C9C008C19AE /* Sources */ = {
@@ -688,14 +657,48 @@
 		};
 		C00C275A1B0D5C9C008C19AE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 15CBC61975F1398DD111B0A6 /* Pods-WWDC Scholars 2015.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Andrew Walker (885Z2MA8CF)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Andrew Walker (885Z2MA8CF)";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WWDC",
+					Scholars,
+					2015,
+					"$(PROJECT_DIR)/WWDC",
+					Scholars,
+					"2015/WWDC-Scholars-iOS-2015",
+					"$(PROJECT_DIR)/WWDC",
+					Scholars,
+					2015,
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "WWDC Scholars 2015/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AssetsLibrary\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MapKit\"",
+					"-framework",
+					"\"MessageUI\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = Header.h;
@@ -704,14 +707,48 @@
 		};
 		C00C275B1B0D5C9C008C19AE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5FA8DE545F33FC48722F860C /* Pods-WWDC Scholars 2015.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Andrew Walker (885Z2MA8CF)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Andrew Walker (885Z2MA8CF)";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WWDC",
+					Scholars,
+					2015,
+					"$(PROJECT_DIR)/WWDC",
+					Scholars,
+					"2015/WWDC-Scholars-iOS-2015",
+					"$(PROJECT_DIR)/WWDC",
+					Scholars,
+					2015,
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "WWDC Scholars 2015/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AssetsLibrary\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MapKit\"",
+					"-framework",
+					"\"MessageUI\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = Header.h;

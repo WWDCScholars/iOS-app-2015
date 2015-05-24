@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import QuickLook
 
-class DetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, MWPhotoBrowserDelegate {
+class DetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, QLPreviewControllerDelegate, QLPreviewControllerDataSource {
     
     var currentScholar : Scholar?
     
@@ -21,9 +22,6 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     @IBOutlet weak var nameLabel: UILabel!
     
     @IBOutlet weak var shortBioLabel: UILabel!
-    
-    private var photos : Array<MWPhoto> = Array<MWPhoto>()
-    
     
     
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -81,18 +79,11 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         self.navigationItem.title = "More about " + currentScholar!.name!
         
-        let screenshots : [String] = currentScholar!.appScreenshots!
-        for string : String in screenshots {
-            photos.append(MWPhoto(URL: NSURL(string: string)))
-        }
-        
-    
-        
         
         // Do any additional setup after loading the view.
     }
     override func prefersStatusBarHidden() -> Bool {
-        return false
+        return true
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -151,28 +142,26 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
             self.openBrowserWithURL(currentScholar!.appDemo!)
         } else {
             var idx : UInt = UInt(indexPath.item)
-            if (currentScholar?.appDemo == nil) {
+            if (currentScholar?.appDemo != nil) {
                 idx--
             }
             
-            let picBrowser : MWPhotoBrowser = MWPhotoBrowser(delegate: self)
-            picBrowser.displayActionButton = false
-            picBrowser.setCurrentPhotoIndex(idx)
-            self.navigationController?.pushViewController(picBrowser, animated: true)
             
-            //open in photo browser
+            let preview : QLPreviewController = QLPreviewController()
+            preview.delegate = self
+            preview.dataSource = self
+            self.presentViewController(preview, animated: true, completion: nil)
+            //self.navigationController?.pushViewController(preview, animated: true)
+            
         }
     }
     
-    func numberOfPhotosInPhotoBrowser(photoBrowser: MWPhotoBrowser!) -> UInt {
-        return UInt(photos.count)
+    func numberOfPreviewItemsInPreviewController(controller: QLPreviewController!) -> Int {
+        return currentScholar!.appScreenshots!.count
     }
     
-    func photoBrowser(photoBrowser: MWPhotoBrowser!, photoAtIndex index: UInt) -> MWPhotoProtocol! {
-        if(index < UInt(photos.count)){
-            return photos[Int(index)]
-        }
-        return nil
+    func previewController(controller: QLPreviewController!, previewItemAtIndex index: Int) -> QLPreviewItem! {
+        return NSURL(string:currentScholar!.appScreenshots![index])
     }
     
     private func openBrowserWithURL(url : String){
