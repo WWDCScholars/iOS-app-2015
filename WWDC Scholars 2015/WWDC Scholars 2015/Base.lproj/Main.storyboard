@@ -671,10 +671,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="1600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K2Y-8a-qLP">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="1329"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="1328.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nicola Giancecchi" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVB-pe-aV2">
-                                                <rect key="frame" x="20" y="310" width="560" height="34"/>
+                                                <rect key="frame" x="20" y="310" width="560" height="33.5"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="28"/>
                                                 <color key="textColor" red="0.29019607843137257" green="0.6588235294117647" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -687,7 +687,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5W-GY-yiC">
-                                                <rect key="frame" x="20" y="359" width="560" height="38"/>
+                                                <rect key="frame" x="20" y="358" width="560" height="38"/>
                                                 <string key="text">22 from San Marino (SMR)
 Two times at WWDC!</string>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="16"/>
@@ -695,7 +695,7 @@ Two times at WWDC!</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vwB-O9-vEU">
-                                                <rect key="frame" x="160" y="417" width="280" height="1"/>
+                                                <rect key="frame" x="160" y="416" width="280" height="1"/>
                                                 <color key="backgroundColor" red="0.66274509803921566" green="0.74901960784313726" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="acg-jU-6t1"/>
@@ -716,19 +716,19 @@ Two times at WWDC!</string>
                                                 </constraints>
                                             </mapView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My App for WWDC15" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wv4-RX-X9v">
-                                                <rect key="frame" x="20" y="823" width="560" height="27"/>
+                                                <rect key="frame" x="20" y="823" width="560" height="26.5"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
                                                 <color key="textColor" red="0.098039215686274508" green="0.44705882352941179" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact me!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXg-Tg-DLf">
-                                                <rect key="frame" x="20" y="1191" width="560" height="27"/>
+                                                <rect key="frame" x="20" y="1191" width="560" height="26.5"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
                                                 <color key="textColor" red="0.070588235294117646" green="0.27450980392156865" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfY-G6-jEd">
-                                                <rect key="frame" x="160" y="1238" width="280" height="1"/>
+                                                <rect key="frame" x="160" y="1237" width="280" height="1"/>
                                                 <color key="backgroundColor" red="0.66274509803921566" green="0.74901960784313726" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="280" id="ThW-lw-3Hb"/>
@@ -760,7 +760,7 @@ Two times at WWDC!</string>
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7mi-NS-L7i">
-                                                <rect key="frame" x="213" y="1269" width="175" height="30"/>
+                                                <rect key="frame" x="213" y="1268" width="175" height="30"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ijt-iV-lnk">
                                                         <rect key="frame" x="12" y="0.0" width="30" height="30"/>
@@ -873,6 +873,15 @@ Two times at WWDC!</string>
                                                     <constraint firstAttribute="width" constant="150" id="k2Y-fV-XL8"/>
                                                 </constraints>
                                             </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PXP-GQ-luw">
+                                                <rect key="frame" x="8" y="15" width="52" height="40"/>
+                                                <state key="normal" image="back-arrow">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="Dyj-yD-7Un" kind="unwind" unwindAction="unwindToMainViewController:" id="lRK-Oh-65a"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="8jU-u9-izq" firstAttribute="top" secondItem="vwB-O9-vEU" secondAttribute="bottom" constant="20" id="0A7-PZ-e84"/>
@@ -951,6 +960,7 @@ Two times at WWDC!</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6pL-Qy-WJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Dyj-yD-7Un" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2632" y="1218"/>
         </scene>
@@ -968,6 +978,7 @@ Two times at WWDC!</string>
         <image name="MatthewPanzer" width="117" height="130"/>
         <image name="MatthijsLogemann" width="106" height="106"/>
         <image name="WallpaperWWDC" width="5535" height="3690"/>
+        <image name="back-arrow" width="30" height="30"/>
         <image name="facebook_test_icn" width="60" height="60"/>
         <image name="github_test_icn" width="60" height="60"/>
         <image name="iPhone" width="70" height="128"/>
