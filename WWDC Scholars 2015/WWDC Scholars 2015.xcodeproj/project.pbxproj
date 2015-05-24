@@ -22,9 +22,10 @@
 		407CDD951B0FBE4100350500 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 407CDD941B0FBE4100350500 /* AsyncImageView.m */; };
 		408211651B0E034B00D567AC /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408211641B0E034B00D567AC /* MainScreenViewController.swift */; };
 		4082116F1B0E292300D567AC /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408211691B0E292300D567AC /* ParseUI.framework */; };
-		408211701B0E292300D567AC /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4082116A1B0E292300D567AC /* ParseCrashReporting.framework */; };
 		408211711B0E292300D567AC /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4082116B1B0E292300D567AC /* Bolts.framework */; };
 		408211761B0E296A00D567AC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408211751B0E296A00D567AC /* DataManager.swift */; };
+		40CA931A1B125BEB006F3BEA /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4082116A1B0E292300D567AC /* ParseCrashReporting.framework */; };
+		40CA931C1B125C68006F3BEA /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CA931B1B125C68006F3BEA /* libstdc++.6.dylib */; };
 		6EEA0A151B0ED45900B99130 /* MainScreenFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA0A141B0ED45900B99130 /* MainScreenFooter.swift */; };
 		7C00D58F1B0E867A00F9B3E7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C00D58E1B0E867A00F9B3E7 /* DetailViewController.swift */; };
 		7C10849F1B11526E00DCC52E /* NGBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C10849D1B11526E00DCC52E /* NGBrowserViewController.swift */; };
@@ -83,6 +84,7 @@
 		4082116A1B0E292300D567AC /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
 		4082116B1B0E292300D567AC /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		408211751B0E296A00D567AC /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		40CA931B1B125C68006F3BEA /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
 		5FA8DE545F33FC48722F860C /* Pods-WWDC Scholars 2015.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WWDC Scholars 2015.release.xcconfig"; path = "Pods/Target Support Files/Pods-WWDC Scholars 2015/Pods-WWDC Scholars 2015.release.xcconfig"; sourceTree = "<group>"; };
 		6EEA0A141B0ED45900B99130 /* MainScreenFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenFooter.swift; sourceTree = "<group>"; };
 		7C00D58E1B0E867A00F9B3E7 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = Controller/DetailViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40CA931C1B125C68006F3BEA /* libstdc++.6.dylib in Frameworks */,
 				7C9A05D71B1226B800EC1F11 /* QuickLook.framework in Frameworks */,
 				407911BF1B0E2B2A00A582FF /* Accounts.framework in Frameworks */,
 				407911C01B0E2B2A00A582FF /* libsqlite3.dylib in Frameworks */,
@@ -138,6 +141,7 @@
 				407911C31B0E2B2A00A582FF /* Social.framework in Frameworks */,
 				407911C51B0E2B2A00A582FF /* SystemConfiguration.framework in Frameworks */,
 				407911B71B0E2AFC00A582FF /* QuartzCore.framework in Frameworks */,
+				40CA931A1B125BEB006F3BEA /* ParseCrashReporting.framework in Frameworks */,
 				407911B51B0E2AF500A582FF /* MobileCoreServices.framework in Frameworks */,
 				407911B11B0E2AEE00A582FF /* CFNetwork.framework in Frameworks */,
 				407911B21B0E2AEE00A582FF /* CoreGraphics.framework in Frameworks */,
@@ -145,7 +149,6 @@
 				407911AD1B0E2AC400A582FF /* AudioToolbox.framework in Frameworks */,
 				4082116F1B0E292300D567AC /* ParseUI.framework in Frameworks */,
 				7C9A052A1B121CD300EC1F11 /* Parse.framework in Frameworks */,
-				408211701B0E292300D567AC /* ParseCrashReporting.framework in Frameworks */,
 				408211711B0E292300D567AC /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +253,7 @@
 		AA58B36BDE81C38F46C9476F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				40CA931B1B125C68006F3BEA /* libstdc++.6.dylib */,
 				7C9A052F1B121FCC00EC1F11 /* libPods-WWDC Scholars 2015.a */,
 				0EF48F6F33F46882AFCB4861 /* libPods-WWDC Scholars 2015.a */,
 			);
@@ -663,6 +667,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Andrew Walker (885Z2MA8CF)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Andrew Walker (885Z2MA8CF)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -673,6 +678,9 @@
 					"$(PROJECT_DIR)/WWDC",
 					Scholars,
 					"2015/WWDC-Scholars-iOS-2015",
+					"$(PROJECT_DIR)/WWDC",
+					Scholars,
+					2015,
 					"$(PROJECT_DIR)/WWDC",
 					Scholars,
 					2015,
@@ -713,6 +721,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Andrew Walker (885Z2MA8CF)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Andrew Walker (885Z2MA8CF)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -723,6 +732,9 @@
 					"$(PROJECT_DIR)/WWDC",
 					Scholars,
 					"2015/WWDC-Scholars-iOS-2015",
+					"$(PROJECT_DIR)/WWDC",
+					Scholars,
+					2015,
 					"$(PROJECT_DIR)/WWDC",
 					Scholars,
 					2015,

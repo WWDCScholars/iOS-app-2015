@@ -41,7 +41,7 @@ class DataManager: NSObject {
                             longitude: (object.objectForKey("longtitude") as? Double)!,
                             email: object.objectForKey("email") as? String,
                             picture: (object.objectForKey("profilePic") as! PFFile).url!,
-                            appScreenshots:[(object.objectForKey("profilePic") as! PFFile).url!, (object.objectForKey("profilePic") as! PFFile).url!, (object.objectForKey("profilePic") as! PFFile).url!, (object.objectForKey("profilePic") as! PFFile).url!],
+                            appScreenshots:[(object.objectForKey("screenshotOne") as! PFFile).url!, (object.objectForKey("screenshotTwo") as! PFFile).url!, (object.objectForKey("screenshotThree") as! PFFile).url!, (object.objectForKey("screenshotFour") as! PFFile).url!],
                             shortBio: object.objectForKey("shortBio") as? String,
                             numberOfWWDCAttend: object.objectForKey("numberOfTimesWWDCScholar") as? Int,
                             appDemo: object.objectForKey("videoLink") as? String,
