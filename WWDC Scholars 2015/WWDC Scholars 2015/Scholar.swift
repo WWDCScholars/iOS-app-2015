@@ -53,4 +53,17 @@ class Scholar:NSObject{
         self.location = location
         self.itunes = itunes
     }
+    
+    func generateSimpleJson() -> NSDictionary!{
+        var dict = NSMutableDictionary()
+        
+        dict.setObject(self.name!, forKey: "name")
+        dict.setObject(self.age!, forKey: "age")
+        dict.setObject(self.numberOfWWDCAttend!, forKey: "numberOfWWDCAttend")
+        dict.setObject(self.latitude, forKey: "latitude")
+        dict.setObject(self.longitude, forKey: "longitude")
+        dict.setObject(self.shortBio!, forKey: "shortBio")
+
+        return dict as NSDictionary
+    }
 }
