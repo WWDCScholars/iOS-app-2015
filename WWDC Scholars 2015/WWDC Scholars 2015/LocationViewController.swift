@@ -25,7 +25,7 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
     
     let transition = BubbleTransition()
     
-    var index : Int?
+    var index = 0
     var qTree = QTree()
     var myLocation : CLLocationCoordinate2D?
     
@@ -226,14 +226,14 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         transition.transitionMode = .Present
         transition.startingPoint = self.view.center
-        transition.bubbleColor =  setColor(index!)
+        transition.bubbleColor =  setColor(index)
         return transition
     }
     
     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         transition.transitionMode = .Dismiss
         transition.startingPoint = self.view.center
-        transition.bubbleColor = setColor(index!)
+        transition.bubbleColor = setColor(index)
         return transition
     }
 
