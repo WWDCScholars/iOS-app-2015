@@ -15,7 +15,7 @@
                                 <label width="1" alignment="left" text="Total amount scholars" textAlignment="center" minimumScaleFactor="0.50000000000000011" id="qAi-eA-C8Z">
                                     <fontDescription key="font" type="system" pointSize="12"/>
                                 </label>
-                                <label width="1" alignment="left" text="52 out of 350" textAlignment="center" id="QKb-eh-w4o">
+                                <label width="1" alignment="left" text="0 out of 350" textAlignment="center" id="QKb-eh-w4o">
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
                                 </label>
                             </items>
@@ -25,7 +25,7 @@
                                 <label width="1" alignment="left" text="Male/Female ratio" textAlignment="center" minimumScaleFactor="0.50000000000000011" id="Zr3-3y-Xop">
                                     <fontDescription key="font" type="system" pointSize="12"/>
                                 </label>
-                                <label width="1" alignment="left" text="48:4" textAlignment="center" minimumScaleFactor="0.10000000000000001" id="yjF-ls-PIB">
+                                <label width="1" alignment="left" text="placeholder" textAlignment="center" minimumScaleFactor="0.10000000000000001" id="yjF-ls-PIB">
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
                                 </label>
                             </items>
@@ -62,12 +62,24 @@
                     <items>
                         <table alignment="left" id="yV8-ms-dcb">
                             <items>
-                                <tableRow id="MLA-R0-RHB">
-                                    <group key="rootItem" width="1" alignment="left" id="Qnc-y8-h0K"/>
+                                <tableRow identifier="scholarCell" id="MLA-R0-RHB" customClass="ScholarTableRow" customModule="WWDC_Scholars_2015_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="Qnc-y8-h0K">
+                                        <items>
+                                            <imageView alignment="left" id="85Y-D1-0Hm"/>
+                                            <label alignment="left" text="Label" id="Ocl-f7-KNY"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="scholarImage" destination="85Y-D1-0Hm" id="NsJ-JG-8p7"/>
+                                        <outlet property="scholarName" destination="Ocl-f7-KNY" id="EFW-hF-1IS"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="scholarTable" destination="yV8-ms-dcb" id="F0G-ND-Gm9"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="491" y="65"/>
