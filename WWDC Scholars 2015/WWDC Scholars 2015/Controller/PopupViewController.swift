@@ -8,10 +8,11 @@
 
 import UIKit
 
-class PopupViewController: UIViewController {
+class PopupViewController: UIViewController,UIScrollViewDelegate {
 
     @IBOutlet weak var imageView: AsyncImageView!
     
+    @IBOutlet weak var scrollView: UIScrollView!
     var imageURL : String?{
         didSet{
                     }
@@ -20,8 +21,15 @@ class PopupViewController: UIViewController {
         super.viewDidLoad()
         self.imageView.image = UIImage(named: "no-profile")
         self.imageView.imageURL = NSURL(string: imageURL!)
+        self.scrollView.contentSize = self.imageView.frame.size
+        self.scrollView.minimumZoomScale = 0.03
+        self.scrollView.maximumZoomScale = 1.5
+        self.scrollView.delegate = self
 
         // Do any additional setup after loading the view.
+    }
+    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+        return self.imageView
     }
 
     override func didReceiveMemoryWarning() {
