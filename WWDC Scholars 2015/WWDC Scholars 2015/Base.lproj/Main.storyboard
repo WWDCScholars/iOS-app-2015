@@ -472,7 +472,7 @@ Two times at WWDC!</string>
                                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7mi-NS-L7i">
                                                 <rect key="frame" x="213" y="1229" width="175" height="30"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ijt-iV-lnk">
+                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ijt-iV-lnk">
                                                         <rect key="frame" x="12" y="0.0" width="30" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Ijt-iV-lnk" secondAttribute="height" multiplier="1:1" id="FrD-36-ZYM"/>
@@ -484,7 +484,7 @@ Two times at WWDC!</string>
                                                             <action selector="facebookClied:" destination="ixk-1w-ECw" eventType="touchUpInside" id="mxW-QL-cG5"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhS-ZP-JYi">
+                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhS-ZP-JYi">
                                                         <rect key="frame" x="96" y="0.0" width="30" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="BhS-ZP-JYi" secondAttribute="height" multiplier="1:1" id="HEk-9S-Gsa"/>
@@ -496,7 +496,7 @@ Two times at WWDC!</string>
                                                             <action selector="emailClicked:" destination="ixk-1w-ECw" eventType="touchUpInside" id="H5A-NI-zIc"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUj-k4-RuS">
+                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUj-k4-RuS">
                                                         <rect key="frame" x="54" y="0.0" width="30" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="XUj-k4-RuS" secondAttribute="height" multiplier="1:1" id="8la-fO-DVp"/>
@@ -505,7 +505,7 @@ Two times at WWDC!</string>
                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eh-Hh-ADw">
+                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eh-Hh-ADw">
                                                         <rect key="frame" x="138" y="0.0" width="30" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="2eh-Hh-ADw" secondAttribute="height" multiplier="1:1" id="gxt-5V-mD3"/>
@@ -1108,9 +1108,13 @@ Two times at WWDC!</string>
         <image name="SamEckert" width="106" height="106"/>
         <image name="WallpaperWWDC" width="5535" height="3690"/>
         <image name="back-arrow" width="30" height="30"/>
+        <image name="facebook_test_icn" width="632" height="673"/>
+        <image name="github_test_icn" width="632" height="673"/>
         <image name="iPhone-1" width="168" height="168"/>
+        <image name="mail_test_icn" width="632" height="673"/>
         <image name="ngiancecchi_test_profile" width="960" height="960"/>
         <image name="no-profile" width="632" height="673"/>
+        <image name="twitter_test_icn" width="632" height="673"/>
         <image name="wwdc15-hero_2x-4" width="1250" height="1250"/>
     </resources>
     <inferredMetricsTieBreakers>
