@@ -9,6 +9,7 @@
 import Foundation
 
 class Scholar:NSObject{
+    
     var name : String?
     var age : Int?
     var birthdate : NSDate?
@@ -30,31 +31,14 @@ class Scholar:NSObject{
     var location : String?
 <<<<<<< HEAD
     var user : PFUser?
-    init(name:String?,age:Int,birthdate:String?,gender:String?,latitude:Double,longitude:Double,email:String?,picture:String?,numberOfWWDCAttend:Int?,appDemo:String?,githubLinkToApp:String?,twitter:String?,facebook:String?,github:String?,linkedIn:String?,website:String?,location:String?,user:PFUser?){
-            self.name = name
-            self.age = age
-            self.birthdate = birthdate
-            self.gender = gender
-            self.longitude = longitude
-            self.latitude = latitude
-            self.email = email
-            self.picture = picture
-            self.numberOfWWDCAttend = numberOfWWDCAttend
-            self.appDemo = appDemo
-            self.githubLinkToApp = githubLinkToApp
-            self.twitter = twitter
-            self.facebook = facebook
-            self.github = github
-            self.linkedIn = linkedIn
-            self.website = website
-            self.location = location
-            self.user = user
-        }
-=======
-    
     // still need shortBio,videoLink,birthday,4 screenShot pictures
     
-    init(name:String?,age:Int,birthdate:NSDate?,gender:String?,latitude:Double,longitude:Double,email:String?,picture:String?, appScreenshots:[String]?,shortBio:String?,numberOfWWDCAttend:Int?,appDemo:String?,githubLinkToApp:String?,twitter:String?,facebook:String?,github:String?,linkedIn:String?,website:String?,location:String?){
+    init(name:String?,age:Int,birthdate:NSDate?,gender:String?,latitude:Double,longitude:Double,email:String?,picture:String?, appScreenshots:[String]?,shortBio:String?,numberOfWWDCAttend:Int?,appDemo:String?,githubLinkToApp:String?,twitter:String?,facebook:String?,github:String?,linkedIn:String?,website:String?,location:String?, user: PFUser?){
+=======
+    var itunes : String?
+    
+    init(name:String?,age:Int,birthdate:NSDate?,gender:String?,latitude:Double,longitude:Double,email:String?,picture:String?, appScreenshots:[String]?,shortBio:String?,numberOfWWDCAttend:Int?,appDemo:String?,githubLinkToApp:String?,twitter:String?,facebook:String?,github:String?,linkedIn:String?,website:String?,location:String?, itunes: String?){
+>>>>>>> 71a868a638278b701967c5a53d8d6ec101f81114
         self.name = name
         self.age = age
         self.birthdate = birthdate
@@ -74,6 +58,10 @@ class Scholar:NSObject{
         self.linkedIn = linkedIn
         self.website = website
         self.location = location
+<<<<<<< HEAD
+            self.user = user
+=======
+        self.itunes = itunes
+>>>>>>> 71a868a638278b701967c5a53d8d6ec101f81114
     }
->>>>>>> 4e3b1f31947b81ca7f7c82d285eb38855b000735
 }
