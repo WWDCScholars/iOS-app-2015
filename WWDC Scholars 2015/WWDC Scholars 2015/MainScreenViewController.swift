@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import ParseUI
 
-class MainScreenViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class MainScreenViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, PFLogInViewControllerDelegate {
     
     @IBOutlet var scholarsCollectionView: UICollectionView!
     
@@ -82,6 +83,7 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
         
     }
     
+    
     func updateCollectionView(){
         scholarsCollectionView.reloadData()
     }
@@ -116,6 +118,35 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
     BUG DETECTED? Exit segue doesn't dismiss automatically, so we have to dismiss it manually.
     */
     @IBAction func unwindToMainViewController (sender: UIStoryboardSegue){
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    //MARK: - PFLogInViewControllerDelegate Methods
+    @IBAction func showLogin(sender: AnyObject) {
+        var loginViewController = PFLogInViewController()
+        loginViewController.delegate = self
+        loginViewController.fields = PFLogInFields.UsernameAndPassword | PFLogInFields.LogInButton | PFLogInFields.DismissButton
+        //var signupViewController = PFSignUpViewController()
+        //signupViewController.delegate = self
+        //loginViewController.signUpController = signupViewController
+        self.presentViewController(loginViewController, animated: true, completion: nil)
+    }
+    
+    func logInViewController(logInController: PFLogInViewController, shouldBeginLogInWithUsername username: String, password: String) -> Bool {
+        if ((count(username) != 0) && (count(password) != 0)) {
+            return true
+        } else {
+            var alert = UIAlertView(title: "Empty field", message: "Some of the fields are empty. Please fill them in to log in.", delegate: nil, cancelButtonTitle: "Ok")
+            alert.show()
+            return false
+        }
+    }
+    
+    func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func logInViewControllerDidCancelLogIn(logInController: PFLogInViewController) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 }
