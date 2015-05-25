@@ -8,40 +8,69 @@
         <!--Interface Controller-->
         <scene sceneID="QFg-to-YIM">
             <objects>
-                <controller id="wHh-Pz-AyL" customClass="InterfaceController" customModule="WWDC_Scholars_2015_WatchKit_Extension">
+                <controller spacing="3" id="wHh-Pz-AyL" customClass="InterfaceController" customModule="WWDC_Scholars_2015_WatchKit_Extension">
                     <items>
-                        <table alignment="left" id="g7B-8n-mHB">
+                        <group width="1" alignment="left" layout="vertical" spacing="0.0" id="5xX-8i-EiQ">
                             <items>
-                                <tableRow identifier="scholarCell" id="Wvq-jZ-qn2" customClass="ScholarTableRow" customModule="WWDC_Scholars_2015_WatchKit_Extension">
-                                    <group key="rootItem" width="1" alignment="left" id="9AO-Qx-fjd">
-                                        <items>
-                                            <group width="35" height="35" alignment="left" verticalAlignment="center" radius="10" id="Q4R-Lb-IyX">
-                                                <items>
-                                                    <imageView width="35" height="35" alignment="left" image="Placeholder" contentMode="scaleAspectFill" id="cnW-MA-zdb"/>
-                                                </items>
-                                            </group>
-                                            <group width="1" widthAdjustment="-30" height="1" alignment="left" id="tGw-qG-0dx">
-                                                <items>
-                                                    <label width="1" alignment="center" verticalAlignment="center" text="Andrew Walker" textAlignment="center" minimumScaleFactor="0.10000000000000014" id="Dvw-ID-5AB"/>
-                                                </items>
-                                            </group>
-                                        </items>
-                                        <edgeInsets key="margins" left="3" right="10" top="3" bottom="3"/>
-                                    </group>
-                                    <connections>
-                                        <outlet property="scholarImage" destination="cnW-MA-zdb" id="SU9-2h-aFi"/>
-                                        <outlet property="scholarName" destination="Dvw-ID-5AB" id="eHi-pA-8F0"/>
-                                    </connections>
+                                <label width="1" alignment="left" text="Total amount scholars" textAlignment="center" minimumScaleFactor="0.50000000000000011" id="qAi-eA-C8Z">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                </label>
+                                <label width="1" alignment="left" text="52 out of 350" textAlignment="center" id="QKb-eh-w4o">
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" spacing="0.0" id="Wvg-kY-kbQ">
+                            <items>
+                                <label width="1" alignment="left" text="Male/Female ratio" textAlignment="center" minimumScaleFactor="0.50000000000000011" id="Zr3-3y-Xop">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                </label>
+                                <label width="1" alignment="left" text="48:4" textAlignment="center" minimumScaleFactor="0.10000000000000001" id="yjF-ls-PIB">
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" spacing="0.0" id="pEy-Fy-bz0">
+                            <items>
+                                <label width="1" alignment="left" text="Most common city" textAlignment="center" minimumScaleFactor="0.50000000000000011" id="N98-HA-AEa">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                </label>
+                                <label width="1" alignment="left" text="New York" textAlignment="center" minimumScaleFactor="0.10000000000000001" id="4wG-Ww-g0N">
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
+                                </label>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Students" id="Hjq-WB-IDG">
+                            <connections>
+                                <segue destination="W0k-RN-FvD" kind="push" identifier="toStudents" id="Xgb-Hd-6PR"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="maleFemaleRatio" destination="yjF-ls-PIB" id="46A-i5-5VR"/>
+                        <outlet property="mostCommonCity" destination="4wG-Ww-g0N" id="evj-3L-h3Q"/>
+                        <outlet property="scholarAmount" destination="QKb-eh-w4o" id="OXf-SG-hDP"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="194" y="102"/>
+        </scene>
+        <!--Students Interface Controller-->
+        <scene sceneID="oMT-Wn-7R7">
+            <objects>
+                <controller id="W0k-RN-FvD" customClass="StudentsInterfaceController" customModule="WWDC_Scholars_2015_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="yV8-ms-dcb">
+                            <items>
+                                <tableRow id="MLA-R0-RHB">
+                                    <group key="rootItem" width="1" alignment="left" id="Qnc-y8-h0K"/>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
-                    <connections>
-                        <outlet property="scholarTable" destination="g7B-8n-mHB" id="02W-C3-Xbz"/>
-                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="710" y="500"/>
+            <point key="canvasLocation" x="491" y="65"/>
         </scene>
     </scenes>
 </document>

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4057B9521B1351DB00CF1C92 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4057B9511B1351DB00CF1C92 /* FontAwesome.otf */; };
+		4057B9531B1351DB00CF1C92 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4057B9511B1351DB00CF1C92 /* FontAwesome.otf */; };
+		4057B9551B13520200CF1C92 /* FontAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057B9541B13520200CF1C92 /* FontAwesome.swift */; };
 		407911AD1B0E2AC400A582FF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407911AC1B0E2AC400A582FF /* AudioToolbox.framework */; };
 		407911B11B0E2AEE00A582FF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407911AE1B0E2AEE00A582FF /* CFNetwork.framework */; };
 		407911B21B0E2AEE00A582FF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407911AF1B0E2AEE00A582FF /* CoreGraphics.framework */; };
@@ -24,6 +27,7 @@
 		4082116F1B0E292300D567AC /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408211691B0E292300D567AC /* ParseUI.framework */; };
 		408211711B0E292300D567AC /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4082116B1B0E292300D567AC /* Bolts.framework */; };
 		408211761B0E296A00D567AC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408211751B0E296A00D567AC /* DataManager.swift */; };
+		40A54CEA1B1349E9008DDDC6 /* StudentsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A54CE91B1349E9008DDDC6 /* StudentsInterfaceController.swift */; };
 		40CA931A1B125BEB006F3BEA /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4082116A1B0E292300D567AC /* ParseCrashReporting.framework */; };
 		40CA931C1B125C68006F3BEA /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CA931B1B125C68006F3BEA /* libstdc++.6.dylib */; };
 		40CA93261B126186006F3BEA /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA93251B126186006F3BEA /* InterfaceController.swift */; };
@@ -104,6 +108,8 @@
 /* Begin PBXFileReference section */
 		0EF48F6F33F46882AFCB4861 /* libPods-WWDC Scholars 2015.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WWDC Scholars 2015.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15CBC61975F1398DD111B0A6 /* Pods-WWDC Scholars 2015.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WWDC Scholars 2015.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WWDC Scholars 2015/Pods-WWDC Scholars 2015.debug.xcconfig"; sourceTree = "<group>"; };
+		4057B9511B1351DB00CF1C92 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
+		4057B9541B13520200CF1C92 /* FontAwesome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesome.swift; sourceTree = "<group>"; };
 		407911AC1B0E2AC400A582FF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		407911AE1B0E2AEE00A582FF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		407911AF1B0E2AEE00A582FF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -123,6 +129,7 @@
 		4082116A1B0E292300D567AC /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
 		4082116B1B0E292300D567AC /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		408211751B0E296A00D567AC /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		40A54CE91B1349E9008DDDC6 /* StudentsInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentsInterfaceController.swift; sourceTree = "<group>"; };
 		40CA931B1B125C68006F3BEA /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
 		40CA93211B126186006F3BEA /* WWDC Scholars 2015 WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WWDC Scholars 2015 WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40CA93241B126186006F3BEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -283,9 +290,19 @@
 			name = Parse;
 			sourceTree = "<group>";
 		};
+		40A54CEF1B134D51008DDDC6 /* FontAwesome */ = {
+			isa = PBXGroup;
+			children = (
+				4057B9541B13520200CF1C92 /* FontAwesome.swift */,
+				4057B9511B1351DB00CF1C92 /* FontAwesome.otf */,
+			);
+			name = FontAwesome;
+			sourceTree = "<group>";
+		};
 		40CA93221B126186006F3BEA /* WWDC Scholars 2015 WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				40A54CEF1B134D51008DDDC6 /* FontAwesome */,
 				40CA93561B1275A9006F3BEA /* Scholar.swift */,
 				40CA93551B12712F006F3BEA /* WWDC Scholars 2015 WatchKit Extension.entitlements */,
 				40CA93471B126303006F3BEA /* ScholarTableRow.swift */,
@@ -293,6 +310,7 @@
 				40CA93271B126186006F3BEA /* Images.xcassets */,
 				40CA93231B126186006F3BEA /* Supporting Files */,
 				40CA93531B126A58006F3BEA /* Utils.swift */,
+				40A54CE91B1349E9008DDDC6 /* StudentsInterfaceController.swift */,
 			);
 			path = "WWDC Scholars 2015 WatchKit Extension";
 			sourceTree = "<group>";
@@ -652,6 +670,7 @@
 			files = (
 				40CA932C1B126186006F3BEA /* WWDC Scholars 2015 WatchKit App.app in Resources */,
 				40CA93281B126186006F3BEA /* Images.xcassets in Resources */,
+				4057B9521B1351DB00CF1C92 /* FontAwesome.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,6 +680,7 @@
 			files = (
 				40CA93461B126224006F3BEA /* Interface.storyboard in Resources */,
 				40CA93421B1261DE006F3BEA /* Images.xcassets in Resources */,
+				4057B9531B1351DB00CF1C92 /* FontAwesome.otf in Resources */,
 				40CA93521B126433006F3BEA /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -695,6 +715,8 @@
 				40CA93481B126303006F3BEA /* ScholarTableRow.swift in Sources */,
 				40CA93261B126186006F3BEA /* InterfaceController.swift in Sources */,
 				40CA93541B126A58006F3BEA /* Utils.swift in Sources */,
+				4057B9551B13520200CF1C92 /* FontAwesome.swift in Sources */,
+				40A54CEA1B1349E9008DDDC6 /* StudentsInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -774,6 +796,7 @@
 		40CA933B1B126186006F3BEA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "WWDC Scholars 2015 WatchKit Extension/WWDC Scholars 2015 WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -786,12 +809,15 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		40CA933C1B126186006F3BEA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "WWDC Scholars 2015 WatchKit Extension/WWDC Scholars 2015 WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -800,6 +826,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
@@ -1084,6 +1111,7 @@
 				40CA933E1B126186006F3BEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		40CA93401B126186006F3BEA /* Build configuration list for PBXNativeTarget "WWDC Scholars 2015 WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -1092,6 +1120,7 @@
 				40CA933C1B126186006F3BEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C00C27351B0D5C9C008C19AE /* Build configuration list for PBXProject "WWDC Scholars 2015" */ = {
 			isa = XCConfigurationList;
