@@ -27,6 +27,7 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
             nameTextView.text = scholar.name
             
             let profileImageView = cell.viewWithTag(202) as! AsyncImageView
+            AsyncImageLoader.sharedLoader().cancelLoadingURL(profileImageView.imageURL)
             profileImageView.image = UIImage(named: "no-profile")
             profileImageView.imageURL = NSURL(string: scholar.picture!)
         }
