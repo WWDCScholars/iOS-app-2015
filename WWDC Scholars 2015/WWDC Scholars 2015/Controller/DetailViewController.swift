@@ -74,6 +74,7 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
             if (user.username == currentScholar?.user?.username) {
 self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Edit, target: self, action: Selector("edit"))
             }
+        }
         
         if(currentScholar?.email != nil){
             social["mail"] = currentScholar!.email!
@@ -87,26 +88,32 @@ self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .E
             social["fb"] = currentScholar!.facebook!
         }
         
-
+        if(currentScholar?.twitter != nil){
             social["tw"] = currentScholar!.twitter!
         }
         
-        let totalWidth : CGFloat = CGFloat((social.count*30)+((social.count-1)*10))
+        let buttonSize = 50
+        let totalWidth : CGFloat = CGFloat((social.count*buttonSize)+((social.count-1)*10))
         let viewWidth : CGFloat = CGFloat(viewSocial.frame.size.width)
         var startingX : CGFloat = (viewWidth-totalWidth) / 2
         
         for key : String in social.keys {
             let value : String = social[key]!
             let btn : UIButton = UIButton()
-            btn.frame = CGRectMake(startingX, CGFloat(0), CGFloat(30), CGFloat(30))
+            btn.frame = CGRectMake(startingX, CGFloat(0), CGFloat(buttonSize), CGFloat(buttonSize))
             btn.setImage(UIImage(named: key + "_logo"), forState: .Normal)
-                
+            btn.addTarget(self, action: Selector("open_"+key) , forControlEvents: UIControlEvents.TouchUpInside)
             viewSocial.addSubview(btn)
-           
+            startingX+=CGFloat(buttonSize)+10.0
         }
+    }
     
-        
-        
+    func open_mail() {
+        UIApplication.sharedApplication().openURL(NSURL(string:"mailto:"+currentScholar!.email!)!)
+    }
+    
+    func open_gh() {
+        UIApplication.sharedApplication().openURL(NSURL(string:currentScholar!.github!)!)
     }
     
     func open_fb() {
@@ -200,11 +207,13 @@ self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .E
             }
             
             
-            self.performSegueWithIdentifier("toPopup", sender: self)
+            //self.performSegueWithIdentifier("toPopup", sender: self)
+            //set to different segue
         }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        /*
         if segue.identifier == "toPopup" {
             let vc = segue.destinationViewController as! PopupViewController
             vc.imageURL = selectedImageView
@@ -237,6 +246,7 @@ self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .E
             popupSegue.dismissableByTouchingBackground = true
 
         }
+        */
     }
     
     

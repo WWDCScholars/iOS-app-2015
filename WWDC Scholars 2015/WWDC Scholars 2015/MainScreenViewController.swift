@@ -10,14 +10,15 @@
 import UIKit
 import ParseUI
 
-class MainScreenViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, PFLogInViewControllerDelegate {
+class MainScreenViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, PFLogInViewControllerDelegate,UIViewControllerTransitioningDelegate  {
     
     @IBOutlet var scholarsCollectionView: UICollectionView!
     
     
-    /*Create your transition manager instance*/
-    var transition = QZCircleSegue()
+    //var cell : UICollectionViewCell?
+    let transition = BubbleTransition()
     var index:Int?
+    
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ScholarshipCell", forIndexPath: indexPath) as! UICollectionViewCell
         
@@ -104,16 +105,25 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let dest = segue.destinationViewController as? DetailViewController {
             dest.currentScholar = DataManager.sharedInstance.scholarAtLocation(scholarsCollectionView.indexPathsForSelectedItems()[0].row)
-            /* Send the button to your transition manager */
-            self.transition.animationChild = self.view
-            /* Set the color to your transition manager*/
-            self.transition.animationColor = setColor(index!)
-            /* Set both, the origin and destination to your transition manager*/
-            self.transition.fromViewController = self
-            self.transition.toViewController = dest
-            /* Add the transition manager to your transitioningDelegate View Controller*/
-            dest.transitioningDelegate = transition
+            dest.transitioningDelegate = self
+            dest.modalPresentationStyle = .Custom
+           
         }
+    }
+    // MARK: UIViewControllerTransitioningDelegate
+    
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .Present
+        transition.startingPoint = self.view.center
+        transition.bubbleColor =  setColor(index!)
+        return transition
+    }
+    
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .Dismiss
+        transition.startingPoint = self.view.center
+        transition.bubbleColor = setColor(index!)
+        return transition
     }
     
     /* REQUIRED, do not connect to any Outlet.
