@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import ParseCrashReporting
 import Bolts
 
 @UIApplicationMain
@@ -20,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
         Parse.enableLocalDatastore()
         
+        ParseCrashReporting.enable();
+
         Parse.setApplicationId("***REMOVED***",
             clientKey: "***REMOVED***")
         

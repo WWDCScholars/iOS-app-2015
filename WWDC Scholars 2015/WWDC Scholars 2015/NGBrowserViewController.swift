@@ -29,6 +29,14 @@ class NGBrowserViewController: UIViewController, UIWebViewDelegate {
         let bbi : UIBarButtonItem = UIBarButtonItem(title: "Open in Safari", style: .Plain, target: self, action: "openInSafari")
         self.navigationItem.rightBarButtonItem = bbi
         
+        
+        if(self.presentingViewController != nil){
+            
+            let bbiDismiss : UIBarButtonItem = UIBarButtonItem(title: "Dismiss", style: .Plain, target: self, action: "dismiss")
+            self.navigationItem.leftBarButtonItem = bbiDismiss
+            
+        }
+        
         if(self.urlToOpen != ""){
             var websiteUrl : NSURL
             
@@ -45,6 +53,9 @@ class NGBrowserViewController: UIViewController, UIWebViewDelegate {
 
     }
     
+    func dismiss(){
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     func openInSafari(){
         UIApplication.sharedApplication().openURL(NSURL(string:self.urlToOpen)!)
     }
