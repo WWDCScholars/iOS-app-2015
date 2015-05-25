@@ -73,8 +73,8 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         if let user = PFUser.currentUser() {
             if (user.username == currentScholar?.user?.username) {
 self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Edit, target: self, action: Selector("edit"))
-}
-}
+            }
+        
         if(currentScholar?.email != nil){
             social["mail"] = currentScholar!.email!
         }
