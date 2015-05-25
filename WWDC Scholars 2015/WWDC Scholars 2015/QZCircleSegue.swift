@@ -11,7 +11,7 @@ import UIKit
 class QZCircleSegue: NSObject, UIViewControllerAnimatedTransitioning, UIViewControllerTransitioningDelegate  {
     
     private var presenting = false
-    var animationDuration = 0.2
+    var animationDuration = 0.1
     var animationColor = UIColor.whiteColor()
     var animationChild: AnyObject! = nil
     var fromViewController: AnyObject! = nil
@@ -51,12 +51,12 @@ class QZCircleSegue: NSObject, UIViewControllerAnimatedTransitioning, UIViewCont
             circularView.tag = 764
             bottomViewController.view.addSubview(circularView)
             
-            UIView.animateWithDuration(0.3, animations: { () -> Void in
+            UIView.animateWithDuration(0.18, animations: { () -> Void in
                 let scale:CGFloat = 12
                 circularView.transform = CGAffineTransformMakeScale(scale, scale)
                 circularView.center = animationPoint
                 }) { (Finished) -> Void in
-                    UIView.animateWithDuration(duration, delay: 0.0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: nil, animations: {
+                    UIView.animateWithDuration(duration, delay: 0.0, usingSpringWithDamping: 1, initialSpringVelocity: 2, options: nil, animations: {
                         self.onStageMenuController(newViewController, fromViewController: bottomViewController)
                         }, completion: { finished in
                             transitionContext.completeTransition(true)
@@ -67,7 +67,7 @@ class QZCircleSegue: NSObject, UIViewControllerAnimatedTransitioning, UIViewCont
             var circularView: UIView = bottomViewController.view.viewWithTag(764)!
             self.offStageMenuController(newViewController, fromViewController: bottomViewController)
             
-            UIView.animateWithDuration(0.3, animations: { () -> Void in
+            UIView.animateWithDuration(0.18, animations: { () -> Void in
                 let scale:CGFloat = -12
                 circularView.transform = CGAffineTransformMakeScale(1, 1)
                 circularView.center = animationPoint
