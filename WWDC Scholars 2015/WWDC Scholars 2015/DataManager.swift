@@ -64,7 +64,9 @@ class DataManager: NSObject {
                             github: object.objectForKey("github") as? String,
                             linkedIn: object.objectForKey("linkedin") as? String,
                             website: object.objectForKey("website") as? String,
-                            location:object.objectForKey("location") as? String, user: object.objectForKey("user") as? PFUser, itunes:object.objectForKey("itunes") as? String)
+                            location:object.objectForKey("location") as? String,
+                            user: object.objectForKey("user") as? PFUser,
+                            itunes:object.objectForKey("itunes") as? String)
                         
                             self.scholarArray.append(scholar)
                     }
