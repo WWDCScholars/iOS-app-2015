@@ -490,9 +490,6 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iPhone" translatesAutoresizingMaskIntoConstraints="NO" id="5eE-DT-EPR">
-                                        <rect key="frame" x="12" y="292" width="56" height="96"/>
-                                    </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DividingLine" translatesAutoresizingMaskIntoConstraints="NO" id="3Ai-mh-qgh">
                                         <rect key="frame" x="32" y="534" width="568" height="1"/>
                                         <constraints>
@@ -529,18 +526,36 @@
                                         <color key="textColor" white="0.64912041080000005" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SamEckert" translatesAutoresizingMaskIntoConstraints="NO" id="3er-9v-X3q">
+                                        <rect key="frame" x="79" y="669" width="55" height="55"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sam Eckert" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4i-JY-rCN">
+                                        <rect key="frame" x="142" y="669" width="450" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jgz-zd-iC9">
+                                        <rect key="frame" x="142" y="696" width="411" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" white="0.64912041080000005" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DividingLine" translatesAutoresizingMaskIntoConstraints="NO" id="INz-QV-67I">
-                                        <rect key="frame" x="32" y="669" width="568" height="1"/>
+                                        <rect key="frame" x="32" y="732" width="568" height="1"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="ug6-KV-bsX"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Design" translatesAutoresizingMaskIntoConstraints="NO" id="XjO-DS-qxz">
-                                        <rect key="frame" x="12" y="573" width="56" height="56"/>
+                                        <rect key="frame" x="12" y="606" width="56" height="56"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iPhone" translatesAutoresizingMaskIntoConstraints="NO" id="5eE-DT-EPR">
+                                        <rect key="frame" x="12" y="318" width="56" height="56"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="INz-QV-67I" firstAttribute="top" secondItem="IOt-M3-h6r" secondAttribute="bottom" constant="530" id="1Ar-cb-ugu"/>
+                                    <constraint firstItem="INz-QV-67I" firstAttribute="top" secondItem="IOt-M3-h6r" secondAttribute="bottom" constant="593" id="1Ar-cb-ugu"/>
                                     <constraint firstAttribute="trailing" secondItem="INz-QV-67I" secondAttribute="trailing" id="2eT-zj-gVJ"/>
                                     <constraint firstItem="IOt-M3-h6r" firstAttribute="top" secondItem="4Gr-Kj-F8B" secondAttribute="top" constant="95" id="4TL-hC-vpK"/>
                                     <constraint firstAttribute="bottom" secondItem="IOt-M3-h6r" secondAttribute="bottom" constant="861" id="6Zz-BH-H87"/>
@@ -986,9 +1001,10 @@ Two times at WWDC!</string>
         <image name="Map Icon" width="35" height="35"/>
         <image name="MatthewPanzer" width="117" height="130"/>
         <image name="MatthijsLogemann" width="106" height="106"/>
+        <image name="SamEckert" width="106" height="106"/>
         <image name="WallpaperWWDC" width="5535" height="3690"/>
         <image name="back-arrow" width="30" height="30"/>
-        <image name="iPhone" width="70" height="128"/>
+        <image name="iPhone" width="56" height="56"/>
         <image name="ngiancecchi_test_profile" width="960" height="960"/>
         <image name="no-profile" width="632" height="673"/>
         <image name="wwdc15-hero_2x-4" width="1250" height="1250"/>
