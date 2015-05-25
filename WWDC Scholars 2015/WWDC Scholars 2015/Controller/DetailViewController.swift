@@ -251,12 +251,12 @@ self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .E
         */
     }
     
-    
     private func openBrowserWithURL(url : String){
         let browser : NGBrowserViewController = NGBrowserViewController(url: url)
         let nav : UINavigationController = UINavigationController(rootViewController: browser)
         self.presentViewController(nav, animated: true, completion: nil)
     }
+   
     
     @IBAction func handleTapGestureRecognizer(sender: UITapGestureRecognizer) {
         
