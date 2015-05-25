@@ -58,6 +58,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func application(
+        application: UIApplication,
+        handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]?,
+        reply: (([NSObject : AnyObject]!) -> Void)!)
+    {
+        if let pfqueryRequest: AnyObject = (userInfo as? [String: AnyObject])?["pfquery_request"] {
+            println("Starting PFQuery") // won't print out to console since you're running the watch extension
+            
+            // 1. Run the PFQuery
+            // 2. Write the data into MMWormhole (done in PFQuery completion block)
+            // 3. Send the reply back to the extension as success (done in PFQuery completion block)
+            
+            reply(["success": true])
+        }
+        
+        reply(["success": false])
+    }
 
 }
 

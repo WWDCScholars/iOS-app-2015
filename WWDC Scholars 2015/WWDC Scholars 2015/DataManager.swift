@@ -71,13 +71,27 @@ class DataManager: NSObject {
                             self.scholarArray.append(scholar)
                     }
                     
-                    var defaults = NSUserDefaults(suiteName: "group.wwdcscholars.2015")
-                    
-                    var allScholarsJson = NSMutableArray()
+//                    var defaults = NSUserDefaults(suiteName: "group.wwdcscholars.2015")
+//                    
+                    var male = 0
+                    var female = 0
+
+//                    for scholar: Scholar in self.scholarArray{
+//                        allScholarsJson.addObject(scholar.generateSimpleJson())
+//                    }
+//                    defaults?.setObject(allScholarsJson, forKey: "scholars")
                     for scholar: Scholar in self.scholarArray{
-                        allScholarsJson.addObject(scholar.generateSimpleJson())
+                        if (scholar.gender == "Male"){
+                            male += 1
+                        }
+                        if (scholar.gender == "Female"){
+                            female += 1
+                        }
                     }
-                    defaults?.setObject(allScholarsJson, forKey: "scholars")
+
+                    println(male)
+                    println(female)
+
                     NSNotificationCenter.defaultCenter().postNotificationName("onScholarsLoadedNotification", object: self)
 
                 }
