@@ -11,9 +11,10 @@ import QuickLook
 
 class DetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, URBMediaFocusViewControllerDelegate, UIGestureRecognizerDelegate {
     
-    @IBAction func swiped(sender: UISwipeGestureRecognizer) {
+    @IBAction func pinched(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
+    
     var currentScholar : Scholar?
     private var social : Dictionary<String,String> = Dictionary<String,String>()
     var selectedImageView : String?
