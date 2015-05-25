@@ -10,6 +10,7 @@ import UIKit
 import Parse
 import ParseCrashReporting
 import Bolts
+import CoreLocation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -66,14 +67,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let pfqueryRequest: AnyObject = (userInfo as? [String: AnyObject])?["pfquery_request"] {
             println("Starting PFQuery") // won't print out to console since you're running the watch extension
             
-            // 1. Run the PFQuery
-            // 2. Write the data into MMWormhole (done in PFQuery completion block)
-            // 3. Send the reply back to the extension as success (done in PFQuery completion block)
+            var male = 0
+            var female = 0
+            var query = PFQuery(className:"scholars")
             
-            reply(["success": true])
+            var objects = query.findObjects()
+
+                    println("Successfully retrieved \(objects!.count) scholars.")
+                    if let objects = objects as? [PFObject] {
+                        for object in objects {
+                            
+                            if (object.objectForKey("gender") as? String == "Male"){
+                                male += 1
+                            }
+                            if (object.objectForKey("gender") as? String == "Female"){
+                                female += 1
+                            }
+                            
+                        }
+                        
+                        println(male)
+                        println(female)
+                        
+                        reply(["success": true, "totalWinners":objects.count, "male": male, "female": female])
+                        
+//                } else {
+//                    // Log details of the failure
+//                    println("Error: \(error!) \(error!.userInfo!)")
+//                }
+            }
+
         }
-        
-        reply(["success": false])
     }
 
 }

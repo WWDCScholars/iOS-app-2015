@@ -17,13 +17,50 @@ class InterfaceController: WKInterfaceController {
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        maleFemaleRatio.setAttributedText(NSAttributedString(string: String.fontAwesomeIconWithName(FontAwesome.Android), attributes: [NSFontAttributeName: UIFont.fontAwesomeOfSize(20)] as Dictionary!))
+        
+        
+        
+        var mfRatioText = NSMutableAttributedString()
+        mfRatioText.appendAttributedString(NSAttributedString(string: String.fontAwesomeIconWithName(FontAwesome.Male), attributes: [NSFontAttributeName: UIFont.fontAwesomeOfSize(20)] as Dictionary!))
+        mfRatioText.appendAttributedString(NSAttributedString(string: ": 0     ", attributes: [NSFontAttributeName: UIFont.boldSystemFontOfSize(20)] as Dictionary!))
+        
+        mfRatioText.appendAttributedString(NSAttributedString(string: String.fontAwesomeIconWithName(FontAwesome.Female), attributes: [NSFontAttributeName: UIFont.fontAwesomeOfSize(20)] as Dictionary!))
+        mfRatioText.appendAttributedString(NSAttributedString(string: ": 0", attributes: [NSFontAttributeName: UIFont.boldSystemFontOfSize(20)] as Dictionary!))
+        
+        maleFemaleRatio.setAttributedText(mfRatioText)
         // Configure interface objects here.
     }
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        
+            WKInterfaceController.openParentApplication(["pfquery_request": "dummy_val"]) { userInfo, error in
+                println("User Info: \(userInfo)")
+                println("Error: \(error)")
+                
+                var data = (userInfo as NSDictionary)
+                
+                if let success = data["success"] as? NSNumber {
+                    if success.boolValue == true {
+                        var male = data.objectForKey("male") as! NSNumber
+                        var female = data.objectForKey("female") as! NSNumber
+                        var total = data.objectForKey("totalWinners") as! NSNumber
+
+                        var mfRatioText = NSMutableAttributedString()
+                        mfRatioText.appendAttributedString(NSAttributedString(string: String.fontAwesomeIconWithName(FontAwesome.Male), attributes: [NSFontAttributeName: UIFont.fontAwesomeOfSize(20)] as Dictionary!))
+                        mfRatioText.appendAttributedString(NSAttributedString(string: ": \(male)     ", attributes: [NSFontAttributeName: UIFont.boldSystemFontOfSize(20)] as Dictionary!))
+                        
+                        mfRatioText.appendAttributedString(NSAttributedString(string: String.fontAwesomeIconWithName(FontAwesome.Female), attributes: [NSFontAttributeName: UIFont.fontAwesomeOfSize(20)] as Dictionary!))
+                        mfRatioText.appendAttributedString(NSAttributedString(string: ": \(female)", attributes: [NSFontAttributeName: UIFont.boldSystemFontOfSize(20)] as Dictionary!))
+                        
+                        self.maleFemaleRatio.setAttributedText(mfRatioText)
+                        
+                        self.scholarAmount.setText("\(total) out of 350")
+                    }
+                }
+            }
+            
     }
 
     override func didDeactivate() {
