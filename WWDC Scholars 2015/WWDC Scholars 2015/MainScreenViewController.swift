@@ -161,4 +161,18 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
     func logInViewControllerDidCancelLogIn(logInController: PFLogInViewController) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+
+        if(UIScreen.mainScreen().bounds.size.width == 320.0){
+            return CGSizeMake(125,125);
+        }
+  
+        return CGSizeMake(100,100)
+    }
+    
+    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
+        
+        self.scholarsCollectionView.collectionViewLayout.invalidateLayout()
+    }
 }
