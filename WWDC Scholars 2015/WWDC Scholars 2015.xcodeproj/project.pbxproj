@@ -36,7 +36,6 @@
 		7C9A05D71B1226B800EC1F11 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C9A05D51B12268B00EC1F11 /* QuickLook.framework */; };
 		7C9A06961B12325E00EC1F11 /* video_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9A06951B12325E00EC1F11 /* video_placeholder.png */; };
 		7C9A06981B12535B00EC1F11 /* MRSocial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9A06971B12535B00EC1F11 /* MRSocial.swift */; };
-		C004F5831B12113300A1AF27 /* QZCircleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004F5821B12113300A1AF27 /* QZCircleSegue.swift */; };
 		C00C27401B0D5C9C008C19AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C273F1B0D5C9C008C19AE /* AppDelegate.swift */; };
 		C00C27421B0D5C9C008C19AE /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C27411B0D5C9C008C19AE /* LocationViewController.swift */; };
 		C00C27451B0D5C9C008C19AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C00C27431B0D5C9C008C19AE /* Main.storyboard */; };
@@ -109,7 +108,6 @@
 		7C9A05D51B12268B00EC1F11 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
 		7C9A06951B12325E00EC1F11 /* video_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video_placeholder.png; sourceTree = "<group>"; };
 		7C9A06971B12535B00EC1F11 /* MRSocial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRSocial.swift; sourceTree = "<group>"; };
-		C004F5821B12113300A1AF27 /* QZCircleSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QZCircleSegue.swift; sourceTree = "<group>"; };
 		C00C273A1B0D5C9C008C19AE /* WWDC Scholars 2015.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WWDC Scholars 2015.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C00C273E1B0D5C9C008C19AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C00C273F1B0D5C9C008C19AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -294,14 +292,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C004F5841B12113700A1AF27 /* QZCircleSegue */ = {
-			isa = PBXGroup;
-			children = (
-				C004F5821B12113300A1AF27 /* QZCircleSegue.swift */,
-			);
-			name = QZCircleSegue;
-			sourceTree = "<group>";
-		};
 		C00C27311B0D5C9C008C19AE = {
 			isa = PBXGroup;
 			children = (
@@ -405,8 +395,7 @@
 			children = (
 				C0ACA1EB1B126444009FAAE4 /* CCMPopup */,
 				7C9A06971B12535B00EC1F11 /* MRSocial.swift */,
-				C0A078D81B1385B800EFCE6B /* BubbleTransition.swift */,
-				C004F5841B12113700A1AF27 /* QZCircleSegue */,
+				C0A078DA1B1388ED00EFCE6B /* BubbleTransition */,
 				407CDD921B0FBE4100350500 /* AsyncImageView */,
 				408211741B0E292800D567AC /* Parse */,
 				C00C275F1B0D5CEB008C19AE /* QTree-objc */,
@@ -431,6 +420,14 @@
 				C00C277A1B0D63CD008C19AE /* Scholar.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		C0A078DA1B1388ED00EFCE6B /* BubbleTransition */ = {
+			isa = PBXGroup;
+			children = (
+				C0A078D81B1385B800EFCE6B /* BubbleTransition.swift */,
+			);
+			name = BubbleTransition;
 			sourceTree = "<group>";
 		};
 		C0ACA1EB1B126444009FAAE4 /* CCMPopup */ = {
@@ -615,7 +612,6 @@
 				C0ACA2021B126444009FAAE4 /* CCMCustomAnimation.m in Sources */,
 				C00C27781B0D5D9E008C19AE /* ClusterAnnotationView.m in Sources */,
 				C00C277E1B0D6A8D008C19AE /* ScholarAnnotation.swift in Sources */,
-				C004F5831B12113300A1AF27 /* QZCircleSegue.swift in Sources */,
 				C0ACA2011B126444009FAAE4 /* CCMBorderView.m in Sources */,
 				C099FF4F1B10163D00ECAEE7 /* CustomTableViewCell.swift in Sources */,
 				C0ACA2091B126444009FAAE4 /* UIViewController+CCMPopupAnimation.m in Sources */,
