@@ -11,7 +11,7 @@ import MapKit
 import CoreLocation
 
 
-class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelegate,UITableViewDataSource,UITableViewDelegate {
+class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelegate,UITableViewDataSource,UITableViewDelegate,UIViewControllerTransitioningDelegate  {
     
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
@@ -22,10 +22,10 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
     var cacheArray : [Scholar] = []
     var viewChanged = false
     var currentScholar:Scholar?
-    /*Create your transition manager instance*/
-    var transition = QZCircleSegue()
     
+    let transition = BubbleTransition()
     
+    var index : Int?
     var qTree = QTree()
     var myLocation : CLLocationCoordinate2D?
     
@@ -200,25 +200,43 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
         viewChanged = true
         self.reloadAnnotations()
     }
+    func setColor(row:Int)->UIColor{
+        if row == 0 {
+            return UIColor(red: 46/255, green: 195/255, blue: 179/255, alpha: 1.0)
+        } else if row == 1{
+            return UIColor(red: 252/255, green: 63/255, blue: 85/255, alpha: 1.0)
+        } else {
+            return UIColor(red: 237/255, green: 204/255, blue: 64/255, alpha: 1.0)
+        }
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "transformToScholarDetail" {
             
             let dest = segue.destinationViewController as! DetailViewController
             dest.currentScholar = currentScholar
-            /* Send the button to your transition manager */
-            self.transition.animationChild = self.mapView
-            /* Set the color to your transition manager*/
-            self.transition.animationColor = UIColor(red: 46/255, green: 195/255, blue: 179/255, alpha: 1.0)
-            /* Set both, the origin and destination to your transition manager*/
-            self.transition.fromViewController = self
-            self.transition.toViewController = dest
-            /* Add the transition manager to your transitioningDelegate View Controller*/
-            dest.transitioningDelegate = transition
-            //println(currentScholar?.name)
+            dest.transitioningDelegate = self
+            dest.modalPresentationStyle = .Custom
         }
         
     }
+    
+    // MARK: UIViewControllerTransitioningDelegate
+    
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .Present
+        transition.startingPoint = self.view.center
+        transition.bubbleColor =  setColor(index!)
+        return transition
+    }
+    
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .Dismiss
+        transition.startingPoint = self.view.center
+        transition.bubbleColor = setColor(index!)
+        return transition
+    }
+
     
     
     //tableview delegate & datasource
@@ -286,6 +304,15 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
         let cell = tableView.cellForRowAtIndexPath(indexPath) as! CustomTableViewCell
         currentScholar = DataManager.sharedInstance.getScholarByName(cell.name.text!)
+        
+        if indexPath.row % 3 == 0 {
+            index = 0
+        } else if indexPath.row % 3 == 1 {
+            index = 1
+        } else {
+            index = 2
+        }
+
         self.performSegueWithIdentifier("transformToScholarDetail", sender: self)
     }
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
