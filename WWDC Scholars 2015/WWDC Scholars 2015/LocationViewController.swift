@@ -111,15 +111,31 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
             if annotationView == nil {
                 annotationView = ClusterAnnotationView(cluster: annotation)
             }
-            annotationView!.canShowCallout = true
-            annotationView!.rightCalloutAccessoryView = UIButton.buttonWithType(UIButtonType.DetailDisclosure) as! UIButton
+            //annotationView!.canShowCallout = true
+            //annotationView!.rightCalloutAccessoryView = UIButton.buttonWithType(UIButtonType.DetailDisclosure) as! UIButton
             annotationView!.cluster = annotation
             return annotationView
+        } else if annotation.isKindOfClass(scholarAnnotation.classForCoder()) {
+            var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier("ScholarAnnotation") as? MKPinAnnotationView
+            if pinView == nil {
+                pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "ScholarAnnotation")
+                pinView?.canShowCallout = true
+                pinView?.rightCalloutAccessoryView = UIButton.buttonWithType(UIButtonType.DetailDisclosure) as! UIButton
+            } else {
+                pinView?.annotation = annotation
+            }
+            return pinView
         }
         return nil
     }
     
-
+    func mapView(mapView: MKMapView!, annotationView view: MKAnnotationView!, calloutAccessoryControlTapped control: UIControl!) {
+        if view.isKindOfClass(MKPinAnnotationView.classForCoder()) {
+            let title = view.annotation.title
+            currentScholar = DataManager.sharedInstance.getScholarByName(title!)
+            self.performSegueWithIdentifier("transformToScholarDetail", sender: self)
+        }
+    }
     
     func reloadAnnotations(){
         if self.isViewLoaded() == false {
