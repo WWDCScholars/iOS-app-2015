@@ -121,6 +121,7 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
                 pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "ScholarAnnotation")
                 pinView?.canShowCallout = true
                 pinView?.rightCalloutAccessoryView = UIButton.buttonWithType(UIButtonType.DetailDisclosure) as! UIButton
+                pinView?.rightCalloutAccessoryView.tintColor = UIColor.blackColor()
             } else {
                 pinView?.annotation = annotation
             }
