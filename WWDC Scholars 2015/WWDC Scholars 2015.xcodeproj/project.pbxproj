@@ -50,6 +50,7 @@
 		C00C277B1B0D63CD008C19AE /* Scholar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C277A1B0D63CD008C19AE /* Scholar.swift */; };
 		C00C277E1B0D6A8D008C19AE /* ScholarAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C277D1B0D6A8D008C19AE /* ScholarAnnotation.swift */; };
 		C099FF4F1B10163D00ECAEE7 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C099FF4E1B10163D00ECAEE7 /* CustomTableViewCell.swift */; };
+		C0A078D91B1385B800EFCE6B /* BubbleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A078D81B1385B800EFCE6B /* BubbleTransition.swift */; };
 		C0ACA2011B126444009FAAE4 /* CCMBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0ACA1ED1B126444009FAAE4 /* CCMBorderView.m */; };
 		C0ACA2021B126444009FAAE4 /* CCMCustomAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C0ACA1EF1B126444009FAAE4 /* CCMCustomAnimation.m */; };
 		C0ACA2031B126444009FAAE4 /* CCMPopupAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C0ACA1F11B126444009FAAE4 /* CCMPopupAnimation.m */; };
@@ -134,6 +135,7 @@
 		C00C277D1B0D6A8D008C19AE /* ScholarAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScholarAnnotation.swift; sourceTree = "<group>"; };
 		C068DC261B0F5D890066221E /* WWDC Scholars 2015.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "WWDC Scholars 2015.entitlements"; sourceTree = "<group>"; };
 		C099FF4E1B10163D00ECAEE7 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		C0A078D81B1385B800EFCE6B /* BubbleTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleTransition.swift; sourceTree = "<group>"; };
 		C0ACA1EC1B126444009FAAE4 /* CCMBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMBorderView.h; sourceTree = "<group>"; };
 		C0ACA1ED1B126444009FAAE4 /* CCMBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCMBorderView.m; sourceTree = "<group>"; };
 		C0ACA1EE1B126444009FAAE4 /* CCMCustomAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMCustomAnimation.h; sourceTree = "<group>"; };
@@ -403,6 +405,7 @@
 			children = (
 				C0ACA1EB1B126444009FAAE4 /* CCMPopup */,
 				7C9A06971B12535B00EC1F11 /* MRSocial.swift */,
+				C0A078D81B1385B800EFCE6B /* BubbleTransition.swift */,
 				C004F5841B12113700A1AF27 /* QZCircleSegue */,
 				407CDD921B0FBE4100350500 /* AsyncImageView */,
 				408211741B0E292800D567AC /* Parse */,
@@ -629,6 +632,7 @@
 				407CDD951B0FBE4100350500 /* AsyncImageView.m in Sources */,
 				C0ACA2081B126444009FAAE4 /* UIImage+screenshot.m in Sources */,
 				C0ACA20B1B126500009FAAE4 /* PopupViewController.swift in Sources */,
+				C0A078D91B1385B800EFCE6B /* BubbleTransition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
