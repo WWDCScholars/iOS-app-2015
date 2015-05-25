@@ -61,6 +61,7 @@
 		C0ACA2091B126444009FAAE4 /* UIViewController+CCMPopupAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C0ACA2001B126444009FAAE4 /* UIViewController+CCMPopupAnimation.m */; };
 		C0ACA20B1B126500009FAAE4 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0ACA20A1B126500009FAAE4 /* PopupViewController.swift */; };
 		C0B7F78D1B0E682600E74458 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0B7F78C1B0E682600E74458 /* Images.xcassets */; };
+		FDC821A81B1399C80083872D /* URBMediaFocusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC821A71B1399C80083872D /* URBMediaFocusViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +151,8 @@
 		C0ACA2001B126444009FAAE4 /* UIViewController+CCMPopupAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CCMPopupAnimation.m"; sourceTree = "<group>"; };
 		C0ACA20A1B126500009FAAE4 /* PopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopupViewController.swift; path = Controller/PopupViewController.swift; sourceTree = "<group>"; };
 		C0B7F78C1B0E682600E74458 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FDC821A61B1399C80083872D /* URBMediaFocusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URBMediaFocusViewController.h; sourceTree = "<group>"; };
+		FDC821A71B1399C80083872D /* URBMediaFocusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URBMediaFocusViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -377,8 +380,10 @@
 		C00C27731B0D5CF1008C19AE /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				C0ACA1EB1B126444009FAAE4 /* CCMPopup */,
+				FDC821A61B1399C80083872D /* URBMediaFocusViewController.h */,
+				FDC821A71B1399C80083872D /* URBMediaFocusViewController.m */,
 				7C9A06971B12535B00EC1F11 /* MRSocial.swift */,
+				C0ACA1EB1B126444009FAAE4 /* CCMPopup */,
 				C0A078DA1B1388ED00EFCE6B /* BubbleTransition */,
 				407CDD921B0FBE4100350500 /* AsyncImageView */,
 				408211741B0E292800D567AC /* Parse */,
@@ -608,6 +613,7 @@
 				C00C27701B0D5CEC008C19AE /* QTree.m in Sources */,
 				C0ACA2031B126444009FAAE4 /* CCMPopupAnimation.m in Sources */,
 				C00C27401B0D5C9C008C19AE /* AppDelegate.swift in Sources */,
+				FDC821A81B1399C80083872D /* URBMediaFocusViewController.m in Sources */,
 				C00C276F1B0D5CEC008C19AE /* QNode.m in Sources */,
 				407CDD951B0FBE4100350500 /* AsyncImageView.m in Sources */,
 				C0ACA2081B126444009FAAE4 /* UIImage+screenshot.m in Sources */,
