@@ -33,14 +33,13 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     @IBOutlet weak var mapView: MKMapView!
     
-    var tappedimageView : UIImageView!
     
     var mediaFocusViewController : URBMediaFocusViewController!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         nameLabel.text = currentScholar?.name
         descriptionLabel.text = currentScholar?.shortBio
         
@@ -77,7 +76,7 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         if let user = PFUser.currentUser() {
             if (user.username == currentScholar?.user?.username) {
-self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Edit, target: self, action: Selector("edit"))
+                self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Edit, target: self, action: Selector("edit"))
             }
         }
         
@@ -193,7 +192,7 @@ self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .E
             return 0
         }
     }
-
+    
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
         
@@ -211,6 +210,15 @@ self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .E
                 self.selectedImageView = url
             }
             
+            let cell = collectionView.cellForItemAtIndexPath(indexPath)
+            
+            let imageView : AsyncImageView = cell!.viewWithTag(100) as! AsyncImageView
+            
+            
+            let controller = URBMediaFocusViewController()
+            controller.showImage(imageView.image, fromView: self.view, inViewController: self)
+            controller.delegate = self
+            self.mediaFocusViewController = controller
             
             //self.performSegueWithIdentifier("toPopup", sender: self)
             //set to different segue
@@ -220,36 +228,36 @@ self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .E
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         /*
         if segue.identifier == "toPopup" {
-            let vc = segue.destinationViewController as! PopupViewController
-            vc.imageURL = selectedImageView
-            
-            let popupSegue = segue as! CCMPopupSegue
-            
-            
-            if (self.view.bounds.size.height < 420) {
-                
-                popupSegue.destinationBounds = CGRectMake(0, 0, 300, 400)
-                //6 plus
-            } else if (self.view.bounds.size.height == 736) {
-                popupSegue.destinationBounds = CGRectMake(0, 0, (UIScreen.mainScreen().bounds.size.height-200) * 0.6, UIScreen.mainScreen().bounds.size.height-150)
-                // 6
-            } else if (self.view.bounds.size.height == 667) {
-                popupSegue.destinationBounds = CGRectMake(0, 0, (UIScreen.mainScreen().bounds.size.height-150) * 0.65, UIScreen.mainScreen().bounds.size.height-150)
-                // 5s / 5
-            } else if (self.view.bounds.size.height == 568) {
-                popupSegue.destinationBounds = CGRectMake(0, 0, (UIScreen.mainScreen().bounds.size.height-150) * 0.7, UIScreen.mainScreen().bounds.size.height-150)
-                // 4s
-            } else if (self.view.bounds.size.height == 480) {
-                popupSegue.destinationBounds = CGRectMake(0, 0, (UIScreen.mainScreen().bounds.size.height-100) * 0.76, UIScreen.mainScreen().bounds.size.height-150)
-                // ipad
-            } else {
-                popupSegue.destinationBounds = CGRectMake(0, 0, (UIScreen.mainScreen().bounds.size.height-100) * 0.7, UIScreen.mainScreen().bounds.size.height-150)
-            }
-            popupSegue.backgroundBlurRadius = 7
-            popupSegue.backgroundViewAlpha = 0.3
-            popupSegue.backgroundViewColor = UIColor.blackColor()
-            popupSegue.dismissableByTouchingBackground = true
-
+        let vc = segue.destinationViewController as! PopupViewController
+        vc.imageURL = selectedImageView
+        
+        let popupSegue = segue as! CCMPopupSegue
+        
+        
+        if (self.view.bounds.size.height < 420) {
+        
+        popupSegue.destinationBounds = CGRectMake(0, 0, 300, 400)
+        //6 plus
+        } else if (self.view.bounds.size.height == 736) {
+        popupSegue.destinationBounds = CGRectMake(0, 0, (UIScreen.mainScreen().bounds.size.height-200) * 0.6, UIScreen.mainScreen().bounds.size.height-150)
+        // 6
+        } else if (self.view.bounds.size.height == 667) {
+        popupSegue.destinationBounds = CGRectMake(0, 0, (UIScreen.mainScreen().bounds.size.height-150) * 0.65, UIScreen.mainScreen().bounds.size.height-150)
+        // 5s / 5
+        } else if (self.view.bounds.size.height == 568) {
+        popupSegue.destinationBounds = CGRectMake(0, 0, (UIScreen.mainScreen().bounds.size.height-150) * 0.7, UIScreen.mainScreen().bounds.size.height-150)
+        // 4s
+        } else if (self.view.bounds.size.height == 480) {
+        popupSegue.destinationBounds = CGRectMake(0, 0, (UIScreen.mainScreen().bounds.size.height-100) * 0.76, UIScreen.mainScreen().bounds.size.height-150)
+        // ipad
+        } else {
+        popupSegue.destinationBounds = CGRectMake(0, 0, (UIScreen.mainScreen().bounds.size.height-100) * 0.7, UIScreen.mainScreen().bounds.size.height-150)
+        }
+        popupSegue.backgroundBlurRadius = 7
+        popupSegue.backgroundViewAlpha = 0.3
+        popupSegue.backgroundViewColor = UIColor.blackColor()
+        popupSegue.dismissableByTouchingBackground = true
+        
         }
         */
     }
@@ -259,24 +267,8 @@ self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .E
         let nav : UINavigationController = UINavigationController(rootViewController: browser)
         self.presentViewController(nav, animated: true, completion: nil)
     }
-   
     
-    @IBAction func handleTapGestureRecognizer(sender: UITapGestureRecognizer) {
-        
-        let controller = URBMediaFocusViewController()
-        controller.showImage(self.tappedimageView.image, fromView: self.view, inViewController: self)
-        controller.delegate = self
-        self.mediaFocusViewController = controller
-    }
     
-    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
-        if touch.view .isKindOfClass(UIImageView.classForCoder()){
-            self.tappedimageView = touch.view as! UIImageView
-            return true
-        } else {
-            return false
-        }
-    }
-
+    
     
 }
