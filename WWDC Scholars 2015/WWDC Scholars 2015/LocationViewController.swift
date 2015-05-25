@@ -22,6 +22,9 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
     var cacheArray : [Scholar] = []
     var viewChanged = false
     var currentScholar:Scholar?
+    /*Create your transition manager instance*/
+    var transition = QZCircleSegue()
+    
     
     var qTree = QTree()
     var myLocation : CLLocationCoordinate2D?
@@ -55,10 +58,6 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
         button.layer.shadowRadius = 2
         self.view.addSubview(button)
         
-        
-        
-        
-        
         for scholar in scholarArray {
             
             let annotation = scholarAnnotation(coordinate: CLLocationCoordinate2DMake(scholar.latitude, scholar.longitude), title: scholar.name!,subtitle:scholar.location!)
@@ -68,8 +67,26 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
         }
         //self.reloadAnnotations()
         
+        var leftSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
+        var rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
+        
+        leftSwipe.direction = .Left
+        rightSwipe.direction = .Right
+        
+        view.addGestureRecognizer(leftSwipe)
+        view.addGestureRecognizer(rightSwipe)
         
         // Do any additional setup after loading the view.
+    }
+    
+    func handleSwipes(sender:UISwipeGestureRecognizer) {
+        if (sender.direction == .Left) {
+            println("Swipe Left")
+        }
+        
+        if (sender.direction == .Right) {
+            println("Swipe Right")
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -102,23 +119,14 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
         return nil
     }
     
-    
-    func mapView(mapView: MKMapView!, didSelectAnnotationView view: MKAnnotationView!) {
-        for scholar in scholarArray {
-            /*
-            if job.title == (view.annotation as! JobAnnotation).title {
-                self.currentJob = job
-                self.performSegueWithIdentifier("transformToScholarDetail", sender: self)
-            }
-            */
-        }
-    }
+
     
     func reloadAnnotations(){
         if self.isViewLoaded() == false {
             return
         }
         self.cacheArray.removeAll(keepCapacity: false)
+        //self.cacheImage?.removeAll(keepCapacity: false)
         let mapRegion = self.mapView.region
         let minNonClusteredSpan = min(mapRegion.span.latitudeDelta, mapRegion.span.longitudeDelta) / 5
         let objects = self.qTree.getObjectsInRegion(mapRegion, minNonClusteredSpan: minNonClusteredSpan) as NSArray
@@ -136,6 +144,7 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
                   
                     if find(self.cacheArray, tmp[0]) == nil {
                         self.cacheArray.insert(tmp[0], atIndex: self.cacheArray.count)
+                        //self.cacheImage?[tmp[0].picture!] = false
                     }
                     
                     
@@ -149,6 +158,8 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
                 
                 if find(self.cacheArray, tmp[0]) == nil {
                     self.cacheArray.insert(tmp[0], atIndex: self.cacheArray.count)
+                    //self.cacheImage?[tmp[0].picture!] = false
+                    
                 }
 
               
@@ -176,8 +187,17 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "transformToScholarDetail" {
             
-            let viewController = segue.destinationViewController as! DetailViewController
-            viewController.currentScholar = currentScholar
+            let dest = segue.destinationViewController as! DetailViewController
+            dest.currentScholar = currentScholar
+            /* Send the button to your transition manager */
+            self.transition.animationChild = self.mapView
+            /* Set the color to your transition manager*/
+            self.transition.animationColor = UIColor(red: 46/255, green: 195/255, blue: 179/255, alpha: 1.0)
+            /* Set both, the origin and destination to your transition manager*/
+            self.transition.fromViewController = self
+            self.transition.toViewController = dest
+            /* Add the transition manager to your transitioningDelegate View Controller*/
+            dest.transitioningDelegate = transition
             //println(currentScholar?.name)
         }
         
@@ -198,7 +218,13 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! CustomTableViewCell
-        if viewChanged{
+   
+        let profileImageView = cell.viewWithTag(202) as! UIImageView
+        profileImageView.image = UIImage(named: "no-profile")
+        profileImageView.contentMode = .ScaleAspectFill
+        profileImageView.layer.cornerRadius = 10
+        
+        if viewChanged {
             cell.name.text = cacheArray[indexPath.row].name
             cell.location.text = cacheArray[indexPath.row].location
         } else {
@@ -206,11 +232,35 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
             cell.location.text = scholarArray[indexPath.row].location
         }
         if let scholar = DataManager.sharedInstance.getScholarByName(cell.name.text!){
-            //let profileImageView = cell.viewWithTag(202) as! AsyncImageView
-            //profileImageView.image = UIImage(named: "no-profile")
-            //profileImageView.imageURL = NSURL(string: scholar.picture!)
-            cell.imageView?.image = UIImage(named: "no-profile")
-            cell.imageView?.imageURL = NSURL(string: scholar.picture!)
+            profileImageView.imageURL = NSURL(string: scholar.picture!)
+            /*
+            let qos = Int(QOS_CLASS_USER_INITIATED.value)
+            dispatch_async(dispatch_get_global_queue(qos, 0)) { () -> Void in
+                var imageData : NSData?
+                if self.cacheImage?[scholar.picture!] == false {
+                    imageData = NSData(contentsOfURL: NSURL(string: scholar.picture!)!)
+                    dispatch_async(dispatch_get_main_queue()) {
+                       
+                            if imageData != nil {
+                                profileImageView.image = UIImage(data: imageData!)
+                            } else {
+                                profileImageView.image = UIImage(named: "no-picture")
+                            }
+                        }
+                    
+                    self.cacheImage?[scholar.picture!] = true
+                } else {
+                    if imageData != nil {
+                        profileImageView.image = UIImage(data: imageData!)
+                    } else {
+                        profileImageView.image = UIImage(named: "no-picture")
+                    }
+ 
+                }
+                
+                
+            }*/
+
         }
         return cell
         
@@ -223,6 +273,12 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
     }
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 80
+    }
+    /* REQUIRED, do not connect to any Outlet.
+    BUG DETECTED? Exit segue doesn't dismiss automatically, so we have to dismiss it manually.
+    */
+    @IBAction func unwindToMainViewController (sender: UIStoryboardSegue){
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
 }
