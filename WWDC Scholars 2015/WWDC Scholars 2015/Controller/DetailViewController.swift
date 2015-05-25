@@ -207,11 +207,13 @@ self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .E
             }
             
             
-            self.performSegueWithIdentifier("toPopup", sender: self)
+            //self.performSegueWithIdentifier("toPopup", sender: self)
+            //set to different segue
         }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        /*
         if segue.identifier == "toPopup" {
             let vc = segue.destinationViewController as! PopupViewController
             vc.imageURL = selectedImageView
@@ -244,6 +246,7 @@ self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .E
             popupSegue.dismissableByTouchingBackground = true
 
         }
+        */
     }
     
     
