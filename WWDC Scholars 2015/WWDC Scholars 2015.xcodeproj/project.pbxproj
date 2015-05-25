@@ -26,6 +26,7 @@
 		408211761B0E296A00D567AC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408211751B0E296A00D567AC /* DataManager.swift */; };
 		40CA931A1B125BEB006F3BEA /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4082116A1B0E292300D567AC /* ParseCrashReporting.framework */; };
 		40CA931C1B125C68006F3BEA /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CA931B1B125C68006F3BEA /* libstdc++.6.dylib */; };
+		6E9ECAD01B13BD3D00289D2D /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9ECACF1B13BD3D00289D2D /* CreditsViewController.swift */; };
 		6EEA0A151B0ED45900B99130 /* MainScreenFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA0A141B0ED45900B99130 /* MainScreenFooter.swift */; };
 		7C00D58F1B0E867A00F9B3E7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C00D58E1B0E867A00F9B3E7 /* DetailViewController.swift */; };
 		7C10849F1B11526E00DCC52E /* NGBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C10849D1B11526E00DCC52E /* NGBrowserViewController.swift */; };
@@ -95,6 +96,7 @@
 		4082116B1B0E292300D567AC /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		408211751B0E296A00D567AC /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		40CA931B1B125C68006F3BEA /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
+		6E9ECACF1B13BD3D00289D2D /* CreditsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
 		6EEA0A141B0ED45900B99130 /* MainScreenFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenFooter.swift; sourceTree = "<group>"; };
 		7C00D58E1B0E867A00F9B3E7 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = Controller/DetailViewController.swift; sourceTree = "<group>"; };
 		7C10849D1B11526E00DCC52E /* NGBrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NGBrowserViewController.swift; sourceTree = "<group>"; };
@@ -254,6 +256,14 @@
 			name = Parse;
 			sourceTree = "<group>";
 		};
+		6E9ECAD11B13BD4400289D2D /* Credits */ = {
+			isa = PBXGroup;
+			children = (
+				6E9ECACF1B13BD3D00289D2D /* CreditsViewController.swift */,
+			);
+			name = Credits;
+			sourceTree = "<group>";
+		};
 		7C00D58D1B0E860A00F9B3E7 /* DetailView */ = {
 			isa = PBXGroup;
 			children = (
@@ -395,6 +405,7 @@
 		C00C27791B0D5E10008C19AE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6E9ECAD11B13BD4400289D2D /* Credits */,
 				7C1084A11B11527200DCC52E /* Browser */,
 				7C00D58D1B0E860A00F9B3E7 /* DetailView */,
 				408211631B0E032C00D567AC /* MainScreen */,
@@ -609,6 +620,7 @@
 				408211651B0E034B00D567AC /* MainScreenViewController.swift in Sources */,
 				6EEA0A151B0ED45900B99130 /* MainScreenFooter.swift in Sources */,
 				C00C277B1B0D63CD008C19AE /* Scholar.swift in Sources */,
+				6E9ECAD01B13BD3D00289D2D /* CreditsViewController.swift in Sources */,
 				408211761B0E296A00D567AC /* DataManager.swift in Sources */,
 				C00C27701B0D5CEC008C19AE /* QTree.m in Sources */,
 				C0ACA2031B126444009FAAE4 /* CCMPopupAnimation.m in Sources */,
