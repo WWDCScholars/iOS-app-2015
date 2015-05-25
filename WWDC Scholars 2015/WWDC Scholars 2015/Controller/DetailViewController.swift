@@ -9,7 +9,7 @@
 import UIKit
 import QuickLook
 
-class DetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class DetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, URBMediaFocusViewControllerDelegate, UIGestureRecognizerDelegate {
     
     var currentScholar : Scholar?
     private var social : Dictionary<String,String> = Dictionary<String,String>()
@@ -30,7 +30,9 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     @IBOutlet weak var mapView: MKMapView!
     
-
+    var tappedimageView : UIImageView!
+    
+    var mediaFocusViewController : URBMediaFocusViewController!
     
     
     override func viewDidLoad() {
@@ -255,5 +257,23 @@ self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .E
         let nav : UINavigationController = UINavigationController(rootViewController: browser)
         self.presentViewController(nav, animated: true, completion: nil)
     }
+    
+    @IBAction func handleTapGestureRecognizer(sender: UITapGestureRecognizer) {
+        
+        let controller = URBMediaFocusViewController()
+        controller.showImage(self.tappedimageView.image, fromView: self.view, inViewController: self)
+        controller.delegate = self
+        self.mediaFocusViewController = controller
+    }
+    
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
+        if touch.view .isKindOfClass(UIImageView.classForCoder()){
+            self.tappedimageView = touch.view as! UIImageView
+            return true
+        } else {
+            return false
+        }
+    }
+
     
 }
