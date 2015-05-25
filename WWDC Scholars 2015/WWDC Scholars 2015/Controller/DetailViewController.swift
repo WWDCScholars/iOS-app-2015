@@ -7,39 +7,30 @@
 //
 
 import UIKit
+import QuickLook
 
 class DetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     var currentScholar : Scholar?
-    
+    private var social : Dictionary<String,String> = Dictionary<String,String>()
+    var selectedImageView : String?
     
     @IBOutlet private weak var imgScholar: AsyncImageView!
     
+    @IBOutlet private weak var cntGithubRepo: NSLayoutConstraint!
     @IBOutlet private weak var btnGithubRepo: UIButton!
     
     @IBOutlet weak var nameLabel: UILabel!
     
     @IBOutlet weak var shortBioLabel: UILabel!
-    
+    @IBOutlet weak var viewSocial: UIView!
     
     
     @IBOutlet weak var descriptionLabel: UILabel!
     
     @IBOutlet weak var mapView: MKMapView!
     
-    @IBAction func toGithub(sender: UIButton) {
-    }
-    
-    @IBAction func emailClicked(sender: UIButton) {
-    }
-    
-    
-    @IBAction func facebookClied(sender: UIButton) {
-    }
-    
-    @IBOutlet weak var twitterClicked: UIButton!
-    
-    
+
     
     
     override func viewDidLoad() {
@@ -66,26 +57,88 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
             descriptionLabel.text = shortBio
         }
         
-        btnGithubRepo.layer.cornerRadius = 5
-        btnGithubRepo.layer.masksToBounds = true
-        btnGithubRepo.layer.borderColor = UIColor.blackColor().CGColor
-        btnGithubRepo.layer.borderWidth = 1.0
+        if (currentScholar?.appDemo == nil){
+            btnGithubRepo.setTitle("", forState: .Normal)
+            cntGithubRepo.constant = 0
+        } else {
+            btnGithubRepo.layer.cornerRadius = 5
+            btnGithubRepo.layer.masksToBounds = true
+            btnGithubRepo.layer.borderColor = btnGithubRepo.titleLabel?.textColor.CGColor
+            btnGithubRepo.layer.borderWidth = 1.0
+        }
         
-        self.navigationItem.title = "Scholar detail"
+        self.navigationItem.title = "More about " + currentScholar!.name!
         
         
+        if let user = PFUser.currentUser() {
+            if (user.username == currentScholar?.user?.username) {
+self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Edit, target: self, action: Selector("edit"))
+            }
         
-        // Do any additional setup after loading the view.
+        if(currentScholar?.email != nil){
+            social["mail"] = currentScholar!.email!
+        }
+        
+        if(currentScholar?.github != nil){
+            social["gh"] = currentScholar!.github!
+        }
+        
+        if(currentScholar?.facebook != nil){
+            social["fb"] = currentScholar!.facebook!
+        }
+        
+
+            social["tw"] = currentScholar!.twitter!
+        }
+        
+        let totalWidth : CGFloat = CGFloat((social.count*30)+((social.count-1)*10))
+        let viewWidth : CGFloat = CGFloat(viewSocial.frame.size.width)
+        var startingX : CGFloat = (viewWidth-totalWidth) / 2
+        
+        for key : String in social.keys {
+            let value : String = social[key]!
+            let btn : UIButton = UIButton()
+            btn.frame = CGRectMake(startingX, CGFloat(0), CGFloat(30), CGFloat(30))
+            btn.setImage(UIImage(named: key + "_logo"), forState: .Normal)
+                
+            viewSocial.addSubview(btn)
+           
+        }
+    
+        
+        
     }
     
+    func open_fb() {
+        UIApplication.sharedApplication().openURL(NSURL(string:currentScholar!.facebook!)!)
+    }
+    
+    func open_tw() {
+        MRSocial.openTwitterProfile(currentScholar!.twitter!.lastPathComponent)
+    }
+    
+    func edit() {
+        //show edit view
+    }
+    
+    func saveEdits() {
+        //close edit view
+        //update scholar object
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     @IBAction func didOpenGithubRepo(sender: AnyObject) {
-        //TODO: check nil -- if scholar doesn't have a github repo for the project, remove the button
-        self.openBrowserWithURL(currentScholar!.githubLinkToApp!)
+        if let url = currentScholar!.githubLinkToApp {
+            self.openBrowserWithURL(currentScholar!.githubLinkToApp!)
+        }
+        
     }
     
     
@@ -95,7 +148,7 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         let imageView : AsyncImageView = cell.viewWithTag(100) as! AsyncImageView
         
         if (currentScholar?.appDemo != nil && indexPath.item == 0) {
-            imageView.imageURL = NSURL(string: "https://s-media-cache-ak0.pinimg.com/736x/5d/ad/1f/5dad1f8ba4815a4c2df7a2c6acd62e5b.jpg") //temp!!
+            imageView.image = UIImage(named: "video_placeholder.png")
         } else if let screenshots : [String] = currentScholar?.appScreenshots{
             
             var idx : Int = indexPath.item
@@ -135,13 +188,62 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         if (currentScholar?.appDemo != nil && indexPath.item == 0) {
             self.openBrowserWithURL(currentScholar!.appDemo!)
         } else {
-            //open in photo browser
+            var idx : Int = indexPath.item
+            if(currentScholar?.appDemo != nil){
+                idx = idx - 1
+            }
+            
+            //code for opening photogallery here!
+            if let screenshots : [String] = currentScholar?.appScreenshots{
+                let url : String = screenshots[idx]
+                self.selectedImageView = url
+            }
+            
+            
+            self.performSegueWithIdentifier("toPopup", sender: self)
         }
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "toPopup" {
+            let vc = segue.destinationViewController as! PopupViewController
+            vc.imageURL = selectedImageView
+            
+            let popupSegue = segue as! CCMPopupSegue
+            
+            
+            if (self.view.bounds.size.height < 420) {
+                
+                popupSegue.destinationBounds = CGRectMake(0, 0, 300, 400)
+                //6 plus
+            } else if (self.view.bounds.size.height == 736) {
+                popupSegue.destinationBounds = CGRectMake(0, 0, (UIScreen.mainScreen().bounds.size.height-200) * 0.6, UIScreen.mainScreen().bounds.size.height-150)
+                // 6
+            } else if (self.view.bounds.size.height == 667) {
+                popupSegue.destinationBounds = CGRectMake(0, 0, (UIScreen.mainScreen().bounds.size.height-150) * 0.65, UIScreen.mainScreen().bounds.size.height-150)
+                // 5s / 5
+            } else if (self.view.bounds.size.height == 568) {
+                popupSegue.destinationBounds = CGRectMake(0, 0, (UIScreen.mainScreen().bounds.size.height-150) * 0.7, UIScreen.mainScreen().bounds.size.height-150)
+                // 4s
+            } else if (self.view.bounds.size.height == 480) {
+                popupSegue.destinationBounds = CGRectMake(0, 0, (UIScreen.mainScreen().bounds.size.height-100) * 0.76, UIScreen.mainScreen().bounds.size.height-150)
+                // ipad
+            } else {
+                popupSegue.destinationBounds = CGRectMake(0, 0, (UIScreen.mainScreen().bounds.size.height-100) * 0.7, UIScreen.mainScreen().bounds.size.height-150)
+            }
+            popupSegue.backgroundBlurRadius = 7
+            popupSegue.backgroundViewAlpha = 0.3
+            popupSegue.backgroundViewColor = UIColor.blackColor()
+            popupSegue.dismissableByTouchingBackground = true
+
+        }
+    }
+    
+    
     private func openBrowserWithURL(url : String){
         let browser : NGBrowserViewController = NGBrowserViewController(url: url)
-        self.navigationController?.pushViewController(browser, animated: true)
+        let nav : UINavigationController = UINavigationController(rootViewController: browser)
+        self.presentViewController(nav, animated: true, completion: nil)
     }
     
 }

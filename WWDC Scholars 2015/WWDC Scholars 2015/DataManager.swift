@@ -32,6 +32,19 @@ class DataManager: NSObject {
                 // Do something with the found objects
                 if let objects = objects as? [PFObject] {
                     for object in objects {
+                        let screenshots = NSMutableArray()
+                        if let screenshotOne = object.objectForKey("screenshotOne") as? PFFile{
+                            screenshots.addObject(screenshotOne.url!)
+                        }
+                        if let screenshotTwo = object.objectForKey("screenshotTwo") as? PFFile{
+                            screenshots.addObject(screenshotTwo.url!)
+                        }
+                        if let screenshotThree = object.objectForKey("screenshotThree") as? PFFile{
+                            screenshots.addObject(screenshotThree.url!)
+                        }
+                        if let screenshotFour = object.objectForKey("screenshotFour") as? PFFile{
+                            screenshots.addObject(screenshotFour.url!)
+                        }
                         var scholar = Scholar(
                             name: NSString(format: "%@ %@", object.objectForKey("firstName") as! String, object.objectForKey("lastName") as! String) as String,
                             age: object.objectForKey("age") as! Int,
@@ -41,7 +54,7 @@ class DataManager: NSObject {
                             longitude: (object.objectForKey("longtitude") as? Double)!,
                             email: object.objectForKey("email") as? String,
                             picture: (object.objectForKey("profilePic") as! PFFile).url!,
-                            appScreenshots:[(object.objectForKey("profilePic") as! PFFile).url!, (object.objectForKey("profilePic") as! PFFile).url!, (object.objectForKey("profilePic") as! PFFile).url!, (object.objectForKey("profilePic") as! PFFile).url!],
+                            appScreenshots:(screenshots as NSArray) as? [String],
                             shortBio: object.objectForKey("shortBio") as? String,
                             numberOfWWDCAttend: object.objectForKey("numberOfTimesWWDCScholar") as? Int,
                             appDemo: object.objectForKey("videoLink") as? String,
@@ -51,11 +64,11 @@ class DataManager: NSObject {
                             github: object.objectForKey("github") as? String,
                             linkedIn: object.objectForKey("linkedin") as? String,
                             website: object.objectForKey("website") as? String,
-                            location:object.objectForKey("location") as? String)
+                            location:object.objectForKey("location") as? String,
+                            user: object.objectForKey("user") as? PFUser,
+                            itunes:object.objectForKey("itunes") as? String)
                         
-                        
-                            // still need shortBio,videoLink,github,githubToApp,birthday,4 screenShot pictures
-                        self.scholarArray.append(scholar)
+                            self.scholarArray.append(scholar)
                     }
                     
                     NSNotificationCenter.defaultCenter().postNotificationName("onScholarsLoadedNotification", object: self)
