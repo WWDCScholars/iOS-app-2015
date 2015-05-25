@@ -60,6 +60,7 @@
 		C0ACA2081B126444009FAAE4 /* UIImage+screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = C0ACA1FE1B126444009FAAE4 /* UIImage+screenshot.m */; };
 		C0ACA2091B126444009FAAE4 /* UIViewController+CCMPopupAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C0ACA2001B126444009FAAE4 /* UIViewController+CCMPopupAnimation.m */; };
 		C0ACA20B1B126500009FAAE4 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0ACA20A1B126500009FAAE4 /* PopupViewController.swift */; };
+		C0ACA20E1B12C16B009FAAE4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0ACA20D1B12C16B009FAAE4 /* LoginViewController.swift */; };
 		C0B7F78D1B0E682600E74458 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0B7F78C1B0E682600E74458 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +154,7 @@
 		C0ACA1FF1B126444009FAAE4 /* UIViewController+CCMPopupAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CCMPopupAnimation.h"; sourceTree = "<group>"; };
 		C0ACA2001B126444009FAAE4 /* UIViewController+CCMPopupAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CCMPopupAnimation.m"; sourceTree = "<group>"; };
 		C0ACA20A1B126500009FAAE4 /* PopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopupViewController.swift; path = Controller/PopupViewController.swift; sourceTree = "<group>"; };
+		C0ACA20D1B12C16B009FAAE4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C0B7F78C1B0E682600E74458 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -414,6 +416,7 @@
 		C00C27791B0D5E10008C19AE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C0ACA20F1B12C172009FAAE4 /* LogIn */,
 				7C1084A11B11527200DCC52E /* Browser */,
 				7C00D58D1B0E860A00F9B3E7 /* DetailView */,
 				408211631B0E032C00D567AC /* MainScreen */,
@@ -477,6 +480,14 @@
 				C0ACA1FE1B126444009FAAE4 /* UIImage+screenshot.m */,
 			);
 			path = "UIImage+screenshot";
+			sourceTree = "<group>";
+		};
+		C0ACA20F1B12C172009FAAE4 /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				C0ACA20D1B12C16B009FAAE4 /* LoginViewController.swift */,
+			);
+			name = LogIn;
 			sourceTree = "<group>";
 		};
 		C0C6CBB31B0D6AA500A00796 /* MapViewController */ = {
@@ -606,6 +617,7 @@
 				C00C27711B0D5CEC008C19AE /* QTreeGeometryUtils.m in Sources */,
 				C0ACA2051B126444009FAAE4 /* CCMPopupTransitioning.m in Sources */,
 				C00C27421B0D5C9C008C19AE /* LocationViewController.swift in Sources */,
+				C0ACA20E1B12C16B009FAAE4 /* LoginViewController.swift in Sources */,
 				C0ACA2061B126444009FAAE4 /* FXBlurView.m in Sources */,
 				C0ACA2071B126444009FAAE4 /* UIImage+ImageEffects.m in Sources */,
 				7C00D58F1B0E867A00F9B3E7 /* DetailViewController.swift in Sources */,
