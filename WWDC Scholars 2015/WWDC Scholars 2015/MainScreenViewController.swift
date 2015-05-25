@@ -7,10 +7,8 @@
 //
 
 import UIKit
-import ParseUI
 
-class MainScreenViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate {
-
+class MainScreenViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet var scholarsCollectionView: UICollectionView!
     
@@ -66,14 +64,14 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
     
     func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
         cell.layer.transform = CATransform3DMakeScale(0.1,0.1,1)
-//        cell.alpha = 0
+        //        cell.alpha = 0
         UIView.animateWithDuration(0.30, delay: 0, options: UIViewAnimationOptions.AllowUserInteraction, animations: {
             cell.layer.transform = CATransform3DMakeScale(1,1,1)
             }, completion: nil)
         
-//        UIView.animateWithDuration(0.40, delay: 0, options: UIViewAnimationOptions.AllowUserInteraction, animations: {
-//            cell.alpha = 1
-//            }, completion: nil)
+        //        UIView.animateWithDuration(0.40, delay: 0, options: UIViewAnimationOptions.AllowUserInteraction, animations: {
+        //            cell.alpha = 1
+        //            }, completion: nil)
     }
     
     
@@ -83,28 +81,12 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateCollectionView", name: "onScholarsLoadedNotification", object: nil)
         
     }
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        if (PFUser.currentUser() == nil) {
-            var loginViewController = PFLogInViewController()
-            loginViewController.delegate = self
-            var signupViewController = PFSignUpViewController()
-            signupViewController.delegate = self
-            loginViewController.signUpController = signupViewController
-            self.presentViewController(loginViewController, animated: true, completion: nil)
-        }
+    
+    func updateCollectionView(){
+        scholarsCollectionView.reloadData()
     }
     
-    func logInViewController(logInController: PFLogInViewController, shouldBeginLogInWithUsername username: String, password: String) -> Bool {
-        if ((count(username) != 0) && (count(password) != 0)) {
-            return true
-        } else {
-            var alert = UIAlertView(title: "Empty field", message: "Some of the fields are empty. Please fill them in to log in.", delegate: nil, cancelButtonTitle: "Ok")
-            alert.show()
-            return false
-        }
-    }
-func setColor(row:Int)->UIColor{
+    func setColor(row:Int)->UIColor{
         if row == 0 {
             return UIColor(red: 46/255, green: 195/255, blue: 179/255, alpha: 1.0)
         } else if row == 1{
@@ -112,35 +94,6 @@ func setColor(row:Int)->UIColor{
         } else {
             return UIColor(red: 237/255, green: 204/255, blue: 64/255, alpha: 1.0)
         }
-    }
-
-    func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    func logInViewControllerDidCancelLogIn(logInController: PFLogInViewController) {
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    func signUpViewControllerDidCancelSignUp(signUpController: PFSignUpViewController) {
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser) {
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    func signUpViewController(signUpController: PFSignUpViewController, shouldBeginSignUp info: [NSObject : AnyObject]) -> Bool {
-        var ok = true
-        for (key, object) in info {
-            var string = object as? String
-            if let newString = string {
-                if count(newString) == 0 {
-                    ok = false
-                }
-            }
-        }
-        return ok
     }
     
     

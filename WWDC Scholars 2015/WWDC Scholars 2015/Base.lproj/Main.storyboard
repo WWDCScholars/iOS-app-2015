@@ -148,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1785" y="748"/>
+            <point key="canvasLocation" x="2265" y="440"/>
         </scene>
         <!--Main Screen View Controller-->
         <scene sceneID="8Iw-4L-evm">
@@ -274,8 +274,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="1Ur-Ti-Ge8">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" image="Map Icon" id="CpF-a7-EKt">
-                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <barButtonItem key="leftBarButtonItem" title="Login" id="alB-59-oRj">
+                            <connections>
+                                <segue destination="zgI-zj-1zL" kind="show" id="baL-tK-HdN"/>
+                            </connections>
                         </barButtonItem>
                         <view key="titleView" contentMode="scaleToFill" id="A4q-SD-fmz">
                             <rect key="frame" x="180" y="5.5" width="240" height="33"/>
@@ -337,7 +339,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VHR-11-YQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1436" y="2438"/>
+            <point key="canvasLocation" x="1436" y="2584"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="h0M-86-nhz">
@@ -657,6 +659,24 @@
             </objects>
             <point key="canvasLocation" x="1436" y="3318"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="3ML-km-CG0">
+            <objects>
+                <viewController id="zgI-zj-1zL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dR6-VZ-Z7l"/>
+                        <viewControllerLayoutGuide type="bottom" id="k55-Rb-QuU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KrZ-5M-gkn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cyQ-Ee-YaT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="857" y="466"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="3SO-3a-R1S">
             <objects>
@@ -924,7 +944,7 @@ Two times at WWDC!</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6pL-Qy-WJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Dyj-yD-7Un" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2632" y="1218"/>
+            <point key="canvasLocation" x="2772" y="1806"/>
         </scene>
         <!--Popup View Controller-->
         <scene sceneID="OGv-TE-DpI">
@@ -986,7 +1006,7 @@ Two times at WWDC!</string>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3231" y="1315"/>
+            <point key="canvasLocation" x="3455" y="1799"/>
         </scene>
     </scenes>
     <resources>
