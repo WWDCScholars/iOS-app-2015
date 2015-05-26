@@ -66,25 +66,25 @@ class LoginViewController: UIViewController, UITextFieldDelegate, DragDropBehavi
     
     func textFieldDidBeginEditing(textField: UITextField) {
         if textField == emailTextField {
-            emailImageView.image = UIImage(named: "icon-mail-active")
+            emailImageView.image = UIImage(named: "icon-user-active")
             emailImageView.animate()
         }
         else {
-            emailImageView.image = UIImage(named: "icon-mail")
+            emailImageView.image = UIImage(named: "icon-user")
         }
         
         if textField == passwordTextField {
-            passwordImageView.image = UIImage(named: "icon-password-active")
+            passwordImageView.image = UIImage(named: "icon-key-active")
             passwordImageView.animate()
         }
         else {
-            passwordImageView.image = UIImage(named: "icon-password")
+            passwordImageView.image = UIImage(named: "icon-key")
         }
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
-        emailImageView.image = UIImage(named: "icon-mail")
-        passwordImageView.image = UIImage(named: "icon-password")
+        emailImageView.image = UIImage(named: "icon-user")
+        passwordImageView.image = UIImage(named: "icon-key")
     }
     
     func dragDropBehavior(behavior: DragDropBehavior, viewDidDrop view: UIView) {
