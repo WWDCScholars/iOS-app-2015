@@ -50,9 +50,9 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         descriptionLabel.text = currentScholar?.shortBio
         
         if currentScholar?.numberOfWWDCAttend == 1 {
-            shortBioLabel.text = "\((currentScholar?.age?.description)!) from \((currentScholar?.location)!)\nFirst time at WWDC!"
+            shortBioLabel.text = "\((currentScholar?.age?.description)!) from \((currentScholar?.location)!)\nFirst time WWDC attendee!"
         } else {
-            shortBioLabel.text = "\((currentScholar?.age?.description)!) from \((currentScholar?.location)!)\nHas attended WWDC \((currentScholar?.numberOfWWDCAttend?.description)!) times"
+            shortBioLabel.text = "\((currentScholar?.age?.description)!) from \((currentScholar?.location)!)\nHas attended WWDC \((currentScholar?.numberOfWWDCAttend?.description)!) times!"
         }
         
         //descriptionLabel.text = currentScholar?.description
