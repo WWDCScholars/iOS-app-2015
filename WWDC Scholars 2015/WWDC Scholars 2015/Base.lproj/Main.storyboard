@@ -349,6 +349,176 @@
             </objects>
             <point key="canvasLocation" x="1436" y="2584"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="ZXG-q4-K4g">
+            <objects>
+                <viewController id="guk-jL-bKW" customClass="LoginViewController" customModule="WWDC_Scholars_2015" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sJc-5b-58t"/>
+                        <viewControllerLayoutGuide type="bottom" id="OkH-tf-wQ4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LMk-Ve-vXM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E8L-HD-xUA">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="m4y-5t-o9b">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6w-cg-8hD" customClass="TPKeyboardAvoidingScrollView">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rY-Gj-w3T">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                                    <state key="normal">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="closeButtonPressed:" destination="guk-jL-bKW" eventType="touchUpInside" id="YsM-lK-b4R"/>
+                                                    </connections>
+                                                </button>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="URD-qi-aeU" customClass="DesignableView" customModule="WWDC_Scholars_2015" customModuleProvider="target">
+                                                    <rect key="frame" x="160" y="160" width="280" height="280"/>
+                                                    <subviews>
+                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aHm-oc-4yZ" customClass="DesignableTextField" customModule="WWDC_Scholars_2015" customModuleProvider="target">
+                                                            <rect key="frame" x="15" y="108" width="250" height="44"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                                    <integer key="value" value="50"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                                                    <integer key="value" value="10"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </textField>
+                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9wF-bN-cic" customClass="DesignableTextField" customModule="WWDC_Scholars_2015" customModuleProvider="target">
+                                                            <rect key="frame" x="15" y="162" width="250" height="30"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                                    <integer key="value" value="50"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                                                    <integer key="value" value="10"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </textField>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTe-PH-mCu" customClass="DesignableButton" customModule="WWDC_Scholars_2015" customModuleProvider="target">
+                                                            <rect key="frame" x="15" y="221" width="250" height="44"/>
+                                                            <color key="backgroundColor" red="1" green="0.50196078430000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <state key="normal" title="Login">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="3"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="signupButtonPressed:" destination="guk-jL-bKW" eventType="touchUpInside" id="W9Z-sE-sTv"/>
+                                                            </connections>
+                                                        </button>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="17f-NQ-8Dy" customClass="SpringImageView" customModule="WWDC_Scholars_2015" customModuleProvider="target">
+                                                            <rect key="frame" x="30" y="171" width="25" height="25"/>
+                                                        </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ss1-8A-vYn" customClass="SpringImageView" customModule="WWDC_Scholars_2015" customModuleProvider="target">
+                                                            <rect key="frame" x="30" y="121" width="25" height="25"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log in to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCc-Ot-pMS">
+                                                            <rect key="frame" x="71" y="34" width="139" height="21"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WWDC Scholars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqM-mJ-Ikp">
+                                                            <rect key="frame" x="59" y="61" width="162" height="21"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="280" id="J9S-2t-rbF"/>
+                                                        <constraint firstAttribute="width" constant="280" id="cfc-Jk-Y8R"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="animation" value="zoomIn"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="6rY-Gj-w3T" firstAttribute="leading" secondItem="S6w-cg-8hD" secondAttribute="leading" id="5P4-EK-AUW"/>
+                                                <constraint firstItem="6rY-Gj-w3T" firstAttribute="top" secondItem="S6w-cg-8hD" secondAttribute="top" id="BCE-Is-LjQ"/>
+                                                <constraint firstAttribute="centerY" secondItem="URD-qi-aeU" secondAttribute="centerY" id="M4b-nH-LGA"/>
+                                                <constraint firstAttribute="bottom" secondItem="6rY-Gj-w3T" secondAttribute="bottom" id="Vj2-cZ-jFl"/>
+                                                <constraint firstItem="URD-qi-aeU" firstAttribute="centerX" secondItem="6rY-Gj-w3T" secondAttribute="centerX" id="bqv-uF-Pvf"/>
+                                                <constraint firstItem="URD-qi-aeU" firstAttribute="centerY" secondItem="6rY-Gj-w3T" secondAttribute="centerY" id="gpN-WG-uMp"/>
+                                                <constraint firstAttribute="trailing" secondItem="6rY-Gj-w3T" secondAttribute="trailing" id="hZ2-p0-br5"/>
+                                                <constraint firstAttribute="centerX" secondItem="URD-qi-aeU" secondAttribute="centerX" id="olb-EV-adT"/>
+                                            </constraints>
+                                            <connections>
+                                                <outletCollection property="gestureRecognizers" destination="rAs-CN-5SB" appends="YES" id="6d4-wW-JmK"/>
+                                            </connections>
+                                        </scrollView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="S6w-cg-8hD" secondAttribute="bottom" id="8gS-by-hUY"/>
+                                        <constraint firstAttribute="trailing" secondItem="S6w-cg-8hD" secondAttribute="trailing" id="F0B-oU-5r4"/>
+                                        <constraint firstItem="S6w-cg-8hD" firstAttribute="top" secondItem="m4y-5t-o9b" secondAttribute="top" id="Iub-oy-SkU"/>
+                                        <constraint firstItem="S6w-cg-8hD" firstAttribute="leading" secondItem="m4y-5t-o9b" secondAttribute="leading" id="jjN-qh-qd5"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="E8L-HD-xUA" secondAttribute="trailing" id="1aI-7h-VwP"/>
+                            <constraint firstItem="OkH-tf-wQ4" firstAttribute="top" secondItem="E8L-HD-xUA" secondAttribute="bottom" id="BlK-Rp-Gw3"/>
+                            <constraint firstItem="E8L-HD-xUA" firstAttribute="leading" secondItem="LMk-Ve-vXM" secondAttribute="leading" id="Ckf-Y0-xdI"/>
+                            <constraint firstItem="E8L-HD-xUA" firstAttribute="top" secondItem="LMk-Ve-vXM" secondAttribute="top" id="qnC-Hh-H6M"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dialogView" destination="URD-qi-aeU" id="YsS-gf-XBZ"/>
+                        <outlet property="emailImageView" destination="ss1-8A-vYn" id="QpB-os-hde"/>
+                        <outlet property="emailTextField" destination="aHm-oc-4yZ" id="MoV-DG-PKR"/>
+                        <outlet property="passwordImageView" destination="17f-NQ-8Dy" id="a4n-mf-Ah7"/>
+                        <outlet property="passwordTextField" destination="9wF-bN-cic" id="XI3-zS-nKZ"/>
+                        <outlet property="signupButton" destination="BTe-PH-mCu" id="Vwt-e3-MbF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sHV-N1-cQC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="rAs-CN-5SB">
+                    <connections>
+                        <action selector="scrollViewPressed:" destination="guk-jL-bKW" id="MLX-YG-ugS"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <customObject id="AfY-xJ-G4p" customClass="DragDropBehavior" customModule="WWDC_Scholars_2015" customModuleProvider="target">
+                    <connections>
+                        <outlet property="delegate" destination="guk-jL-bKW" id="UEI-nx-3Tz"/>
+                        <outlet property="referenceView" destination="LMk-Ve-vXM" id="v3f-YQ-5cq"/>
+                        <outlet property="targetView" destination="URD-qi-aeU" id="ev5-7T-blp"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="2381" y="3165"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="3SO-3a-R1S">
             <objects>
@@ -955,7 +1125,7 @@ Two times at WWDC!</string>
                                             <constraint firstAttribute="width" constant="181" id="qnF-bd-NLx"/>
                                         </constraints>
                                         <state key="normal" title="Log in">
-                                            <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="1" green="0.50196078431372548" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <variation key="default">
@@ -963,6 +1133,9 @@ Two times at WWDC!</string>
                                                 <exclude reference="6lG-Ez-7Jb"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <segue destination="guk-jL-bKW" kind="presentation" modalPresentationStyle="currentContext" modalTransitionStyle="crossDissolve" id="tdj-DT-Wln"/>
+                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DividingLine" translatesAutoresizingMaskIntoConstraints="NO" id="7AE-yT-C7a">
                                         <rect key="frame" x="32" y="230" width="568" height="1"/>
@@ -1355,7 +1528,7 @@ Two times at WWDC!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SfU-eW-jze" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1441" y="3697"/>
+            <point key="canvasLocation" x="1460" y="3763"/>
         </scene>
     </scenes>
     <resources>
