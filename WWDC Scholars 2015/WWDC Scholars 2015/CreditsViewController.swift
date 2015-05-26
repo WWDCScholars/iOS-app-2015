@@ -15,9 +15,9 @@ class CreditsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        websiteButton.layer.cornerRadius = 7
-        websiteButton.layer.borderWidth = 0.5
-        websiteButton.layer.borderColor = UIColor.orangeColor().CGColor
+//        websiteButton.layer.cornerRadius = 7
+//        websiteButton.layer.borderWidth = 0.5
+//        websiteButton.layer.borderColor = UIColor.orangeColor().CGColor
         
         // Do any additional setup after loading the view.
     }
