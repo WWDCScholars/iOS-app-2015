@@ -10,7 +10,7 @@
 	<string>WWDC Scholars 2015</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>84A7BF928AB34B88411D38BB053F4EA3F8529FDC</key>
+		<key>460F8EC5B8D49DFD95C1A22D1C4D2476EF9257AC</key>
 		<string>https://github.com/Oliver-Binns/WWDC-Scholars-iOS-2015.git</string>
 		<key>84A7BF928AB34B88411D38BB053F4EA3F8529FDC</key>
 		<string>https://github.com/WWDC-Students/WWDC-Scholars-iOS-2015.git</string>
@@ -36,7 +36,7 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>84A7BF928AB34B88411D38BB053F4EA3F8529FDC</string>
+			<string>460F8EC5B8D49DFD95C1A22D1C4D2476EF9257AC</string>
 			<key>IDESourceControlWCCName</key>
 			<string>WWDC-Scholars-iOS-2015</string>
 		</dict>
