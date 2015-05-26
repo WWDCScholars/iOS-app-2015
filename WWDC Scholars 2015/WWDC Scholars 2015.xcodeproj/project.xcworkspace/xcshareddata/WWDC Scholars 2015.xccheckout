@@ -12,20 +12,24 @@
 	<dict>
 		<key>460F8EC5B8D49DFD95C1A22D1C4D2476EF9257AC</key>
 		<string>https://github.com/Oliver-Binns/WWDC-Scholars-iOS-2015.git</string>
+		<key>84A7BF928AB34B88411D38BB053F4EA3F8529FDC</key>
+		<string>https://github.com/WWDC-Students/WWDC-Scholars-iOS-2015.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>WWDC Scholars 2015/WWDC Scholars 2015.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>460F8EC5B8D49DFD95C1A22D1C4D2476EF9257AC</key>
+		<string>../../../../WWDC-Scholars-iOS-2015</string>
+		<key>84A7BF928AB34B88411D38BB053F4EA3F8529FDC</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/Oliver-Binns/WWDC-Scholars-iOS-2015.git</string>
+	<string>https://github.com/WWDC-Students/WWDC-Scholars-iOS-2015.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>460F8EC5B8D49DFD95C1A22D1C4D2476EF9257AC</string>
+	<string>84A7BF928AB34B88411D38BB053F4EA3F8529FDC</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -35,6 +39,14 @@
 			<string>460F8EC5B8D49DFD95C1A22D1C4D2476EF9257AC</string>
 			<key>IDESourceControlWCCName</key>
 			<string>WWDC-Scholars-iOS-2015</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>84A7BF928AB34B88411D38BB053F4EA3F8529FDC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>WWDC-Scholars-iOS-2015-master</string>
 		</dict>
 	</array>
 </dict>
