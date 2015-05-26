@@ -520,10 +520,10 @@
             </objects>
             <point key="canvasLocation" x="2381" y="3165"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Intro View Controller-->
         <scene sceneID="3SO-3a-R1S">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2fS-oi-cWY" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2fS-oi-cWY" customClass="IntroViewController" customModule="WWDC_Scholars_2015" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PSe-dm-1da">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
