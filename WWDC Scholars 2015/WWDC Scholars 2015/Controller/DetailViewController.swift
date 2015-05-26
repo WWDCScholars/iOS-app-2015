@@ -50,9 +50,9 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         descriptionLabel.text = currentScholar?.shortBio
         
         if currentScholar?.numberOfWWDCAttend == 1 {
-            shortBioLabel.text = "\((currentScholar?.age?.description)!) from \((currentScholar?.location)!)\nFirst time WWDC attendee!"
+            shortBioLabel.text = "\((currentScholar?.age?.description)!) from \((currentScholar?.location)!)\nFirst time WWDC scholar!"
         } else {
-            shortBioLabel.text = "\((currentScholar?.age?.description)!) from \((currentScholar?.location)!)\nHas attended WWDC \((currentScholar?.numberOfWWDCAttend?.description)!) times!"
+            shortBioLabel.text = "\((currentScholar?.age?.description)!) from \((currentScholar?.location)!)\nHas attended WWDC \((currentScholar?.numberOfWWDCAttend?.description)!) times as a scholar!"
         }
         
         //descriptionLabel.text = currentScholar?.description
@@ -60,6 +60,7 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         mapView.setRegion(zoomRegion, animated: true)
         mapView.addAnnotation(scholarAnnotation(coordinate: CLLocationCoordinate2D(latitude: (currentScholar!.latitude), longitude: (currentScholar!.longitude)), title: "", subtitle: ""))
         mapView.userInteractionEnabled = false
+        
         
         imgScholar.layer.cornerRadius = 30
         imgScholar.layer.masksToBounds = true
