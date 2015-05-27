@@ -11,6 +11,7 @@ import UIKit
 class CreditsViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var websiteButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
     
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -18,13 +19,19 @@ class CreditsViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.scrollView.contentSize = CGSizeMake(320, 1700)
-
-//        websiteButton.layer.cornerRadius = 7
-//        websiteButton.layer.borderWidth = 0.5
-//        websiteButton.layer.borderColor = UIColor.orangeColor().CGColor
+        websiteButton.layer.cornerRadius = 7
+        websiteButton.layer.borderWidth = 0.5
+        websiteButton.layer.borderColor = UIColor.orangeColor().CGColor
+        
+        loginButton.layer.cornerRadius = 7
+        loginButton.layer.borderWidth = 0.5
+        loginButton.layer.borderColor = UIColor.orangeColor().CGColor
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.scrollView.contentSize = CGSizeMake(320, 1719)
     }
 
     @IBAction func openWebsite(sender: AnyObject) {
