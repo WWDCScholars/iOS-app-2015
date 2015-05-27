@@ -34,9 +34,9 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     @IBOutlet weak var shortBioLabel: UILabel!
     @IBOutlet weak var viewSocial: UIView!
     
-    
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    @IBOutlet weak var screenshotView: UICollectionView!
     @IBOutlet weak var mapView: MKMapView!
     
     
@@ -55,14 +55,11 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
             shortBioLabel.text = "\((currentScholar?.age?.description)!) from \((currentScholar?.location)!)\nHas attended WWDC \((currentScholar?.numberOfWWDCAttend?.description)!) times as a scholar!"
         }
         
-        //descriptionLabel.text = currentScholar?.description
-        
-        
-            let zoomRegion = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D(latitude: (currentScholar!.latitude), longitude: (currentScholar!.longitude)), 1000000, 1000000)
+        let zoomRegion = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D(latitude: (currentScholar!.latitude), longitude: (currentScholar!.longitude)), 1000000, 1000000)
             
-            mapView.setRegion(zoomRegion, animated: true)
-            mapView.addAnnotation(scholarAnnotation(coordinate: CLLocationCoordinate2D(latitude: (currentScholar!.latitude), longitude: (currentScholar!.longitude)), title: "", subtitle: ""))
-            mapView.userInteractionEnabled = false
+        mapView.setRegion(zoomRegion, animated: true)
+        mapView.addAnnotation(scholarAnnotation(coordinate: CLLocationCoordinate2D(latitude: (currentScholar!.latitude), longitude: (currentScholar!.longitude)), title: "", subtitle: ""))
+        mapView.userInteractionEnabled = false
         
         imgScholar.layer.cornerRadius = 30
         imgScholar.layer.masksToBounds = true
@@ -106,9 +103,6 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         if(currentScholar?.twitter != nil){
             social["tw"] = currentScholar!.twitter!
         }
-        
-        
-        
         
         let buttonSize = 40
         let totalWidth : CGFloat = CGFloat((social.count*buttonSize)+((social.count-1)*10))
@@ -170,12 +164,11 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! UICollectionViewCell
         
-        let imageView : AsyncImageView = cell.viewWithTag(100) as! AsyncImageView
+        var imageView: AsyncImageView = cell.viewWithTag(100) as! AsyncImageView
         
         if (currentScholar?.appDemo != nil && indexPath.item == 0) {
             imageView.image = UIImage(named: "VideoButton.png")
-        } else if let screenshots : [String] = currentScholar?.appScreenshots{
-            
+        } else if let screenshots : [String] = currentScholar?.appScreenshots {
             var idx : Int = indexPath.item
             if(currentScholar?.appDemo != nil){
                 idx = idx - 1
@@ -183,9 +176,7 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
             
             let url : String = screenshots[idx]
             imageView.imageURL = NSURL(string: url)
-            
         }
-        
         
         return cell
     }
@@ -195,12 +186,26 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         if (currentScholar?.appScreenshots != nil){
             var count : Int = currentScholar!.appScreenshots!.count
             if (currentScholar?.appDemo != nil) {
                 count++
             }
+            println(count)
+            
+            if currentScholar?.appScreenshots?.count == 0 {
+                println("Test")
+                
+                var messageLabel = UILabel()
+                messageLabel.frame = screenshotView.frame
+                messageLabel.frame.origin.y = 0
+                println(messageLabel.frame)
+                messageLabel.text = "No screenshots to display"
+                messageLabel.textAlignment = NSTextAlignment.Center
+                messageLabel.textColor = UIColor.darkGrayColor()
+                screenshotView.addSubview(messageLabel)
+            }
+            
             return count
         } else {
             return 0

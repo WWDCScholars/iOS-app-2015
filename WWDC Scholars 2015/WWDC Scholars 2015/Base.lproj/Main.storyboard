@@ -1920,6 +1920,7 @@ Two times at WWDC!</string>
                         <outlet property="imgScholar" destination="pqL-kn-ipq" id="N7h-WP-BGR"/>
                         <outlet property="mapView" destination="g5u-IO-TJj" id="7dP-oc-7ca"/>
                         <outlet property="nameLabel" destination="hws-tT-QWB" id="zj4-qT-3Vx"/>
+                        <outlet property="screenshotView" destination="Ysb-Sj-6a1" id="15x-94-hbx"/>
                         <outlet property="shortBioLabel" destination="Ksw-jJ-pI1" id="J4O-Cd-djU"/>
                         <outlet property="viewSocial" destination="fv4-PN-J1m" id="uUa-hd-Dp5"/>
                     </connections>
