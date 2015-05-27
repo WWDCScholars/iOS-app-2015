@@ -173,7 +173,7 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         let imageView : AsyncImageView = cell.viewWithTag(100) as! AsyncImageView
         
         if (currentScholar?.appDemo != nil && indexPath.item == 0) {
-            imageView.image = UIImage(named: "video_placeholder.png")
+            imageView.image = UIImage(named: "VideoButton.png")
         } else if let screenshots : [String] = currentScholar?.appScreenshots{
             
             var idx : Int = indexPath.item
