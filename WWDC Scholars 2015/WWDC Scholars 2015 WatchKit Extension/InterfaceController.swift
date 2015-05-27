@@ -14,6 +14,7 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet var scholarAmount: WKInterfaceLabel!
     @IBOutlet var mostCommonCity: WKInterfaceLabel!
     @IBOutlet var maleFemaleRatio: WKInterfaceLabel!
+    @IBOutlet var averageAge: WKInterfaceLabel!
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -46,6 +47,7 @@ class InterfaceController: WKInterfaceController {
                         var male = data.objectForKey("male") as! NSNumber
                         var female = data.objectForKey("female") as! NSNumber
                         var total = data.objectForKey("totalWinners") as! NSNumber
+                        var averageAge = data.objectForKey("averageAge") as! NSNumber
 
                         var mfRatioText = NSMutableAttributedString()
                         mfRatioText.appendAttributedString(NSAttributedString(string: String.fontAwesomeIconWithName(FontAwesome.Male), attributes: [NSFontAttributeName: UIFont.fontAwesomeOfSize(20)] as Dictionary!))
@@ -57,6 +59,7 @@ class InterfaceController: WKInterfaceController {
                         self.maleFemaleRatio.setAttributedText(mfRatioText)
                         
                         self.scholarAmount.setText("\(total) out of 350")
+                        self.averageAge.setText(averageAge.description)
                     }
                 }
             }

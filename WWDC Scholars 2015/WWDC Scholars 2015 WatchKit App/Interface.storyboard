@@ -22,7 +22,7 @@
                         </group>
                         <group width="1" alignment="left" layout="vertical" spacing="0.0" id="Wvg-kY-kbQ">
                             <items>
-                                <label width="1" alignment="left" text="Male/Female ratio" textAlignment="center" minimumScaleFactor="0.50000000000000011" id="Zr3-3y-Xop">
+                                <label width="1" alignment="left" text="Male/Female" textAlignment="center" minimumScaleFactor="0.50000000000000011" id="Zr3-3y-Xop">
                                     <fontDescription key="font" type="system" pointSize="12"/>
                                 </label>
                                 <label width="1" alignment="left" text="placeholder" textAlignment="center" minimumScaleFactor="0.10000000000000001" id="yjF-ls-PIB">
@@ -40,13 +40,24 @@
                                 </label>
                             </items>
                         </group>
-                        <button width="1" alignment="left" verticalAlignment="bottom" title="Students" id="Hjq-WB-IDG">
+                        <group width="1" alignment="left" layout="vertical" spacing="0.0" id="4s8-fZ-foq">
+                            <items>
+                                <label width="1" alignment="left" text="Average age" textAlignment="center" minimumScaleFactor="0.50000000000000011" id="HqY-re-x2X">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                </label>
+                                <label width="1" alignment="left" text="0" textAlignment="center" minimumScaleFactor="0.10000000000000001" id="vs3-ZN-jPa">
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
+                                </label>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Scholars" id="Hjq-WB-IDG">
                             <connections>
                                 <segue destination="W0k-RN-FvD" kind="push" identifier="toStudents" id="Xgb-Hd-6PR"/>
                             </connections>
                         </button>
                     </items>
                     <connections>
+                        <outlet property="averageAge" destination="vs3-ZN-jPa" id="PW5-3T-zdd"/>
                         <outlet property="maleFemaleRatio" destination="yjF-ls-PIB" id="46A-i5-5VR"/>
                         <outlet property="mostCommonCity" destination="4wG-Ww-g0N" id="evj-3L-h3Q"/>
                         <outlet property="scholarAmount" destination="QKb-eh-w4o" id="OXf-SG-hDP"/>
@@ -63,11 +74,16 @@
                         <table alignment="left" id="yV8-ms-dcb">
                             <items>
                                 <tableRow identifier="scholarCell" id="MLA-R0-RHB" customClass="ScholarTableRow" customModule="WWDC_Scholars_2015_WatchKit_Extension">
-                                    <group key="rootItem" width="1" alignment="left" id="Qnc-y8-h0K">
+                                    <group key="rootItem" width="1" height="50" alignment="left" id="Qnc-y8-h0K">
                                         <items>
-                                            <imageView alignment="left" id="85Y-D1-0Hm"/>
-                                            <label alignment="left" text="Label" id="Ocl-f7-KNY"/>
+                                            <group width="40" height="40" alignment="left" verticalAlignment="center" radius="10" id="M9n-Ty-K0l">
+                                                <items>
+                                                    <imageView width="40" height="40" alignment="left" verticalAlignment="center" contentMode="scaleAspectFill" id="85Y-D1-0Hm"/>
+                                                </items>
+                                            </group>
+                                            <label width="1" widthAdjustment="-2" alignment="center" verticalAlignment="center" text="Matthijs Logemann" textAlignment="center" minimumScaleFactor="0.10000000000000001" id="Ocl-f7-KNY"/>
                                         </items>
+                                        <edgeInsets key="margins" left="5" right="40" top="0.0" bottom="0.0"/>
                                     </group>
                                     <connections>
                                         <outlet property="scholarImage" destination="85Y-D1-0Hm" id="NsJ-JG-8p7"/>
