@@ -41,6 +41,7 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
         
         myLocation = mapView.userLocation.coordinate as CLLocationCoordinate2D
         
+        
         let zoomRegion = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D(latitude: 38.8833, longitude: -77.0167), 10000000, 10000000)
         self.mapView.setRegion(zoomRegion, animated: true)
         mapView.showsUserLocation = true
@@ -60,8 +61,10 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
         
         for scholar in scholarArray {
             
-            let annotation = scholarAnnotation(coordinate: CLLocationCoordinate2DMake(scholar.latitude, scholar.longitude), title: scholar.name!,subtitle:scholar.location!)
-            self.qTree.insertObject(annotation)
+            //if scholar latitude and longtitude is not nil
+            
+                let annotation = scholarAnnotation(coordinate: CLLocationCoordinate2DMake(scholar.latitude, scholar.longitude), title: scholar.name!,subtitle:scholar.location!)
+                self.qTree.insertObject(annotation)
             
             //self.mapView.addAnnotation(annotation)
         }
