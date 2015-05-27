@@ -193,7 +193,7 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
             }
             println(count)
             
-            if currentScholar?.appScreenshots?.count == 0 {
+            if currentScholar?.appScreenshots?.count == 0 && currentScholar?.appDemo == nil{
                 println("Test")
                 
                 var messageLabel = UILabel()
