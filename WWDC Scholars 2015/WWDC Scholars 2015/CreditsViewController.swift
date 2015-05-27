@@ -8,12 +8,17 @@
 
 import UIKit
 
-class CreditsViewController: UIViewController {
+class CreditsViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var websiteButton: UIButton!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.scrollView.contentSize = CGSizeMake(320, 1700)
 
 //        websiteButton.layer.cornerRadius = 7
 //        websiteButton.layer.borderWidth = 0.5

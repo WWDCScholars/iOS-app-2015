@@ -56,11 +56,13 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         }
         
         //descriptionLabel.text = currentScholar?.description
-        let zoomRegion = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D(latitude: (currentScholar!.latitude), longitude: (currentScholar!.longitude)), 1000000, 1000000)
-        mapView.setRegion(zoomRegion, animated: true)
-        mapView.addAnnotation(scholarAnnotation(coordinate: CLLocationCoordinate2D(latitude: (currentScholar!.latitude), longitude: (currentScholar!.longitude)), title: "", subtitle: ""))
-        mapView.userInteractionEnabled = false
         
+        
+            let zoomRegion = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D(latitude: (currentScholar!.latitude), longitude: (currentScholar!.longitude)), 1000000, 1000000)
+            
+            mapView.setRegion(zoomRegion, animated: true)
+            mapView.addAnnotation(scholarAnnotation(coordinate: CLLocationCoordinate2D(latitude: (currentScholar!.latitude), longitude: (currentScholar!.longitude)), title: "", subtitle: ""))
+            mapView.userInteractionEnabled = false
         
         imgScholar.layer.cornerRadius = 30
         imgScholar.layer.masksToBounds = true
@@ -105,7 +107,10 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
             social["tw"] = currentScholar!.twitter!
         }
         
-        let buttonSize = 50
+        
+        
+        
+        let buttonSize = 40
         let totalWidth : CGFloat = CGFloat((social.count*buttonSize)+((social.count-1)*10))
         let viewWidth : CGFloat = CGFloat(viewSocial.frame.size.width)
         var startingX : CGFloat = (viewWidth-totalWidth) / 2

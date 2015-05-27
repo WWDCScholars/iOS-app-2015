@@ -45,7 +45,9 @@ class DataManager: NSObject {
                         if let screenshotFour = object.objectForKey("screenshotFour") as? PFFile{
                             screenshots.addObject(screenshotFour.url!)
                         }
+                  
                         var scholar = Scholar(
+                            
                             name: NSString(format: "%@ %@", object.objectForKey("firstName") as! String, object.objectForKey("lastName") as! String) as String,
                             age: object.objectForKey("age") as! Int,
                             birthdate: object.objectForKey("birthday") as? NSDate,
@@ -69,6 +71,7 @@ class DataManager: NSObject {
                             itunes:object.objectForKey("itunes") as? String)
                         
                             self.scholarArray.append(scholar)
+                        
                     }
                     
                     NSNotificationCenter.defaultCenter().postNotificationName("onScholarsLoadedNotification", object: self)
