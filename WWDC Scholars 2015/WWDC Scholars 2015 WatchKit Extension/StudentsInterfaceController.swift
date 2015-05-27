@@ -20,22 +20,6 @@ class StudentsInterfaceController: WKInterfaceController {
         
         var defaults = NSUserDefaults(suiteName: "group.wwdcscholars.2015")
         
-        var allScholarsJson = defaults?.objectForKey("scholars") as! NSArray
-        for dict: NSDictionary in allScholarsJson as! [NSDictionary]{
-            var scholar = Scholar(name: dict.objectForKey("name") as? String,
-                age: dict.objectForKey("age") as! Int,
-                latitude: dict.objectForKey("latitude") as! Double,
-                longitude: dict.objectForKey("longitude") as! Double,
-                picture: dict.objectForKey("picture") as? String,
-                shortBio: dict.objectForKey("shortBio") as? String,
-                numberOfWWDCAttend: dict.objectForKey("numberOfWWDCAttend") as? Int,
-                location: dict.objectForKey("location") as? String)
-            scholars.addObject(scholar)
-            println(scholar)
-        }
-        println("Loaded \(allScholarsJson.count) scholars")
-        
-        //loadTableData()
         
         // Configure interface objects here.
     }
@@ -44,20 +28,33 @@ class StudentsInterfaceController: WKInterfaceController {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(2.0 * Float(NSEC_PER_SEC))), dispatch_get_main_queue()) {
-            WKInterfaceController.openParentApplication(["pfquery_request": "dummy_val"]) { userInfo, error in
+            WKInterfaceController.openParentApplication(["scholar_request": "dummy_val"]) { userInfo, error in
                 println("User Info: \(userInfo)")
                 println("Error: \(error)")
                 
                 if let success = (userInfo as? [String: AnyObject])?["success"] as? NSNumber {
                     if success.boolValue == true {
-                        println("Read data from Wormhole and update interface!")
+                        var allScholarsJson = (userInfo as NSDictionary).objectForKey("scholars") as! NSArray
+                        for dict: NSDictionary in allScholarsJson as! [NSDictionary]{
+                            var scholar = Scholar(name: dict.objectForKey("name") as? String,
+                                age: dict.objectForKey("age") as! Int,
+                                latitude: dict.objectForKey("latitude") as! Double,
+                                longitude: dict.objectForKey("longitude") as! Double,
+                                picture: dict.objectForKey("picture") as? String,
+                                shortBio: dict.objectForKey("shortBio") as? String,
+                                numberOfWWDCAttend: dict.objectForKey("numberOfWWDCAttend") as? Int,
+                                location: dict.objectForKey("location") as? String)
+                            self.scholars.addObject(scholar)
+                            println(scholar)
+                        }
+                        println("Loaded \(allScholarsJson.count) scholars")
+                        
+                        self.loadTableData()
+
                     }
                 }
             }
             
-            return
-        }
     }
     
     override func didDeactivate() {
@@ -72,10 +69,13 @@ class StudentsInterfaceController: WKInterfaceController {
             if let row = scholarTable.rowControllerAtIndex(index) as? ScholarTableRow {
                 row.scholarName.setText(scholar.name)
                 if let profilePic = scholar.picture{
-                    row.scholarImage=row.scholarImage.setImageWithUrl(profilePic)
+                    row.scholarImage.setImage(UIImage(data: NSData(contentsOfURL: applicationDocumentsDirectory!.URLByAppendingPathComponent(scholar.name!.stringByReplacingOccurrencesOfString(" ", withString: "")))!))
+//                    row.scholarImage=row.scholarImage.setImageWithUrl(profilePic)
                 }
             }
         }
     }
-
+    lazy var applicationDocumentsDirectory: NSURL? = {
+        return NSFileManager.defaultManager().containerURLForSecurityApplicationGroupIdentifier("group.wwdcscholars.2015") ?? nil
+        }()
 }
