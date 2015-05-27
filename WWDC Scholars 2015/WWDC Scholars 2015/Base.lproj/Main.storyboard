@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2fS-oi-cWY">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -112,7 +112,7 @@
                             <rect key="frame" x="180" y="5.5" width="240" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gbx-0T-Rgf">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gbx-0T-Rgf">
                                     <rect key="frame" x="44" y="4" width="154" height="27"/>
                                     <attributedString key="attributedText">
                                         <fragment content="WWDC">
@@ -276,7 +276,7 @@
                     <navigationItem key="navigationItem" id="1Ur-Ti-Ge8">
                         <nil key="title"/>
                         <view key="titleView" contentMode="scaleToFill" id="A4q-SD-fmz">
-                            <rect key="frame" x="180" y="5.5" width="240" height="33"/>
+                            <rect key="frame" x="180" y="6" width="240" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrb-Du-ggb">
@@ -1212,7 +1212,7 @@
                     <navigationItem key="navigationItem" id="DrD-db-f6e">
                         <nil key="title"/>
                         <view key="titleView" contentMode="scaleToFill" id="3hj-6k-Aiw">
-                            <rect key="frame" x="180" y="5.5" width="240" height="33"/>
+                            <rect key="frame" x="180" y="6" width="240" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaT-eM-jzd">
@@ -1265,7 +1265,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYy-ZX-rYb">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="1600"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xYx-Fp-3wa">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xYx-Fp-3wa">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="1328"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nicola Giancecchi" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hws-tT-QWB">
@@ -1289,63 +1289,78 @@ Two times at WWDC!</string>
                                                 <color key="textColor" red="0.2901960784" green="0.6588235294" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lUn-7d-UaA">
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lUn-7d-UaA">
                                                 <rect key="frame" x="160" y="416" width="280" height="1"/>
-                                                <color key="backgroundColor" red="0.66274509800000003" green="0.74901960779999999" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="0.84776023384574406" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="1js-4w-E6R"/>
                                                     <constraint firstAttribute="width" constant="280" id="L9J-wb-WRw"/>
                                                 </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="L9J-wb-WRw"/>
+                                                    </mask>
+                                                </variation>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wO1-9f-6LN">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wO1-9f-6LN">
                                                 <rect key="frame" x="20" y="437" width="560" height="76"/>
                                                 <string key="text">I am a Mobile App Developer from San Marino (SMR). I'm 22. Currently studying Computer Science &amp; Engineering at the University of Bologna (Italy) and working at Mr. APPs srl as iOS Developer. My main interests are programming, design and music.</string>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="16"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="g5u-IO-TJj">
+                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="g5u-IO-TJj">
                                                 <rect key="frame" x="0.0" y="533" width="600" height="270"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="g5u-IO-TJj" secondAttribute="height" multiplier="20:9" id="V1c-ia-7CB"/>
                                                 </constraints>
                                             </mapView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My App for WWDC15" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggs-oG-RhV">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="My WWDC App" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggs-oG-RhV">
                                                 <rect key="frame" x="20" y="823" width="560" height="27"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
                                                 <color key="textColor" red="0.29019607843137257" green="0.6588235294117647" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect with me!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sh5-bD-Rnf">
-                                                <rect key="frame" x="20" y="1191" width="560" height="27"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Connect with me!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sh5-bD-Rnf">
+                                                <rect key="frame" x="20" y="1208" width="560" height="27"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
                                                 <color key="textColor" red="0.29019607843137257" green="0.6588235294117647" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5As-1u-SiI">
-                                                <rect key="frame" x="160" y="1237" width="280" height="1"/>
-                                                <color key="backgroundColor" red="0.66274509800000003" green="0.74901960779999999" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5As-1u-SiI">
+                                                <rect key="frame" x="160" y="1255" width="280" height="1"/>
+                                                <color key="backgroundColor" white="0.84776023384574406" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="BUR-z4-Fji"/>
                                                     <constraint firstAttribute="width" constant="280" id="nO9-re-lhm"/>
                                                 </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="nO9-re-lhm"/>
+                                                    </mask>
+                                                </variation>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N64-7S-cFl">
-                                                <rect key="frame" x="160" y="910" width="280" height="1"/>
-                                                <color key="backgroundColor" red="0.66274509800000003" green="0.74901960779999999" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N64-7S-cFl">
+                                                <rect key="frame" x="160" y="927" width="280" height="1"/>
+                                                <color key="backgroundColor" white="0.84776023384574406" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="280" id="Y9u-uH-eW4"/>
                                                     <constraint firstAttribute="height" constant="1" id="oNa-9N-SXj"/>
                                                 </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="Y9u-uH-eW4"/>
+                                                    </mask>
+                                                </variation>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAJ-6w-2xS">
-                                                <rect key="frame" x="200" y="865" width="200" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAJ-6w-2xS">
+                                                <rect key="frame" x="200" y="870" width="200" height="37"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="VGf-yx-bxw"/>
-                                                    <constraint firstAttribute="height" constant="30" id="ofB-Nr-YEh"/>
+                                                    <constraint firstAttribute="height" constant="37" id="ofB-Nr-YEh"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                                <state key="normal" title="See the repo on Github!">
+                                                <state key="normal" title="View on GitHub">
                                                     <color key="titleColor" red="0.29019607843137257" green="0.6588235294117647" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -1353,11 +1368,12 @@ Two times at WWDC!</string>
                                                     <action selector="didOpenGithubRepo:" destination="bj9-Te-WTq" eventType="touchUpInside" id="AOg-zL-2Jy"/>
                                                 </connections>
                                             </button>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fv4-PN-J1m">
-                                                <rect key="frame" x="213" y="1268" width="175" height="30"/>
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fv4-PN-J1m">
+                                                <rect key="frame" x="213" y="1276" width="175" height="30"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luL-qv-71N">
                                                         <rect key="frame" x="-213" y="-1268" width="34" height="34"/>
+                                                        <color key="backgroundColor" white="0.95096700174825177" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="luL-qv-71N" secondAttribute="height" multiplier="1:1" id="iXc-c8-CCs"/>
                                                         </constraints>
@@ -1422,9 +1438,9 @@ Two times at WWDC!</string>
                                                     <constraint firstItem="Jiw-4k-Qy5" firstAttribute="leading" secondItem="Kpg-bs-MOn" secondAttribute="leading" id="wjq-mE-Zfr"/>
                                                 </constraints>
                                             </view>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ysb-Sj-6a1">
-                                                <rect key="frame" x="0.0" y="931" width="600" height="240"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ysb-Sj-6a1">
+                                                <rect key="frame" x="0.0" y="948" width="600" height="240"/>
+                                                <color key="backgroundColor" white="0.95266062062937074" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Ysb-Sj-6a1" secondAttribute="height" multiplier="600:240" id="WuI-ut-2r6"/>
                                                 </constraints>
@@ -1488,6 +1504,7 @@ Two times at WWDC!</string>
                                             <constraint firstItem="hws-tT-QWB" firstAttribute="leading" secondItem="xYx-Fp-3wa" secondAttribute="leading" constant="20" id="2L3-dY-qyp"/>
                                             <constraint firstItem="Ksw-jJ-pI1" firstAttribute="top" secondItem="hws-tT-QWB" secondAttribute="bottom" constant="15" id="3Mz-v9-noP"/>
                                             <constraint firstItem="sh5-bD-Rnf" firstAttribute="top" secondItem="Ysb-Sj-6a1" secondAttribute="bottom" constant="20" id="3at-Xz-F4o"/>
+                                            <constraint firstItem="5As-1u-SiI" firstAttribute="leading" secondItem="xYx-Fp-3wa" secondAttribute="leading" id="7EH-hU-gcW"/>
                                             <constraint firstItem="lUn-7d-UaA" firstAttribute="top" secondItem="Ksw-jJ-pI1" secondAttribute="bottom" constant="20" id="9fT-Eh-jgj"/>
                                             <constraint firstAttribute="trailing" secondItem="sh5-bD-Rnf" secondAttribute="trailing" constant="20" id="9wp-et-A7Y"/>
                                             <constraint firstItem="sh5-bD-Rnf" firstAttribute="leading" secondItem="xYx-Fp-3wa" secondAttribute="leading" constant="20" id="Ax5-Lx-M9V"/>
@@ -1500,30 +1517,35 @@ Two times at WWDC!</string>
                                             <constraint firstAttribute="centerX" secondItem="lUn-7d-UaA" secondAttribute="centerX" id="JX7-f1-C8s"/>
                                             <constraint firstItem="g5u-IO-TJj" firstAttribute="top" secondItem="wO1-9f-6LN" secondAttribute="bottom" constant="20" id="Jcb-GJ-3kh"/>
                                             <constraint firstItem="VeJ-bw-sWg" firstAttribute="top" secondItem="xYx-Fp-3wa" secondAttribute="topMargin" constant="5" id="Je3-Au-35g"/>
-                                            <constraint firstItem="HAJ-6w-2xS" firstAttribute="top" secondItem="Ggs-oG-RhV" secondAttribute="bottom" constant="15" id="KC3-hZ-OBZ"/>
+                                            <constraint firstItem="HAJ-6w-2xS" firstAttribute="top" secondItem="Ggs-oG-RhV" secondAttribute="bottom" constant="20" id="KC3-hZ-OBZ"/>
                                             <constraint firstAttribute="centerX" secondItem="5As-1u-SiI" secondAttribute="centerX" id="KR6-go-HT1"/>
                                             <constraint firstAttribute="centerX" secondItem="E5L-4Z-iEc" secondAttribute="centerX" id="L1H-PR-gSi"/>
                                             <constraint firstAttribute="centerX" secondItem="HAJ-6w-2xS" secondAttribute="centerX" id="LHZ-g8-dmN"/>
                                             <constraint firstAttribute="bottom" secondItem="Ysb-Sj-6a1" secondAttribute="bottom" constant="26" id="MyH-n6-cd2"/>
+                                            <constraint firstItem="N64-7S-cFl" firstAttribute="leading" secondItem="xYx-Fp-3wa" secondAttribute="leading" id="N95-kG-3fV"/>
                                             <constraint firstItem="Ggs-oG-RhV" firstAttribute="leading" secondItem="xYx-Fp-3wa" secondAttribute="leading" constant="20" id="Ouc-ZK-VgA"/>
                                             <constraint firstItem="Ysb-Sj-6a1" firstAttribute="leading" secondItem="xYx-Fp-3wa" secondAttribute="leading" id="Poz-5T-iCm"/>
                                             <constraint firstItem="hws-tT-QWB" firstAttribute="top" secondItem="E5L-4Z-iEc" secondAttribute="bottom" constant="5" id="QOh-Rj-mIk"/>
                                             <constraint firstItem="Ksw-jJ-pI1" firstAttribute="leading" secondItem="xYx-Fp-3wa" secondAttribute="leading" constant="20" id="S7E-60-XjJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="5As-1u-SiI" secondAttribute="trailing" id="SbO-8Q-8OK"/>
                                             <constraint firstItem="5As-1u-SiI" firstAttribute="top" secondItem="sh5-bD-Rnf" secondAttribute="bottom" constant="20" id="TuU-Sp-FiK"/>
                                             <constraint firstAttribute="centerX" secondItem="pqL-kn-ipq" secondAttribute="centerX" id="Ufm-jB-XAX"/>
-                                            <constraint firstItem="N64-7S-cFl" firstAttribute="top" secondItem="HAJ-6w-2xS" secondAttribute="bottom" constant="15" id="ZCt-wC-ZLe"/>
+                                            <constraint firstItem="N64-7S-cFl" firstAttribute="top" secondItem="HAJ-6w-2xS" secondAttribute="bottom" constant="20" id="ZCt-wC-ZLe"/>
                                             <constraint firstItem="wO1-9f-6LN" firstAttribute="leading" secondItem="xYx-Fp-3wa" secondAttribute="leading" constant="20" id="c1W-ns-jVr"/>
                                             <constraint firstItem="Ysb-Sj-6a1" firstAttribute="top" secondItem="N64-7S-cFl" secondAttribute="bottom" constant="20" id="cCw-BO-vFh"/>
-                                            <constraint firstItem="fv4-PN-J1m" firstAttribute="top" secondItem="5As-1u-SiI" secondAttribute="bottom" constant="30" id="cn2-CQ-H7V"/>
+                                            <constraint firstItem="fv4-PN-J1m" firstAttribute="top" secondItem="5As-1u-SiI" secondAttribute="bottom" constant="20" id="cn2-CQ-H7V"/>
                                             <constraint firstItem="pqL-kn-ipq" firstAttribute="centerY" secondItem="E5L-4Z-iEc" secondAttribute="centerY" id="crD-LD-OBV"/>
+                                            <constraint firstAttribute="trailing" secondItem="N64-7S-cFl" secondAttribute="trailing" id="eNw-mz-KSi"/>
                                             <constraint firstAttribute="trailing" secondItem="Ysb-Sj-6a1" secondAttribute="trailing" id="fYo-ZB-3NV"/>
+                                            <constraint firstAttribute="trailing" secondItem="lUn-7d-UaA" secondAttribute="trailing" id="hVl-WY-51g"/>
                                             <constraint firstItem="g5u-IO-TJj" firstAttribute="leading" secondItem="xYx-Fp-3wa" secondAttribute="leading" id="jhV-Ew-S89"/>
                                             <constraint firstAttribute="trailing" secondItem="Ksw-jJ-pI1" secondAttribute="trailing" constant="20" id="kI5-Og-9kO"/>
                                             <constraint firstAttribute="trailing" secondItem="Ggs-oG-RhV" secondAttribute="trailing" constant="20" id="npZ-vy-cRR"/>
                                             <constraint firstItem="Ggs-oG-RhV" firstAttribute="top" secondItem="g5u-IO-TJj" secondAttribute="bottom" constant="20" id="oiS-7S-FgE"/>
-                                            <constraint firstAttribute="bottom" secondItem="fv4-PN-J1m" secondAttribute="bottom" constant="30" id="qZw-jf-IJi"/>
+                                            <constraint firstAttribute="bottom" secondItem="fv4-PN-J1m" secondAttribute="bottom" constant="22" id="qZw-jf-IJi"/>
                                             <constraint firstAttribute="trailing" secondItem="hws-tT-QWB" secondAttribute="trailing" constant="20" id="sqP-h3-B3e"/>
                                             <constraint firstItem="E5L-4Z-iEc" firstAttribute="top" secondItem="xYx-Fp-3wa" secondAttribute="top" constant="15" id="tzi-JQ-xgV"/>
+                                            <constraint firstItem="lUn-7d-UaA" firstAttribute="leading" secondItem="xYx-Fp-3wa" secondAttribute="leading" id="vmP-X7-LxX"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
