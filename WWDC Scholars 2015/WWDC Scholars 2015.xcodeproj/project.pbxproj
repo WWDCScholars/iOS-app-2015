@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		227687C71B16154E00AAB1E6 /* EditDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227687C61B16154E00AAB1E6 /* EditDetailsViewController.swift */; };
 		407911AD1B0E2AC400A582FF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407911AC1B0E2AC400A582FF /* AudioToolbox.framework */; };
 		407911B11B0E2AEE00A582FF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407911AE1B0E2AEE00A582FF /* CFNetwork.framework */; };
 		407911B21B0E2AEE00A582FF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407911AF1B0E2AEE00A582FF /* CoreGraphics.framework */; };
@@ -104,6 +105,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		227687C61B16154E00AAB1E6 /* EditDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditDetailsViewController.swift; sourceTree = "<group>"; };
 		407911AC1B0E2AC400A582FF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		407911AE1B0E2AEE00A582FF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		407911AF1B0E2AEE00A582FF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -250,6 +252,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		227687C81B16155900AAB1E6 /* Edit Details */ = {
+			isa = PBXGroup;
+			children = (
+				227687C61B16154E00AAB1E6 /* EditDetailsViewController.swift */,
+			);
+			name = "Edit Details";
+			sourceTree = "<group>";
+		};
 		407911AB1B0E29CC00A582FF /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -461,6 +471,7 @@
 			isa = PBXGroup;
 			children = (
 				C0D2684D1B14C2850062B7C4 /* Intro */,
+				227687C81B16155900AAB1E6 /* Edit Details */,
 				F9007BDC1B148D6900E2BB09 /* Login */,
 				6E9ECAD11B13BD4400289D2D /* Credits */,
 				7C1084A11B11527200DCC52E /* Browser */,
@@ -729,6 +740,7 @@
 				C0D268471B14C24F0062B7C4 /* EAIntroView.m in Sources */,
 				F9007BD11B148D2A00E2BB09 /* SpringTextView.swift in Sources */,
 				F9007BD81B148D2A00E2BB09 /* TPKeyboardAvoidingTableView.m in Sources */,
+				227687C71B16154E00AAB1E6 /* EditDetailsViewController.swift in Sources */,
 				F9007BD31B148D2A00E2BB09 /* TransitionManager.swift in Sources */,
 				C099FF4F1B10163D00ECAEE7 /* CustomTableViewCell.swift in Sources */,
 				F9007BCF1B148D2A00E2BB09 /* SpringLabel.swift in Sources */,
