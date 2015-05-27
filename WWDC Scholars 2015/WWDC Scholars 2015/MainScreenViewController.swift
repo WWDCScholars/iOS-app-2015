@@ -41,6 +41,7 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return DataManager.sharedInstance.scholarArray.count
+        
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
@@ -54,7 +55,10 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
         }
         self.performSegueWithIdentifier("toDetail", sender: self)
     }
-    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    /*
     func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
         switch kind {
         case UICollectionElementKindSectionFooter:
@@ -64,7 +68,7 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
         default:
             assert(false, "Unexpected element kind")
         }
-    }
+    }*/
     
     func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
         cell.layer.transform = CATransform3DMakeScale(0.1,0.1,1)
