@@ -226,7 +226,7 @@
                                     <outlet property="delegate" destination="tYb-zB-5ZJ" id="Mb2-CF-hjY"/>
                                 </connections>
                             </collectionView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="final" translatesAutoresizingMaskIntoConstraints="NO" id="5Uo-4A-3Q5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="final" translatesAutoresizingMaskIntoConstraints="NO" id="5Uo-4A-3Q5">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="144" id="0ku-Fq-mk2"/>
@@ -680,7 +680,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lxM-Mw-dl9">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lxM-Mw-dl9">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="1500"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GENERAL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reZ-zx-Sg9">
@@ -1769,7 +1769,7 @@ Two times at WWDC!</string>
         <image name="SamEckert" width="83" height="83"/>
         <image name="Website" width="59" height="58"/>
         <image name="applewatchicon" width="59" height="58"/>
-        <image name="final" width="551" height="213"/>
+        <image name="final" width="2204" height="852"/>
         <image name="iPhone" width="59" height="58"/>
         <image name="icon-key" width="25" height="25"/>
         <image name="icon-user" width="25" height="25"/>
