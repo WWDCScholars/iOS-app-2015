@@ -20,17 +20,17 @@ class CreditsViewController: UIViewController, UIScrollViewDelegate {
         
         websiteButton.layer.cornerRadius = 7
         websiteButton.layer.borderWidth = 0.5
-        websiteButton.layer.borderColor = UIColor.orangeColor().CGColor
+        websiteButton.layer.borderColor = UIColor.purpleColor().CGColor
         
         loginButton.layer.cornerRadius = 7
         loginButton.layer.borderWidth = 0.5
-        loginButton.layer.borderColor = UIColor.orangeColor().CGColor
+        loginButton.layer.borderColor = UIColor.purpleColor().CGColor
         
         // Do any additional setup after loading the view.
     }
     
     override func viewWillLayoutSubviews() {
-        self.scrollView.contentSize = CGSizeMake(UIScreen.mainScreen().bounds.width, 1726)
+        self.scrollView.contentSize = CGSizeMake(UIScreen.mainScreen().bounds.width, 1800)
     }
 
     @IBAction func openWebsite(sender: AnyObject) {
