@@ -12,9 +12,8 @@ class EditDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
 
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var screenshotScrollview: UIScrollView!
-    
-    @IBOutlet var firstName: UITextField!
-    @IBOutlet var lastName: UITextField!
+    var newImage = false
+    @IBOutlet var name: UILabel!
     @IBOutlet var age: UITextField!
     @IBOutlet var dateOfBirth: UITextField!
     @IBOutlet var gender: UITextField!
@@ -53,7 +52,7 @@ class EditDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
     @IBOutlet var profpic: UIButton!
     @IBAction func profpicButton(sender: AnyObject) {
     }
-
+    var user: PFObject!
     func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
         let length = count(textView.text) + count(text) - range.length
         if length <= 250 {
@@ -63,61 +62,69 @@ class EditDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
     }
 
     @IBAction func save(sender: AnyObject) {
-        let query = PFQuery(className: "scholars")
-        query.whereKey("user", equalTo: PFUser.currentUser()!)
-        query.getFirstObjectInBackgroundWithBlock { (object, error) -> Void in
-            if let scholar = object {
-                if count(self.firstName.text) != 0 {
-                    scholar["firstName"] = self.firstName.text
-                }
-                if count(self.lastName.text) != 0 {
-                    scholar["lastName"] = self.lastName.text
-                }
-                if count(self.age.text) != 0 {
-                    scholar["age"] = self.age.text.toInt()
-                }
-                //TODO: Birthday
-                if count(self.gender.text) != 0 {
-                    scholar["gender"] = self.gender.text
-                }
-                if count(self.cityCountry.text) != 0 {
-                    scholar["location"] = self.cityCountry.text
-                }
-                if count(self.shortBio.text) != 0 {
-                    scholar["shortBio"] = self.shortBio.text
-                }
-                //TODO: # times attended
-                if count(self.appVideo.text) != 0 {
-                    scholar["videoLink"] = self.appVideo.text
-                }
-                if count(self.githubUsername.text) != 0 {
-                    scholar["github"] = self.githubUsername.text
-                }
-                if count(self.email.text) != 0 {
-                    scholar["email"] = self.email.text
-                }
-                if count(self.twitterUsername.text) != 0 {
-                    scholar["twitter"] = "https://twitter.com/" + self.twitterUsername.text
-                }
-                if count(self.facebookUsername.text) != 0 {
-                    scholar["facebook"] = "https://facebook.com/" + self.facebookUsername.text
-                }
-                if count(self.githubLink.text) != 0 {
-                    scholar["githubLinkApp"] = self.githubLink.text
-                }
-                if count(self.linkedinUsername.text) != 0 {
-                    scholar["linkedin"] = self.linkedinUsername.text
-                }
-                if count(self.websiteLink.text) != 0 {
-                    scholar["website"] = self.websiteLink.text
-                }
-                if count(self.itunesLink.text) != 0 {
-                    scholar["itunes"] = self.itunesLink.text
-                }
-                scholar.saveInBackground()
-                
+        if self.user != nil {
+            self.verifyAndSubmit(self.user)
+        } else {
+            let query = PFQuery(className: "scholars")
+            query.whereKey("user", equalTo: PFUser.currentUser()!)
+            query.getFirstObjectInBackgroundWithBlock { (object, error) -> Void in
+                if let scholar = object {
+                    self.verifyAndSubmit(scholar)
+                                    }
             }
         }
+    }
+    
+    func verifyAndSubmit(scholar: PFObject) {
+        if count(self.age.text) != 0 {
+            scholar["age"] = self.age.text.toInt()
+        }
+        //TODO: Birthday
+        if count(self.gender.text) != 0 {
+            scholar["gender"] = self.gender.text
+        }
+        if count(self.cityCountry.text) != 0 {
+            scholar["location"] = self.cityCountry.text
+        }
+        if count(self.shortBio.text) != 0 {
+            scholar["shortBio"] = self.shortBio.text
+        }
+        //TODO: # times attended
+        if count(self.appVideo.text) != 0 {
+            scholar["videoLink"] = self.appVideo.text
+        }
+        if count(self.githubUsername.text) != 0 {
+            scholar["github"] = self.githubUsername.text
+        }
+        if count(self.email.text) != 0 {
+            scholar["email"] = self.email.text
+        }
+        if count(self.twitterUsername.text) != 0 {
+            scholar["twitter"] = "https://twitter.com/" + self.twitterUsername.text
+        }
+        if count(self.facebookUsername.text) != 0 {
+            scholar["facebook"] = "https://facebook.com/" + self.facebookUsername.text
+        }
+        if count(self.githubLink.text) != 0 {
+            scholar["githubLinkApp"] = self.githubLink.text
+        }
+        if count(self.linkedinUsername.text) != 0 {
+            scholar["linkedin"] = self.linkedinUsername.text
+        }
+        if count(self.websiteLink.text) != 0 {
+            scholar["website"] = self.websiteLink.text
+        }
+        if count(self.itunesLink.text) != 0 {
+            scholar["itunes"] = self.itunesLink.text
+        }
+        if count(self.previousWWDC.text) != 0 {
+            let arr = self.previousWWDC.text.componentsSeparatedByString(", ")
+            scholar["numberOfTimesWWDCScholar"] = arr.count
+            scholar["batchWWDC"] = arr
+        }
+        
+        scholar.saveInBackground()
+
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -132,12 +139,7 @@ class EditDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
         screenshotScrollview.showsHorizontalScrollIndicator = true
 
         
-        let paddingView = UIView(frame: CGRectMake(0, 0, 8, self.firstName.frame.height))
-        firstName.leftView = paddingView
-        firstName.leftViewMode = UITextFieldViewMode.Always
-        let paddingView2 = UIView(frame: CGRectMake(0, 0, 8, self.lastName.frame.height))
-        lastName.leftView = paddingView2
-        lastName.leftViewMode = UITextFieldViewMode.Always
+        
         let paddingView3 = UIView(frame: CGRectMake(0, 0, 8, self.age.frame.height))
         age.leftView = paddingView3
         age.leftViewMode = UITextFieldViewMode.Always
@@ -170,7 +172,7 @@ class EditDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
         facebookUsername.leftViewMode = UITextFieldViewMode.Always
         let paddingView13 = UIView(frame: CGRectMake(0, 0, 8, self.githubUsername.frame.height))
         githubUsername.leftView = paddingView13
-        githubUsername.leftViewMode = UITextFieldViewMode.Always
+//        githubUsername.leftViewMode = UITextFieldViewMode.Always
         let paddingView14 = UIView(frame: CGRectMake(0, 0, 8, self.linkedinUsername.frame.height))
         linkedinUsername.leftView = paddingView14
         linkedinUsername.leftViewMode = UITextFieldViewMode.Always
@@ -184,7 +186,24 @@ class EditDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
         saveButton.layer.cornerRadius = 7
         saveButton.layer.borderWidth = 0.5
         saveButton.layer.borderColor = UIColor.purpleColor().CGColor
-        shortBio.text = "0/250 characters left"
+        shortBio.text = ""
+        shortBioCharactersLeft.text = "0/250 characters left"
+        let query = PFQuery(className: "scholars")
+        query.whereKey("user", equalTo: PFUser.currentUser()!)
+        query.getFirstObjectInBackgroundWithBlock { (object, error) -> Void in
+            if let loadedUser = object {
+                self.user = loadedUser
+                self.name.text = (loadedUser["firstName"] as! String) + " " + (loadedUser["lastName"] as! String)
+                println("happened")
+                (loadedUser["profilePic"] as! PFFile).getDataInBackgroundWithBlock({ (data, error) -> Void in
+                    println("happened 2 with \(data!)")
+                    if let picData = data {
+                        self.profpic.setBackgroundImage(UIImage(data: picData), forState: UIControlState.Normal)
+                    }
+                })
+            }
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
