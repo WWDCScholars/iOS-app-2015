@@ -183,26 +183,22 @@ func verifyAndSubmit(scholar: PFObject) {
         scholar["profilePic"] = file
     }
     if let image = appScreenshot1.currentBackgroundImage {
-        let squaredimage = self.squareImage(image)
-        let file = PFFile(name: "screenshot1", data: UIImagePNGRepresentation(squaredimage))
+        let file = PFFile(name: "screenshot1", data: UIImagePNGRepresentation(image))
         file.saveInBackground()
         scholar["screenshotOne"] = file
     }
     if let image = appScreenshot2.currentBackgroundImage {
-        let squaredimage = self.squareImage(image)
-        let file = PFFile(name: "screenshot2", data: UIImagePNGRepresentation(squaredimage))
+        let file = PFFile(name: "screenshot2", data: UIImagePNGRepresentation(image))
         file.saveInBackground()
         scholar["screenshotTwo"] = file
     }
     if let image = appScreenshot3.currentBackgroundImage {
-        let squaredimage = self.squareImage(image)
-        let file = PFFile(name: "screenshot3", data: UIImagePNGRepresentation(squaredimage))
+        let file = PFFile(name: "screenshot3", data: UIImagePNGRepresentation(image))
         file.saveInBackground()
         scholar["screenshotThree"] = file
     }
     if let image = appScreenshot4.currentBackgroundImage {
-        let squaredimage = self.squareImage(image)
-        let file = PFFile(name: "screenshot4", data: UIImagePNGRepresentation(squaredimage))
+        let file = PFFile(name: "screenshot4", data: UIImagePNGRepresentation(image))
         file.saveInBackground()
         scholar["screenshotFour"] = file
     }
