@@ -12,6 +12,7 @@ class CreditsViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var websiteButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
     
     @IBOutlet weak var scrollView: UIScrollView!
         
@@ -26,15 +27,24 @@ class CreditsViewController: UIViewController, UIScrollViewDelegate {
         loginButton.layer.borderWidth = 0.5
         loginButton.layer.borderColor = UIColor.purpleColor().CGColor
         
+        backButton.layer.cornerRadius = 7
+        backButton.layer.borderWidth = 0.5
+        backButton.layer.borderColor = UIColor.purpleColor().CGColor
+        
+        
         // Do any additional setup after loading the view.
     }
     
     override func viewWillLayoutSubviews() {
-        self.scrollView.contentSize = CGSizeMake(UIScreen.mainScreen().bounds.width, 1800)
+        self.scrollView.contentSize = CGSizeMake(UIScreen.mainScreen().bounds.width, 2025)
     }
 
     @IBAction func openWebsite(sender: AnyObject) {
         UIApplication.sharedApplication().openURL(NSURL(string: "http://wwdcscholars.com")!)
+    }
+    
+    @IBAction func backButtonClicked(sender: UIButton) {
+        self.dismissViewControllerAnimated(true, completion: {});
     }
     
     override func didReceiveMemoryWarning() {
