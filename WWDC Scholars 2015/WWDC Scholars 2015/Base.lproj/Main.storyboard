@@ -110,7 +110,7 @@
                     <navigationItem key="navigationItem" id="lC6-sg-O5W">
                         <nil key="title"/>
                         <view key="titleView" contentMode="scaleToFill" id="w4m-C8-G5S">
-                            <rect key="frame" x="180" y="5.5" width="240" height="33"/>
+                            <rect key="frame" x="180" y="6" width="240" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gbx-0T-Rgf">
@@ -277,7 +277,7 @@
                     <navigationItem key="navigationItem" id="1Ur-Ti-Ge8">
                         <nil key="title"/>
                         <view key="titleView" contentMode="scaleToFill" id="A4q-SD-fmz">
-                            <rect key="frame" x="180" y="5.5" width="240" height="33"/>
+                            <rect key="frame" x="180" y="6" width="240" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrb-Du-ggb">
@@ -507,6 +507,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sHV-N1-cQC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="xRy-lK-QCM" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="rAs-CN-5SB">
                     <connections>
                         <action selector="scrollViewPressed:" destination="guk-jL-bKW" id="MLX-YG-ugS"/>
@@ -1054,11 +1055,12 @@
                         <outlet property="shortBioCharactersLeft" destination="fie-BX-80S" id="aYU-bz-UWr"/>
                         <outlet property="twitterUsername" destination="bRd-u5-cD6" id="gYF-mQ-Ehr"/>
                         <outlet property="websiteLink" destination="JOb-XY-FkV" id="KSP-Hk-qbp"/>
+                        <segue destination="xRy-lK-QCM" kind="unwind" identifier="backToMain" unwindAction="unwindToMainViewController:" id="SsB-Hb-zHX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5t-cj-KO0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4062" y="3266"/>
+            <point key="canvasLocation" x="4082" y="3294"/>
         </scene>
         <!--Intro View Controller-->
         <scene sceneID="3SO-3a-R1S">
@@ -1544,7 +1546,7 @@
                     <navigationItem key="navigationItem" id="DrD-db-f6e">
                         <nil key="title"/>
                         <view key="titleView" contentMode="scaleToFill" id="3hj-6k-Aiw">
-                            <rect key="frame" x="180" y="5.5" width="240" height="33"/>
+                            <rect key="frame" x="180" y="6" width="240" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaT-eM-jzd">
