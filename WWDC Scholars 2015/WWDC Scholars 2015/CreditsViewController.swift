@@ -14,8 +14,7 @@ class CreditsViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var loginButton: UIButton!
     
     @IBOutlet weak var scrollView: UIScrollView!
-    
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
