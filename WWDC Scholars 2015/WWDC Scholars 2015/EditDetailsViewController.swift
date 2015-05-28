@@ -130,7 +130,6 @@ func verifyAndSubmit(scholar: PFObject) {
         if count(self.age.text) != 0 {
             scholar["age"] = self.age.text.toInt()
         }
-        //TODO: Birthday
         if count(self.gender.text) != 0 {
             scholar["gender"] = self.gender.text
         }
@@ -140,7 +139,6 @@ func verifyAndSubmit(scholar: PFObject) {
         if count(self.shortBio.text) != 0 {
             scholar["shortBio"] = self.shortBio.text
         }
-        //TODO: # times attended
         if count(self.appVideo.text) != 0 {
             scholar["videoLink"] = self.appVideo.text
         }
@@ -204,7 +202,7 @@ func verifyAndSubmit(scholar: PFObject) {
     }
         self.performSegueWithIdentifier("backToMain", sender: self)
         scholar.saveInBackground()
-
+    PFUser.logOutInBackground()
     }
 
 func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
@@ -255,19 +253,6 @@ func imagePickerController(picker: UIImagePickerController, didFinishPickingMedi
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         dismissViewControllerAnimated(true, completion: nil)
     }
- 
-
-
- 
-    
-
- 
- 
- 
- 
- 
-
-   
     
     override func viewDidLoad() {
         super.viewDidLoad()
