@@ -49,6 +49,7 @@ class DataManager: NSObject {
                         var scholar = Scholar(
                             
                             name: NSString(format: "%@ %@", object.objectForKey("firstName") as! String, object.objectForKey("lastName") as! String) as String,
+                            firstName: object.objectForKey("firstName") as! String,
                             age: object.objectForKey("age") as! Int,
                             birthdate: object.objectForKey("birthday") as? NSDate,
                             gender: object.objectForKey("gender") as? String,
