@@ -93,7 +93,6 @@ class EditDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
     
 
     @IBAction func save(sender: AnyObject) {
-        println("saving")
         if self.user != nil {
             self.verifyAndSubmit(self.user)
         } else {
@@ -107,7 +106,25 @@ class EditDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
         }
     }
     let picker = UIImagePickerController()
-   
+    func squareImage(image: UIImage) -> UIImage? {
+        var height: CGFloat = 0
+        var width: CGFloat = 0
+        var offsetX: CGFloat = 0
+        var offsetY: CGFloat = 0
+        if image.size.width > image.size.height {
+            width = image.size.height
+            height = image.size.height
+            offsetX = (image.size.width - image.size.height) / 2
+        } else {
+            width = image.size.width
+            height = image.size.width
+            offsetY = (image.size.height - image.size.width) / 2
+        }
+        var cropRect = CGRectMake(offsetX, offsetY, width, height)
+        var imageRef = CGImageCreateWithImageInRect(image.CGImage, cropRect)
+        
+        return UIImage(CGImage: imageRef)
+    }
     
 func verifyAndSubmit(scholar: PFObject) {
         if count(self.age.text) != 0 {
@@ -160,27 +177,32 @@ func verifyAndSubmit(scholar: PFObject) {
         scholar["birthday"] = self.dateOfBirth.text
     }
     if newImage {
-        let file = PFFile(name: "profilePic", data: UIImagePNGRepresentation(self.profpic.currentBackgroundImage!))
+        let squaredimage = self.squareImage(self.profpic.currentBackgroundImage!)
+        let file = PFFile(name: "profilePic", data: UIImagePNGRepresentation(squaredimage))
         file.saveInBackground()
         scholar["profilePic"] = file
     }
     if let image = appScreenshot1.currentBackgroundImage {
-        let file = PFFile(name: "screenshot1", data: UIImagePNGRepresentation(image))
+        let squaredimage = self.squareImage(image)
+        let file = PFFile(name: "screenshot1", data: UIImagePNGRepresentation(squaredimage))
         file.saveInBackground()
         scholar["screenshotOne"] = file
     }
     if let image = appScreenshot2.currentBackgroundImage {
-        let file = PFFile(name: "screenshot2", data: UIImagePNGRepresentation(image))
+        let squaredimage = self.squareImage(image)
+        let file = PFFile(name: "screenshot2", data: UIImagePNGRepresentation(squaredimage))
         file.saveInBackground()
         scholar["screenshotTwo"] = file
     }
     if let image = appScreenshot3.currentBackgroundImage {
-        let file = PFFile(name: "screenshot3", data: UIImagePNGRepresentation(image))
+        let squaredimage = self.squareImage(image)
+        let file = PFFile(name: "screenshot3", data: UIImagePNGRepresentation(squaredimage))
         file.saveInBackground()
         scholar["screenshotThree"] = file
     }
     if let image = appScreenshot4.currentBackgroundImage {
-        let file = PFFile(name: "screenshot4", data: UIImagePNGRepresentation(image))
+        let squaredimage = self.squareImage(image)
+        let file = PFFile(name: "screenshot4", data: UIImagePNGRepresentation(squaredimage))
         file.saveInBackground()
         scholar["screenshotFour"] = file
     }
@@ -321,7 +343,6 @@ func imagePickerController(picker: UIImagePickerController, didFinishPickingMedi
             if let loadedUser = object {
                 self.user = loadedUser
                 self.name.text = (loadedUser["firstName"] as! String) + " " + (loadedUser["lastName"] as! String)
-                println("happened")
                 (loadedUser["profilePic"] as! PFFile).getDataInBackgroundWithBlock({ (data, error) -> Void in
                     if let picData = data {
                         self.profpic.setBackgroundImage(UIImage(data: picData), forState: UIControlState.Normal)
