@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EditDetailsViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+class EditDetailsViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var screenshotScrollview: UIScrollView!
@@ -207,20 +207,16 @@ func imagePickerController(picker: UIImagePickerController, didFinishPickingMedi
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         dismissViewControllerAnimated(true, completion: nil)
     }
-        }
  
-        }
+
 
  
-        }
+    
 
  
-        }
  
  
  
-            dismissViewControllerAnimated(true, completion: nil) //5
-        }
  
 
    
