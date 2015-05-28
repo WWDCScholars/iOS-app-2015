@@ -32,6 +32,12 @@ class DataManager: NSObject {
                 // Do something with the found objects
                 if let objects = objects as? [PFObject] {
                     for object in objects {
+                        
+                        if (object.objectForKey("firstName")  == nil) || (object.objectForKey("lastName")  == nil)||(object.objectForKey("longtitude")  == nil)||(object.objectForKey("latitude")  == nil) {
+                            continue
+                        }
+                        
+                        
                         let screenshots = NSMutableArray()
                         if let screenshotOne = object.objectForKey("screenshotOne") as? PFFile{
                             screenshots.addObject(screenshotOne.url!)
@@ -49,7 +55,7 @@ class DataManager: NSObject {
                         var scholar = Scholar(
                             
                             name: NSString(format: "%@ %@", object.objectForKey("firstName") as! String, object.objectForKey("lastName") as! String) as String,
-                            firstName: object.objectForKey("firstName") as! String,
+                            firstName: object.objectForKey("firstName") as? String,
                             age: object.objectForKey("age") as! Int,
                             birthdate: object.objectForKey("birthday") as? NSDate,
                             gender: object.objectForKey("gender") as? String,
@@ -76,13 +82,14 @@ class DataManager: NSObject {
                     }
                     
                     NSNotificationCenter.defaultCenter().postNotificationName("onScholarsLoadedNotification", object: self)
-
+                    println("The length of ScholarArray is \(self.scholarArray.count).")
                 }
             } else {
                 // Log details of the failure
                 println("Error: \(error!) \(error!.userInfo!)")
             }
         }
+        
     }
     
     func scholarAtLocation(pos: Int) -> Scholar?{
