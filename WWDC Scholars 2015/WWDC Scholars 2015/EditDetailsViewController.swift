@@ -184,7 +184,7 @@ func verifyAndSubmit(scholar: PFObject) {
         file.saveInBackground()
         scholar["screenshotFour"] = file
     }
-        
+        self.performSegueWithIdentifier("backToMain", sender: self)
         scholar.saveInBackground()
 
     }
