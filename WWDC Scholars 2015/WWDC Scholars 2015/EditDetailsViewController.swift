@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EditDetailsViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
+class EditDetailsViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var screenshotScrollview: UIScrollView!
@@ -34,33 +34,64 @@ class EditDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
     @IBOutlet var shortBioCharactersLeft: UILabel!
     @IBOutlet var shortBio: UITextView!
     
+    var screenshot: NSInteger = 0
+
+    
+    
+    
     @IBOutlet var appScreenshot1: UIButton!
     @IBAction func appScreenshot1Button(sender: AnyObject) {
+        screenshot = 1
+        picker.allowsEditing = false //2
+        picker.sourceType = .PhotoLibrary //3
+        presentViewController(picker, animated: true, completion: nil)
     }
     @IBOutlet var appScreenshot2: UIButton!
     @IBAction func appScreenshot2Button(sender: AnyObject) {
+        screenshot = 2
+
+        picker.allowsEditing = false //2
+        picker.sourceType = .PhotoLibrary //3
+        presentViewController(picker, animated: true, completion: nil)
     }
     
     @IBOutlet var appScreenshot3: UIButton!
     @IBAction func appScreenshot3Button(sender: AnyObject) {
+        screenshot = 3
+
+        picker.allowsEditing = false //2
+        picker.sourceType = .PhotoLibrary //3
+        presentViewController(picker, animated: true, completion: nil)
     }
     
     @IBOutlet var appScreenshot4: UIButton!
     @IBAction func appScreenshot4Button(sender: AnyObject) {
+        screenshot = 4
+
+        picker.allowsEditing = false //2
+        picker.sourceType = .PhotoLibrary //3
+        presentViewController(picker, animated: true, completion: nil)
     }
     
 
     @IBOutlet var profpic: UIButton!
     @IBAction func profpicButton(sender: AnyObject) {
+        screenshot = 5
+        
+        picker.allowsEditing = false //2
+        picker.sourceType = .PhotoLibrary //3
+        presentViewController(picker, animated: true, completion: nil)
     }
 
     func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
         let length = count(textView.text) + count(text) - range.length
         if length <= 250 {
-            shortBioCharactersLeft.text = "\(length)/250 characters left"
+            shortBioCharactersLeft.text = "\(250-length)/250 characters left"
         }
         return (length <= 250)
     }
+    
+    
 
     @IBAction func save(sender: AnyObject) {
         let query = PFQuery(className: "scholars")
@@ -119,9 +150,62 @@ class EditDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
             }
         }
     }
+    let picker = UIImagePickerController()
+   
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+        if screenshot == 1 {
+        var chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
+        appScreenshot1.contentMode = .ScaleAspectFit //3
+        appScreenshot1.setBackgroundImage(chosenImage, forState: UIControlState.Normal) //4
+            appScreenshot1.setTitle("", forState: UIControlState.Normal)
+
+        dismissViewControllerAnimated(true, completion: nil) //5
+        }
+        if screenshot == 2 {
+            var chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
+            appScreenshot2.contentMode = .ScaleAspectFit //3
+            appScreenshot2.setBackgroundImage(chosenImage, forState: UIControlState.Normal) //4
+            appScreenshot2.setTitle("", forState: UIControlState.Normal)
+
+            dismissViewControllerAnimated(true, completion: nil) //5
+        }
+        if screenshot == 3 {
+            var chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
+            appScreenshot3.contentMode = .ScaleAspectFit //3
+            appScreenshot3.setBackgroundImage(chosenImage, forState: UIControlState.Normal) //4
+            appScreenshot3.setTitle("", forState: UIControlState.Normal)
+
+            dismissViewControllerAnimated(true, completion: nil) //5
+        }
+        if screenshot == 4 {
+            var chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
+            appScreenshot4.contentMode = .ScaleAspectFit //3
+            appScreenshot4.setBackgroundImage(chosenImage, forState: UIControlState.Normal) //4
+            appScreenshot4.setTitle("", forState: UIControlState.Normal)
+            dismissViewControllerAnimated(true, completion: nil) //5
+        }
+        if screenshot == 5 {
+            var chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
+            profpic.contentMode = .ScaleAspectFit //3
+            profpic.setBackgroundImage(chosenImage, forState: UIControlState.Normal) //4
+            profpic.setTitle("", forState: UIControlState.Normal)
+            dismissViewControllerAnimated(true, completion: nil) //5
+        }
+
+
+    }
+    
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        picker.delegate = self
+        
         // Do any additional setup after loading the view.
         scrollView.scrollEnabled = true
         scrollView.contentSize = CGSizeMake(self.view.bounds.size.width, 1500)
