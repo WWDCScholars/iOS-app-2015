@@ -1120,9 +1120,9 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="di4-IC-X0c">
-                                        <rect key="frame" x="20" y="142" width="560" height="70"/>
+                                        <rect key="frame" x="20" y="142" width="560" height="75"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="Xl3-ln-nwD"/>
+                                            <constraint firstAttribute="height" constant="75" id="Xl3-ln-nwD"/>
                                         </constraints>
                                         <string key="text">Thanks for checking our projects out! If you are a WWDC scholarship winner and would like to add your profile, please visit our website.</string>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
@@ -1196,7 +1196,7 @@
                                         <rect key="frame" x="12" y="1065" width="30" height="30"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOP-p1-SOV">
-                                        <rect key="frame" x="312" y="217" width="110" height="37"/>
+                                        <rect key="frame" x="312" y="222" width="110" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="37" id="3Kd-tm-zQD"/>
                                             <constraint firstAttribute="width" constant="110" id="sav-CC-jRl"/>
@@ -1275,7 +1275,7 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edinburg, UK" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LA2-0m-pcQ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edinburgh, UK" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LA2-0m-pcQ">
                                         <rect key="frame" x="113" y="525" width="118" height="22"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                                         <color key="textColor" white="0.65000000000000002" alpha="1" colorSpace="calibratedWhite"/>
@@ -1311,7 +1311,7 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stuggart, Germany" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GId-sC-w3O">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stuttgart, Germany" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GId-sC-w3O">
                                         <rect key="frame" x="112" y="902" width="118" height="22"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                                         <color key="textColor" white="0.65000000000000002" alpha="1" colorSpace="calibratedWhite"/>
@@ -1342,7 +1342,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsq-st-aQP">
-                                        <rect key="frame" x="179" y="217" width="110" height="37"/>
+                                        <rect key="frame" x="179" y="222" width="110" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="37" id="sBl-P5-8PA"/>
                                             <constraint firstAttribute="width" constant="110" id="wb2-ey-LRI"/>

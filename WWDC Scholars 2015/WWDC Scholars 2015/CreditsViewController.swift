@@ -29,8 +29,8 @@ class CreditsViewController: UIViewController, UIScrollViewDelegate {
         // Do any additional setup after loading the view.
     }
     
-    override func viewWillAppear(animated: Bool) {
-        self.scrollView.contentSize = CGSizeMake(320, 1719)
+    override func viewWillLayoutSubviews() {
+        self.scrollView.contentSize = CGSizeMake(UIScreen.mainScreen().bounds.width, 1726)
     }
 
     @IBAction func openWebsite(sender: AnyObject) {
