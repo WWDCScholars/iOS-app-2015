@@ -93,6 +93,7 @@ class EditDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
     
 
     @IBAction func save(sender: AnyObject) {
+        println("saving")
         if self.user != nil {
             self.verifyAndSubmit(self.user)
         } else {
@@ -155,6 +156,34 @@ func verifyAndSubmit(scholar: PFObject) {
             scholar["numberOfTimesWWDCScholar"] = arr.count
             scholar["batchWWDC"] = arr
         }
+    if count(self.dateOfBirth.text) != 0 {
+        scholar["birthday"] = self.dateOfBirth.text
+    }
+    if newImage {
+        let file = PFFile(name: "profilePic", data: UIImagePNGRepresentation(self.profpic.currentBackgroundImage!))
+        file.saveInBackground()
+        scholar["profilePic"] = file
+    }
+    if let image = appScreenshot1.currentBackgroundImage {
+        let file = PFFile(name: "screenshot1", data: UIImagePNGRepresentation(image))
+        file.saveInBackground()
+        scholar["screenshotOne"] = file
+    }
+    if let image = appScreenshot2.currentBackgroundImage {
+        let file = PFFile(name: "screenshot2", data: UIImagePNGRepresentation(image))
+        file.saveInBackground()
+        scholar["screenshotTwo"] = file
+    }
+    if let image = appScreenshot3.currentBackgroundImage {
+        let file = PFFile(name: "screenshot3", data: UIImagePNGRepresentation(image))
+        file.saveInBackground()
+        scholar["screenshotThree"] = file
+    }
+    if let image = appScreenshot4.currentBackgroundImage {
+        let file = PFFile(name: "screenshot4", data: UIImagePNGRepresentation(image))
+        file.saveInBackground()
+        scholar["screenshotFour"] = file
+    }
         
         scholar.saveInBackground()
 
@@ -197,6 +226,7 @@ func imagePickerController(picker: UIImagePickerController, didFinishPickingMedi
             profpic.contentMode = .ScaleAspectFit //3
             profpic.setBackgroundImage(chosenImage, forState: UIControlState.Normal) //4
             profpic.setTitle("", forState: UIControlState.Normal)
+            newImage = true
             dismissViewControllerAnimated(true, completion: nil) //5
         }
 
@@ -293,7 +323,6 @@ func imagePickerController(picker: UIImagePickerController, didFinishPickingMedi
                 self.name.text = (loadedUser["firstName"] as! String) + " " + (loadedUser["lastName"] as! String)
                 println("happened")
                 (loadedUser["profilePic"] as! PFFile).getDataInBackgroundWithBlock({ (data, error) -> Void in
-                    println("happened 2 with \(data!)")
                     if let picData = data {
                         self.profpic.setBackgroundImage(UIImage(data: picData), forState: UIControlState.Normal)
                     }
