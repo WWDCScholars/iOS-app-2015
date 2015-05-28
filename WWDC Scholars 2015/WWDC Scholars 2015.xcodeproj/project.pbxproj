@@ -40,7 +40,6 @@
 		7C9A06981B12535B00EC1F11 /* MRSocial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9A06971B12535B00EC1F11 /* MRSocial.swift */; };
 		C00C27401B0D5C9C008C19AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C273F1B0D5C9C008C19AE /* AppDelegate.swift */; };
 		C00C27421B0D5C9C008C19AE /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C27411B0D5C9C008C19AE /* LocationViewController.swift */; };
-		C00C27451B0D5C9C008C19AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C00C27431B0D5C9C008C19AE /* Main.storyboard */; };
 		C00C274A1B0D5C9C008C19AE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C00C27481B0D5C9C008C19AE /* LaunchScreen.xib */; };
 		C00C27561B0D5C9C008C19AE /* WWDC_Scholars_2015Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C27551B0D5C9C008C19AE /* WWDC_Scholars_2015Tests.swift */; };
 		C00C276E1B0D5CEC008C19AE /* QCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = C00C27641B0D5CEC008C19AE /* QCluster.m */; };
@@ -50,6 +49,7 @@
 		C00C27781B0D5D9E008C19AE /* ClusterAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C00C27761B0D5D9E008C19AE /* ClusterAnnotationView.m */; };
 		C00C277B1B0D63CD008C19AE /* Scholar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C277A1B0D63CD008C19AE /* Scholar.swift */; };
 		C00C277E1B0D6A8D008C19AE /* ScholarAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C277D1B0D6A8D008C19AE /* ScholarAnnotation.swift */; };
+		C07AD2A61B17AE6D0073F58B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C07AD2A51B17AE6D0073F58B /* Main.storyboard */; };
 		C099FF4F1B10163D00ECAEE7 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C099FF4E1B10163D00ECAEE7 /* CustomTableViewCell.swift */; };
 		C0A078D91B1385B800EFCE6B /* BubbleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A078D81B1385B800EFCE6B /* BubbleTransition.swift */; };
 		C0B7F78D1B0E682600E74458 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0B7F78C1B0E682600E74458 /* Images.xcassets */; };
@@ -141,7 +141,6 @@
 		C00C273E1B0D5C9C008C19AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C00C273F1B0D5C9C008C19AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C00C27411B0D5C9C008C19AE /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
-		C00C27441B0D5C9C008C19AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C00C27491B0D5C9C008C19AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C00C274F1B0D5C9C008C19AE /* WWDC Scholars 2015Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WWDC Scholars 2015Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C00C27541B0D5C9C008C19AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -161,6 +160,7 @@
 		C00C277A1B0D63CD008C19AE /* Scholar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scholar.swift; sourceTree = "<group>"; };
 		C00C277D1B0D6A8D008C19AE /* ScholarAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScholarAnnotation.swift; sourceTree = "<group>"; };
 		C068DC261B0F5D890066221E /* WWDC Scholars 2015.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "WWDC Scholars 2015.entitlements"; sourceTree = "<group>"; };
+		C07AD2A51B17AE6D0073F58B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C099FF4E1B10163D00ECAEE7 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		C0A078D81B1385B800EFCE6B /* BubbleTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleTransition.swift; sourceTree = "<group>"; };
 		C0B7F78C1B0E682600E74458 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -392,8 +392,8 @@
 				7C9A06951B12325E00EC1F11 /* video_placeholder.png */,
 				C00C273F1B0D5C9C008C19AE /* AppDelegate.swift */,
 				C0B7F78C1B0E682600E74458 /* Images.xcassets */,
-				C00C27431B0D5C9C008C19AE /* Main.storyboard */,
 				C00C27751B0D5D37008C19AE /* Header.h */,
+				C07AD2A51B17AE6D0073F58B /* Main.storyboard */,
 				C00C27481B0D5C9C008C19AE /* LaunchScreen.xib */,
 				C00C273E1B0D5C9C008C19AE /* Info.plist */,
 			);
@@ -696,8 +696,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C07AD2A61B17AE6D0073F58B /* Main.storyboard in Resources */,
 				7C1084A01B11526E00DCC52E /* NGBrowserViewController.xib in Resources */,
-				C00C27451B0D5C9C008C19AE /* Main.storyboard in Resources */,
 				F9007BC51B148D2A00E2BB09 /* Info.plist in Resources */,
 				7C9A06961B12325E00EC1F11 /* video_placeholder.png in Resources */,
 				F9007BC81B148D2A00E2BB09 /* LoadingView.xib in Resources */,
@@ -799,14 +799,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C00C27431B0D5C9C008C19AE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C00C27441B0D5C9C008C19AE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C00C27481B0D5C9C008C19AE /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
