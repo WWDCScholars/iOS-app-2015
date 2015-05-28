@@ -100,8 +100,16 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
             social["fb"] = currentScholar!.facebook!
         }
         
+        if(currentScholar?.linkedIn != nil){
+            social["li"] = currentScholar!.linkedIn!
+        }
+        
         if(currentScholar?.twitter != nil){
             social["tw"] = currentScholar!.twitter!
+        }
+        
+        if(currentScholar?.itunes != nil){
+            social["it"] = currentScholar!.itunes!
         }
         
         let buttonSize = 40
@@ -132,6 +140,14 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         UIApplication.sharedApplication().openURL(NSURL(string:currentScholar!.facebook!)!)
     }
     
+    func open_li() {
+        UIApplication.sharedApplication().openURL(NSURL(string:currentScholar!.linkedIn!)!)
+    }
+    
+    func open_it() {
+        UIApplication.sharedApplication().openURL(NSURL(string:currentScholar!.itunes!)!)
+    }
+    
     func open_tw() {
         MRSocial.openTwitterProfile(currentScholar!.twitter!.lastPathComponent)
     }
@@ -157,7 +173,6 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         if let url = currentScholar!.githubLinkToApp {
             self.openBrowserWithURL(currentScholar!.githubLinkToApp!)
         }
-        
     }
     
     
