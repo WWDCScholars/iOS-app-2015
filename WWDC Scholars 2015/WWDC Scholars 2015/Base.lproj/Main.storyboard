@@ -1073,11 +1073,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Zwo-tn-ON5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hUS-2f-g72">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="2025"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="2030"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kV2-5G-mbJ">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="2025"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="2030"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scholarIcon" translatesAutoresizingMaskIntoConstraints="NO" id="tjf-kw-Dwi">
                                         <rect key="frame" x="238" y="40" width="120" height="120"/>
@@ -1712,7 +1712,7 @@
                         </view>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="2025"/>
+                    <size key="freeformSize" width="600" height="2030"/>
                     <connections>
                         <outlet property="backButton" destination="nbs-x3-C9T" id="ckC-UV-Ime"/>
                         <outlet property="loginButton" destination="GOP-p1-SOV" id="nIG-qH-JZm"/>
