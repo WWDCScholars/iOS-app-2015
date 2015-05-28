@@ -25,7 +25,7 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
         if let scholar = DataManager.sharedInstance.scholarAtLocation(indexPath.row) {
             
             let nameTextView = cell.viewWithTag(201) as! UILabel
-            nameTextView.text = scholar.name
+            nameTextView.text = scholar.firstName
             
             let profileImageView = cell.viewWithTag(202) as! AsyncImageView
             AsyncImageLoader.sharedLoader().cancelLoadingURL(profileImageView.imageURL)

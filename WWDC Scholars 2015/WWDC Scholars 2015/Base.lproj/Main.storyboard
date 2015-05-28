@@ -189,7 +189,7 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="201" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matthijs Logemann" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="xuQ-xm-zw0">
                                                             <rect key="frame" x="8" y="0.0" width="84" height="25"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -2003,7 +2003,7 @@ Two times at WWDC!</string>
         <image name="input-outline-active" width="250" height="44"/>
         <image name="ngiancecchi_test_profile" width="250" height="250"/>
         <image name="no-profile" width="632" height="673"/>
-        <image name="scholarIcon" width="75" height="75"/>
+        <image name="scholarIcon" width="155" height="155"/>
         <image name="wwdc15-hero_2x-4" width="1250" height="1250"/>
         <image name="wwdc2015-top-logo" width="300" height="300"/>
     </resources>
