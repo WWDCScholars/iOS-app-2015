@@ -50,12 +50,16 @@
                                 </label>
                             </items>
                         </group>
-                        <button width="1" alignment="left" verticalAlignment="bottom" title="Scholars" id="Hjq-WB-IDG">
-                            <connections>
-                                <segue destination="W0k-RN-FvD" kind="push" identifier="toStudents" id="Xgb-Hd-6PR"/>
-                            </connections>
-                        </button>
                     </items>
+                    <menu key="menu" id="tIv-cc-EMo">
+                        <items>
+                            <menuItem title="Scholars" icon="accept" id="EjD-PK-yRJ">
+                                <connections>
+                                    <action selector="goToScholars" destination="wHh-Pz-AyL" id="Tqk-gk-smz"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
                     <connections>
                         <outlet property="averageAge" destination="vs3-ZN-jPa" id="PW5-3T-zdd"/>
                         <outlet property="maleFemaleRatio" destination="yjF-ls-PIB" id="46A-i5-5VR"/>
@@ -66,10 +70,10 @@
             </objects>
             <point key="canvasLocation" x="194" y="102"/>
         </scene>
-        <!--Students Interface Controller-->
+        <!--scholars-->
         <scene sceneID="oMT-Wn-7R7">
             <objects>
-                <controller id="W0k-RN-FvD" customClass="StudentsInterfaceController" customModule="WWDC_Scholars_2015_WatchKit_Extension">
+                <controller identifier="scholars" id="W0k-RN-FvD" customClass="StudentsInterfaceController" customModule="WWDC_Scholars_2015_WatchKit_Extension">
                     <items>
                         <table alignment="left" id="yV8-ms-dcb">
                             <items>

@@ -71,4 +71,7 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+    @IBAction func goToScholars() {
+        self.pushControllerWithName("scholars", context: nil)
+    }
 }
