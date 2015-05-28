@@ -48,7 +48,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate, DragDropBehavi
                 
                 self.dialogView.animation = "zoomOut"
                 self.dialogView.animate()
-                self.dismissViewControllerAnimated(true, completion: nil)
+                self.performSegueWithIdentifier("edit", sender: self)
+                //self.dismissViewControllerAnimated(true, completion: nil)
             }
         })
     }

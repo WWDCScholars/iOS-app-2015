@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EditDetailsViewController: UIViewController, UITextFieldDelegate {
+class EditDetailsViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
 
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var screenshotScrollview: UIScrollView!
@@ -30,7 +30,7 @@ class EditDetailsViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var websiteLink: UITextField!
     @IBOutlet var itunesLink: UITextField!
     
-    
+    @IBOutlet var saveButton: UIButton!
     @IBOutlet var shortBioCharactersLeft: UILabel!
     @IBOutlet var shortBio: UITextView!
     
@@ -49,14 +49,76 @@ class EditDetailsViewController: UIViewController, UITextFieldDelegate {
     @IBAction func appScreenshot4Button(sender: AnyObject) {
     }
     
-    @IBOutlet var latitudeLongitude: UITextField!
-    @IBAction func locationButton(sender: AnyObject) {
-    }
 
     @IBOutlet var profpic: UIButton!
     @IBAction func profpicButton(sender: AnyObject) {
     }
 
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        let length = count(textView.text) + count(text) - range.length
+        if length <= 250 {
+            shortBioCharactersLeft.text = "\(length)/250 characters left"
+        }
+        return (length <= 250)
+    }
+
+    @IBAction func save(sender: AnyObject) {
+        let query = PFQuery(className: "scholars")
+        query.whereKey("user", equalTo: PFUser.currentUser()!)
+        query.getFirstObjectInBackgroundWithBlock { (object, error) -> Void in
+            if let scholar = object {
+                if count(self.firstName.text) != 0 {
+                    scholar["firstName"] = self.firstName.text
+                }
+                if count(self.lastName.text) != 0 {
+                    scholar["lastName"] = self.lastName.text
+                }
+                if count(self.age.text) != 0 {
+                    scholar["age"] = self.age.text.toInt()
+                }
+                //TODO: Birthday
+                if count(self.gender.text) != 0 {
+                    scholar["gender"] = self.gender.text
+                }
+                if count(self.cityCountry.text) != 0 {
+                    scholar["location"] = self.cityCountry.text
+                }
+                if count(self.shortBio.text) != 0 {
+                    scholar["shortBio"] = self.shortBio.text
+                }
+                //TODO: # times attended
+                if count(self.appVideo.text) != 0 {
+                    scholar["videoLink"] = self.appVideo.text
+                }
+                if count(self.githubUsername.text) != 0 {
+                    scholar["github"] = self.githubUsername.text
+                }
+                if count(self.email.text) != 0 {
+                    scholar["email"] = self.email.text
+                }
+                if count(self.twitterUsername.text) != 0 {
+                    scholar["twitter"] = "https://twitter.com/" + self.twitterUsername.text
+                }
+                if count(self.facebookUsername.text) != 0 {
+                    scholar["facebook"] = "https://facebook.com/" + self.facebookUsername.text
+                }
+                if count(self.githubLink.text) != 0 {
+                    scholar["githubLinkApp"] = self.githubLink.text
+                }
+                if count(self.linkedinUsername.text) != 0 {
+                    scholar["linkedin"] = self.linkedinUsername.text
+                }
+                if count(self.websiteLink.text) != 0 {
+                    scholar["website"] = self.websiteLink.text
+                }
+                if count(self.itunesLink.text) != 0 {
+                    scholar["itunes"] = self.itunesLink.text
+                }
+                scholar.saveInBackground()
+                
+            }
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -118,10 +180,11 @@ class EditDetailsViewController: UIViewController, UITextFieldDelegate {
         let paddingView16 = UIView(frame: CGRectMake(0, 0, 8, self.itunesLink.frame.height))
         itunesLink.leftView = paddingView16
         itunesLink.leftViewMode = UITextFieldViewMode.Always
-        let paddingView17 = UIView(frame: CGRectMake(0, 0, 8, self.latitudeLongitude.frame.height))
-        latitudeLongitude.leftView = paddingView17
-        latitudeLongitude.leftViewMode = UITextFieldViewMode.Always
-
+        shortBio.delegate = self
+        saveButton.layer.cornerRadius = 7
+        saveButton.layer.borderWidth = 0.5
+        saveButton.layer.borderColor = UIColor.purpleColor().CGColor
+        shortBio.text = "0/250 characters left"
     }
 
     override func didReceiveMemoryWarning() {
