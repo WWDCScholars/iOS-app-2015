@@ -181,7 +181,7 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="2513" y="3141"/>
+            <point key="canvasLocation" x="3114" y="3265.5"/>
         </scene>
         <!--Edit Details View Controller-->
         <scene sceneID="aJi-EC-KOE">
@@ -674,7 +674,7 @@
                     <navigationItem key="navigationItem" id="0kU-m0-DtZ">
                         <nil key="title"/>
                         <view key="titleView" contentMode="scaleToFill" id="zgi-kF-eT2">
-                            <rect key="frame" x="180" y="6" width="240" height="33"/>
+                            <rect key="frame" x="180" y="5.5" width="240" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edit your details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHh-mN-pNP">
@@ -720,7 +720,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5t-cj-KO0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4082" y="3294"/>
+            <point key="canvasLocation" x="5335.5" y="3268.5"/>
         </scene>
         <!--Intro View Controller-->
         <scene sceneID="3SO-3a-R1S">
@@ -738,7 +738,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nGJ-iH-qCL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="603" y="1782"/>
+            <point key="canvasLocation" x="711" y="1821.75"/>
         </scene>
         <!--Credits View Controller-->
         <scene sceneID="lfK-RP-rPo">
@@ -3254,7 +3254,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1441" y="3221"/>
+            <point key="canvasLocation" x="1885" y="3269"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="Pwz-yi-QM1">
@@ -3609,7 +3609,7 @@ Two times at WWDC!</string>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2772" y="1806"/>
+            <point key="canvasLocation" x="3888" y="1821.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5I6-3S-OiO">
@@ -3627,7 +3627,7 @@ Two times at WWDC!</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Svn-yD-Xoz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3391" y="3165"/>
+            <point key="canvasLocation" x="3945" y="3265.5"/>
         </scene>
         <!--Main Screen View Controller-->
         <scene sceneID="0Ia-Vp-wSL">
@@ -3859,7 +3859,7 @@ Two times at WWDC!</string>
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="oJ6-o5-4XE" kind="presentation" modalTransitionStyle="flipHorizontal" id="0mG-DR-jQn"/>
+                                    <segue destination="oJ6-o5-4XE" kind="presentation" modalTransitionStyle="crossDissolve" id="0mG-DR-jQn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygO-hE-WxG">
@@ -4252,7 +4252,7 @@ Two times at WWDC!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lUI-KI-rWu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1462.5" y="1758.75"/>
+            <point key="canvasLocation" x="2020.5" y="1821.75"/>
         </scene>
         <!--Location View Controller-->
         <scene sceneID="dlh-73-Xvf">
@@ -4500,7 +4500,7 @@ Two times at WWDC!</string>
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="Gyk-Wj-uBM" kind="presentation" modalTransitionStyle="flipHorizontal" id="iL3-5n-g4p"/>
+                                    <segue destination="Gyk-Wj-uBM" kind="presentation" modalTransitionStyle="crossDissolve" id="iL3-5n-g4p"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wwdcscholars" translatesAutoresizingMaskIntoConstraints="NO" id="jd6-Qe-8fv">
@@ -4718,7 +4718,7 @@ Two times at WWDC!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c69-ec-nP3" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1828.5" y="990"/>
+            <point key="canvasLocation" x="2932.5" y="1194"/>
         </scene>
     </scenes>
     <resources>
