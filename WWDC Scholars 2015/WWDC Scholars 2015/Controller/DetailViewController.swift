@@ -19,6 +19,11 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         dismissViewControllerAnimated(true, completion: nil)
     }
 
+    @IBAction func closeClicked(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+ 
+    
     
     var currentScholar : Scholar?
     private var social : Dictionary<String,String> = Dictionary<String,String>()
