@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E26a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2fS-oi-cWY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E17e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2fS-oi-cWY">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -3827,10 +3827,10 @@ Two times at WWDC!</string>
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="154" height="200"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" tag="100" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no-profile" translatesAutoresizingMaskIntoConstraints="NO" id="B9l-N8-A8C" customClass="AsyncImageView">
+                                                                <imageView clipsSubviews="YES" tag="100" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="no-profile" translatesAutoresizingMaskIntoConstraints="NO" id="B9l-N8-A8C" customClass="AsyncImageView">
                                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                                 </imageView>
                                                             </subviews>
@@ -5063,19 +5063,20 @@ Two times at WWDC!</string>
                                 <exclude reference="BbM-nF-pSR"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="AuK-bR-fIk"/>
-                                <exclude reference="byb-Ih-ybX"/>
-                                <exclude reference="kbn-4U-gZZ"/>
-                                <exclude reference="nBc-cz-MqJ"/>
-                                <exclude reference="uPg-9Q-CBK"/>
-                                <exclude reference="24i-T5-rZH"/>
-                                <exclude reference="25y-p8-sh6"/>
-                                <exclude reference="26i-zr-An1"/>
-                                <exclude reference="V7P-fl-Ud1"/>
-                                <exclude reference="W6a-Da-2d6"/>
-                                <exclude reference="gwD-b3-qcv"/>
-                                <exclude reference="qeh-N6-D9x"/>
-                                <exclude reference="uoy-N2-uSM"/>
+                                <exclude reference="4AN-LW-8Jb"/>
+                                <exclude reference="FVN-HS-iRC"/>
+                                <exclude reference="PjX-TD-DKr"/>
+                                <exclude reference="g5O-mk-Xx1"/>
+                                <exclude reference="jIb-2v-bO5"/>
+                                <exclude reference="lPr-hN-37i"/>
+                                <exclude reference="sQa-I8-cml"/>
+                                <exclude reference="u4e-hm-ThN"/>
+                                <exclude reference="C3m-RR-vOq"/>
+                                <exclude reference="CeV-Vn-6ee"/>
+                                <exclude reference="JGi-1x-tpP"/>
+                                <exclude reference="Qnv-Xc-ETG"/>
+                                <exclude reference="ZX1-wa-kys"/>
+                                <exclude reference="miB-VU-5IA"/>
                                 <exclude reference="84L-P4-1bv"/>
                                 <exclude reference="L2b-Nb-kBV"/>
                                 <exclude reference="a0L-Ed-hak"/>
@@ -5083,12 +5084,6 @@ Two times at WWDC!</string>
                                 <exclude reference="INF-wv-CU7"/>
                                 <exclude reference="K3h-OE-6L2"/>
                                 <exclude reference="gv2-6v-1Gk"/>
-                                <exclude reference="C3m-RR-vOq"/>
-                                <exclude reference="CeV-Vn-6ee"/>
-                                <exclude reference="JGi-1x-tpP"/>
-                                <exclude reference="Qnv-Xc-ETG"/>
-                                <exclude reference="ZX1-wa-kys"/>
-                                <exclude reference="miB-VU-5IA"/>
                                 <exclude reference="09J-ra-kiD"/>
                                 <exclude reference="9bN-x4-6sv"/>
                                 <exclude reference="FPq-Yt-PGH"/>
@@ -5103,14 +5098,19 @@ Two times at WWDC!</string>
                                 <exclude reference="iaK-5b-xeI"/>
                                 <exclude reference="nuP-Yu-hB0"/>
                                 <exclude reference="t4t-hS-2ax"/>
-                                <exclude reference="4AN-LW-8Jb"/>
-                                <exclude reference="FVN-HS-iRC"/>
-                                <exclude reference="PjX-TD-DKr"/>
-                                <exclude reference="g5O-mk-Xx1"/>
-                                <exclude reference="jIb-2v-bO5"/>
-                                <exclude reference="lPr-hN-37i"/>
-                                <exclude reference="sQa-I8-cml"/>
-                                <exclude reference="u4e-hm-ThN"/>
+                                <exclude reference="24i-T5-rZH"/>
+                                <exclude reference="25y-p8-sh6"/>
+                                <exclude reference="26i-zr-An1"/>
+                                <exclude reference="V7P-fl-Ud1"/>
+                                <exclude reference="W6a-Da-2d6"/>
+                                <exclude reference="gwD-b3-qcv"/>
+                                <exclude reference="qeh-N6-D9x"/>
+                                <exclude reference="uoy-N2-uSM"/>
+                                <exclude reference="AuK-bR-fIk"/>
+                                <exclude reference="byb-Ih-ybX"/>
+                                <exclude reference="kbn-4U-gZZ"/>
+                                <exclude reference="nBc-cz-MqJ"/>
+                                <exclude reference="uPg-9Q-CBK"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -5123,26 +5123,20 @@ Two times at WWDC!</string>
                                 <include reference="BbM-nF-pSR"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="17X-1c-82O"/>
-                                <exclude reference="8Or-7s-l9c"/>
-                                <include reference="AuK-bR-fIk"/>
-                                <exclude reference="amS-im-Mr4"/>
-                                <include reference="byb-Ih-ybX"/>
-                                <exclude reference="hEr-MA-L17"/>
-                                <include reference="kbn-4U-gZZ"/>
-                                <include reference="nBc-cz-MqJ"/>
-                                <include reference="uPg-9Q-CBK"/>
-                                <exclude reference="z0t-yv-8Pq"/>
-                                <include reference="24i-T5-rZH"/>
-                                <include reference="25y-p8-sh6"/>
-                                <include reference="26i-zr-An1"/>
-                                <include reference="V7P-fl-Ud1"/>
-                                <exclude reference="W6a-Da-2d6"/>
-                                <include reference="gwD-b3-qcv"/>
-                                <include reference="qeh-N6-D9x"/>
-                                <exclude reference="rlm-4g-Kco"/>
-                                <include reference="uoy-N2-uSM"/>
-                                <exclude reference="zRN-CT-FvA"/>
+                                <include reference="4AN-LW-8Jb"/>
+                                <exclude reference="FVN-HS-iRC"/>
+                                <include reference="PjX-TD-DKr"/>
+                                <exclude reference="g5O-mk-Xx1"/>
+                                <include reference="jIb-2v-bO5"/>
+                                <exclude reference="lPr-hN-37i"/>
+                                <exclude reference="sQa-I8-cml"/>
+                                <exclude reference="u4e-hm-ThN"/>
+                                <include reference="C3m-RR-vOq"/>
+                                <exclude reference="CeV-Vn-6ee"/>
+                                <exclude reference="JGi-1x-tpP"/>
+                                <include reference="Qnv-Xc-ETG"/>
+                                <include reference="ZX1-wa-kys"/>
+                                <include reference="miB-VU-5IA"/>
                                 <exclude reference="84L-P4-1bv"/>
                                 <include reference="L2b-Nb-kBV"/>
                                 <include reference="a0L-Ed-hak"/>
@@ -5150,12 +5144,6 @@ Two times at WWDC!</string>
                                 <exclude reference="INF-wv-CU7"/>
                                 <exclude reference="K3h-OE-6L2"/>
                                 <include reference="gv2-6v-1Gk"/>
-                                <include reference="C3m-RR-vOq"/>
-                                <exclude reference="CeV-Vn-6ee"/>
-                                <exclude reference="JGi-1x-tpP"/>
-                                <include reference="Qnv-Xc-ETG"/>
-                                <include reference="ZX1-wa-kys"/>
-                                <include reference="miB-VU-5IA"/>
                                 <exclude reference="09J-ra-kiD"/>
                                 <include reference="9bN-x4-6sv"/>
                                 <exclude reference="FPq-Yt-PGH"/>
@@ -5170,14 +5158,26 @@ Two times at WWDC!</string>
                                 <include reference="iaK-5b-xeI"/>
                                 <exclude reference="nuP-Yu-hB0"/>
                                 <exclude reference="t4t-hS-2ax"/>
-                                <include reference="4AN-LW-8Jb"/>
-                                <exclude reference="FVN-HS-iRC"/>
-                                <include reference="PjX-TD-DKr"/>
-                                <exclude reference="g5O-mk-Xx1"/>
-                                <include reference="jIb-2v-bO5"/>
-                                <exclude reference="lPr-hN-37i"/>
-                                <exclude reference="sQa-I8-cml"/>
-                                <exclude reference="u4e-hm-ThN"/>
+                                <include reference="24i-T5-rZH"/>
+                                <include reference="25y-p8-sh6"/>
+                                <include reference="26i-zr-An1"/>
+                                <include reference="V7P-fl-Ud1"/>
+                                <exclude reference="W6a-Da-2d6"/>
+                                <include reference="gwD-b3-qcv"/>
+                                <include reference="qeh-N6-D9x"/>
+                                <exclude reference="rlm-4g-Kco"/>
+                                <include reference="uoy-N2-uSM"/>
+                                <exclude reference="zRN-CT-FvA"/>
+                                <exclude reference="17X-1c-82O"/>
+                                <exclude reference="8Or-7s-l9c"/>
+                                <include reference="AuK-bR-fIk"/>
+                                <exclude reference="amS-im-Mr4"/>
+                                <include reference="byb-Ih-ybX"/>
+                                <exclude reference="hEr-MA-L17"/>
+                                <include reference="kbn-4U-gZZ"/>
+                                <include reference="nBc-cz-MqJ"/>
+                                <include reference="uPg-9Q-CBK"/>
+                                <exclude reference="z0t-yv-8Pq"/>
                             </mask>
                         </variation>
                     </view>
