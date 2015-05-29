@@ -140,9 +140,9 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
             annotationView!.cluster = annotation
             return annotationView
         } else if annotation.isKindOfClass(scholarAnnotation.classForCoder()) {
-            var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier("ScholarAnnotation") as? MKPinAnnotationView
+            var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier("ScholarAnnotation")
             if pinView == nil {
-                pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "ScholarAnnotation")
+                pinView = MKAnnotationView(annotation: annotation, reuseIdentifier: "ScholarAnnotation")
                 pinView?.canShowCallout = true
                 pinView?.rightCalloutAccessoryView = UIButton.buttonWithType(UIButtonType.DetailDisclosure) as! UIButton
                 pinView?.rightCalloutAccessoryView.tintColor = UIColor.blackColor()
@@ -156,7 +156,7 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
     }
     
     func mapView(mapView: MKMapView!, annotationView view: MKAnnotationView!, calloutAccessoryControlTapped control: UIControl!) {
-        if view.isKindOfClass(MKPinAnnotationView.classForCoder()) {
+        if view.isKindOfClass(MKAnnotationView.classForCoder()) {
             mapView.deselectAnnotation(view.annotation, animated: true)
             let title = view.annotation.title
             currentScholar = DataManager.sharedInstance.getScholarByName(title!)
