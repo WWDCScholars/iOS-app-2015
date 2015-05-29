@@ -37,7 +37,6 @@ class EditDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
 
     
     
-    
     @IBOutlet var appScreenshot1: UIButton!
     @IBAction func appScreenshot1Button(sender: AnyObject) {
         screenshot = 1
@@ -125,6 +124,8 @@ class EditDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
         
         return UIImage(CGImage: imageRef)
     }
+    
+
     
 func verifyAndSubmit(scholar: PFObject) {
         if count(self.age.text) != 0 {
@@ -261,7 +262,7 @@ func imagePickerController(picker: UIImagePickerController, didFinishPickingMedi
         
         // Do any additional setup after loading the view.
         scrollView.scrollEnabled = true
-        scrollView.contentSize = CGSizeMake(self.view.bounds.size.width, 1500)
+        scrollView.contentSize = CGSizeMake(self.view.bounds.size.width, 1746)
         scrollView.showsVerticalScrollIndicator = true
         
         screenshotScrollview.scrollEnabled = true
@@ -319,7 +320,7 @@ func imagePickerController(picker: UIImagePickerController, didFinishPickingMedi
         shortBio.text = ""
         shortBioCharactersLeft.text = "0/250 characters left"
         let query = PFQuery(className: "scholars")
-        query.whereKey("user", equalTo: PFUser.currentUser()!)
+        //query.whereKey("user", equalTo: PFUser.currentUser()!)
         query.getFirstObjectInBackgroundWithBlock { (object, error) -> Void in
             if let loadedUser = object {
                 self.user = loadedUser
@@ -351,6 +352,8 @@ func imagePickerController(picker: UIImagePickerController, didFinishPickingMedi
         }
         
     }
+    
+  
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
