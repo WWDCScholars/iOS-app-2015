@@ -70,6 +70,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             var male = 0
             var female = 0
             var totalAge = 0
+            var youngestAge = 0
+            var oldestAge = 0
             var query = PFQuery(className:"scholars")
             
             var objects = query.findObjects()
@@ -77,7 +79,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     println("Successfully retrieved \(objects!.count) scholars.")
                     if let objects = objects as? [PFObject] {
                         for object in objects {
+                            var age = object.objectForKey("age") as! Int
                             
+                            if (youngestAge == 0){
+                                youngestAge = age
+                            }
+                            if (oldestAge == 0){
+                                oldestAge = age
+                            }
+                            if (age > oldestAge){ oldestAge = age }
+                            if (age < youngestAge){ youngestAge = age }
                             totalAge += (object.objectForKey("age") as! Int)
                             if (object.objectForKey("gender") as? String == "Male"){
                                 male += 1
@@ -92,7 +103,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         println(female)
                         
                         let averageAge = totalAge/objects.count
-                        reply(["success": true, "totalWinners":objects.count, "male": male, "female": female, "averageAge": averageAge])
+                        reply(["success": true, "totalWinners":objects.count, "male": male, "female": female, "averageAge": averageAge, "oldest": oldestAge, "youngest": youngestAge])
                         
 //                } else {
 //                    // Log details of the failure

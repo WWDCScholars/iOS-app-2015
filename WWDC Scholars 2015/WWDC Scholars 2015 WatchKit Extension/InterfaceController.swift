@@ -16,6 +16,8 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet var maleFemaleRatio: WKInterfaceLabel!
     @IBOutlet var averageAge: WKInterfaceLabel!
     
+    @IBOutlet var youngestScholarAge: WKInterfaceLabel!
+    @IBOutlet var oldestScholarAge: WKInterfaceLabel!
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
@@ -36,34 +38,7 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         
-            WKInterfaceController.openParentApplication(["pfquery_request": "dummy_val"]) { userInfo, error in
-                println("User Info: \(userInfo)")
-                println("Error: \(error)")
-                
-                var data = (userInfo as NSDictionary)
-                
-                if let success = data["success"] as? NSNumber {
-                    if success.boolValue == true {
-                        var male = data.objectForKey("male") as! NSNumber
-                        var female = data.objectForKey("female") as! NSNumber
-                        var total = data.objectForKey("totalWinners") as! NSNumber
-                        var averageAge = data.objectForKey("averageAge") as! NSNumber
-
-                        var mfRatioText = NSMutableAttributedString()
-                        mfRatioText.appendAttributedString(NSAttributedString(string: String.fontAwesomeIconWithName(FontAwesome.Male), attributes: [NSFontAttributeName: UIFont.fontAwesomeOfSize(20)] as Dictionary!))
-                        mfRatioText.appendAttributedString(NSAttributedString(string: ": \(male)     ", attributes: [NSFontAttributeName: UIFont.boldSystemFontOfSize(20)] as Dictionary!))
-                        
-                        mfRatioText.appendAttributedString(NSAttributedString(string: String.fontAwesomeIconWithName(FontAwesome.Female), attributes: [NSFontAttributeName: UIFont.fontAwesomeOfSize(20)] as Dictionary!))
-                        mfRatioText.appendAttributedString(NSAttributedString(string: ": \(female)", attributes: [NSFontAttributeName: UIFont.boldSystemFontOfSize(20)] as Dictionary!))
-                        
-                        self.maleFemaleRatio.setAttributedText(mfRatioText)
-                        
-                        self.scholarAmount.setText("\(total) out of 350")
-                        self.averageAge.setText(averageAge.description)
-                    }
-                }
-            }
-            
+            reload()
     }
 
     override func didDeactivate() {
@@ -74,4 +49,44 @@ class InterfaceController: WKInterfaceController {
     @IBAction func goToScholars() {
         self.pushControllerWithName("scholars", context: nil)
     }
+    
+    @IBAction func reload() {
+        WKInterfaceController.openParentApplication(["pfquery_request": "dummy_val"]) { userInfo, error in
+            println("User Info: \(userInfo)")
+            println("Error: \(error)")
+            
+            var data = (userInfo as NSDictionary)
+            
+            if let success = data["success"] as? NSNumber {
+                if success.boolValue == true {
+                    var male = data.objectForKey("male") as! NSNumber
+                    var female = data.objectForKey("female") as! NSNumber
+                    var total = data.objectForKey("totalWinners") as! NSNumber
+                    var averageAge = data.objectForKey("averageAge") as! NSNumber
+                    
+                    var youngestAge = data.objectForKey("youngest") as! NSNumber
+                    var oldestAge = data.objectForKey("oldest") as! NSNumber
+                    
+                    var mfRatioText = NSMutableAttributedString()
+                    mfRatioText.appendAttributedString(NSAttributedString(string: String.fontAwesomeIconWithName(FontAwesome.Male), attributes: [NSFontAttributeName: UIFont.fontAwesomeOfSize(20)] as Dictionary!))
+                    mfRatioText.appendAttributedString(NSAttributedString(string: ": \(male)     ", attributes: [NSFontAttributeName: UIFont.boldSystemFontOfSize(20)] as Dictionary!))
+                    
+                    mfRatioText.appendAttributedString(NSAttributedString(string: String.fontAwesomeIconWithName(FontAwesome.Female), attributes: [NSFontAttributeName: UIFont.fontAwesomeOfSize(20)] as Dictionary!))
+                    mfRatioText.appendAttributedString(NSAttributedString(string: ": \(female)", attributes: [NSFontAttributeName: UIFont.boldSystemFontOfSize(20)] as Dictionary!))
+                    
+                    self.maleFemaleRatio.setAttributedText(mfRatioText)
+                    
+                    self.scholarAmount.setText("\(total) out of 350")
+                    self.averageAge.setText(averageAge.description)
+                    
+                    self.youngestScholarAge.setText("\(youngestAge)")
+                    self.oldestScholarAge.setText("\(oldestAge)")
+                    
+                }
+            }
+        }
+    }
+    
+    
+    
 }
