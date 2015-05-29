@@ -97,6 +97,14 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
         // Dispose of any resources that can be recreated.
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
     
     
     func buttonAction(sender:UIButton!)
