@@ -48,7 +48,7 @@ class CreditsViewController: UIViewController, UIScrollViewDelegate {
     }
 
     @IBAction func openWebsite(sender: AnyObject) {
-        UIApplication.sharedApplication().openURL(NSURL(string: "http://wwdcscholars.com")!)
+        UIApplication.sharedApplication().openURL(NSURL(string: "https://michieriffic.typeform.com/to/iLcHKn")!)
     }
     
     @IBAction func backButtonClicked(sender: UIButton) {
