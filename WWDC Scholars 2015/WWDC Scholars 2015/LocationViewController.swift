@@ -69,7 +69,7 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
         button.layer.shadowRadius = 2
         self.view.addSubview(button)
         
-        self.segmentedControl.layer.cornerRadius = 4.0
+        self.segmentedControl.layer.cornerRadius = 5.0
         
         
         for scholar in scholarArray {
