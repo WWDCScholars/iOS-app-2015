@@ -2,13 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "scholarIcon.png"
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "scholarIcon@2x.png"
+      "filename" : "scholarIcon.png"
     },
     {
       "idiom" : "universal",
