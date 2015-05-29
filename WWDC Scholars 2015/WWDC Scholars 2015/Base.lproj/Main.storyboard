@@ -362,19 +362,15 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="URD-qi-aeU" customClass="DesignableView" customModule="WWDC_Scholars_2015" customModuleProvider="target">
                                                     <rect key="frame" x="160" y="160" width="280" height="280"/>
                                                     <subviews>
-                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Scholar" minimumFontSize="17" background="input-outline-active" translatesAutoresizingMaskIntoConstraints="NO" id="aHm-oc-4yZ" customClass="DesignableTextField" customModule="WWDC_Scholars_2015" customModuleProvider="target">
-                                                            <rect key="frame" x="15" y="109" width="250" height="44"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
-                                                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
-                                                                    <integer key="value" value="50"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
-                                                                    <integer key="value" value="10"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                        </textField>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="scholarIcon" translatesAutoresizingMaskIntoConstraints="NO" id="VDd-yR-cmZ">
+                                                            <rect key="frame" x="115" y="19" width="50" height="50"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WWDC Scholars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqM-mJ-Ikp">
+                                                            <rect key="frame" x="59" y="72" width="162" height="21"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="19"/>
+                                                            <color key="textColor" red="0.63921568630000003" green="0.35294117650000001" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="Password" minimumFontSize="17" background="input-outline-active" translatesAutoresizingMaskIntoConstraints="NO" id="9wF-bN-cic" customClass="DesignableTextField" customModule="WWDC_Scholars_2015" customModuleProvider="target">
                                                             <rect key="frame" x="15" y="167" width="250" height="30"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
@@ -393,7 +389,7 @@
                                                             <color key="backgroundColor" red="0.63921568630000003" green="0.35294117650000001" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <state key="normal" title="Login">
+                                                            <state key="normal" title="Enter">
                                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                             </state>
                                                             <userDefinedRuntimeAttributes>
@@ -412,23 +408,24 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-user" translatesAutoresizingMaskIntoConstraints="NO" id="ss1-8A-vYn" customClass="SpringImageView" customModule="WWDC_Scholars_2015" customModuleProvider="target">
-                                                            <rect key="frame" x="30" y="117" width="25" height="25"/>
+                                                            <rect key="frame" x="30" y="112" width="25" height="25"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="string" keyPath="animation" value="zoomIn"/>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log in to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCc-Ot-pMS">
-                                                            <rect key="frame" x="71" y="34" width="139" height="21"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
-                                                            <color key="textColor" red="0.63921568630000003" green="0.35294117650000001" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WWDC Scholars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqM-mJ-Ikp">
-                                                            <rect key="frame" x="59" y="61" width="162" height="21"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
-                                                            <color key="textColor" red="0.63921568630000003" green="0.35294117650000001" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Scholar" minimumFontSize="17" background="input-outline-active" translatesAutoresizingMaskIntoConstraints="NO" id="aHm-oc-4yZ" customClass="DesignableTextField" customModule="WWDC_Scholars_2015" customModuleProvider="target">
+                                                            <rect key="frame" x="15" y="103" width="250" height="44"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                                    <integer key="value" value="50"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                                                    <integer key="value" value="10"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </textField>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -1076,7 +1073,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="2030"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kV2-5G-mbJ">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kV2-5G-mbJ">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="2030"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scholarIcon" translatesAutoresizingMaskIntoConstraints="NO" id="tjf-kw-Dwi">
