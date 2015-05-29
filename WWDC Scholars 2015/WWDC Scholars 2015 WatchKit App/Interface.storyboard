@@ -12,8 +12,8 @@
                     <items>
                         <group width="1" alignment="left" layout="vertical" spacing="0.0" id="5xX-8i-EiQ">
                             <items>
-                                <label width="1" alignment="left" text="Total amount scholars" textAlignment="center" minimumScaleFactor="0.50000000000000011" id="qAi-eA-C8Z">
-                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                <label width="1" alignment="left" text="Total number of scholars" textAlignment="center" minimumScaleFactor="0.50000000000000011" id="qAi-eA-C8Z">
+                                    <fontDescription key="font" type="system" pointSize="11"/>
                                 </label>
                                 <label width="1" alignment="left" text="0 out of 350" textAlignment="center" id="QKb-eh-w4o">
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
@@ -23,17 +23,17 @@
                         <group width="1" alignment="left" layout="vertical" spacing="0.0" id="Wvg-kY-kbQ">
                             <items>
                                 <label width="1" alignment="left" text="Male/Female" textAlignment="center" minimumScaleFactor="0.50000000000000011" id="Zr3-3y-Xop">
-                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                    <fontDescription key="font" type="system" pointSize="11"/>
                                 </label>
                                 <label width="1" alignment="left" text="placeholder" textAlignment="center" minimumScaleFactor="0.10000000000000001" id="yjF-ls-PIB">
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
                                 </label>
                             </items>
                         </group>
-                        <group width="1" alignment="left" layout="vertical" spacing="0.0" id="pEy-Fy-bz0">
+                        <group width="1" alignment="left" hidden="YES" layout="vertical" spacing="0.0" id="pEy-Fy-bz0">
                             <items>
                                 <label width="1" alignment="left" text="Most common city" textAlignment="center" minimumScaleFactor="0.50000000000000011" id="N98-HA-AEa">
-                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                    <fontDescription key="font" type="system" pointSize="11"/>
                                 </label>
                                 <label width="1" alignment="left" text="New York" textAlignment="center" minimumScaleFactor="0.10000000000000001" id="4wG-Ww-g0N">
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
@@ -43,19 +43,39 @@
                         <group width="1" alignment="left" layout="vertical" spacing="0.0" id="4s8-fZ-foq">
                             <items>
                                 <label width="1" alignment="left" text="Average age" textAlignment="center" minimumScaleFactor="0.50000000000000011" id="HqY-re-x2X">
-                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                    <fontDescription key="font" type="system" pointSize="11"/>
                                 </label>
                                 <label width="1" alignment="left" text="0" textAlignment="center" minimumScaleFactor="0.10000000000000001" id="vs3-ZN-jPa">
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
                                 </label>
                             </items>
                         </group>
+                        <group width="1" alignment="left" layout="vertical" spacing="0.0" id="ZNj-Sc-TXM">
+                            <items>
+                                <label width="1" alignment="left" text="Age of youngest scholar" textAlignment="center" minimumScaleFactor="0.50000000000000011" id="ubt-d3-Kbd">
+                                    <fontDescription key="font" type="system" pointSize="11"/>
+                                </label>
+                                <label width="1" alignment="left" text="0" textAlignment="center" minimumScaleFactor="0.10000000000000001" id="bQC-7W-pDP">
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" spacing="0.0" id="14F-bl-sMe">
+                            <items>
+                                <label width="1" alignment="left" text="Age of oldest scholar" textAlignment="center" minimumScaleFactor="0.50000000000000011" id="L6m-zb-RgJ">
+                                    <fontDescription key="font" type="system" pointSize="11"/>
+                                </label>
+                                <label width="1" alignment="left" text="0" textAlignment="center" minimumScaleFactor="0.10000000000000001" id="i2A-U9-fc2">
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
+                                </label>
+                            </items>
+                        </group>
                     </items>
-                    <menu key="menu" id="tIv-cc-EMo">
+                    <menu key="menu" id="r8Z-Ck-fpQ">
                         <items>
-                            <menuItem title="Scholars" icon="accept" id="EjD-PK-yRJ">
+                            <menuItem title="Reload" icon="repeat" id="PZD-N8-gsr">
                                 <connections>
-                                    <action selector="goToScholars" destination="wHh-Pz-AyL" id="Tqk-gk-smz"/>
+                                    <action selector="reload" destination="wHh-Pz-AyL" id="CIk-aU-d0C"/>
                                 </connections>
                             </menuItem>
                         </items>
@@ -64,7 +84,9 @@
                         <outlet property="averageAge" destination="vs3-ZN-jPa" id="PW5-3T-zdd"/>
                         <outlet property="maleFemaleRatio" destination="yjF-ls-PIB" id="46A-i5-5VR"/>
                         <outlet property="mostCommonCity" destination="4wG-Ww-g0N" id="evj-3L-h3Q"/>
+                        <outlet property="oldestScholarAge" destination="i2A-U9-fc2" id="bU9-MH-aKy"/>
                         <outlet property="scholarAmount" destination="QKb-eh-w4o" id="OXf-SG-hDP"/>
+                        <outlet property="youngestScholarAge" destination="bQC-7W-pDP" id="12R-sj-zHJ"/>
                     </connections>
                 </controller>
             </objects>
