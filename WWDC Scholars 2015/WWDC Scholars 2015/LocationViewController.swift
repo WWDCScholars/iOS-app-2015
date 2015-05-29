@@ -144,6 +144,7 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
     
     func mapView(mapView: MKMapView!, annotationView view: MKAnnotationView!, calloutAccessoryControlTapped control: UIControl!) {
         if view.isKindOfClass(MKPinAnnotationView.classForCoder()) {
+            mapView.deselectAnnotation(view.annotation, animated: true)
             let title = view.annotation.title
             currentScholar = DataManager.sharedInstance.getScholarByName(title!)
             self.performSegueWithIdentifier("transformToScholarDetail", sender: self)
