@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>FA9929F8-5AD3-4DAF-BB73-F9287A86DE4B</string>
 	<key>IDESourceControlProjectName</key>
-	<string>WWDC Scholars 2015</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>84A7BF928AB34B88411D38BB053F4EA3F8529FDC</key>
 		<string>https://github.com/WWDC-Students/WWDC-Scholars-iOS-2015.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>WWDC Scholars 2015/WWDC Scholars 2015.xcodeproj</string>
+	<string>WWDC Scholars 2015/WWDC Scholars 2015.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>84A7BF928AB34B88411D38BB053F4EA3F8529FDC</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>84A7BF928AB34B88411D38BB053F4EA3F8529FDC</string>
 			<key>IDESourceControlWCCName</key>
-			<string>WWDC-Scholars-iOS-2015</string>
+			<string>WWDC%20Scholars%202015%204</string>
 		</dict>
 	</array>
 </dict>
