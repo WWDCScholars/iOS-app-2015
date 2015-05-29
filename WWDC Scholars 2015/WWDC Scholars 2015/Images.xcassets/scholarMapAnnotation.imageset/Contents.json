@@ -3,15 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "scholarMapAnnotation_meitu_4.png"
+      "filename" : "scholarMapAnnotation.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "scholarMapAnnotation@2x.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "scholarMapAnnotation@3x.png"
     }
   ],
   "info" : {
