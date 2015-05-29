@@ -263,12 +263,14 @@ func imagePickerController(picker: UIImagePickerController, didFinishPickingMedi
         // Do any additional setup after loading the view.
         scrollView.scrollEnabled = true
         scrollView.contentSize = CGSizeMake(self.view.bounds.size.width, 1746)
-        scrollView.showsVerticalScrollIndicator = true
+//        scrollView.showsVerticalScrollIndicator = true
         
         screenshotScrollview.scrollEnabled = true
         screenshotScrollview.contentSize = CGSizeMake(600, 249)
-        screenshotScrollview.showsHorizontalScrollIndicator = true
+//        screenshotScrollview.showsHorizontalScrollIndicator = true
 
+        profpic.layer.cornerRadius = 10
+        profpic.layer.masksToBounds = true
         
         
         let paddingView3 = UIView(frame: CGRectMake(0, 0, 8, self.age.frame.height))
@@ -319,6 +321,7 @@ func imagePickerController(picker: UIImagePickerController, didFinishPickingMedi
         saveButton.layer.borderColor = UIColor.purpleColor().CGColor
         shortBio.text = ""
         shortBioCharactersLeft.text = "0/250 characters left"
+        
         let query = PFQuery(className: "scholars")
         //query.whereKey("user", equalTo: PFUser.currentUser()!)
         query.getFirstObjectInBackgroundWithBlock { (object, error) -> Void in
