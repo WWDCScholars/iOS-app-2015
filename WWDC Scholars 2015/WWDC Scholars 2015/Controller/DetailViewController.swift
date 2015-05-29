@@ -63,7 +63,8 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         let zoomRegion = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D(latitude: (currentScholar!.latitude), longitude: (currentScholar!.longitude)), 1000000, 1000000)
             
         mapView.setRegion(zoomRegion, animated: true)
-        mapView.addAnnotation(scholarAnnotation(coordinate: CLLocationCoordinate2D(latitude: (currentScholar!.latitude), longitude: (currentScholar!.longitude)), title: "", subtitle: ""))
+        mapView.addAnnotation(scholarAnnotation(coordinate: CLLocationCoordinate2D(latitude: (currentScholar!.latitude), longitude: (currentScholar!.longitude)), title: (currentScholar?.name)!, subtitle: (currentScholar?.location)!))
+        
         mapView.userInteractionEnabled = false
         
         imgScholar.layer.cornerRadius = 30
