@@ -324,6 +324,24 @@ func imagePickerController(picker: UIImagePickerController, didFinishPickingMedi
             if let loadedUser = object {
                 self.user = loadedUser
                 self.name.text = (loadedUser["firstName"] as! String) + " " + (loadedUser["lastName"] as! String)
+                self.age.text = String(stringInterpolationSegment: loadedUser["age"] as! NSNumber)
+                let date: NSDate = loadedUser["birthday"] as! NSDate
+                let formatter = NSDateFormatter()
+                formatter.dateFormat = "MM/DD/YYYY"
+                self.dateOfBirth.text = formatter.stringFromDate(date)
+                self.gender.text = loadedUser["gender"] as? String
+                self.cityCountry.text = loadedUser["location"] as? String
+                self.shortBio.text = loadedUser["shortBio"] as? String
+            self.previousWWDC.text = ", ".join((loadedUser["batchWWDC"] as! [String]))
+                self.appVideo.text = loadedUser["videoLink"] as? String
+                self.githubLink.text = loadedUser["githubLinkApp"] as? String
+                self.email.text = loadedUser["email"] as? String
+                self.twitterUsername.text = loadedUser["twitter"] as? String
+                self.facebookUsername.text = loadedUser["facebook"] as? String
+                self.githubUsername.text = loadedUser["github"] as? String
+                self.linkedinUsername.text = loadedUser["linkedin"] as? String
+                self.websiteLink.text = loadedUser["website"] as? String
+                self.itunesLink.text = loadedUser["itunes"] as? String
                 (loadedUser["profilePic"] as! PFFile).getDataInBackgroundWithBlock({ (data, error) -> Void in
                     if let picData = data {
                         self.profpic.setBackgroundImage(UIImage(data: picData), forState: UIControlState.Normal)
