@@ -35,6 +35,14 @@ class CreditsViewController: UIViewController, UIScrollViewDelegate {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func pinched(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func swiped(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     override func viewWillLayoutSubviews() {
         self.scrollView.contentSize = CGSizeMake(UIScreen.mainScreen().bounds.width, 2030)
     }
