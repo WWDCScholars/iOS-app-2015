@@ -54,7 +54,7 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
         }
         self.performSegueWithIdentifier("toDetail", sender: self)
     }
-    
+    /*
     func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
         switch kind {
         case UICollectionElementKindSectionFooter:
@@ -64,7 +64,7 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
         default:
             assert(false, "Unexpected element kind")
         }
-    }
+    }*/
     
     func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
         cell.layer.transform = CATransform3DMakeScale(0.1,0.1,1)
@@ -84,6 +84,15 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
         self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateCollectionView", name: "onScholarsLoadedNotification", object: nil)
         
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     
