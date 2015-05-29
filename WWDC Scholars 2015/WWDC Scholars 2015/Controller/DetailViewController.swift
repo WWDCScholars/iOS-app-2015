@@ -9,7 +9,7 @@
 import UIKit
 import QuickLook
 
-class DetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, URBMediaFocusViewControllerDelegate, UIGestureRecognizerDelegate {
+class DetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, URBMediaFocusViewControllerDelegate, UIGestureRecognizerDelegate,MKMapViewDelegate {
     
     @IBAction func pinched(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
@@ -63,7 +63,10 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         let zoomRegion = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D(latitude: (currentScholar!.latitude), longitude: (currentScholar!.longitude)), 1000000, 1000000)
             
         mapView.setRegion(zoomRegion, animated: true)
-        mapView.addAnnotation(scholarAnnotation(coordinate: CLLocationCoordinate2D(latitude: (currentScholar!.latitude), longitude: (currentScholar!.longitude)), title: (currentScholar?.name)!, subtitle: (currentScholar?.location)!))
+        let anno = scholarAnnotation(coordinate: CLLocationCoordinate2D(latitude: (currentScholar!.latitude), longitude: (currentScholar!.longitude)), title: (currentScholar?.name)!, subtitle: (currentScholar?.location)!)
+        let pinView = MKAnnotationView(annotation: anno, reuseIdentifier: "ScholarAnnotation")
+        mapView.addAnnotation(pinView.annotation)
+
         
         mapView.userInteractionEnabled = false
         
@@ -308,6 +311,15 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         self.presentViewController(nav, animated: true, completion: nil)
     }
     
+    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+        let pinView = MKAnnotationView(annotation: annotation, reuseIdentifier: "ScholarAnnotation")
+        //pinView?.canShowCallout = true
+        //pinView?.rightCalloutAccessoryView = UIButton.buttonWithType(UIButtonType.DetailDisclosure) as! UIButton
+        //pinView?.rightCalloutAccessoryView.tintColor = UIColor.blackColor()
+        pinView?.image = UIImage(named: "scholarMapAnnotation")
+        return pinView
+
+    }
     
     
     
