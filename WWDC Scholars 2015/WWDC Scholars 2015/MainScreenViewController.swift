@@ -184,4 +184,11 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
         
         self.scholarsCollectionView.collectionViewLayout.invalidateLayout()
     }
+    
+    
+    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+        println(scrollView)
+    }
+    
+    
 }
