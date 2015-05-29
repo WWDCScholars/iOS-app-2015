@@ -4402,22 +4402,22 @@ Two times at WWDC!</string>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="191" id="0eO-Sh-reA"/>
                                     <constraint firstAttribute="width" constant="400" id="2Az-nj-jM4"/>
-                                    <constraint firstAttribute="height" constant="191" id="4vt-Z5-Lf3"/>
                                     <constraint firstAttribute="height" constant="234" id="g9E-gr-iqH"/>
+                                    <constraint firstAttribute="height" constant="191" id="mxE-9U-0Jq"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="0eO-Sh-reA"/>
                                         <exclude reference="2Az-nj-jM4"/>
-                                        <exclude reference="4vt-Z5-Lf3"/>
+                                        <exclude reference="mxE-9U-0Jq"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <exclude reference="0eO-Sh-reA"/>
                                         <exclude reference="2Az-nj-jM4"/>
-                                        <include reference="4vt-Z5-Lf3"/>
                                         <exclude reference="g9E-gr-iqH"/>
+                                        <include reference="mxE-9U-0Jq"/>
                                     </mask>
                                 </variation>
                             </mapView>
@@ -4428,12 +4428,12 @@ Two times at WWDC!</string>
                                     <constraint firstAttribute="width" secondItem="0wG-oj-9i7" secondAttribute="height" multiplier="400:161" id="3WE-QQ-68h"/>
                                     <constraint firstAttribute="width" constant="399" id="5u0-A8-qsY"/>
                                     <constraint firstAttribute="height" constant="163" id="ARZ-e4-mlb"/>
-                                    <constraint firstAttribute="height" constant="163" id="FXw-BI-yML"/>
                                     <constraint firstAttribute="width" constant="375" id="IAk-X1-GNR"/>
                                     <constraint firstAttribute="width" constant="370" id="IpE-53-Wx1">
                                         <variation key="heightClass=regular-widthClass=compact" constant="375"/>
                                     </constraint>
                                     <constraint firstAttribute="width" secondItem="0wG-oj-9i7" secondAttribute="height" multiplier="70:27" id="J3u-Qa-BHW"/>
+                                    <constraint firstAttribute="height" constant="163" id="UW3-Gf-qWu"/>
                                     <constraint firstAttribute="height" constant="163" id="W2a-LD-G5q"/>
                                     <constraint firstAttribute="width" constant="350" id="a6f-xW-4bX"/>
                                     <constraint firstAttribute="height" constant="163" id="b9X-to-rFC"/>
@@ -4452,10 +4452,10 @@ Two times at WWDC!</string>
                                         <exclude reference="3WE-QQ-68h"/>
                                         <exclude reference="5u0-A8-qsY"/>
                                         <exclude reference="ARZ-e4-mlb"/>
-                                        <exclude reference="FXw-BI-yML"/>
                                         <exclude reference="IAk-X1-GNR"/>
                                         <exclude reference="IpE-53-Wx1"/>
                                         <exclude reference="J3u-Qa-BHW"/>
+                                        <exclude reference="UW3-Gf-qWu"/>
                                         <exclude reference="W2a-LD-G5q"/>
                                         <exclude reference="a6f-xW-4bX"/>
                                         <exclude reference="b9X-to-rFC"/>
@@ -4475,10 +4475,10 @@ Two times at WWDC!</string>
                                         <exclude reference="3WE-QQ-68h"/>
                                         <exclude reference="5u0-A8-qsY"/>
                                         <exclude reference="ARZ-e4-mlb"/>
-                                        <include reference="FXw-BI-yML"/>
                                         <exclude reference="IAk-X1-GNR"/>
                                         <exclude reference="IpE-53-Wx1"/>
                                         <exclude reference="J3u-Qa-BHW"/>
+                                        <include reference="UW3-Gf-qWu"/>
                                         <exclude reference="W2a-LD-G5q"/>
                                         <exclude reference="a6f-xW-4bX"/>
                                         <exclude reference="b9X-to-rFC"/>
@@ -4497,9 +4497,9 @@ Two times at WWDC!</string>
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42.5" id="1eG-H0-klg"/>
+                                    <constraint firstAttribute="width" constant="93" id="3bN-3j-uJl"/>
                                     <constraint firstAttribute="height" constant="35" id="6tK-lI-lTb"/>
                                     <constraint firstAttribute="width" constant="136" id="7DI-zn-F9u"/>
-                                    <constraint firstAttribute="height" constant="43" id="7Sr-5g-Sdv"/>
                                     <constraint firstAttribute="height" constant="52" id="AIj-YV-dGp"/>
                                     <constraint firstAttribute="width" constant="86" id="CLF-1n-yBb"/>
                                     <constraint firstAttribute="width" constant="136" id="F5O-LL-enc"/>
@@ -4508,8 +4508,8 @@ Two times at WWDC!</string>
                                     <constraint firstAttribute="height" constant="42.5" id="SJf-0Z-Mgn"/>
                                     <constraint firstAttribute="width" constant="217" id="T2n-OO-dfI"/>
                                     <constraint firstAttribute="height" constant="55" id="Vyx-6a-A03"/>
-                                    <constraint firstAttribute="width" constant="136" id="fuy-dm-B1t"/>
                                     <constraint firstAttribute="width" constant="136" id="k9X-HU-r8v"/>
+                                    <constraint firstAttribute="height" constant="93" id="kTU-1l-ypF"/>
                                     <constraint firstAttribute="height" constant="52" id="kkJ-bd-hd5"/>
                                     <constraint firstAttribute="height" constant="69" id="oxd-oH-F3n"/>
                                     <constraint firstAttribute="width" constant="113" id="vBQ-lk-qCO"/>
@@ -4521,9 +4521,9 @@ Two times at WWDC!</string>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="1eG-H0-klg"/>
+                                        <exclude reference="3bN-3j-uJl"/>
                                         <exclude reference="6tK-lI-lTb"/>
                                         <exclude reference="7DI-zn-F9u"/>
-                                        <exclude reference="7Sr-5g-Sdv"/>
                                         <exclude reference="AIj-YV-dGp"/>
                                         <exclude reference="CLF-1n-yBb"/>
                                         <exclude reference="F5O-LL-enc"/>
@@ -4532,8 +4532,8 @@ Two times at WWDC!</string>
                                         <exclude reference="SJf-0Z-Mgn"/>
                                         <exclude reference="T2n-OO-dfI"/>
                                         <exclude reference="Vyx-6a-A03"/>
-                                        <exclude reference="fuy-dm-B1t"/>
                                         <exclude reference="k9X-HU-r8v"/>
+                                        <exclude reference="kTU-1l-ypF"/>
                                         <exclude reference="kkJ-bd-hd5"/>
                                         <exclude reference="oxd-oH-F3n"/>
                                         <exclude reference="vBQ-lk-qCO"/>
@@ -4543,9 +4543,9 @@ Two times at WWDC!</string>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <exclude reference="1eG-H0-klg"/>
+                                        <include reference="3bN-3j-uJl"/>
                                         <exclude reference="6tK-lI-lTb"/>
                                         <exclude reference="7DI-zn-F9u"/>
-                                        <include reference="7Sr-5g-Sdv"/>
                                         <exclude reference="AIj-YV-dGp"/>
                                         <exclude reference="CLF-1n-yBb"/>
                                         <exclude reference="F5O-LL-enc"/>
@@ -4554,8 +4554,8 @@ Two times at WWDC!</string>
                                         <exclude reference="SJf-0Z-Mgn"/>
                                         <exclude reference="T2n-OO-dfI"/>
                                         <exclude reference="Vyx-6a-A03"/>
-                                        <include reference="fuy-dm-B1t"/>
                                         <exclude reference="k9X-HU-r8v"/>
+                                        <include reference="kTU-1l-ypF"/>
                                         <exclude reference="kkJ-bd-hd5"/>
                                         <exclude reference="oxd-oH-F3n"/>
                                         <exclude reference="vBQ-lk-qCO"/>
@@ -4570,10 +4570,11 @@ Two times at WWDC!</string>
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="GAA-6K-GDS"/>
-                                    <constraint firstAttribute="height" constant="43" id="SjY-R3-oc4"/>
+                                    <constraint firstAttribute="width" constant="93" id="ScN-UA-yjY"/>
                                     <constraint firstAttribute="width" constant="113" id="gma-AT-lov"/>
                                     <constraint firstAttribute="width" constant="84" id="iUX-bR-UgJ"/>
                                     <constraint firstAttribute="height" constant="42.5" id="iXp-jN-vML"/>
+                                    <constraint firstAttribute="height" constant="93" id="xLg-2I-QKI"/>
                                     <constraint firstAttribute="height" constant="35" id="yxo-bX-QHg"/>
                                     <constraint firstAttribute="width" constant="136" id="z1v-CL-zw3"/>
                                 </constraints>
@@ -4583,10 +4584,11 @@ Two times at WWDC!</string>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="GAA-6K-GDS"/>
-                                        <exclude reference="SjY-R3-oc4"/>
+                                        <exclude reference="ScN-UA-yjY"/>
                                         <exclude reference="gma-AT-lov"/>
                                         <exclude reference="iUX-bR-UgJ"/>
                                         <exclude reference="iXp-jN-vML"/>
+                                        <exclude reference="xLg-2I-QKI"/>
                                         <exclude reference="yxo-bX-QHg"/>
                                         <exclude reference="z1v-CL-zw3"/>
                                     </mask>
@@ -4594,10 +4596,11 @@ Two times at WWDC!</string>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <exclude reference="GAA-6K-GDS"/>
-                                        <include reference="SjY-R3-oc4"/>
+                                        <include reference="ScN-UA-yjY"/>
                                         <exclude reference="gma-AT-lov"/>
                                         <exclude reference="iUX-bR-UgJ"/>
                                         <exclude reference="iXp-jN-vML"/>
+                                        <include reference="xLg-2I-QKI"/>
                                         <exclude reference="yxo-bX-QHg"/>
                                         <exclude reference="z1v-CL-zw3"/>
                                     </mask>
@@ -4609,53 +4612,75 @@ Two times at WWDC!</string>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wwdcscholars" translatesAutoresizingMaskIntoConstraints="NO" id="jd6-Qe-8fv">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="155" id="NqS-ac-Y9g"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="41" id="0bS-ff-9cv"/>
+                                    <constraint firstAttribute="height" constant="41" id="Fvg-Cl-uxh"/>
+                                    <constraint firstAttribute="height" constant="41" id="Gqr-cP-xzw"/>
+                                    <constraint firstAttribute="width" constant="93" id="RPU-yz-Aly"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="NqS-ac-Y9g"/>
+                                        <exclude reference="0bS-ff-9cv"/>
+                                        <exclude reference="Fvg-Cl-uxh"/>
+                                        <exclude reference="Gqr-cP-xzw"/>
+                                        <exclude reference="RPU-yz-Aly"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="123" y="739" width="155" height="53"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
-                                        <include reference="NqS-ac-Y9g"/>
+                                        <exclude reference="0bS-ff-9cv"/>
+                                        <include reference="Fvg-Cl-uxh"/>
+                                        <exclude reference="Gqr-cP-xzw"/>
+                                        <include reference="RPU-yz-Aly"/>
                                     </mask>
                                 </variation>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="jd6-Qe-8fv" firstAttribute="top" secondItem="MlJ-U5-HGS" secondAttribute="bottom" constant="67" id="09J-ra-kiD"/>
                             <constraint firstItem="MlJ-U5-HGS" firstAttribute="top" secondItem="LP0-YZ-pcz" secondAttribute="bottom" id="17X-1c-82O"/>
-                            <constraint firstItem="jd6-Qe-8fv" firstAttribute="leading" secondItem="0wG-oj-9i7" secondAttribute="leading" id="1bW-R6-tR2"/>
-                            <constraint firstItem="Ayj-cf-GR6" firstAttribute="top" secondItem="HO0-Sc-Wtn" secondAttribute="bottom" constant="6" id="1eq-Yy-bXW"/>
-                            <constraint firstItem="jd6-Qe-8fv" firstAttribute="top" secondItem="MlJ-U5-HGS" secondAttribute="bottom" constant="54" id="3Qn-ow-ud1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="HO0-Sc-Wtn" secondAttribute="trailing" constant="-21" id="6lf-VW-Ltu"/>
+                            <constraint firstItem="LP0-YZ-pcz" firstAttribute="leading" secondItem="MyJ-rq-Yku" secondAttribute="leading" id="3dp-0y-mly"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ayj-cf-GR6" secondAttribute="trailing" constant="-19" id="4AN-LW-8Jb"/>
                             <constraint firstItem="MlJ-U5-HGS" firstAttribute="leading" secondItem="MyJ-rq-Yku" secondAttribute="leading" id="8Or-7s-l9c"/>
-                            <constraint firstItem="0wG-oj-9i7" firstAttribute="bottom" secondItem="IJ0-4j-GkO" secondAttribute="top" id="BbS-5r-fSM"/>
+                            <constraint firstItem="LP0-YZ-pcz" firstAttribute="top" secondItem="6Ph-6h-tBi" secondAttribute="bottom" id="9Nj-ds-B3T"/>
+                            <constraint firstItem="jd6-Qe-8fv" firstAttribute="bottom" secondItem="IJ0-4j-GkO" secondAttribute="top" id="9bN-x4-6sv"/>
+                            <constraint firstItem="MlJ-U5-HGS" firstAttribute="top" secondItem="LP0-YZ-pcz" secondAttribute="bottom" id="AuK-bR-fIk"/>
+                            <constraint firstItem="HO0-Sc-Wtn" firstAttribute="leading" secondItem="MyJ-rq-Yku" secondAttribute="leadingMargin" constant="-23" id="C3m-RR-vOq"/>
                             <constraint firstItem="HO0-Sc-Wtn" firstAttribute="leading" secondItem="0wG-oj-9i7" secondAttribute="trailing" constant="-131" id="CeV-Vn-6ee"/>
-                            <constraint firstItem="LP0-YZ-pcz" firstAttribute="trailing" secondItem="MlJ-U5-HGS" secondAttribute="trailing" id="DZ8-vx-jTa"/>
+                            <constraint firstItem="jd6-Qe-8fv" firstAttribute="leading" secondItem="HO0-Sc-Wtn" secondAttribute="trailing" constant="68" id="FPq-Yt-PGH"/>
                             <constraint firstItem="Ayj-cf-GR6" firstAttribute="centerY" secondItem="0wG-oj-9i7" secondAttribute="centerY" constant="61.5" id="FVN-HS-iRC"/>
-                            <constraint firstItem="Ayj-cf-GR6" firstAttribute="trailing" secondItem="HO0-Sc-Wtn" secondAttribute="trailing" id="HZq-ku-EFX"/>
                             <constraint firstItem="0wG-oj-9i7" firstAttribute="leading" secondItem="jd6-Qe-8fv" secondAttribute="leading" id="INF-wv-CU7"/>
                             <constraint firstItem="HO0-Sc-Wtn" firstAttribute="centerY" secondItem="0wG-oj-9i7" secondAttribute="centerY" constant="11.75" id="JGi-1x-tpP"/>
-                            <constraint firstItem="HO0-Sc-Wtn" firstAttribute="top" secondItem="MlJ-U5-HGS" secondAttribute="bottom" constant="18" id="JOQ-3G-s70"/>
                             <constraint firstItem="0wG-oj-9i7" firstAttribute="centerY" secondItem="jd6-Qe-8fv" secondAttribute="centerY" constant="-54" id="K3h-OE-6L2"/>
-                            <constraint firstItem="IJ0-4j-GkO" firstAttribute="top" secondItem="jd6-Qe-8fv" secondAttribute="bottom" constant="1" id="Nfn-wK-opO"/>
-                            <constraint firstItem="LP0-YZ-pcz" firstAttribute="leading" secondItem="MyJ-rq-Yku" secondAttribute="leading" id="OOe-96-TES"/>
-                            <constraint firstItem="MlJ-U5-HGS" firstAttribute="top" secondItem="LP0-YZ-pcz" secondAttribute="bottom" id="OVL-GF-k0q"/>
-                            <constraint firstAttribute="trailing" secondItem="MlJ-U5-HGS" secondAttribute="trailing" id="OkL-Xx-uUV"/>
+                            <constraint firstItem="jd6-Qe-8fv" firstAttribute="bottom" secondItem="IJ0-4j-GkO" secondAttribute="top" id="MTK-bx-Qxd"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Ayj-cf-GR6" secondAttribute="bottom" constant="-8" id="PjX-TD-DKr"/>
+                            <constraint firstItem="jd6-Qe-8fv" firstAttribute="centerX" secondItem="0wG-oj-9i7" secondAttribute="centerX" id="Qcw-fP-Eed"/>
+                            <constraint firstItem="jd6-Qe-8fv" firstAttribute="top" secondItem="MlJ-U5-HGS" secondAttribute="bottom" constant="67" id="SZm-ek-t3T"/>
+                            <constraint firstItem="jd6-Qe-8fv" firstAttribute="top" secondItem="MlJ-U5-HGS" secondAttribute="bottom" constant="67" id="V8c-FV-FMe"/>
                             <constraint firstAttribute="centerX" secondItem="LP0-YZ-pcz" secondAttribute="centerX" id="W6a-Da-2d6"/>
+                            <constraint firstItem="jd6-Qe-8fv" firstAttribute="leading" secondItem="HO0-Sc-Wtn" secondAttribute="trailing" constant="68" id="WaD-0L-1zA"/>
+                            <constraint firstItem="HO0-Sc-Wtn" firstAttribute="top" secondItem="MlJ-U5-HGS" secondAttribute="bottom" constant="21" id="ZX1-wa-kys"/>
                             <constraint firstAttribute="trailing" secondItem="MlJ-U5-HGS" secondAttribute="trailing" id="amS-im-Mr4"/>
-                            <constraint firstItem="MlJ-U5-HGS" firstAttribute="trailing" secondItem="0wG-oj-9i7" secondAttribute="trailing" id="eQ6-vY-qaQ"/>
-                            <constraint firstItem="LP0-YZ-pcz" firstAttribute="leading" secondItem="MlJ-U5-HGS" secondAttribute="leading" id="fIl-F6-Ci6"/>
+                            <constraint firstAttribute="trailing" secondItem="MlJ-U5-HGS" secondAttribute="trailing" id="byb-Ih-ybX"/>
+                            <constraint firstItem="jd6-Qe-8fv" firstAttribute="leading" secondItem="HO0-Sc-Wtn" secondAttribute="trailing" constant="68" id="eAR-jI-QQG"/>
+                            <constraint firstItem="jd6-Qe-8fv" firstAttribute="centerX" secondItem="0wG-oj-9i7" secondAttribute="centerX" id="eY6-kI-MY0"/>
+                            <constraint firstItem="jd6-Qe-8fv" firstAttribute="centerX" secondItem="0wG-oj-9i7" secondAttribute="centerX" id="g35-dD-4ud"/>
+                            <constraint firstItem="Ayj-cf-GR6" firstAttribute="leading" secondItem="jd6-Qe-8fv" secondAttribute="trailing" constant="63" id="g5O-mk-Xx1"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="0wG-oj-9i7" secondAttribute="bottom" constant="-1" id="gv2-6v-1Gk"/>
                             <constraint firstItem="MlJ-U5-HGS" firstAttribute="trailing" secondItem="LP0-YZ-pcz" secondAttribute="trailing" id="hEr-MA-L17"/>
-                            <constraint firstItem="LP0-YZ-pcz" firstAttribute="top" secondItem="6Ph-6h-tBi" secondAttribute="bottom" id="mvf-kj-zwK"/>
-                            <constraint firstItem="Ayj-cf-GR6" firstAttribute="leading" secondItem="HO0-Sc-Wtn" secondAttribute="leading" id="oNG-Lh-1ql"/>
-                            <constraint firstItem="MlJ-U5-HGS" firstAttribute="leading" secondItem="jd6-Qe-8fv" secondAttribute="leading" id="rIL-JT-jME"/>
+                            <constraint firstItem="jd6-Qe-8fv" firstAttribute="top" secondItem="0wG-oj-9i7" secondAttribute="bottom" constant="-42" id="iaK-5b-xeI"/>
+                            <constraint firstItem="Ayj-cf-GR6" firstAttribute="top" secondItem="MlJ-U5-HGS" secondAttribute="bottom" constant="23" id="jIb-2v-bO5"/>
+                            <constraint firstItem="MlJ-U5-HGS" firstAttribute="trailing" secondItem="0wG-oj-9i7" secondAttribute="trailing" id="kbn-4U-gZZ"/>
+                            <constraint firstItem="Ayj-cf-GR6" firstAttribute="leading" secondItem="jd6-Qe-8fv" secondAttribute="trailing" constant="63" id="lPr-hN-37i"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="HO0-Sc-Wtn" secondAttribute="bottom" constant="-6" id="miB-VU-5IA"/>
+                            <constraint firstItem="MlJ-U5-HGS" firstAttribute="trailing" secondItem="LP0-YZ-pcz" secondAttribute="trailing" id="nBc-cz-MqJ"/>
+                            <constraint firstItem="jd6-Qe-8fv" firstAttribute="top" secondItem="0wG-oj-9i7" secondAttribute="bottom" constant="-42" id="nuP-Yu-hB0"/>
+                            <constraint firstItem="LP0-YZ-pcz" firstAttribute="leading" secondItem="MlJ-U5-HGS" secondAttribute="leading" id="qeh-N6-D9x"/>
                             <constraint firstItem="LP0-YZ-pcz" firstAttribute="leading" secondItem="MlJ-U5-HGS" secondAttribute="leading" id="rlm-4g-Kco"/>
                             <constraint firstItem="Ayj-cf-GR6" firstAttribute="leading" secondItem="0wG-oj-9i7" secondAttribute="trailing" constant="-131" id="sQa-I8-cml"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="Ayj-cf-GR6" secondAttribute="bottom" constant="-2" id="wCj-Eq-fli"/>
+                            <constraint firstItem="jd6-Qe-8fv" firstAttribute="bottom" secondItem="IJ0-4j-GkO" secondAttribute="top" id="t4t-hS-2ax"/>
+                            <constraint firstItem="Ayj-cf-GR6" firstAttribute="leading" secondItem="jd6-Qe-8fv" secondAttribute="trailing" constant="63" id="u4e-hm-ThN"/>
+                            <constraint firstItem="MlJ-U5-HGS" firstAttribute="leading" secondItem="0wG-oj-9i7" secondAttribute="leading" id="uPg-9Q-CBK"/>
                             <constraint firstAttribute="bottom" secondItem="MlJ-U5-HGS" secondAttribute="bottom" id="z0t-yv-8Pq"/>
                             <constraint firstItem="LP0-YZ-pcz" firstAttribute="top" secondItem="6Ph-6h-tBi" secondAttribute="bottom" id="zRN-CT-FvA"/>
                         </constraints>
@@ -4667,31 +4692,45 @@ Two times at WWDC!</string>
                                 <exclude reference="jd6-Qe-8fv"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="1eq-Yy-bXW"/>
-                                <exclude reference="FVN-HS-iRC"/>
-                                <exclude reference="HZq-ku-EFX"/>
-                                <exclude reference="oNG-Lh-1ql"/>
-                                <exclude reference="sQa-I8-cml"/>
-                                <exclude reference="wCj-Eq-fli"/>
-                                <exclude reference="6lf-VW-Ltu"/>
-                                <exclude reference="CeV-Vn-6ee"/>
-                                <exclude reference="JGi-1x-tpP"/>
-                                <exclude reference="JOQ-3G-s70"/>
-                                <exclude reference="BbS-5r-fSM"/>
+                                <exclude reference="3dp-0y-mly"/>
+                                <exclude reference="9Nj-ds-B3T"/>
+                                <exclude reference="W6a-Da-2d6"/>
+                                <exclude reference="qeh-N6-D9x"/>
+                                <exclude reference="AuK-bR-fIk"/>
+                                <exclude reference="byb-Ih-ybX"/>
+                                <exclude reference="kbn-4U-gZZ"/>
+                                <exclude reference="nBc-cz-MqJ"/>
+                                <exclude reference="uPg-9Q-CBK"/>
                                 <exclude reference="INF-wv-CU7"/>
                                 <exclude reference="K3h-OE-6L2"/>
-                                <exclude reference="1bW-R6-tR2"/>
-                                <exclude reference="3Qn-ow-ud1"/>
-                                <exclude reference="DZ8-vx-jTa"/>
-                                <exclude reference="OOe-96-TES"/>
-                                <exclude reference="W6a-Da-2d6"/>
-                                <exclude reference="fIl-F6-Ci6"/>
-                                <exclude reference="mvf-kj-zwK"/>
-                                <exclude reference="OVL-GF-k0q"/>
-                                <exclude reference="OkL-Xx-uUV"/>
-                                <exclude reference="eQ6-vY-qaQ"/>
-                                <exclude reference="rIL-JT-jME"/>
-                                <exclude reference="Nfn-wK-opO"/>
+                                <exclude reference="gv2-6v-1Gk"/>
+                                <exclude reference="C3m-RR-vOq"/>
+                                <exclude reference="CeV-Vn-6ee"/>
+                                <exclude reference="JGi-1x-tpP"/>
+                                <exclude reference="ZX1-wa-kys"/>
+                                <exclude reference="miB-VU-5IA"/>
+                                <exclude reference="09J-ra-kiD"/>
+                                <exclude reference="9bN-x4-6sv"/>
+                                <exclude reference="FPq-Yt-PGH"/>
+                                <exclude reference="MTK-bx-Qxd"/>
+                                <exclude reference="Qcw-fP-Eed"/>
+                                <exclude reference="SZm-ek-t3T"/>
+                                <exclude reference="V8c-FV-FMe"/>
+                                <exclude reference="WaD-0L-1zA"/>
+                                <exclude reference="eAR-jI-QQG"/>
+                                <exclude reference="eY6-kI-MY0"/>
+                                <exclude reference="g35-dD-4ud"/>
+                                <exclude reference="iaK-5b-xeI"/>
+                                <exclude reference="nuP-Yu-hB0"/>
+                                <exclude reference="t4t-hS-2ax"/>
+                                <exclude reference="4AN-LW-8Jb"/>
+                                <exclude reference="FVN-HS-iRC"/>
+                                <exclude reference="PjX-TD-DKr"/>
+                                <exclude reference="g5O-mk-Xx1"/>
+                                <exclude reference="jIb-2v-bO5"/>
+                                <exclude reference="lPr-hN-37i"/>
+                                <exclude reference="sQa-I8-cml"/>
+                                <exclude reference="u4e-hm-ThN"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -4702,38 +4741,52 @@ Two times at WWDC!</string>
                                 <include reference="jd6-Qe-8fv"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="1eq-Yy-bXW"/>
-                                <exclude reference="FVN-HS-iRC"/>
-                                <include reference="HZq-ku-EFX"/>
-                                <include reference="oNG-Lh-1ql"/>
-                                <exclude reference="sQa-I8-cml"/>
-                                <include reference="wCj-Eq-fli"/>
-                                <include reference="6lf-VW-Ltu"/>
-                                <exclude reference="CeV-Vn-6ee"/>
-                                <exclude reference="JGi-1x-tpP"/>
-                                <include reference="JOQ-3G-s70"/>
-                                <include reference="BbS-5r-fSM"/>
-                                <exclude reference="INF-wv-CU7"/>
-                                <exclude reference="K3h-OE-6L2"/>
-                                <include reference="1bW-R6-tR2"/>
-                                <include reference="3Qn-ow-ud1"/>
-                                <include reference="DZ8-vx-jTa"/>
-                                <include reference="OOe-96-TES"/>
+                                <include reference="3dp-0y-mly"/>
+                                <include reference="9Nj-ds-B3T"/>
                                 <exclude reference="W6a-Da-2d6"/>
-                                <include reference="fIl-F6-Ci6"/>
-                                <include reference="mvf-kj-zwK"/>
+                                <include reference="qeh-N6-D9x"/>
                                 <exclude reference="rlm-4g-Kco"/>
                                 <exclude reference="zRN-CT-FvA"/>
                                 <exclude reference="17X-1c-82O"/>
                                 <exclude reference="8Or-7s-l9c"/>
-                                <include reference="OVL-GF-k0q"/>
-                                <include reference="OkL-Xx-uUV"/>
+                                <include reference="AuK-bR-fIk"/>
                                 <exclude reference="amS-im-Mr4"/>
-                                <include reference="eQ6-vY-qaQ"/>
+                                <include reference="byb-Ih-ybX"/>
                                 <exclude reference="hEr-MA-L17"/>
-                                <include reference="rIL-JT-jME"/>
+                                <include reference="kbn-4U-gZZ"/>
+                                <include reference="nBc-cz-MqJ"/>
+                                <include reference="uPg-9Q-CBK"/>
                                 <exclude reference="z0t-yv-8Pq"/>
-                                <include reference="Nfn-wK-opO"/>
+                                <exclude reference="INF-wv-CU7"/>
+                                <exclude reference="K3h-OE-6L2"/>
+                                <include reference="gv2-6v-1Gk"/>
+                                <include reference="C3m-RR-vOq"/>
+                                <exclude reference="CeV-Vn-6ee"/>
+                                <exclude reference="JGi-1x-tpP"/>
+                                <include reference="ZX1-wa-kys"/>
+                                <include reference="miB-VU-5IA"/>
+                                <exclude reference="09J-ra-kiD"/>
+                                <include reference="9bN-x4-6sv"/>
+                                <exclude reference="FPq-Yt-PGH"/>
+                                <exclude reference="MTK-bx-Qxd"/>
+                                <include reference="Qcw-fP-Eed"/>
+                                <exclude reference="SZm-ek-t3T"/>
+                                <include reference="V8c-FV-FMe"/>
+                                <exclude reference="WaD-0L-1zA"/>
+                                <exclude reference="eAR-jI-QQG"/>
+                                <exclude reference="eY6-kI-MY0"/>
+                                <exclude reference="g35-dD-4ud"/>
+                                <include reference="iaK-5b-xeI"/>
+                                <exclude reference="nuP-Yu-hB0"/>
+                                <exclude reference="t4t-hS-2ax"/>
+                                <include reference="4AN-LW-8Jb"/>
+                                <exclude reference="FVN-HS-iRC"/>
+                                <include reference="PjX-TD-DKr"/>
+                                <exclude reference="g5O-mk-Xx1"/>
+                                <include reference="jIb-2v-bO5"/>
+                                <exclude reference="lPr-hN-37i"/>
+                                <exclude reference="sQa-I8-cml"/>
+                                <exclude reference="u4e-hm-ThN"/>
                             </mask>
                         </variation>
                     </view>
