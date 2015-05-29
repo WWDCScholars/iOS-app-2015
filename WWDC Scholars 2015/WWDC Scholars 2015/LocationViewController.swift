@@ -67,6 +67,9 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
         button.layer.shadowOpacity = 0.5
         button.layer.shadowOffset = CGSizeMake(0, 0)
         button.layer.shadowRadius = 2
+        button.layer.cornerRadius = button.frame.width/2
+        button.layer.masksToBounds = true
+        button.backgroundColor = UIColor.whiteColor()
         self.view.addSubview(button)
         
         self.segmentedControl.layer.cornerRadius = 5.0
