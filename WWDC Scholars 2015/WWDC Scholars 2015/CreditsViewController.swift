@@ -21,16 +21,17 @@ class CreditsViewController: UIViewController, UIScrollViewDelegate {
         
         websiteButton.layer.cornerRadius = 7
         websiteButton.layer.borderWidth = 0.5
-        websiteButton.layer.borderColor = UIColor.purpleColor().CGColor
+        websiteButton.layer.borderColor = UIColorFromRGB(0x593A8F).CGColor
         
         loginButton.layer.cornerRadius = 7
         loginButton.layer.borderWidth = 0.5
-        loginButton.layer.borderColor = UIColor.purpleColor().CGColor
+        loginButton.layer.borderColor = UIColorFromRGB(0x593A8F).CGColor
         
         backButton.layer.cornerRadius = 7
         backButton.layer.borderWidth = 0.5
-        backButton.layer.borderColor = UIColor.purpleColor().CGColor
+        backButton.layer.borderColor = UIColorFromRGB(0x593A8F).CGColor
         
+        //593A8F
         
         // Do any additional setup after loading the view.
     }
