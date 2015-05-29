@@ -13,6 +13,17 @@ import CoreLocation
 
 class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelegate,UITableViewDataSource,UITableViewDelegate,UIViewControllerTransitioningDelegate  {
     
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBAction func changeMapTypeTaped(sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            self.mapView.mapType = MKMapType.Standard
+        } else if sender.selectedSegmentIndex == 1 {
+            self.mapView.mapType = MKMapType.Hybrid
+        } else {
+            self.mapView.mapType = MKMapType.Satellite
+        }
+    }
+    @IBOutlet weak var bottomImageView: UIImageView!
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
     
@@ -46,18 +57,20 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
         self.mapView.setRegion(zoomRegion, animated: true)
         mapView.showsUserLocation = true
         mapView.delegate = self
-        
+        mapView.mapType = MKMapType.Standard
         
         //The "Find me" button
         let button = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
-        //println(self.tableView.frame.maxY)
-        button.frame = CGRectMake(UIScreen.mainScreen().bounds.width - 55,10, 50, 50)
+        button.frame = CGRectMake(UIScreen.mainScreen().bounds.width - 55,UIScreen.mainScreen().bounds.height - self.bottomImageView.frame.size.height - 25, 50, 50)
         button.setImage(UIImage(named: "MyLocation"), forState: .Normal)
         button.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
         button.layer.shadowOpacity = 0.5
         button.layer.shadowOffset = CGSizeMake(0, 0)
         button.layer.shadowRadius = 2
         self.view.addSubview(button)
+        
+        self.segmentedControl.layer.cornerRadius = 4.0
+        
         
         for scholar in scholarArray {
             
@@ -195,8 +208,8 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
               
             }
         }
-        self.tableView.clearsContextBeforeDrawing = true
-        self.tableView.reloadData()
+        //self.tableView.clearsContextBeforeDrawing = true
+        //self.tableView.reloadData()
         
         let annotationsToRemove = (self.mapView.annotations as NSArray).mutableCopy() as! NSMutableArray
         annotationsToRemove.removeObject(self.mapView.userLocation)
