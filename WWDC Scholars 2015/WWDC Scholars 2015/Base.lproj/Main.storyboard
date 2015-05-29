@@ -447,7 +447,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="148" id="19G-oU-kh4"/>
                                         </constraints>
-                                        <state key="normal" backgroundImage="scholarIcon">
+                                        <state key="normal" backgroundImage="no-profile">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
