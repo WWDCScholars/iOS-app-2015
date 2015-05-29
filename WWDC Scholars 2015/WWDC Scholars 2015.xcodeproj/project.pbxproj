@@ -25,6 +25,7 @@
 		4082116F1B0E292300D567AC /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408211691B0E292300D567AC /* ParseUI.framework */; };
 		408211711B0E292300D567AC /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4082116B1B0E292300D567AC /* Bolts.framework */; };
 		408211761B0E296A00D567AC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408211751B0E296A00D567AC /* DataManager.swift */; };
+		4085BAE91B18E2A4009CB2B7 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4085BAE81B18E2A4009CB2B7 /* Utils.swift */; };
 		40CA931A1B125BEB006F3BEA /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4082116A1B0E292300D567AC /* ParseCrashReporting.framework */; };
 		40CA931C1B125C68006F3BEA /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CA931B1B125C68006F3BEA /* libstdc++.6.dylib */; };
 		6E9ECAD01B13BD3D00289D2D /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9ECACF1B13BD3D00289D2D /* CreditsViewController.swift */; };
@@ -125,6 +126,7 @@
 		4082116A1B0E292300D567AC /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
 		4082116B1B0E292300D567AC /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		408211751B0E296A00D567AC /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		4085BAE81B18E2A4009CB2B7 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		40CA931B1B125C68006F3BEA /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
 		6E9ECACF1B13BD3D00289D2D /* CreditsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
 		6EEA0A141B0ED45900B99130 /* MainScreenFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenFooter.swift; sourceTree = "<group>"; };
@@ -396,6 +398,7 @@
 				C00C27751B0D5D37008C19AE /* Header.h */,
 				C00C27481B0D5C9C008C19AE /* LaunchScreen.xib */,
 				C00C273E1B0D5C9C008C19AE /* Info.plist */,
+				4085BAE81B18E2A4009CB2B7 /* Utils.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -757,6 +760,7 @@
 				F9007BB91B148D2A00E2BB09 /* AsyncButton.swift in Sources */,
 				F9007BD61B148D2A00E2BB09 /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				408211761B0E296A00D567AC /* DataManager.swift in Sources */,
+				4085BAE91B18E2A4009CB2B7 /* Utils.swift in Sources */,
 				C00C27701B0D5CEC008C19AE /* QTree.m in Sources */,
 				F9007BD01B148D2A00E2BB09 /* SpringTextField.swift in Sources */,
 				F9007BC01B148D2A00E2BB09 /* DesignableTextField.swift in Sources */,

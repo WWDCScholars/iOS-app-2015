@@ -173,8 +173,11 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
 
-        if(UIScreen.mainScreen().bounds.size.width == 320.0){
-            return CGSizeMake(125,125);
+        if(DeviceType.IS_IPHONE_5 || DeviceType.IS_IPHONE_4_OR_LESS){
+            return CGSizeMake(85,85);
+        }
+        if (DeviceType.IS_IPHONE_6P){
+            return CGSizeMake(115,115)
         }
   
         return CGSizeMake(100,100)
@@ -189,6 +192,4 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
     func scrollViewWillBeginDragging(scrollView: UIScrollView) {
         println(scrollView)
     }
-    
-    
 }
