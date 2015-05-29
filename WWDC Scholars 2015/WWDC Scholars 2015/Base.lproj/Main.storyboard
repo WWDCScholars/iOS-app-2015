@@ -2345,7 +2345,7 @@ Two times at WWDC!</string>
                                 <include reference="dQU-Dx-kzT"/>
                                 <exclude reference="eRn-aN-qYd"/>
                                 <exclude reference="E5d-E9-QTg"/>
-                                <include reference="ZkE-Lv-iWQ"/>
+                                <exclude reference="ZkE-Lv-iWQ"/>
                                 <include reference="BQ5-PK-jqx"/>
                                 <exclude reference="WZ9-Av-WT2"/>
                                 <exclude reference="qXr-AV-r1e"/>
@@ -2941,8 +2941,8 @@ Two times at WWDC!</string>
         <image name="wwdcscholars" width="680" height="224"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EyO-Cu-GgD"/>
+        <segue reference="DyR-D1-yrL"/>
         <segue reference="iL3-5n-g4p"/>
-        <segue reference="dZ8-0W-jxb"/>
+        <segue reference="JZ3-vC-fi4"/>
     </inferredMetricsTieBreakers>
 </document>
