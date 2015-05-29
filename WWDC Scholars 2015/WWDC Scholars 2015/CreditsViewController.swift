@@ -36,7 +36,7 @@ class CreditsViewController: UIViewController, UIScrollViewDelegate {
     }
     
     override func viewWillLayoutSubviews() {
-        self.scrollView.contentSize = CGSizeMake(UIScreen.mainScreen().bounds.width, 2025)
+        self.scrollView.contentSize = CGSizeMake(UIScreen.mainScreen().bounds.width, 2030)
     }
 
     @IBAction func openWebsite(sender: AnyObject) {
