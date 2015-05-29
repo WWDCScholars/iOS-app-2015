@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E26a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2fS-oi-cWY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D87h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2fS-oi-cWY">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -78,6 +78,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                             <connections>
                                                                 <action selector="signupButtonPressed:" destination="guk-jL-bKW" eventType="touchUpInside" id="W9Z-sE-sTv"/>
+                                                                <segue destination="uyN-Za-RBa" kind="presentation" identifier="edit" modalTransitionStyle="coverVertical" id="ZJJ-Xm-NhB"/>
                                                             </connections>
                                                         </button>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-key" translatesAutoresizingMaskIntoConstraints="NO" id="17f-NQ-8Dy" customClass="SpringImageView" customModule="WWDC_Scholars_2015" customModuleProvider="target">
@@ -163,7 +164,6 @@
                         <outlet property="passwordImageView" destination="17f-NQ-8Dy" id="a4n-mf-Ah7"/>
                         <outlet property="passwordTextField" destination="9wF-bN-cic" id="XI3-zS-nKZ"/>
                         <outlet property="signupButton" destination="BTe-PH-mCu" id="Vwt-e3-MbF"/>
-                        <segue destination="PQl-js-iA9" kind="show" identifier="edit" id="cZx-vr-EWp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sHV-N1-cQC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -195,7 +195,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lxM-Mw-dl9">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxM-Mw-dl9">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="1500"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GENERAL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reZ-zx-Sg9">
@@ -241,7 +241,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="Dbc-Zl-Xbq"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Date of birth" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="NX1-Le-GIU">
@@ -250,7 +250,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="fXM-8l-w4Y"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Gender" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="XLU-tp-bAl">
@@ -259,7 +259,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="1PZ-2Q-VNz"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City, Country" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ifD-n5-uVK">
@@ -268,7 +268,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="tEg-ES-psa"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="(Example: WWDC15, WWDC14, WWDC13, ...)" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="q3k-QK-1QV">
@@ -277,7 +277,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="SLd-to-P8E"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="YouTube or Vimeo link of your app" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Nlp-h4-61x">
@@ -286,7 +286,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="jJm-xM-Xgj"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Github link of your app" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="m9f-IV-NI6">
@@ -295,13 +295,13 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="hI4-So-L1c"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8yn-Gy-OZI">
                                         <rect key="frame" x="0.0" y="427" width="600" height="120"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X/250 characters left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fie-BX-80S">
@@ -334,75 +334,75 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="MUB-Ku-auu"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Twitter username" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bRd-u5-cD6">
-                                        <rect key="frame" x="137" y="1083" width="463" height="44"/>
+                                    <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Twitter username" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bRd-u5-cD6">
+                                        <rect key="frame" x="93" y="1083" width="507" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="lmj-aI-KHM"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Twitter.com/" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xpv-xk-Xuy">
-                                        <rect key="frame" x="8" y="1094" width="94" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Twitter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xpv-xk-Xuy">
+                                        <rect key="frame" x="8" y="1094" width="50" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Facebook username" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="OWQ-xn-Cfo">
-                                        <rect key="frame" x="137" y="1135" width="463" height="44"/>
+                                    <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Facebook username" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="OWQ-xn-Cfo">
+                                        <rect key="frame" x="93" y="1135" width="507" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="vzu-IX-7qH"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facebook.com/" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvE-0V-ybM">
-                                        <rect key="frame" x="8" y="1146" width="121" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Facebook" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvE-0V-ybM">
+                                        <rect key="frame" x="8" y="1146" width="77" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="mfa-7G-UMX"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Github username" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aq8-Hq-Tx3">
-                                        <rect key="frame" x="137" y="1187" width="463" height="44"/>
+                                    <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Github username" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aq8-Hq-Tx3">
+                                        <rect key="frame" x="93" y="1187" width="507" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="kqu-un-UMW"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Github.com/" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLI-5s-ime">
-                                        <rect key="frame" x="8" y="1198" width="96" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Github" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLI-5s-ime">
+                                        <rect key="frame" x="8" y="1198" width="52" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="yZ3-pB-0GT"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="LinkedIn username" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Cbx-U5-z1D">
-                                        <rect key="frame" x="137" y="1239" width="463" height="44"/>
+                                    <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="LinkedIn username" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Cbx-U5-z1D">
+                                        <rect key="frame" x="93" y="1239" width="507" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="mZv-Yw-xzS"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LinkedIn.com/" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZU-Da-1nz">
-                                        <rect key="frame" x="8" y="1250" width="110" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Linkedin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZU-Da-1nz">
+                                        <rect key="frame" x="8" y="1250" width="66" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="qOv-uf-hTG"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -430,7 +430,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="3fi-UP-NKG"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="http://" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="h12-n8-pba">
@@ -439,7 +439,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="jbS-Ye-3TD"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLv-Ne-sYq">
@@ -447,7 +447,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="148" id="19G-oU-kh4"/>
                                         </constraints>
-                                        <state key="normal" backgroundImage="wwdc2015-top-logo">
+                                        <state key="normal" backgroundImage="no-profile">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -538,7 +538,7 @@
                                             <constraint firstAttribute="width" constant="70" id="NGD-cP-hoY"/>
                                             <constraint firstAttribute="height" constant="35" id="cMM-4p-WOf"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="27"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
                                         <state key="normal" title="Save">
                                             <color key="titleColor" red="0.63921568630000003" green="0.35294117650000001" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -553,7 +553,7 @@
                                             <constraint firstAttribute="height" constant="21" id="kGL-G6-shw"/>
                                             <constraint firstAttribute="width" constant="335" id="o7e-6j-cbT"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -663,7 +663,6 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="lxM-Mw-dl9" firstAttribute="height" secondItem="Oer-10-ZHw" secondAttribute="height" id="ISO-Dy-DeQ"/>
                             <constraint firstAttribute="centerX" secondItem="lxM-Mw-dl9" secondAttribute="centerX" id="Mas-V0-9Vs"/>
@@ -674,7 +673,7 @@
                     <navigationItem key="navigationItem" id="0kU-m0-DtZ">
                         <nil key="title"/>
                         <view key="titleView" contentMode="scaleToFill" id="zgi-kF-eT2">
-                            <rect key="frame" x="180" y="5.5" width="240" height="33"/>
+                            <rect key="frame" x="180" y="6" width="240" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edit your details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHh-mN-pNP">
@@ -720,7 +719,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5t-cj-KO0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5335.5" y="3268.5"/>
+            <point key="canvasLocation" x="3878" y="3715"/>
         </scene>
         <!--Intro View Controller-->
         <scene sceneID="3SO-3a-R1S">
@@ -756,7 +755,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="2030"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scholarIcon" translatesAutoresizingMaskIntoConstraints="NO" id="tjf-kw-Dwi">
-                                        <rect key="frame" x="238" y="40" width="120" height="120"/>
+                                        <rect key="frame" x="238" y="30" width="120" height="120"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="120" id="3jr-gX-a0n"/>
                                             <constraint firstAttribute="width" constant="120" id="Wqs-2e-9yd"/>
@@ -777,7 +776,7 @@
                                         </variation>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="di4-IC-X0c">
-                                        <rect key="frame" x="20" y="168" width="560" height="75"/>
+                                        <rect key="frame" x="20" y="158" width="560" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="DEZ-GG-UWU"/>
                                             <constraint firstAttribute="height" constant="75" id="Gej-bK-jQp"/>
@@ -798,7 +797,7 @@
                                         </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOP-p1-SOV">
-                                        <rect key="frame" x="312" y="246" width="110" height="37"/>
+                                        <rect key="frame" x="312" y="236" width="110" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="110" id="6sU-Df-6KP"/>
                                             <constraint firstAttribute="width" constant="110" id="BDJ-HG-OXY"/>
@@ -823,7 +822,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsq-st-aQP">
-                                        <rect key="frame" x="179" y="246" width="110" height="37"/>
+                                        <rect key="frame" x="179" y="236" width="110" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="110" id="Nn1-mM-ah8"/>
                                             <constraint firstAttribute="height" constant="37" id="Q6q-Ew-LMW"/>
@@ -852,7 +851,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Credits" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvQ-nT-v4a">
-                                        <rect key="frame" x="8" y="291" width="584" height="42"/>
+                                        <rect key="frame" x="8" y="281" width="584" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="Rux-W3-WrD"/>
                                             <constraint firstAttribute="height" constant="42" id="zQ7-uh-96m"/>
@@ -872,7 +871,7 @@
                                         </variation>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AndrewWalker" translatesAutoresizingMaskIntoConstraints="NO" id="uUC-fx-iB1">
-                                        <rect key="frame" x="48" y="578" width="55" height="55"/>
+                                        <rect key="frame" x="48" y="568" width="55" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="U8F-3m-pqs"/>
                                             <constraint firstAttribute="height" constant="55" id="bgj-WB-a22"/>
@@ -889,7 +888,7 @@
                                         </variation>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AmanJain" translatesAutoresizingMaskIntoConstraints="NO" id="3n1-iP-Fcq">
-                                        <rect key="frame" x="48" y="705" width="55" height="55"/>
+                                        <rect key="frame" x="48" y="695" width="55" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="suX-RB-oZM"/>
                                             <constraint firstAttribute="height" constant="55" id="wvp-4H-Mf1"/>
@@ -906,7 +905,7 @@
                                         </variation>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HarshitaGupta" translatesAutoresizingMaskIntoConstraints="NO" id="GgE-57-FRJ">
-                                        <rect key="frame" x="48" y="894" width="55" height="55"/>
+                                        <rect key="frame" x="48" y="884" width="55" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="MuW-S2-llj"/>
                                             <constraint firstAttribute="height" constant="55" id="V3k-kZ-Fpm"/>
@@ -923,7 +922,7 @@
                                         </variation>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CharleyHutchison" translatesAutoresizingMaskIntoConstraints="NO" id="nUc-78-hYA">
-                                        <rect key="frame" x="48" y="768" width="55" height="55"/>
+                                        <rect key="frame" x="48" y="758" width="55" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="Xlg-71-neW"/>
                                             <constraint firstAttribute="height" constant="55" id="dLh-6T-amW"/>
@@ -940,7 +939,7 @@
                                         </variation>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NikhilDSouza250" translatesAutoresizingMaskIntoConstraints="NO" id="gHz-mK-XRH">
-                                        <rect key="frame" x="48" y="831" width="55" height="55"/>
+                                        <rect key="frame" x="48" y="821" width="55" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="joV-m5-qKr"/>
                                             <constraint firstAttribute="height" constant="55" id="rcc-o6-SDO"/>
@@ -957,7 +956,7 @@
                                         </variation>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MatthewPanzer" translatesAutoresizingMaskIntoConstraints="NO" id="lXb-BN-IVK">
-                                        <rect key="frame" x="48" y="1020" width="55" height="55"/>
+                                        <rect key="frame" x="48" y="1010" width="55" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="nVm-Vf-9YW"/>
                                             <constraint firstAttribute="height" constant="55" id="zmO-sS-nmf"/>
@@ -974,7 +973,7 @@
                                         </variation>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SamEckert" translatesAutoresizingMaskIntoConstraints="NO" id="kvu-3m-NPd">
-                                        <rect key="frame" x="48" y="957" width="55" height="55"/>
+                                        <rect key="frame" x="48" y="947" width="55" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="Rj9-N5-Yxe"/>
                                             <constraint firstAttribute="height" constant="55" id="ifY-11-Aj9"/>
@@ -991,10 +990,10 @@
                                         </variation>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MichieAng" translatesAutoresizingMaskIntoConstraints="NO" id="pGv-yJ-FFq">
-                                        <rect key="frame" x="48" y="1083" width="55" height="55"/>
+                                        <rect key="frame" x="48" y="1073" width="55" height="55"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AlexanderZimin" translatesAutoresizingMaskIntoConstraints="NO" id="mD9-dd-HIa">
-                                        <rect key="frame" x="48" y="641" width="55" height="55"/>
+                                        <rect key="frame" x="48" y="631" width="55" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="czv-c0-U55"/>
                                             <constraint firstAttribute="height" constant="55" id="gBr-HL-tyM"/>
@@ -1011,7 +1010,7 @@
                                         </variation>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGu-C3-9Pr">
-                                        <rect key="frame" x="48" y="1149" width="206" height="23"/>
+                                        <rect key="frame" x="48" y="1139" width="206" height="23"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                         <color key="textColor" red="0.23921568627450981" green="0.40784313725490196" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1034,13 +1033,13 @@
                                         </variation>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aman Jain" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNp-3C-3OG">
-                                        <rect key="frame" x="111" y="712" width="119" height="24"/>
+                                        <rect key="frame" x="111" y="702" width="119" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jabalpur, India" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMm-Dc-ug1">
-                                        <rect key="frame" x="111" y="731" width="118" height="22"/>
+                                        <rect key="frame" x="111" y="721" width="118" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="o2V-YY-JcT"/>
                                             <constraint firstAttribute="height" constant="22" id="sHr-sw-SOH"/>
@@ -1060,13 +1059,13 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nikhil D'Souza" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtN-e9-9X5">
-                                        <rect key="frame" x="111" y="838" width="119" height="24"/>
+                                        <rect key="frame" x="111" y="828" width="119" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="California, USA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4LK-8d-qFo">
-                                        <rect key="frame" x="111" y="861" width="118" height="22"/>
+                                        <rect key="frame" x="111" y="851" width="118" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="Acl-V5-lMg"/>
                                             <constraint firstAttribute="height" constant="22" id="sMt-Ab-GGc"/>
@@ -1086,13 +1085,13 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matthew Panzer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UuS-BT-Dxa">
-                                        <rect key="frame" x="112" y="1027" width="119" height="24"/>
+                                        <rect key="frame" x="112" y="1017" width="119" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New York, USA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZx-iB-JI9">
-                                        <rect key="frame" x="112" y="1046" width="118" height="22"/>
+                                        <rect key="frame" x="112" y="1036" width="118" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="aJx-Yi-Edt"/>
                                             <constraint firstAttribute="height" constant="22" id="wqd-hb-vci"/>
@@ -1112,13 +1111,13 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Michie Ang" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hM9-7y-F6F">
-                                        <rect key="frame" x="111" y="1090" width="119" height="24"/>
+                                        <rect key="frame" x="111" y="1080" width="119" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manila, Philippines" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYC-fr-ANk">
-                                        <rect key="frame" x="111" y="1109" width="118" height="22"/>
+                                        <rect key="frame" x="111" y="1099" width="118" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="ECn-uf-PtX"/>
                                             <constraint firstAttribute="height" constant="22" id="qKZ-CQ-9C7"/>
@@ -1138,13 +1137,13 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Andrew Walker" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6c3-lg-USq">
-                                        <rect key="frame" x="112" y="585" width="119" height="24"/>
+                                        <rect key="frame" x="112" y="575" width="119" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edinburgh, UK" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LA2-0m-pcQ">
-                                        <rect key="frame" x="112" y="604" width="118" height="22"/>
+                                        <rect key="frame" x="112" y="594" width="118" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="efQ-Yd-08o"/>
                                             <constraint firstAttribute="height" constant="22" id="uBn-Hw-9ck"/>
@@ -1164,13 +1163,13 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charley Hutchinson" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfe-87-FV3">
-                                        <rect key="frame" x="111" y="775" width="119" height="24"/>
+                                        <rect key="frame" x="111" y="765" width="119" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mississippi, USA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGA-sx-YmX">
-                                        <rect key="frame" x="111" y="794" width="118" height="22"/>
+                                        <rect key="frame" x="111" y="784" width="118" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="3OX-TY-1O0"/>
                                             <constraint firstAttribute="height" constant="22" id="fB1-ev-oWR"/>
@@ -1190,13 +1189,13 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Harshita Gupta" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Cw-Mp-Ac2">
-                                        <rect key="frame" x="111" y="901" width="119" height="24"/>
+                                        <rect key="frame" x="111" y="891" width="119" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="California, USA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Bf-80-FNh">
-                                        <rect key="frame" x="111" y="920" width="118" height="22"/>
+                                        <rect key="frame" x="111" y="910" width="118" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="hbM-qC-nEi"/>
                                             <constraint firstAttribute="height" constant="22" id="vza-oQ-vTI"/>
@@ -1216,13 +1215,13 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sam Eckert" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEg-Pm-4al">
-                                        <rect key="frame" x="111" y="964" width="119" height="24"/>
+                                        <rect key="frame" x="111" y="954" width="119" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stuttgart, Germany" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GId-sC-w3O">
-                                        <rect key="frame" x="111" y="983" width="118" height="22"/>
+                                        <rect key="frame" x="111" y="973" width="118" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="Hp8-92-QTZ"/>
                                             <constraint firstAttribute="height" constant="22" id="IOA-6u-WmE"/>
@@ -1242,13 +1241,13 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alexander Zimin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Hc-yJ-jo5">
-                                        <rect key="frame" x="111" y="648" width="119" height="24"/>
+                                        <rect key="frame" x="111" y="638" width="119" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moscow, Russia" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qvy-x9-jwV">
-                                        <rect key="frame" x="111" y="668" width="118" height="22"/>
+                                        <rect key="frame" x="111" y="658" width="118" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="qff-jo-bPR"/>
                                             <constraint firstAttribute="height" constant="22" id="s89-gI-564"/>
@@ -1268,10 +1267,10 @@
                                         </variation>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DividingLine" translatesAutoresizingMaskIntoConstraints="NO" id="zWV-ax-zyh">
-                                        <rect key="frame" x="0.0" y="341" width="600" height="1"/>
+                                        <rect key="frame" x="0.0" y="331" width="600" height="1"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OliverBinns" translatesAutoresizingMaskIntoConstraints="NO" id="3du-HO-WhV">
-                                        <rect key="frame" x="49" y="1180" width="55" height="55"/>
+                                        <rect key="frame" x="49" y="1170" width="55" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="pPE-DT-VWM"/>
                                             <constraint firstAttribute="height" constant="55" id="ssu-mf-5UL"/>
@@ -1288,7 +1287,7 @@
                                         </variation>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GautamMittal250" translatesAutoresizingMaskIntoConstraints="NO" id="cUg-1u-C2V">
-                                        <rect key="frame" x="48" y="1243" width="55" height="55"/>
+                                        <rect key="frame" x="48" y="1233" width="55" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="FuZ-7G-bi9"/>
                                             <constraint firstAttribute="height" constant="55" id="OEa-lC-gou"/>
@@ -1305,10 +1304,10 @@
                                         </variation>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MatthijsLogemann" translatesAutoresizingMaskIntoConstraints="NO" id="mAt-jC-05x">
-                                        <rect key="frame" x="48" y="1403" width="55" height="55"/>
+                                        <rect key="frame" x="48" y="1393" width="55" height="55"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MatthijsLogemann" translatesAutoresizingMaskIntoConstraints="NO" id="chl-uY-ru0">
-                                        <rect key="frame" x="49" y="1563" width="55" height="55"/>
+                                        <rect key="frame" x="49" y="1553" width="55" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="3hv-m8-6Bu"/>
                                             <constraint firstAttribute="height" constant="55" id="dHd-a3-xKg"/>
@@ -1325,16 +1324,16 @@
                                         </variation>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OliverBinns" translatesAutoresizingMaskIntoConstraints="NO" id="OH9-vD-PWe">
-                                        <rect key="frame" x="49" y="1626" width="55" height="55"/>
+                                        <rect key="frame" x="49" y="1616" width="55" height="55"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gautam Mittal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqU-or-lMS">
-                                        <rect key="frame" x="112" y="1250" width="119" height="24"/>
+                                        <rect key="frame" x="112" y="1240" width="119" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="California, USA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ybg-hF-AYq">
-                                        <rect key="frame" x="112" y="1269" width="118" height="22"/>
+                                        <rect key="frame" x="112" y="1259" width="118" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="9Ze-uL-AUK"/>
                                             <constraint firstAttribute="height" constant="22" id="Fnt-mh-41Y"/>
@@ -1354,16 +1353,16 @@
                                         </variation>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MichieAng" translatesAutoresizingMaskIntoConstraints="NO" id="9J9-St-5iD">
-                                        <rect key="frame" x="48" y="1306" width="55" height="55"/>
+                                        <rect key="frame" x="48" y="1296" width="55" height="55"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Michie Ang" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLe-4M-Wv0">
-                                        <rect key="frame" x="112" y="1313" width="119" height="24"/>
+                                        <rect key="frame" x="112" y="1303" width="119" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manila, Philippines" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkA-c7-Fk6">
-                                        <rect key="frame" x="112" y="1332" width="118" height="22"/>
+                                        <rect key="frame" x="112" y="1322" width="118" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="3i8-1u-LD9"/>
                                             <constraint firstAttribute="height" constant="22" id="5t8-D1-UFr"/>
@@ -1383,13 +1382,13 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Michie Ang" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pan-6x-rX9">
-                                        <rect key="frame" x="111" y="1507" width="119" height="24"/>
+                                        <rect key="frame" x="111" y="1497" width="119" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manila, Philippines" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biq-7t-MjV">
-                                        <rect key="frame" x="111" y="1526" width="118" height="22"/>
+                                        <rect key="frame" x="111" y="1516" width="118" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="Dj9-A1-kJa"/>
                                             <constraint firstAttribute="height" constant="22" id="JrA-oK-ASS"/>
@@ -1409,13 +1408,13 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oliver Binns" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZn-TP-352">
-                                        <rect key="frame" x="112" y="1187" width="119" height="24"/>
+                                        <rect key="frame" x="112" y="1177" width="119" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="London, UK" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6J-dx-EmL">
-                                        <rect key="frame" x="112" y="1206" width="118" height="22"/>
+                                        <rect key="frame" x="112" y="1196" width="118" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="CXD-g6-l8f"/>
                                             <constraint firstAttribute="height" constant="22" id="Lru-Dc-tiQ"/>
@@ -1435,13 +1434,13 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oliver Binns" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wX-eB-gq8">
-                                        <rect key="frame" x="112" y="1633" width="119" height="24"/>
+                                        <rect key="frame" x="112" y="1623" width="119" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="London, UK" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61R-0s-0uV">
-                                        <rect key="frame" x="112" y="1652" width="118" height="22"/>
+                                        <rect key="frame" x="112" y="1642" width="118" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="CtS-9B-6sR"/>
                                             <constraint firstAttribute="height" constant="22" id="m2g-P4-p0K"/>
@@ -1461,7 +1460,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple Watch" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mkq-CP-wpa">
-                                        <rect key="frame" x="48" y="1372" width="206" height="23"/>
+                                        <rect key="frame" x="48" y="1362" width="206" height="23"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                         <color key="textColor" red="0.96470588235294119" green="0.67450980392156867" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1484,7 +1483,7 @@
                                         </variation>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Database" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpp-sZ-GTT">
-                                        <rect key="frame" x="48" y="1469" width="206" height="23"/>
+                                        <rect key="frame" x="48" y="1459" width="206" height="23"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                         <color key="textColor" red="0.34901960784313724" green="0.74509803921568629" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1507,13 +1506,13 @@
                                         </variation>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matthijs Logeman" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icX-PU-A7D">
-                                        <rect key="frame" x="112" y="1410" width="119" height="24"/>
+                                        <rect key="frame" x="112" y="1400" width="119" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maarn, Netherlands" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbk-oI-LZI">
-                                        <rect key="frame" x="112" y="1429" width="118" height="22"/>
+                                        <rect key="frame" x="112" y="1419" width="118" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="BSS-PI-3aa"/>
                                             <constraint firstAttribute="height" constant="22" id="Oks-71-rSA"/>
@@ -1533,13 +1532,13 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matthijs Logeman" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imH-Aj-l9x">
-                                        <rect key="frame" x="112" y="1570" width="119" height="24"/>
+                                        <rect key="frame" x="112" y="1560" width="119" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maarn, Netherlands" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7v-hT-5ey">
-                                        <rect key="frame" x="112" y="1589" width="118" height="22"/>
+                                        <rect key="frame" x="112" y="1579" width="118" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="Eex-dP-31H"/>
                                             <constraint firstAttribute="height" constant="22" id="Rj3-d9-va2"/>
@@ -1559,7 +1558,7 @@
                                         </variation>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CharleyHutchison" translatesAutoresizingMaskIntoConstraints="NO" id="XJq-sl-QNg">
-                                        <rect key="frame" x="49" y="1691" width="55" height="55"/>
+                                        <rect key="frame" x="49" y="1681" width="55" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="1d1-Qr-MfJ"/>
                                             <constraint firstAttribute="height" constant="55" id="OgU-8k-Ufd"/>
@@ -1576,16 +1575,16 @@
                                         </variation>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GreyChen" translatesAutoresizingMaskIntoConstraints="NO" id="pib-dy-bcG">
-                                        <rect key="frame" x="49" y="1755" width="55" height="55"/>
+                                        <rect key="frame" x="49" y="1745" width="55" height="55"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gelei Chen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehw-Od-lex">
-                                        <rect key="frame" x="112" y="1762" width="119" height="24"/>
+                                        <rect key="frame" x="112" y="1752" width="119" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beijing, China" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QqI-qJ-6SJ">
-                                        <rect key="frame" x="112" y="1779" width="118" height="22"/>
+                                        <rect key="frame" x="112" y="1769" width="118" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="F1R-9f-XOA"/>
                                             <constraint firstAttribute="height" constant="22" id="nLW-hr-Tcq"/>
@@ -1605,7 +1604,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charley Hutchinson" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPu-xf-LEr">
-                                        <rect key="frame" x="112" y="1698" width="119" height="24"/>
+                                        <rect key="frame" x="112" y="1688" width="119" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="k8c-Ad-OtU"/>
                                             <constraint firstAttribute="height" constant="24" id="yFB-sO-HGk"/>
@@ -1625,7 +1624,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mississippi, USA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Kh-Gq-gMP">
-                                        <rect key="frame" x="112" y="1717" width="118" height="22"/>
+                                        <rect key="frame" x="112" y="1707" width="118" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="aTt-Tz-KBr"/>
                                             <constraint firstAttribute="height" constant="22" id="eSj-gg-eJO"/>
@@ -1645,7 +1644,7 @@
                                         </variation>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MichieAng" translatesAutoresizingMaskIntoConstraints="NO" id="oiC-r0-uzD">
-                                        <rect key="frame" x="48" y="1500" width="55" height="55"/>
+                                        <rect key="frame" x="48" y="1490" width="55" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="WIP-2a-P9A"/>
                                             <constraint firstAttribute="height" constant="55" id="iaf-P1-W8g"/>
@@ -1662,7 +1661,7 @@
                                         </variation>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project Manager" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3WH-Si-GpK">
-                                        <rect key="frame" x="48" y="1821" width="206" height="23"/>
+                                        <rect key="frame" x="48" y="1811" width="206" height="23"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="23" id="6MW-k3-cit"/>
                                             <constraint firstAttribute="height" constant="23" id="cBk-7h-JIT"/>
@@ -1682,7 +1681,7 @@
                                         </variation>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProjectManager" translatesAutoresizingMaskIntoConstraints="NO" id="733-vF-ljE">
-                                        <rect key="frame" x="11" y="1818" width="30" height="30"/>
+                                        <rect key="frame" x="11" y="1808" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="gkP-nY-BFq"/>
                                             <constraint firstAttribute="height" constant="30" id="hsS-oR-0GL"/>
@@ -1699,16 +1698,16 @@
                                         </variation>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MichieAng" translatesAutoresizingMaskIntoConstraints="NO" id="GzT-5F-Za4">
-                                        <rect key="frame" x="48" y="1852" width="55" height="55"/>
+                                        <rect key="frame" x="48" y="1842" width="55" height="55"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Michie Ang" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhw-bk-w8t">
-                                        <rect key="frame" x="111" y="1859" width="119" height="24"/>
+                                        <rect key="frame" x="111" y="1849" width="119" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manila, Philippines" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXD-NC-Vdq">
-                                        <rect key="frame" x="111" y="1878" width="118" height="22"/>
+                                        <rect key="frame" x="111" y="1868" width="118" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="Cor-YN-Rh1"/>
                                             <constraint firstAttribute="height" constant="22" id="Leu-W2-1W1"/>
@@ -1728,19 +1727,19 @@
                                         </variation>
                                     </label>
                                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DividingLine" translatesAutoresizingMaskIntoConstraints="NO" id="Syb-fx-01p">
-                                        <rect key="frame" x="48" y="1158" width="551" height="1"/>
+                                        <rect key="frame" x="48" y="1148" width="551" height="1"/>
                                     </imageView>
                                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DividingLine" translatesAutoresizingMaskIntoConstraints="NO" id="lBq-Ul-eM4">
-                                        <rect key="frame" x="48" y="1385" width="551" height="1"/>
+                                        <rect key="frame" x="48" y="1375" width="551" height="1"/>
                                     </imageView>
                                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DividingLine" translatesAutoresizingMaskIntoConstraints="NO" id="1Mq-uU-c0R">
-                                        <rect key="frame" x="48" y="1486" width="551" height="1"/>
+                                        <rect key="frame" x="48" y="1476" width="551" height="1"/>
                                     </imageView>
                                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DividingLine" translatesAutoresizingMaskIntoConstraints="NO" id="AG6-rh-RKN">
-                                        <rect key="frame" x="49" y="1713" width="551" height="1"/>
+                                        <rect key="frame" x="49" y="1703" width="551" height="1"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Stay Hungry, Stay Foolish&quot; - Steve Jobs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYI-es-2gU">
-                                        <rect key="frame" x="20" y="1992" width="560" height="30"/>
+                                        <rect key="frame" x="20" y="1982" width="560" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="dwa-a5-Qxg"/>
                                             <constraint firstAttribute="height" constant="30" id="xoB-Ci-6RB"/>
@@ -1760,7 +1759,7 @@
                                         </variation>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ngiancecchi_test_profile" translatesAutoresizingMaskIntoConstraints="NO" id="vP4-H8-8GM">
-                                        <rect key="frame" x="48" y="391" width="55" height="55"/>
+                                        <rect key="frame" x="48" y="381" width="55" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="55" id="Q6g-IA-Q8k"/>
                                             <constraint firstAttribute="height" constant="55" id="fqt-CN-4c9"/>
@@ -1781,7 +1780,7 @@
                                         </variation>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MatthijsLogemann" translatesAutoresizingMaskIntoConstraints="NO" id="b6j-rO-f8D">
-                                        <rect key="frame" x="48" y="452" width="55" height="55"/>
+                                        <rect key="frame" x="48" y="442" width="55" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="9Rr-pL-oFY"/>
                                             <constraint firstAttribute="height" constant="55" id="BzY-q8-6Da"/>
@@ -1798,7 +1797,7 @@
                                         </variation>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GreyChen" translatesAutoresizingMaskIntoConstraints="NO" id="jwW-yq-I0V">
-                                        <rect key="frame" x="49" y="515" width="55" height="55"/>
+                                        <rect key="frame" x="49" y="505" width="55" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="OqO-6z-975"/>
                                             <constraint firstAttribute="height" constant="55" id="hLu-Dh-Bpy"/>
@@ -1815,13 +1814,13 @@
                                         </variation>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nicola Giancecchi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bp-w2-aYo">
-                                        <rect key="frame" x="111" y="398" width="119" height="24"/>
+                                        <rect key="frame" x="111" y="388" width="119" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone Application" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nwz-qq-T2w">
-                                        <rect key="frame" x="48" y="360" width="206" height="23"/>
+                                        <rect key="frame" x="48" y="350" width="206" height="23"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="206" id="2Uq-4u-ziJ"/>
                                             <constraint firstAttribute="height" constant="23" id="HIL-eM-Jbw"/>
@@ -1845,7 +1844,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="San Marino, SMR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Pe-1e-qpv">
-                                        <rect key="frame" x="111" y="417" width="118" height="22"/>
+                                        <rect key="frame" x="111" y="407" width="118" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="118" id="Fto-Cu-HC6"/>
                                             <constraint firstAttribute="height" constant="22" id="JeZ-g7-ZSj"/>
@@ -1869,7 +1868,7 @@
                                         </variation>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone" translatesAutoresizingMaskIntoConstraints="NO" id="Qf7-U1-2sM">
-                                        <rect key="frame" x="11" y="357" width="30" height="30"/>
+                                        <rect key="frame" x="11" y="347" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="3qD-br-ncD"/>
                                             <constraint firstAttribute="height" constant="30" id="sx7-0f-zl4"/>
@@ -1886,13 +1885,13 @@
                                         </variation>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gelei Chen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oy3-Wq-K0u">
-                                        <rect key="frame" x="112" y="522" width="119" height="24"/>
+                                        <rect key="frame" x="112" y="512" width="119" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beijing, China" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="445-Jf-E2y">
-                                        <rect key="frame" x="112" y="541" width="118" height="22"/>
+                                        <rect key="frame" x="112" y="531" width="118" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="CF7-HT-OUX"/>
                                             <constraint firstAttribute="height" constant="22" id="rii-qz-RGj"/>
@@ -1912,13 +1911,13 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matthijs Logeman" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ti2-dv-AZx">
-                                        <rect key="frame" x="111" y="459" width="119" height="24"/>
+                                        <rect key="frame" x="111" y="449" width="119" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maarn, Netherlands" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Mz-xc-pO4">
-                                        <rect key="frame" x="111" y="478" width="118" height="22"/>
+                                        <rect key="frame" x="111" y="468" width="118" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="cOc-hc-iEs"/>
                                             <constraint firstAttribute="height" constant="22" id="hpo-7Y-zy4"/>
@@ -1938,10 +1937,10 @@
                                         </variation>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DividingLine" translatesAutoresizingMaskIntoConstraints="NO" id="XoQ-Xn-mEj">
-                                        <rect key="frame" x="0.0" y="1922" width="600" height="1"/>
+                                        <rect key="frame" x="0.0" y="1912" width="600" height="1"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbs-x3-C9T">
-                                        <rect key="frame" x="190" y="1947" width="220" height="37"/>
+                                        <rect key="frame" x="190" y="1937" width="220" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="220" id="BBK-4E-9FO"/>
                                             <constraint firstAttribute="width" constant="220" id="Tzw-vC-u6S"/>
@@ -1983,7 +1982,7 @@
                                     <constraint firstItem="zWV-ax-zyh" firstAttribute="leading" secondItem="kV2-5G-mbJ" secondAttribute="leading" id="13Z-Kh-iNx"/>
                                     <constraint firstItem="Nwz-qq-T2w" firstAttribute="leading" secondItem="Qf7-U1-2sM" secondAttribute="trailing" constant="7" id="1Nb-VI-0PR"/>
                                     <constraint firstItem="GgE-57-FRJ" firstAttribute="leading" secondItem="kvu-3m-NPd" secondAttribute="leading" id="1PN-2T-3bj"/>
-                                    <constraint firstItem="tjf-kw-Dwi" firstAttribute="top" secondItem="kV2-5G-mbJ" secondAttribute="top" constant="40" id="1RH-oE-hSA"/>
+                                    <constraint firstItem="tjf-kw-Dwi" firstAttribute="top" secondItem="kV2-5G-mbJ" secondAttribute="top" constant="30" id="1RH-oE-hSA"/>
                                     <constraint firstItem="XJq-sl-QNg" firstAttribute="top" secondItem="OH9-vD-PWe" secondAttribute="bottom" constant="10" id="1Rb-Cc-zEV"/>
                                     <constraint firstItem="Lfe-87-FV3" firstAttribute="top" secondItem="fNp-3C-3OG" secondAttribute="bottom" constant="39" id="1Wt-u1-ojn"/>
                                     <constraint firstItem="icX-PU-A7D" firstAttribute="leading" secondItem="rkA-c7-Fk6" secondAttribute="leading" id="1d7-qw-1Tv"/>
@@ -3254,7 +3253,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1885" y="3269"/>
+            <point key="canvasLocation" x="2085" y="3358"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="Pwz-yi-QM1">
@@ -3308,26 +3307,26 @@ Two times at WWDC!</string>
                                                     </mask>
                                                 </variation>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wO1-9f-6LN">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wO1-9f-6LN">
                                                 <rect key="frame" x="20" y="437" width="560" height="76"/>
                                                 <string key="text">I am a Mobile App Developer from San Marino (SMR). I'm 22. Currently studying Computer Science &amp; Engineering at the University of Bologna (Italy) and working at Mr. APPs srl as iOS Developer. My main interests are programming, design and music.</string>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="16"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="g5u-IO-TJj">
+                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="g5u-IO-TJj">
                                                 <rect key="frame" x="0.0" y="533" width="600" height="270"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="g5u-IO-TJj" secondAttribute="height" multiplier="20:9" id="V1c-ia-7CB"/>
                                                 </constraints>
                                             </mapView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My WWDC App" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggs-oG-RhV">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="My WWDC App" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggs-oG-RhV">
                                                 <rect key="frame" x="20" y="823" width="560" height="27"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
                                                 <color key="textColor" red="0.29019607843137257" green="0.6588235294117647" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect with me!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sh5-bD-Rnf">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Connect with me!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sh5-bD-Rnf">
                                                 <rect key="frame" x="20" y="1208" width="560" height="27"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
                                                 <color key="textColor" red="0.29019607843137257" green="0.6588235294117647" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3359,7 +3358,7 @@ Two times at WWDC!</string>
                                                     </mask>
                                                 </variation>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAJ-6w-2xS">
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAJ-6w-2xS">
                                                 <rect key="frame" x="200" y="870" width="200" height="37"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="VGf-yx-bxw"/>
@@ -3444,7 +3443,7 @@ Two times at WWDC!</string>
                                                     <constraint firstItem="Jiw-4k-Qy5" firstAttribute="leading" secondItem="Kpg-bs-MOn" secondAttribute="leading" id="wjq-mE-Zfr"/>
                                                 </constraints>
                                             </view>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ysb-Sj-6a1">
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ysb-Sj-6a1">
                                                 <rect key="frame" x="0.0" y="948" width="600" height="240"/>
                                                 <color key="backgroundColor" white="0.95266062062937074" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -3461,10 +3460,10 @@ Two times at WWDC!</string>
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="154" height="200"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" tag="100" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no-profile" translatesAutoresizingMaskIntoConstraints="NO" id="B9l-N8-A8C" customClass="AsyncImageView">
+                                                                <imageView clipsSubviews="YES" tag="100" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="no-profile" translatesAutoresizingMaskIntoConstraints="NO" id="B9l-N8-A8C" customClass="AsyncImageView">
                                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                                 </imageView>
                                                             </subviews>
@@ -3610,24 +3609,6 @@ Two times at WWDC!</string>
                 </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3888" y="1821.75"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="5I6-3S-OiO">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PQl-js-iA9" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zhn-qI-7SN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="uyN-Za-RBa" kind="relationship" relationship="rootViewController" id="YLC-l6-Og2"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Svn-yD-Xoz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3945" y="3265.5"/>
         </scene>
         <!--Main Screen View Controller-->
         <scene sceneID="0Ia-Vp-wSL">
@@ -3908,7 +3889,7 @@ Two times at WWDC!</string>
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="j7n-CZ-1V0" kind="presentation" id="DyR-D1-yrL"/>
+                                    <segue destination="j7n-CZ-1V0" kind="presentation" modalTransitionStyle="crossDissolve" id="DyR-D1-yrL"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navigationBarLandscape" translatesAutoresizingMaskIntoConstraints="NO" id="DkA-eO-FKa">
@@ -4069,6 +4050,25 @@ Two times at WWDC!</string>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="toe-Zz-fh0"/>
+                                <exclude reference="6Po-D3-pd8"/>
+                                <exclude reference="AY2-gh-MAa"/>
+                                <exclude reference="kBU-Pg-513"/>
+                                <exclude reference="4YL-cD-u5W"/>
+                                <exclude reference="4dj-TO-9J7"/>
+                                <exclude reference="62l-dl-irq"/>
+                                <exclude reference="8Yr-AN-qR2"/>
+                                <exclude reference="Amd-gy-5L3"/>
+                                <exclude reference="Az3-UB-dgf"/>
+                                <exclude reference="E5d-E9-QTg"/>
+                                <exclude reference="EMH-Dj-q6o"/>
+                                <exclude reference="HtL-9m-hAR"/>
+                                <exclude reference="OWP-rL-Y3n"/>
+                                <exclude reference="U5r-v5-4aV"/>
+                                <exclude reference="Urn-D5-cH0"/>
+                                <exclude reference="ZkE-Lv-iWQ"/>
+                                <exclude reference="aQn-H4-r6s"/>
+                                <exclude reference="cfD-nB-tQO"/>
+                                <exclude reference="eRn-aN-qYd"/>
                                 <exclude reference="1Xt-Xc-riI"/>
                                 <exclude reference="1at-tb-c55"/>
                                 <exclude reference="67w-UT-WMd"/>
@@ -4090,28 +4090,7 @@ Two times at WWDC!</string>
                                 <exclude reference="o0l-kO-4lk"/>
                                 <exclude reference="ota-4d-8uK"/>
                                 <exclude reference="qXr-AV-r1e"/>
-                                <exclude reference="4YL-cD-u5W"/>
-                                <exclude reference="4dj-TO-9J7"/>
-                                <exclude reference="62l-dl-irq"/>
-                                <exclude reference="8Yr-AN-qR2"/>
-                                <exclude reference="Amd-gy-5L3"/>
-                                <exclude reference="Az3-UB-dgf"/>
-                                <exclude reference="E5d-E9-QTg"/>
-                                <exclude reference="EMH-Dj-q6o"/>
-                                <exclude reference="HtL-9m-hAR"/>
-                                <exclude reference="OWP-rL-Y3n"/>
-                                <exclude reference="U5r-v5-4aV"/>
-                                <exclude reference="Urn-D5-cH0"/>
-                                <exclude reference="ZkE-Lv-iWQ"/>
-                                <exclude reference="aQn-H4-r6s"/>
-                                <exclude reference="cfD-nB-tQO"/>
-                                <exclude reference="eRn-aN-qYd"/>
-                                <exclude reference="gZV-ew-OhM"/>
-                                <exclude reference="gd4-7s-vJq"/>
-                                <exclude reference="hx8-Mt-iza"/>
-                                <exclude reference="nBL-8s-La8"/>
-                                <exclude reference="uCM-5Z-plQ"/>
-                                <exclude reference="yoC-3i-1a2"/>
+                                <exclude reference="NYy-p1-EZR"/>
                                 <exclude reference="0Yl-Ge-qfY"/>
                                 <exclude reference="4vO-UF-tgy"/>
                                 <exclude reference="E4h-HC-9eZ"/>
@@ -4134,9 +4113,6 @@ Two times at WWDC!</string>
                                 <exclude reference="gSE-7R-COs"/>
                                 <exclude reference="m5x-je-evW"/>
                                 <exclude reference="zee-rH-UM9"/>
-                                <exclude reference="6Po-D3-pd8"/>
-                                <exclude reference="AY2-gh-MAa"/>
-                                <exclude reference="kBU-Pg-513"/>
                                 <exclude reference="56z-Um-7tE"/>
                                 <exclude reference="G5x-dN-eVH"/>
                                 <exclude reference="HHP-K5-kIa"/>
@@ -4151,7 +4127,12 @@ Two times at WWDC!</string>
                                 <exclude reference="scP-jD-zY7"/>
                                 <exclude reference="uBP-2X-2xP"/>
                                 <exclude reference="wkG-CP-9xt"/>
-                                <exclude reference="NYy-p1-EZR"/>
+                                <exclude reference="gZV-ew-OhM"/>
+                                <exclude reference="gd4-7s-vJq"/>
+                                <exclude reference="hx8-Mt-iza"/>
+                                <exclude reference="nBL-8s-La8"/>
+                                <exclude reference="uCM-5Z-plQ"/>
+                                <exclude reference="yoC-3i-1a2"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=compact">
@@ -4176,6 +4157,25 @@ Two times at WWDC!</string>
                                 <include reference="ygO-hE-WxG"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="6Po-D3-pd8"/>
+                                <exclude reference="AY2-gh-MAa"/>
+                                <exclude reference="kBU-Pg-513"/>
+                                <exclude reference="4YL-cD-u5W"/>
+                                <include reference="4dj-TO-9J7"/>
+                                <exclude reference="62l-dl-irq"/>
+                                <exclude reference="8Yr-AN-qR2"/>
+                                <include reference="Amd-gy-5L3"/>
+                                <exclude reference="Az3-UB-dgf"/>
+                                <exclude reference="E5d-E9-QTg"/>
+                                <exclude reference="EMH-Dj-q6o"/>
+                                <exclude reference="HtL-9m-hAR"/>
+                                <exclude reference="OWP-rL-Y3n"/>
+                                <exclude reference="U5r-v5-4aV"/>
+                                <exclude reference="Urn-D5-cH0"/>
+                                <exclude reference="ZkE-Lv-iWQ"/>
+                                <exclude reference="aQn-H4-r6s"/>
+                                <exclude reference="cfD-nB-tQO"/>
+                                <exclude reference="eRn-aN-qYd"/>
                                 <include reference="1Xt-Xc-riI"/>
                                 <exclude reference="1at-tb-c55"/>
                                 <exclude reference="5ha-8j-TEP"/>
@@ -4199,28 +4199,8 @@ Two times at WWDC!</string>
                                 <include reference="ota-4d-8uK"/>
                                 <exclude reference="qXr-AV-r1e"/>
                                 <exclude reference="yke-55-Qpe"/>
-                                <exclude reference="4YL-cD-u5W"/>
-                                <include reference="4dj-TO-9J7"/>
-                                <exclude reference="62l-dl-irq"/>
-                                <exclude reference="8Yr-AN-qR2"/>
-                                <include reference="Amd-gy-5L3"/>
-                                <exclude reference="Az3-UB-dgf"/>
-                                <exclude reference="E5d-E9-QTg"/>
-                                <exclude reference="EMH-Dj-q6o"/>
-                                <exclude reference="HtL-9m-hAR"/>
-                                <exclude reference="OWP-rL-Y3n"/>
-                                <exclude reference="U5r-v5-4aV"/>
-                                <exclude reference="Urn-D5-cH0"/>
-                                <exclude reference="ZkE-Lv-iWQ"/>
-                                <exclude reference="aQn-H4-r6s"/>
-                                <exclude reference="cfD-nB-tQO"/>
-                                <exclude reference="eRn-aN-qYd"/>
-                                <exclude reference="gZV-ew-OhM"/>
-                                <exclude reference="gd4-7s-vJq"/>
-                                <exclude reference="hx8-Mt-iza"/>
-                                <exclude reference="nBL-8s-La8"/>
-                                <exclude reference="uCM-5Z-plQ"/>
-                                <exclude reference="yoC-3i-1a2"/>
+                                <exclude reference="NYy-p1-EZR"/>
+                                <exclude reference="sgq-3O-4U0"/>
                                 <exclude reference="0Yl-Ge-qfY"/>
                                 <exclude reference="4vO-UF-tgy"/>
                                 <exclude reference="E4h-HC-9eZ"/>
@@ -4243,9 +4223,6 @@ Two times at WWDC!</string>
                                 <exclude reference="gSE-7R-COs"/>
                                 <include reference="m5x-je-evW"/>
                                 <exclude reference="zee-rH-UM9"/>
-                                <exclude reference="6Po-D3-pd8"/>
-                                <exclude reference="AY2-gh-MAa"/>
-                                <exclude reference="kBU-Pg-513"/>
                                 <exclude reference="56z-Um-7tE"/>
                                 <include reference="G5x-dN-eVH"/>
                                 <exclude reference="HHP-K5-kIa"/>
@@ -4260,8 +4237,12 @@ Two times at WWDC!</string>
                                 <exclude reference="scP-jD-zY7"/>
                                 <exclude reference="uBP-2X-2xP"/>
                                 <include reference="wkG-CP-9xt"/>
-                                <exclude reference="NYy-p1-EZR"/>
-                                <exclude reference="sgq-3O-4U0"/>
+                                <exclude reference="gZV-ew-OhM"/>
+                                <exclude reference="gd4-7s-vJq"/>
+                                <exclude reference="hx8-Mt-iza"/>
+                                <exclude reference="nBL-8s-La8"/>
+                                <exclude reference="uCM-5Z-plQ"/>
+                                <exclude reference="yoC-3i-1a2"/>
                             </mask>
                         </variation>
                     </view>
@@ -4606,7 +4587,7 @@ Two times at WWDC!</string>
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="j7n-CZ-1V0" kind="presentation" id="EyO-Cu-GgD"/>
+                                    <segue destination="j7n-CZ-1V0" kind="presentation" modalTransitionStyle="crossDissolve" id="EyO-Cu-GgD"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wwdcscholars" translatesAutoresizingMaskIntoConstraints="NO" id="jd6-Qe-8fv">
@@ -4692,23 +4673,22 @@ Two times at WWDC!</string>
                                 <exclude reference="jd6-Qe-8fv"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="3dp-0y-mly"/>
-                                <exclude reference="9Nj-ds-B3T"/>
-                                <exclude reference="W6a-Da-2d6"/>
-                                <exclude reference="qeh-N6-D9x"/>
-                                <exclude reference="AuK-bR-fIk"/>
-                                <exclude reference="byb-Ih-ybX"/>
-                                <exclude reference="kbn-4U-gZZ"/>
-                                <exclude reference="nBc-cz-MqJ"/>
-                                <exclude reference="uPg-9Q-CBK"/>
-                                <exclude reference="INF-wv-CU7"/>
-                                <exclude reference="K3h-OE-6L2"/>
-                                <exclude reference="gv2-6v-1Gk"/>
+                                <exclude reference="4AN-LW-8Jb"/>
+                                <exclude reference="FVN-HS-iRC"/>
+                                <exclude reference="PjX-TD-DKr"/>
+                                <exclude reference="g5O-mk-Xx1"/>
+                                <exclude reference="jIb-2v-bO5"/>
+                                <exclude reference="lPr-hN-37i"/>
+                                <exclude reference="sQa-I8-cml"/>
+                                <exclude reference="u4e-hm-ThN"/>
                                 <exclude reference="C3m-RR-vOq"/>
                                 <exclude reference="CeV-Vn-6ee"/>
                                 <exclude reference="JGi-1x-tpP"/>
                                 <exclude reference="ZX1-wa-kys"/>
                                 <exclude reference="miB-VU-5IA"/>
+                                <exclude reference="INF-wv-CU7"/>
+                                <exclude reference="K3h-OE-6L2"/>
+                                <exclude reference="gv2-6v-1Gk"/>
                                 <exclude reference="09J-ra-kiD"/>
                                 <exclude reference="9bN-x4-6sv"/>
                                 <exclude reference="FPq-Yt-PGH"/>
@@ -4723,14 +4703,15 @@ Two times at WWDC!</string>
                                 <exclude reference="iaK-5b-xeI"/>
                                 <exclude reference="nuP-Yu-hB0"/>
                                 <exclude reference="t4t-hS-2ax"/>
-                                <exclude reference="4AN-LW-8Jb"/>
-                                <exclude reference="FVN-HS-iRC"/>
-                                <exclude reference="PjX-TD-DKr"/>
-                                <exclude reference="g5O-mk-Xx1"/>
-                                <exclude reference="jIb-2v-bO5"/>
-                                <exclude reference="lPr-hN-37i"/>
-                                <exclude reference="sQa-I8-cml"/>
-                                <exclude reference="u4e-hm-ThN"/>
+                                <exclude reference="3dp-0y-mly"/>
+                                <exclude reference="9Nj-ds-B3T"/>
+                                <exclude reference="W6a-Da-2d6"/>
+                                <exclude reference="qeh-N6-D9x"/>
+                                <exclude reference="AuK-bR-fIk"/>
+                                <exclude reference="byb-Ih-ybX"/>
+                                <exclude reference="kbn-4U-gZZ"/>
+                                <exclude reference="nBc-cz-MqJ"/>
+                                <exclude reference="uPg-9Q-CBK"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -4741,6 +4722,36 @@ Two times at WWDC!</string>
                                 <include reference="jd6-Qe-8fv"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="4AN-LW-8Jb"/>
+                                <exclude reference="FVN-HS-iRC"/>
+                                <include reference="PjX-TD-DKr"/>
+                                <exclude reference="g5O-mk-Xx1"/>
+                                <include reference="jIb-2v-bO5"/>
+                                <exclude reference="lPr-hN-37i"/>
+                                <exclude reference="sQa-I8-cml"/>
+                                <exclude reference="u4e-hm-ThN"/>
+                                <include reference="C3m-RR-vOq"/>
+                                <exclude reference="CeV-Vn-6ee"/>
+                                <exclude reference="JGi-1x-tpP"/>
+                                <include reference="ZX1-wa-kys"/>
+                                <include reference="miB-VU-5IA"/>
+                                <exclude reference="INF-wv-CU7"/>
+                                <exclude reference="K3h-OE-6L2"/>
+                                <include reference="gv2-6v-1Gk"/>
+                                <exclude reference="09J-ra-kiD"/>
+                                <include reference="9bN-x4-6sv"/>
+                                <exclude reference="FPq-Yt-PGH"/>
+                                <exclude reference="MTK-bx-Qxd"/>
+                                <include reference="Qcw-fP-Eed"/>
+                                <exclude reference="SZm-ek-t3T"/>
+                                <include reference="V8c-FV-FMe"/>
+                                <exclude reference="WaD-0L-1zA"/>
+                                <exclude reference="eAR-jI-QQG"/>
+                                <exclude reference="eY6-kI-MY0"/>
+                                <exclude reference="g35-dD-4ud"/>
+                                <include reference="iaK-5b-xeI"/>
+                                <exclude reference="nuP-Yu-hB0"/>
+                                <exclude reference="t4t-hS-2ax"/>
                                 <include reference="3dp-0y-mly"/>
                                 <include reference="9Nj-ds-B3T"/>
                                 <exclude reference="W6a-Da-2d6"/>
@@ -4757,36 +4768,6 @@ Two times at WWDC!</string>
                                 <include reference="nBc-cz-MqJ"/>
                                 <include reference="uPg-9Q-CBK"/>
                                 <exclude reference="z0t-yv-8Pq"/>
-                                <exclude reference="INF-wv-CU7"/>
-                                <exclude reference="K3h-OE-6L2"/>
-                                <include reference="gv2-6v-1Gk"/>
-                                <include reference="C3m-RR-vOq"/>
-                                <exclude reference="CeV-Vn-6ee"/>
-                                <exclude reference="JGi-1x-tpP"/>
-                                <include reference="ZX1-wa-kys"/>
-                                <include reference="miB-VU-5IA"/>
-                                <exclude reference="09J-ra-kiD"/>
-                                <include reference="9bN-x4-6sv"/>
-                                <exclude reference="FPq-Yt-PGH"/>
-                                <exclude reference="MTK-bx-Qxd"/>
-                                <include reference="Qcw-fP-Eed"/>
-                                <exclude reference="SZm-ek-t3T"/>
-                                <include reference="V8c-FV-FMe"/>
-                                <exclude reference="WaD-0L-1zA"/>
-                                <exclude reference="eAR-jI-QQG"/>
-                                <exclude reference="eY6-kI-MY0"/>
-                                <exclude reference="g35-dD-4ud"/>
-                                <include reference="iaK-5b-xeI"/>
-                                <exclude reference="nuP-Yu-hB0"/>
-                                <exclude reference="t4t-hS-2ax"/>
-                                <include reference="4AN-LW-8Jb"/>
-                                <exclude reference="FVN-HS-iRC"/>
-                                <include reference="PjX-TD-DKr"/>
-                                <exclude reference="g5O-mk-Xx1"/>
-                                <include reference="jIb-2v-bO5"/>
-                                <exclude reference="lPr-hN-37i"/>
-                                <exclude reference="sQa-I8-cml"/>
-                                <exclude reference="u4e-hm-ThN"/>
                             </mask>
                         </variation>
                     </view>
@@ -4797,7 +4778,7 @@ Two times at WWDC!</string>
                             <rect key="frame" x="180" y="5.5" width="240" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUJ-46-Wbn">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUJ-46-Wbn">
                                     <rect key="frame" x="44" y="4" width="154" height="27"/>
                                     <attributedString key="attributedText">
                                         <fragment content="WWDC">
@@ -4869,15 +4850,14 @@ Two times at WWDC!</string>
         <image name="mapview" width="395" height="395"/>
         <image name="navigationBarLandscape" width="2000" height="680"/>
         <image name="ngiancecchi_test_profile" width="250" height="250"/>
-        <image name="no-profile" width="632" height="673"/>
+        <image name="no-profile" width="512" height="512"/>
         <image name="scholarIcon" width="77" height="77"/>
         <image name="wwdc15-hero_2x-4" width="1250" height="1250"/>
-        <image name="wwdc2015-top-logo" width="300" height="300"/>
         <image name="wwdcscholars" width="478" height="209"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EyO-Cu-GgD"/>
         <segue reference="iL3-5n-g4p"/>
         <segue reference="dZ8-0W-jxb"/>
+        <segue reference="EyO-Cu-GgD"/>
     </inferredMetricsTieBreakers>
 </document>
