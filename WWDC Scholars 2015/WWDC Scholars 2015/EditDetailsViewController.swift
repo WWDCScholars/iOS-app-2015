@@ -411,6 +411,61 @@ func imagePickerController(picker: UIImagePickerController, didFinishPickingMedi
                         self.profpic.setBackgroundImage(UIImage(data: picData), forState: UIControlState.Normal)
                     }
                 })
+                
+                let image = UIImage(named: "uploadScreenshots.png") as UIImage?
+                
+                if (loadedUser["screenshotOne"] == nil){
+                    self.appScreenshot1.setImage(image, forState: UIControlState.Normal)
+                }
+                    
+                else {
+                    (loadedUser["screenshotOne"] as! PFFile).getDataInBackgroundWithBlock({ (data, error) -> Void in
+                        if let picData = data {
+                            self.appScreenshot1.setBackgroundImage(UIImage(data: picData), forState: UIControlState.Normal)
+                        }
+                    })
+                }
+                
+                if (loadedUser["screenshotTwo"] == nil){
+                    self.appScreenshot2.setImage(image, forState: UIControlState.Normal)
+                }
+                    
+                else {
+                    (loadedUser["screenshotTwo"] as! PFFile).getDataInBackgroundWithBlock({ (data, error) -> Void in
+                        if let picData = data {
+                            self.appScreenshot2.setBackgroundImage(UIImage(data: picData), forState: UIControlState.Normal)
+                        }
+                    })
+                }
+                
+                if (loadedUser["screenshotThree"] == nil){
+                    self.appScreenshot3.setImage(image, forState: UIControlState.Normal)
+                }
+                    
+                else {
+                    (loadedUser["screenshotThree"] as! PFFile).getDataInBackgroundWithBlock({ (data, error) -> Void in
+                        if let picData = data {
+                            self.appScreenshot3.setBackgroundImage(UIImage(data: picData), forState: UIControlState.Normal)
+                        }
+                    })
+                }
+                
+                if (loadedUser["screenshotFour"] == nil){
+                    self.appScreenshot4.setImage(image, forState: UIControlState.Normal)
+                }
+                    
+                else {
+                    (loadedUser["screenshotFour"] as! PFFile).getDataInBackgroundWithBlock({ (data, error) -> Void in
+                        if let picData = data {
+                            self.appScreenshot4.setBackgroundImage(UIImage(data: picData), forState: UIControlState.Normal)
+                        }
+                    })
+                }
+
+                
+                
+                
+                
             }
         }
         
