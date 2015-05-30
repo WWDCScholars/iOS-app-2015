@@ -557,6 +557,24 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="age" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOP-MV-LRb">
+                                        <rect key="frame" x="8" y="92" width="104" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="dob" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHZ-HM-4nH">
+                                        <rect key="frame" x="131" y="92" width="144" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="gender" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTS-ic-K4e">
+                                        <rect key="frame" x="298" y="92" width="112" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Cbx-U5-z1D" firstAttribute="baseline" secondItem="tZU-Da-1nz" secondAttribute="baseline" constant="-2" id="0mu-6H-Gab"/>
@@ -690,17 +708,17 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="1500"/>
                     <connections>
-                        <outlet property="age" destination="vAX-I1-1ly" id="aYN-Yz-AWu"/>
+                        <outlet property="ageLabel" destination="QOP-MV-LRb" id="CxM-5e-VC8"/>
                         <outlet property="appScreenshot1" destination="0cz-8A-aeu" id="Tlv-au-Gxc"/>
                         <outlet property="appScreenshot2" destination="Jh6-HZ-g23" id="JP0-6X-glu"/>
                         <outlet property="appScreenshot3" destination="Z4e-kC-vhJ" id="hNO-WV-nva"/>
                         <outlet property="appScreenshot4" destination="bAh-IE-FSn" id="1uF-JD-TXM"/>
                         <outlet property="appVideo" destination="Nlp-h4-61x" id="mlh-vw-ISx"/>
+                        <outlet property="birthdayLabel" destination="qHZ-HM-4nH" id="CmC-wG-ftb"/>
                         <outlet property="cityCountry" destination="ifD-n5-uVK" id="FmR-Ya-66u"/>
-                        <outlet property="dateOfBirth" destination="NX1-Le-GIU" id="Dr8-E1-cts"/>
                         <outlet property="email" destination="JEa-2O-8pv" id="Jtd-yZ-UQd"/>
                         <outlet property="facebookUsername" destination="OWQ-xn-Cfo" id="XOg-e6-7If"/>
-                        <outlet property="gender" destination="XLU-tp-bAl" id="cJS-XA-bM3"/>
+                        <outlet property="genderLabel" destination="mTS-ic-K4e" id="Vsa-NF-ax7"/>
                         <outlet property="githubLink" destination="m9f-IV-NI6" id="mcS-SK-1Cg"/>
                         <outlet property="githubUsername" destination="aq8-Hq-Tx3" id="k7b-YG-5Rv"/>
                         <outlet property="itunesLink" destination="h12-n8-pba" id="WyG-d6-sOL"/>
@@ -720,7 +738,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5t-cj-KO0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3878" y="3715"/>
+            <point key="canvasLocation" x="3830" y="3737"/>
         </scene>
         <!--Credits View Controller-->
         <scene sceneID="lfK-RP-rPo">
@@ -5305,7 +5323,7 @@ Two times at WWDC!</string>
                             </scrollView>
                             <pageControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="gBZ-hX-PFk">
                                 <rect key="frame" x="280" y="555" width="39" height="37"/>
-                                <color key="pageIndicatorTintColor" patternImage="8AA1EFED-F52A-4FC8-B15B-412A9A3B5F5F" colorSpace="pattern"/>
+                                <color key="pageIndicatorTintColor" patternImage="BCFF9722-6DEA-402E-8905-DB1A6AB71205" colorSpace="pattern"/>
                                 <color key="currentPageIndicatorTintColor" red="0.0" green="0.0" blue="0.66825143909999996" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
                         </subviews>
@@ -5334,7 +5352,10 @@ Two times at WWDC!</string>
         </scene>
     </scenes>
     <resources>
-        <image name="8AA1EFED-F52A-4FC8-B15B-412A9A3B5F5F" width="512" height="512">
+        <image name="AlexanderZimin" width="83" height="83"/>
+        <image name="AmanJain" width="83" height="83"/>
+        <image name="AndrewWalker" width="83" height="83"/>
+        <image name="BCFF9722-6DEA-402E-8905-DB1A6AB71205" width="512" height="512">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -22884,9 +22905,6 @@ EA65ABAOwQAQDs4AEA7TABAO1QAQDtcAEA7cABAO5AAQDucAEA7sABAO9AAQDvcAEA8JABAPDAAQDxEA
 AAAAAAAEAQAAAAAAAABCAAAAAAAAAAAAAAAAABAPEw
 </mutableData>
         </image>
-        <image name="AlexanderZimin" width="83" height="83"/>
-        <image name="AmanJain" width="83" height="83"/>
-        <image name="AndrewWalker" width="83" height="83"/>
         <image name="CharleyHutchison" width="83" height="83"/>
         <image name="CloseButton" width="35" height="35"/>
         <image name="Data" width="59" height="58"/>
