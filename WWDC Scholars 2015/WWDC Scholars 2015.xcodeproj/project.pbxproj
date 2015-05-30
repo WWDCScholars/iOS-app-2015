@@ -45,7 +45,6 @@
 		C00C27401B0D5C9C008C19AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C273F1B0D5C9C008C19AE /* AppDelegate.swift */; };
 		C00C27421B0D5C9C008C19AE /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C27411B0D5C9C008C19AE /* LocationViewController.swift */; };
 		C00C274A1B0D5C9C008C19AE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C00C27481B0D5C9C008C19AE /* LaunchScreen.xib */; };
-		C00C27561B0D5C9C008C19AE /* WWDC_Scholars_2015Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C27551B0D5C9C008C19AE /* WWDC_Scholars_2015Tests.swift */; };
 		C00C276E1B0D5CEC008C19AE /* QCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = C00C27641B0D5CEC008C19AE /* QCluster.m */; };
 		C00C276F1B0D5CEC008C19AE /* QNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C00C27661B0D5CEC008C19AE /* QNode.m */; };
 		C00C27701B0D5CEC008C19AE /* QTree.m in Sources */ = {isa = PBXBuildFile; fileRef = C00C27681B0D5CEC008C19AE /* QTree.m */; };
@@ -97,16 +96,6 @@
 		FDC821A81B1399C80083872D /* URBMediaFocusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC821A71B1399C80083872D /* URBMediaFocusViewController.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		C00C27501B0D5C9C008C19AE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C00C27321B0D5C9C008C19AE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C00C27391B0D5C9C008C19AE;
-			remoteInfo = "WWDC Scholars 2015";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		227687C61B16154E00AAB1E6 /* EditDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditDetailsViewController.swift; sourceTree = "<group>"; };
 		31BE00BD1B197DCA008503CF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -149,7 +138,6 @@
 		C00C273F1B0D5C9C008C19AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C00C27411B0D5C9C008C19AE /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		C00C27491B0D5C9C008C19AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		C00C274F1B0D5C9C008C19AE /* WWDC Scholars 2015Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WWDC Scholars 2015Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C00C27541B0D5C9C008C19AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C00C27551B0D5C9C008C19AE /* WWDC_Scholars_2015Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDC_Scholars_2015Tests.swift; sourceTree = "<group>"; };
 		C00C27631B0D5CEB008C19AE /* QCluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCluster.h; sourceTree = "<group>"; };
@@ -244,13 +232,6 @@
 				4082116F1B0E292300D567AC /* ParseUI.framework in Frameworks */,
 				7C9A052A1B121CD300EC1F11 /* Parse.framework in Frameworks */,
 				408211711B0E292300D567AC /* Bolts.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C00C274C1B0D5C9C008C19AE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,7 +354,6 @@
 			isa = PBXGroup;
 			children = (
 				C00C273A1B0D5C9C008C19AE /* WWDC Scholars 2015.app */,
-				C00C274F1B0D5C9C008C19AE /* WWDC Scholars 2015Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -625,24 +605,6 @@
 			productReference = C00C273A1B0D5C9C008C19AE /* WWDC Scholars 2015.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C00C274E1B0D5C9C008C19AE /* WWDC Scholars 2015Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C00C275C1B0D5C9C008C19AE /* Build configuration list for PBXNativeTarget "WWDC Scholars 2015Tests" */;
-			buildPhases = (
-				C00C274B1B0D5C9C008C19AE /* Sources */,
-				C00C274C1B0D5C9C008C19AE /* Frameworks */,
-				C00C274D1B0D5C9C008C19AE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C00C27511B0D5C9C008C19AE /* PBXTargetDependency */,
-			);
-			name = "WWDC Scholars 2015Tests";
-			productName = "WWDC Scholars 2015Tests";
-			productReference = C00C274F1B0D5C9C008C19AE /* WWDC Scholars 2015Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -654,7 +616,7 @@
 				TargetAttributes = {
 					C00C27391B0D5C9C008C19AE = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = 32FG3U99MG;
+						DevelopmentTeam = YQ3FQN6Z53;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 0;
@@ -663,11 +625,6 @@
 								enabled = 0;
 							};
 						};
-					};
-					C00C274E1B0D5C9C008C19AE = {
-						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = 32FG3U99MG;
-						TestTargetID = C00C27391B0D5C9C008C19AE;
 					};
 				};
 			};
@@ -685,7 +642,6 @@
 			projectRoot = "";
 			targets = (
 				C00C27391B0D5C9C008C19AE /* WWDC Scholars 2015 */,
-				C00C274E1B0D5C9C008C19AE /* WWDC Scholars 2015Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -702,13 +658,6 @@
 				F9007BC81B148D2A00E2BB09 /* LoadingView.xib in Resources */,
 				C0B7F78D1B0E682600E74458 /* Images.xcassets in Resources */,
 				C00C274A1B0D5C9C008C19AE /* LaunchScreen.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C00C274D1B0D5C9C008C19AE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -782,23 +731,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C00C274B1B0D5C9C008C19AE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C00C27561B0D5C9C008C19AE /* WWDC_Scholars_2015Tests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C00C27511B0D5C9C008C19AE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C00C27391B0D5C9C008C19AE /* WWDC Scholars 2015 */;
-			targetProxy = C00C27501B0D5C9C008C19AE /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C00C27481B0D5C9C008C19AE /* LaunchScreen.xib */ = {
@@ -979,46 +912,6 @@
 			};
 			name = Release;
 		};
-		C00C275D1B0D5C9C008C19AE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "WWDC Scholars 2015Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WWDC Scholars 2015.app/WWDC Scholars 2015";
-			};
-			name = Debug;
-		};
-		C00C275E1B0D5C9C008C19AE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "WWDC Scholars 2015Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WWDC Scholars 2015.app/WWDC Scholars 2015";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1036,15 +929,6 @@
 			buildConfigurations = (
 				C00C275A1B0D5C9C008C19AE /* Debug */,
 				C00C275B1B0D5C9C008C19AE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C00C275C1B0D5C9C008C19AE /* Build configuration list for PBXNativeTarget "WWDC Scholars 2015Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C00C275D1B0D5C9C008C19AE /* Debug */,
-				C00C275E1B0D5C9C008C19AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
