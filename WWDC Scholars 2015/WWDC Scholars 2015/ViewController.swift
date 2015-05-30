@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var contentView: UIView!
     var swipeLeftImage: UIImageView!
+    var stopSwipeAnim = false
     
     let numberOfScreens: CGFloat = 6
     
@@ -106,22 +107,25 @@ class ViewController: UIViewController {
         swipeLeftImage.contentMode = .ScaleAspectFit
         swipeLeftImage.alpha = 0.50
         UIView.animateWithDuration(2.0, delay: 2.0, options: .CurveEaseInOut, animations: {
-                self.swipeLeftImage.frame.origin.x = 10
+            self.swipeLeftImage.frame.origin.x = 10
+            self.swipeLeftImage.alpha = 0.0
+
             }, completion: { _ in
+                if (self.movingTimer != nil && !self.stopSwipeAnim){ self.animateSwipeImage() }
                 self.animateSwipeImage()
         })
         self.view.addSubview(swipeLeftImage)
     }
     
     func animateSwipeImage(){
-        UIView.animateWithDuration(0.5, delay: 0.0, options: .CurveEaseInOut, animations: {
             self.swipeLeftImage.frame.origin.x = self.screenSize.width - 60
-            }, completion: nil)
+        self.swipeLeftImage.alpha = 0.5
         
         UIView.animateWithDuration(2.0, delay: 2.0, options: .CurveEaseInOut, animations: {
             self.swipeLeftImage.frame.origin.x = 10
+            self.swipeLeftImage.alpha = 0.0
             }, completion: { _ in
-                self.animateSwipeImage()
+                if (self.movingTimer != nil && !self.stopSwipeAnim){ self.animateSwipeImage() }
         })
     }
     
@@ -231,6 +235,7 @@ class ViewController: UIViewController {
 extension ViewController: UIScrollViewDelegate {
     func scrollViewWillBeginDragging(scrollView: UIScrollView) {
         if let timer = movingTimer {
+            self.stopSwipeAnim = true
             timer.invalidate()
             movingTimer = nil
         }
@@ -258,6 +263,7 @@ extension ViewController: UIScrollViewDelegate {
         if scrollView.contentOffset.x > lastContentOffset.x && scrollView.contentOffset.x > screenSize.width * 0.5 {
             if self.quoteLabel.text != "We are " {
                 self.quoteLabel.setText("We are ", withCompletionBlock: nil)
+                self.stopSwipeAnim = true
             }
         } else if scrollView.contentOffset.x < lastContentOffset.x && scrollView.contentOffset.x < screenSize.width * 0.5 {
             if self.quoteLabel.text != "Here's to " {
