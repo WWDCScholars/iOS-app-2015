@@ -101,6 +101,9 @@ class ViewController: UIViewController {
     func buttonAction(sender:UIButton!)
     {
         self.performSegueWithIdentifier("toMain", sender: self)
+        
+        //If the user presses the button, then it will set the intro as visited (and won't open again)
+        LocalStore.setIntroAsVisited()
     }
 
     

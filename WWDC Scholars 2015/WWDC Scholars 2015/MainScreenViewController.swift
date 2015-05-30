@@ -13,8 +13,7 @@ import ParseUI
 class MainScreenViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, PFLogInViewControllerDelegate,UIViewControllerTransitioningDelegate  {
     
     @IBOutlet var scholarsCollectionView: UICollectionView!
-    
-    
+
     //var cell : UICollectionViewCell?
     let transition = BubbleTransition()
     var index:Int?
@@ -83,7 +82,14 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
         super.viewDidLoad()
         self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateCollectionView", name: "onScholarsLoadedNotification", object: nil)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        //If the user has opened the app for the first time then go to the intro view
         
+//        if !LocalStore.isIntroVisited() {
+//            performSegueWithIdentifier("IntroSegue", sender: self)
+//        }
     }
     
     override func prefersStatusBarHidden() -> Bool {
@@ -116,7 +122,6 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
             dest.currentScholar = DataManager.sharedInstance.scholarAtLocation(scholarsCollectionView.indexPathsForSelectedItems()[0].row)
             dest.transitioningDelegate = self
             dest.modalPresentationStyle = .Custom
-           
         }
     }
     // MARK: UIViewControllerTransitioningDelegate
@@ -139,35 +144,6 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
     BUG DETECTED? Exit segue doesn't dismiss automatically, so we have to dismiss it manually.
     */
     @IBAction func unwindToMainViewController (sender: UIStoryboardSegue){
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    //MARK: - PFLogInViewControllerDelegate Methods
-    @IBAction func showLogin(sender: AnyObject) {
-        var loginViewController = PFLogInViewController()
-        loginViewController.delegate = self
-        loginViewController.fields = PFLogInFields.UsernameAndPassword | PFLogInFields.LogInButton | PFLogInFields.DismissButton
-        //var signupViewController = PFSignUpViewController()
-        //signupViewController.delegate = self
-        //loginViewController.signUpController = signupViewController
-        self.presentViewController(loginViewController, animated: true, completion: nil)
-    }
-    
-    func logInViewController(logInController: PFLogInViewController, shouldBeginLogInWithUsername username: String, password: String) -> Bool {
-        if ((count(username) != 0) && (count(password) != 0)) {
-            return true
-        } else {
-            var alert = UIAlertView(title: "Empty field", message: "Some of the fields are empty. Please fill them in to log in.", delegate: nil, cancelButtonTitle: "Ok")
-            alert.show()
-            return false
-        }
-    }
-    
-    func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    func logInViewControllerDidCancelLogIn(logInController: PFLogInViewController) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
