@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dxU-Y8-xWh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E26a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dxU-Y8-xWh">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -181,7 +181,7 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="3114" y="3265.5"/>
+            <point key="canvasLocation" x="2864" y="3349"/>
         </scene>
         <!--Edit Details View Controller-->
         <scene sceneID="aJi-EC-KOE">
@@ -545,7 +545,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5t-cj-KO0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3830" y="3737"/>
+            <point key="canvasLocation" x="3560" y="3349"/>
         </scene>
         <!--Credits View Controller-->
         <scene sceneID="lfK-RP-rPo">
@@ -3806,7 +3806,7 @@ Two times at WWDC!</string>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3888" y="1821.75"/>
+            <point key="canvasLocation" x="2864" y="1533"/>
         </scene>
         <!--Main Screen View Controller-->
         <scene sceneID="0Ia-Vp-wSL">
@@ -4498,7 +4498,7 @@ Two times at WWDC!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lUI-KI-rWu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2020.5" y="1821.75"/>
+            <point key="canvasLocation" x="2085" y="1205"/>
         </scene>
         <!--Location View Controller-->
         <scene sceneID="dlh-73-Xvf">
@@ -5093,7 +5093,7 @@ Two times at WWDC!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c69-ec-nP3" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2932.5" y="1194"/>
+            <point key="canvasLocation" x="2085" y="1914"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="1Ay-LA-Ary">
@@ -5131,7 +5131,7 @@ Two times at WWDC!</string>
                             </scrollView>
                             <pageControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="gBZ-hX-PFk">
                                 <rect key="frame" x="280" y="555" width="39" height="37"/>
-                                <color key="pageIndicatorTintColor" patternImage="395B3369-0059-4FCE-947E-0FA45D1CA064" colorSpace="pattern"/>
+                                <color key="pageIndicatorTintColor" patternImage="E9F696D6-03D0-4970-B7FD-88589910DFCD" colorSpace="pattern"/>
                                 <color key="currentPageIndicatorTintColor" red="0.0" green="0.0" blue="0.66825143909999996" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
                         </subviews>
@@ -5156,11 +5156,18 @@ Two times at WWDC!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xzF-fh-vD4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1172" y="1821"/>
+            <point key="canvasLocation" x="1248" y="1565"/>
         </scene>
     </scenes>
     <resources>
-        <image name="395B3369-0059-4FCE-947E-0FA45D1CA064" width="512" height="512">
+        <image name="AlexanderZimin" width="83" height="83"/>
+        <image name="AmanJain" width="83" height="83"/>
+        <image name="AndrewWalker" width="83" height="83"/>
+        <image name="CharleyHutchison" width="83" height="83"/>
+        <image name="CloseButton" width="35" height="35"/>
+        <image name="Data" width="59" height="58"/>
+        <image name="DividingLine" width="1" height="1"/>
+        <image name="E9F696D6-03D0-4970-B7FD-88589910DFCD" width="512" height="512">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -22710,13 +22717,6 @@ EA65ABAOwQAQDs4AEA7TABAO1QAQDtcAEA7cABAO5AAQDucAEA7sABAO9AAQDvcAEA8JABAPDAAQDxEA
 AAAAAAAEAQAAAAAAAABCAAAAAAAAAAAAAAAAABAPEw
 </mutableData>
         </image>
-        <image name="AlexanderZimin" width="83" height="83"/>
-        <image name="AmanJain" width="83" height="83"/>
-        <image name="AndrewWalker" width="83" height="83"/>
-        <image name="CharleyHutchison" width="83" height="83"/>
-        <image name="CloseButton" width="35" height="35"/>
-        <image name="Data" width="59" height="58"/>
-        <image name="DividingLine" width="1" height="1"/>
         <image name="GautamMittal250" width="83" height="83"/>
         <image name="GreyChen" width="83" height="86"/>
         <image name="HarshitaGupta" width="83" height="83"/>
@@ -22747,8 +22747,8 @@ AAAAAAAEAQAAAAAAAABCAAAAAAAAAAAAAAAAABAPEw
         <image name="wwdcscholars" width="478" height="209"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DyR-D1-yrL"/>
+        <segue reference="EyO-Cu-GgD"/>
         <segue reference="MaV-rI-wzv"/>
-        <segue reference="JZ3-vC-fi4"/>
+        <segue reference="dZ8-0W-jxb"/>
     </inferredMetricsTieBreakers>
 </document>
