@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E17e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2fS-oi-cWY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E26a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2fS-oi-cWY">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -908,22 +908,22 @@ Two times at WWDC!</string>
         </scene>
     </scenes>
     <resources>
-        <image name="AmanJain" width="320" height="320"/>
-        <image name="AndrewWalker" width="166" height="166"/>
+        <image name="AmanJain" width="83" height="83"/>
+        <image name="AndrewWalker" width="83" height="83"/>
         <image name="AppIconCredits" width="60" height="60"/>
-        <image name="Design" width="56" height="56"/>
+        <image name="Design" width="60" height="59"/>
         <image name="DividingLine" width="1" height="1"/>
-        <image name="GreyChen" width="301" height="314"/>
-        <image name="HarshitaGupta" width="333" height="333"/>
-        <image name="IshaanPrasad" width="116" height="116"/>
+        <image name="GreyChen" width="83" height="86"/>
+        <image name="HarshitaGupta" width="83" height="83"/>
+        <image name="IshaanPrasad" width="83" height="83"/>
         <image name="Map Icon" width="35" height="35"/>
-        <image name="MatthewPanzer" width="117" height="130"/>
-        <image name="MatthijsLogemann" width="106" height="106"/>
+        <image name="MatthewPanzer" width="83" height="92"/>
+        <image name="MatthijsLogemann" width="83" height="83"/>
         <image name="WallpaperWWDC" width="5535" height="3690"/>
         <image name="back-arrow" width="30" height="30"/>
-        <image name="iPhone" width="70" height="128"/>
-        <image name="ngiancecchi_test_profile" width="960" height="960"/>
-        <image name="no-profile" width="632" height="673"/>
+        <image name="iPhone" width="60" height="59"/>
+        <image name="ngiancecchi_test_profile" width="250" height="250"/>
+        <image name="no-profile" width="341" height="341"/>
         <image name="wwdc15-hero_2x-4" width="1250" height="1250"/>
     </resources>
     <inferredMetricsTieBreakers>
