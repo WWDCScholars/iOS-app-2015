@@ -166,10 +166,10 @@ func verifyAndSubmit(scholar: PFObject) {
             scholar["email"] = self.email.text
         }
         if count(self.twitterUsername.text) != 0 {
-            scholar["twitter"] = "https://twitter.com/" + self.twitterUsername.text
+            scholar["twitter"] = self.twitterUsername.text
         }
         if count(self.facebookUsername.text) != 0 {
-            scholar["facebook"] = "https://facebook.com/" + self.facebookUsername.text
+            scholar["facebook"] = self.facebookUsername.text
         }
         if count(self.githubLink.text) != 0 {
             scholar["githubLinkApp"] = self.githubLink.text

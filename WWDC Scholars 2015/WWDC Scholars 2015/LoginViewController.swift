@@ -38,13 +38,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate, DragDropBehavi
     }
     
     // MARK: Button
-    @IBAction func signupButtonPressed(sender: AnyObject) {
+    @IBAction func signupButtonPressed(sender: AnyObject){
         PFUser.logInWithUsernameInBackground(emailTextField.text, password: passwordTextField.text, block: { (user,error) in
             if error != nil {
                 self.dialogView.animation = "shake"
                 self.dialogView.animate()
-//                var alert = UIAlertView(title: "Error", message: "There was a problem with the username and password you have entered. Please try again.", delegate: nil, cancelButtonTitle: "Ok")
-//                alert.show()
+                //                var alert = UIAlertView(title: "Error", message: "There was a problem with the username and password you have entered. Please try again.", delegate: nil, cancelButtonTitle: "Ok")
+                //                alert.show()
             } else {
                 self.passwordTextField.text = nil
                 self.emailTextField.text = nil
@@ -56,6 +56,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, DragDropBehavi
             }
         })
     }
+
     
     @IBAction func closeButtonPressed(sender: AnyObject) {
         dialogView.animation = "zoomOut"
