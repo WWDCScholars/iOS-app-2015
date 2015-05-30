@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>WWDC Scholars 2015 WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>WWDC Scholars 2015.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>40CA932A1B126186006F3BEA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C00C27391B0D5C9C008C19AE</key>
 		<dict>
 			<key>primary</key>
