@@ -47,6 +47,9 @@ class ViewController: UIViewController {
         addObjects()
         
         pageControl.numberOfPages = Int(numberOfScreens)
+        
+        movingTimer = NSTimer(timeInterval: 4.0, target: self, selector: "timerStep", userInfo: nil, repeats: true)
+        NSRunLoop.currentRunLoop().addTimer(movingTimer!, forMode: NSRunLoopCommonModes)
     }
     
     func addObjects() {
@@ -204,9 +207,35 @@ class ViewController: UIViewController {
     
     var lastContentOffset: CGPoint = CGPointZero
     var textState = 0
+    var movingTimer: NSTimer?
+    
+    @objc
+    func timerStep() {
+        if scrollView.contentOffset.x <= screenSize.width * (numberOfScreens - 2) {
+            self.scrollView.panGestureRecognizer.enabled = false
+            self.scrollView.panGestureRecognizer.enabled = true
+            
+            UIView.animateWithDuration(0.5, animations: { () -> Void in
+                self.scrollView.contentOffset = CGPoint(x: self.scrollView.contentOffset.x + self.screenSize.width, y: self.scrollView.contentOffset.y)
+            })
+            
+            if scrollView.contentOffset.x > screenSize.width * 1.0 {
+                println(0.5 - (scrollView.contentOffset.x - screenSize.width) / screenSize.width)
+                self.swipeLeftImage.alpha = 0.5 - (scrollView.contentOffset.x - screenSize.width) / screenSize.width
+            }
+           // scrollView.scrollRectToVisible(CGRectMake(scrollView.contentOffset.x + screenSize.width, 0, screenSize.width, screenSize.height), animated: true)
+        }
+    }
 }
 
 extension ViewController: UIScrollViewDelegate {
+    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+        if let timer = movingTimer {
+            timer.invalidate()
+            movingTimer = nil
+        }
+    }
+    
     func scrollViewDidScroll(scrollView: UIScrollView) {
         updatePageControl()
         
