@@ -120,6 +120,9 @@ class EditDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
         }
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
     
     let picker = UIImagePickerController()
     func squareImage(image: UIImage) -> UIImage? {
