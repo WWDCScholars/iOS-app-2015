@@ -93,6 +93,7 @@ class ViewController: UIViewController {
         startButton.backgroundColor = UIColorFromRGB(0x6C4FA0)
         startButton.setTitle("Welcome", forState: .Normal)
         startButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        startButton.layer.cornerRadius = 3
         contentView.addSubview(startButton)
     }
     

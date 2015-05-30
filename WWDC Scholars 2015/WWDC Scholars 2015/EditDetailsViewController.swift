@@ -29,7 +29,7 @@ class EditDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
 //    @IBOutlet var dateOfBirth: UITextField!
 //    @IBOutlet var gender: UITextField!
     @IBOutlet var cityCountry: UITextField!
-    @IBOutlet var previousWWDC: UITextField!
+//    @IBOutlet var previousWWDC: UITextField!
     @IBOutlet var appVideo: UITextField!
     @IBOutlet var githubLink: UITextField!
     @IBOutlet var email: UITextField!
@@ -183,11 +183,11 @@ func verifyAndSubmit(scholar: PFObject) {
         if count(self.itunesLink.text) != 0 {
             scholar["itunes"] = self.itunesLink.text
         }
-        if count(self.previousWWDC.text) != 0 {
-            let arr = self.previousWWDC.text.componentsSeparatedByString(", ")
-            scholar["numberOfTimesWWDCScholar"] = arr.count
-            scholar["batchWWDC"] = arr
-        }
+//        if count(self.previousWWDC.text) != 0 {
+//            let arr = self.previousWWDC.text.componentsSeparatedByString(", ")
+//            scholar["numberOfTimesWWDCScholar"] = arr.count
+//            scholar["batchWWDC"] = arr
+//        }
 //    if count(self.dateOfBirth.text) != 0 {
 //        scholar["birthday"] = self.dateOfBirth.text
 //    }
@@ -377,7 +377,7 @@ func imagePickerController(picker: UIImagePickerController, didFinishPickingMedi
                 
                 self.cityCountry.text = loadedUser["location"] as? String
                 self.shortBio.text = loadedUser["shortBio"] as? String
-            self.previousWWDC.text = ", ".join((loadedUser["batchWWDC"] as! [String]))
+//            self.previousWWDC.text = ", ".join((loadedUser["batchWWDC"] as! [String]))
                 self.appVideo.text = loadedUser["videoLink"] as? String
                 self.githubLink.text = loadedUser["githubLinkApp"] as? String
                 self.email.text = loadedUser["email"] as? String
