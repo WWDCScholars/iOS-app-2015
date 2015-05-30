@@ -5131,7 +5131,7 @@ Two times at WWDC!</string>
                             </scrollView>
                             <pageControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="gBZ-hX-PFk">
                                 <rect key="frame" x="280" y="555" width="39" height="37"/>
-                                <color key="pageIndicatorTintColor" patternImage="E9F696D6-03D0-4970-B7FD-88589910DFCD" colorSpace="pattern"/>
+                                <color key="pageIndicatorTintColor" patternImage="5BFDD3AC-C960-4D62-9F43-3A4B08A54ADA" colorSpace="pattern"/>
                                 <color key="currentPageIndicatorTintColor" red="0.0" green="0.0" blue="0.66825143909999996" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
                         </subviews>
@@ -5160,14 +5160,7 @@ Two times at WWDC!</string>
         </scene>
     </scenes>
     <resources>
-        <image name="AlexanderZimin" width="83" height="83"/>
-        <image name="AmanJain" width="83" height="83"/>
-        <image name="AndrewWalker" width="83" height="83"/>
-        <image name="CharleyHutchison" width="83" height="83"/>
-        <image name="CloseButton" width="35" height="35"/>
-        <image name="Data" width="59" height="58"/>
-        <image name="DividingLine" width="1" height="1"/>
-        <image name="E9F696D6-03D0-4970-B7FD-88589910DFCD" width="512" height="512">
+        <image name="5BFDD3AC-C960-4D62-9F43-3A4B08A54ADA" width="512" height="512">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -22717,6 +22710,13 @@ EA65ABAOwQAQDs4AEA7TABAO1QAQDtcAEA7cABAO5AAQDucAEA7sABAO9AAQDvcAEA8JABAPDAAQDxEA
 AAAAAAAEAQAAAAAAAABCAAAAAAAAAAAAAAAAABAPEw
 </mutableData>
         </image>
+        <image name="AlexanderZimin" width="83" height="83"/>
+        <image name="AmanJain" width="83" height="83"/>
+        <image name="AndrewWalker" width="83" height="83"/>
+        <image name="CharleyHutchison" width="83" height="83"/>
+        <image name="CloseButton" width="35" height="35"/>
+        <image name="Data" width="59" height="58"/>
+        <image name="DividingLine" width="1" height="1"/>
         <image name="GautamMittal250" width="83" height="83"/>
         <image name="GreyChen" width="83" height="86"/>
         <image name="HarshitaGupta" width="83" height="83"/>
