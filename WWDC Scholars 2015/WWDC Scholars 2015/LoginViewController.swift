@@ -95,7 +95,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, DragDropBehavi
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override func prefersStatusBarHidden() -> Bool {
+        return true
     }
 }
