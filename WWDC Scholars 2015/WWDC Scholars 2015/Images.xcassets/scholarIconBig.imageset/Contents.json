@@ -3,17 +3,15 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "wwdc_logo.png"
+      "filename" : "scholarIconBig.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x",
-      "filename" : "wwdc_logo@2x.png"
+      "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x",
-      "filename" : "wwdc_logo@3x.png"
+      "scale" : "3x"
     }
   ],
   "info" : {

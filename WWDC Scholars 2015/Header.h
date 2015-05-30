@@ -14,5 +14,5 @@
 #import <Parse/Parse.h>
 #import "AsyncImageView.h"
 #import "URBMediaFocusViewController.h"
-#import "EAIntroView.h"
+#import "TOMSMorphingLabel.h"
 #endif
