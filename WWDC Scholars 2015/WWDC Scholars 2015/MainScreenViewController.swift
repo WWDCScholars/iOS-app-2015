@@ -189,7 +189,5 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
     }
     
     
-    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
-        println(scrollView)
-    }
+ 
 }
