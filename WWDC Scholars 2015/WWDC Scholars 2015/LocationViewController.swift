@@ -79,7 +79,7 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
             
             //if scholar latitude and longtitude is not nil
             
-                let annotation = scholarAnnotation(coordinate: CLLocationCoordinate2DMake(scholar.latitude, scholar.longitude), title: scholar.name!,subtitle:scholar.location!)
+            let annotation = scholarAnnotation(coordinate: CLLocationCoordinate2DMake(scholar.latitude, scholar.longitude), title: scholar.name!,subtitle:scholar.location!,profilePictureUrl:(scholar.smallPicture)!)
                 self.qTree.insertObject(annotation)
             
             //self.mapView.addAnnotation(annotation)
@@ -149,9 +149,35 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
                 pinView?.canShowCallout = true
                 pinView?.rightCalloutAccessoryView = UIButton.buttonWithType(UIButtonType.DetailDisclosure) as! UIButton
                 pinView?.rightCalloutAccessoryView.tintColor = UIColor.blackColor()
+                
+                let imageView = AsyncImageView(image: UIImage(named: "noProfilePicSmall"))
+                let url = (DataManager.sharedInstance.getScholarByName(annotation.title!))?.smallPicture
+                
+                
+                imageView.imageURL = NSURL(string:url!)
+                //println((annotation as! scholarAnnotation).profilePictureUrl)
+                //println(url)
+                
+                
+                pinView.leftCalloutAccessoryView = imageView
+                
                 pinView?.image = UIImage(named: "scholarMapAnnotation")
             } else {
                 pinView?.annotation = annotation
+                
+                let imageView = AsyncImageView(image: UIImage(named: "noProfilePicSmall"))
+                let url = (DataManager.sharedInstance.getScholarByName(annotation.title!))?.smallPicture
+                
+                
+                imageView.imageURL = NSURL(string:url!)
+                //println((annotation as! scholarAnnotation).profilePictureUrl)
+                //println(url)
+                
+                
+                pinView.leftCalloutAccessoryView = imageView
+                
+
+                
             }
             return pinView
         }
@@ -160,7 +186,7 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
     
     func mapView(mapView: MKMapView!, annotationView view: MKAnnotationView!, calloutAccessoryControlTapped control: UIControl!) {
         if view.isKindOfClass(MKAnnotationView.classForCoder()) {
-            mapView.deselectAnnotation(view.annotation, animated: true)
+            //mapView.deselectAnnotation(view.annotation, animated: true)
             let title = view.annotation.title
             currentScholar = DataManager.sharedInstance.getScholarByName(title!)
             self.performSegueWithIdentifier("transformToScholarDetail", sender: self)

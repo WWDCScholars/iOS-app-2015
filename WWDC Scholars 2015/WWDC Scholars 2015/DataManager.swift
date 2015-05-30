@@ -75,10 +75,11 @@ class DataManager: NSObject {
                             website: object.objectForKey("website") as? String,
                             location:object.objectForKey("location") as? String,
                             user: object.objectForKey("user") as? PFUser,
-                            itunes:object.objectForKey("itunes") as? String)
+                            itunes:object.objectForKey("itunes") as? String,
+                            smallPicture:(object.objectForKey("smallPicture") as! PFFile).url)
                         
                             self.scholarArray.append(scholar)
-                        
+                            //println(scholar.smallPicture)
                     }
                     
                     NSNotificationCenter.defaultCenter().postNotificationName("onScholarsLoadedNotification", object: self)
