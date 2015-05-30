@@ -79,6 +79,7 @@ func ==(lhs: TutorialObjectAction, rhs: TutorialObjectAction) -> Bool {
 class TutorialObject {
     var object: UIView!
     private(set) var points: [CGPoint] = []
+    var tag = 0
 
     private(set) var size: CGSize = CGSizeZero
     private var startPosition: CGPoint = CGPointZero
@@ -202,6 +203,7 @@ class TutorialObject {
             
             let alphaAction = TutorialObjectActionContainer.findOrCreateAction(.ChangeAlpha, actions: oldActions).merge(TutorialObjectActionContainer.findOrCreateAction(.ChangeAlpha, actions: newActions), delta: delta)
             let frameAction = TutorialObjectActionContainer.findOrCreateAction(.Resize, actions: oldActions).merge(TutorialObjectActionContainer.findOrCreateAction(.Resize, actions: newActions), delta: delta)
+            
             
             alphaAction.applyAction(self.object)
             frameAction.applyAction(self.object)
