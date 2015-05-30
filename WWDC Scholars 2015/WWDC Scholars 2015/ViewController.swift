@@ -49,7 +49,7 @@ class ViewController: UIViewController {
         
         pageControl.numberOfPages = Int(numberOfScreens)
         
-        movingTimer = NSTimer(timeInterval: 4.0, target: self, selector: "timerStep", userInfo: nil, repeats: true)
+        movingTimer = NSTimer(timeInterval: 6.0, target: self, selector: "timerStep", userInfo: nil, repeats: true)
         NSRunLoop.currentRunLoop().addTimer(movingTimer!, forMode: NSRunLoopCommonModes)
     }
     
