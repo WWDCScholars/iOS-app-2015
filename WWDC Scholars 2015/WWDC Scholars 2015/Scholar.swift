@@ -46,6 +46,9 @@ class Scholar:NSObject{
         self.picture = picture
         self.appScreenshots = appScreenshots
         self.shortBio = shortBio
+        if shortBio == nil {
+            self.shortBio = ""
+        }
         self.numberOfWWDCAttend = numberOfWWDCAttend
         self.appDemo = appDemo
         self.githubLinkToApp = githubLinkToApp
@@ -58,5 +61,20 @@ class Scholar:NSObject{
         self.itunes = itunes
         self.user = user
         self.smallPicture = smallPicture
+    }
+    
+    func generateSimpleJson() -> NSDictionary!{
+        var dict = NSMutableDictionary()
+        
+        dict.setObject(self.name!, forKey: "name")
+        dict.setObject(self.age!, forKey: "age")
+        dict.setObject(self.numberOfWWDCAttend!, forKey: "numberOfWWDCAttend")
+        dict.setObject(self.latitude, forKey: "latitude")
+        dict.setObject(self.longitude, forKey: "longitude")
+        dict.setObject(self.picture!, forKey: "picture")
+        dict.setObject(self.shortBio!, forKey: "shortBio")
+        dict.setObject(self.location!, forKey: "location")
+
+        return dict as NSDictionary
     }
 }

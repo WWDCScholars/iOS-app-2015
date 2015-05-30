@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14E17e" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WWDC_Scholars_2015_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="8Dd-CG-7Ks">
+                            <items>
+                                <tableRow identifier="scholarCell" id="zci-PW-wVV" customClass="ScholarTableRow" customModule="WWDC_Scholars_2015_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="50" alignment="left" id="0fL-qW-Zg1">
+                                        <items>
+                                            <group width="40" height="40" alignment="left" verticalAlignment="center" radius="10" id="NhB-5v-kmM">
+                                                <items>
+                                                    <imageView width="40" height="40" alignment="center" verticalAlignment="center" image="11358626_821050244645510_1909173720_n.jpg" contentMode="scaleAspectFill" id="EoF-JB-KYV"/>
+                                                </items>
+                                            </group>
+                                            <label width="0.90000000000000002" widthAdjustment="-25" height="1" alignment="left" verticalAlignment="center" text="Name" textAlignment="center" minimumScaleFactor="0.50000000000000011" id="FnN-UN-Et3"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="scholarImage" destination="EoF-JB-KYV" id="2JW-lp-TOw"/>
+                                        <outlet property="scholarName" destination="FnN-UN-Et3" id="Yn1-GU-Tlm"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="scholarTable" destination="8Dd-CG-7Ks" id="Rmg-mj-RvX"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+</document>
