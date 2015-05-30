@@ -118,7 +118,7 @@ class ViewController: UIViewController {
     }
     
     func animateSwipeImage(){
-            self.swipeLeftImage.frame.origin.x = self.screenSize.width - 60
+        self.swipeLeftImage.frame.origin.x = self.screenSize.width - 60
         self.swipeLeftImage.alpha = 0.5
         
         UIView.animateWithDuration(2.0, delay: 2.0, options: .CurveEaseInOut, animations: {
@@ -131,8 +131,8 @@ class ViewController: UIViewController {
     
     func buttonAction(sender:UIButton!)
     {
-        self.performSegueWithIdentifier("toMain", sender: self)
-        
+//        self.performSegueWithIdentifier("toMain", sender: self)
+        dismissViewControllerAnimated(true, completion: nil)
         //If the user presses the button, then it will set the intro as visited (and won't open again)
         LocalStore.setIntroAsVisited()
     }

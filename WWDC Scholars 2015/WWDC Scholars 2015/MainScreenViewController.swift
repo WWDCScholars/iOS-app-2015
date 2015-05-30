@@ -87,9 +87,9 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
     override func viewDidAppear(animated: Bool) {
         //If the user has opened the app for the first time then go to the intro view
         
-//        if !LocalStore.isIntroVisited() {
-//            performSegueWithIdentifier("IntroSegue", sender: self)
-//        }
+        if !LocalStore.isIntroVisited() {
+            performSegueWithIdentifier("IntroSegue", sender: self)
+        }
     }
     
     override func prefersStatusBarHidden() -> Bool {
