@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var contentView: UIView!
+    var swipeLeftImage: UIImageView!
     
     let numberOfScreens: CGFloat = 6
     
@@ -96,6 +97,29 @@ class ViewController: UIViewController {
         startButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
         startButton.layer.cornerRadius = 3
         contentView.addSubview(startButton)
+        
+        swipeLeftImage = UIImageView(frame: CGRectMake(screenSize.width - 60, screenSize.height - 120, 50, 100))
+        swipeLeftImage.image = UIImage(named: "SwipeLeft")
+        swipeLeftImage.contentMode = .ScaleAspectFit
+        swipeLeftImage.alpha = 0.50
+        UIView.animateWithDuration(2.0, delay: 2.0, options: .CurveEaseInOut, animations: {
+                self.swipeLeftImage.frame.origin.x = 10
+            }, completion: { _ in
+                self.animateSwipeImage()
+        })
+        self.view.addSubview(swipeLeftImage)
+    }
+    
+    func animateSwipeImage(){
+        UIView.animateWithDuration(0.5, delay: 0.0, options: .CurveEaseInOut, animations: {
+            self.swipeLeftImage.frame.origin.x = self.screenSize.width - 60
+            }, completion: nil)
+        
+        UIView.animateWithDuration(2.0, delay: 2.0, options: .CurveEaseInOut, animations: {
+            self.swipeLeftImage.frame.origin.x = 10
+            }, completion: { _ in
+                self.animateSwipeImage()
+        })
     }
     
     func buttonAction(sender:UIButton!)
@@ -198,6 +222,7 @@ extension ViewController: UIScrollViewDelegate {
         if let label = firstLabel {
             if scrollView.contentOffset.x > screenSize.width * 1.0 && scrollView.contentOffset.x < screenSize.width * 2.0 {
                 label.alpha = (scrollView.contentOffset.x - screenSize.width) / screenSize.width
+                self.swipeLeftImage.alpha = 0.5-(scrollView.contentOffset.x - screenSize.width) / screenSize.width
             }
         }
         
