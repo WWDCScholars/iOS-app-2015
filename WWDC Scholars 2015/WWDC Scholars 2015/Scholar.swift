@@ -32,8 +32,9 @@ class Scholar:NSObject{
     var location : String?
     var itunes : String?
     var user : PFUser?
+    var smallPicture : String?
     
-    init(name:String?,firstName:String?,age:Int,birthdate:NSDate?,gender:String?,latitude:Double,longitude:Double,email:String?,picture:String?, appScreenshots:[String]?,shortBio:String?,numberOfWWDCAttend:Int?,appDemo:String?,githubLinkToApp:String?,twitter:String?,facebook:String?,github:String?,linkedIn:String?,website:String?,location:String?, user: PFUser?,  itunes: String?){
+    init(name:String?,firstName:String?,age:Int,birthdate:NSDate?,gender:String?,latitude:Double,longitude:Double,email:String?,picture:String?, appScreenshots:[String]?,shortBio:String?,numberOfWWDCAttend:Int?,appDemo:String?,githubLinkToApp:String?,twitter:String?,facebook:String?,github:String?,linkedIn:String?,website:String?,location:String?, user: PFUser?,  itunes: String?, smallPicture:String?){
         self.name = name
         self.firstName = firstName
         self.age = age
@@ -55,6 +56,7 @@ class Scholar:NSObject{
         self.website = website
         self.location = location
         self.itunes = itunes
-            self.user = user
+        self.user = user
+        self.smallPicture = smallPicture
     }
 }

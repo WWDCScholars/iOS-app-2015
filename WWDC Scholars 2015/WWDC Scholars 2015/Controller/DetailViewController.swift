@@ -63,7 +63,7 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         let zoomRegion = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D(latitude: (currentScholar!.latitude), longitude: (currentScholar!.longitude)), 1000000, 1000000)
             
         mapView.setRegion(zoomRegion, animated: true)
-        let anno = scholarAnnotation(coordinate: CLLocationCoordinate2D(latitude: (currentScholar!.latitude), longitude: (currentScholar!.longitude)), title: (currentScholar?.name)!, subtitle: (currentScholar?.location)!)
+        let anno = scholarAnnotation(coordinate: CLLocationCoordinate2D(latitude: (currentScholar!.latitude), longitude: (currentScholar!.longitude)), title: (currentScholar?.name)!, subtitle: (currentScholar?.location)!,profilePictureUrl:"")
         let pinView = MKAnnotationView(annotation: anno, reuseIdentifier: "ScholarAnnotation")
         mapView.addAnnotation(pinView.annotation)
 
