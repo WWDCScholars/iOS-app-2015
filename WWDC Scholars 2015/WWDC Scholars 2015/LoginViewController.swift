@@ -32,7 +32,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, DragDropBehavi
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
         dialogView.animate()
-        if DeviceType.IS_IPHONE_4_OR_LESS {
+        if UIScreen.mainScreen().bounds.size.height == 480 {
             dialogView.transform = CGAffineTransformMakeScale(0.8, 0.8)
         }
     }
