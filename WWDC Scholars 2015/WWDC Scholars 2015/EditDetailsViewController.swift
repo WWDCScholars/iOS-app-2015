@@ -368,7 +368,7 @@ func imagePickerController(picker: UIImagePickerController, didFinishPickingMedi
         
         
         let query = PFQuery(className: "scholars")
-        //query.whereKey("user", equalTo: PFUser.currentUser()!)
+        query.whereKey("user", equalTo: PFUser.currentUser()!)
         query.getFirstObjectInBackgroundWithBlock { (object, error) -> Void in
             if let loadedUser = object {
                 self.user = loadedUser
