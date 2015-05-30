@@ -83,15 +83,15 @@ class ViewController: UIViewController {
         
         let anotheQuoteLabel = UILabel(frame: CGRectMake(0, 0, screenSize.width - 32, 30))
         anotheQuoteLabel.center = CGPoint(x: screenSize.width / 2, y: screenSize.height / 1.8)
-        anotheQuoteLabel.text = "-Steve Jobs"
+        anotheQuoteLabel.text = "- Steve Jobs"
         anotheQuoteLabel.font = UIFont(name: "HelveticaNeue-Thin", size: 18)
         anotheQuoteLabel.textAlignment = .Right
         contentView.addSubview(anotheQuoteLabel)
         
         let startButton = UIButton(frame: CGRectMake(0, 0, imageView.frame.width, imageView.frame.height))
         startButton.center = CGPoint(x: screenSize.width * 5.5, y: screenSize.height / 1.2)
-        startButton.backgroundColor = UIColor.purpleColor()
-        startButton.setTitle("Start", forState: .Normal)
+        startButton.backgroundColor = UIColorFromRGB(0x6C4FA0)
+        startButton.setTitle("Welcome", forState: .Normal)
         startButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
         contentView.addSubview(startButton)
     }

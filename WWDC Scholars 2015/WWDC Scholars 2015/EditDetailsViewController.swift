@@ -273,54 +273,67 @@ func imagePickerController(picker: UIImagePickerController, didFinishPickingMedi
         profpic.layer.masksToBounds = true
         
         
-        let paddingView3 = UIView(frame: CGRectMake(0, 0, 8, self.age.frame.height))
-        age.leftView = paddingView3
-        age.leftViewMode = UITextFieldViewMode.Always
-        let paddingView4 = UIView(frame: CGRectMake(0, 0, 8, self.dateOfBirth.frame.height))
-        dateOfBirth.leftView = paddingView4
-        dateOfBirth.leftViewMode = UITextFieldViewMode.Always
-        let paddingView5 = UIView(frame: CGRectMake(0, 0, 8, self.gender.frame.height))
-        gender.leftView = paddingView5
-        gender.leftViewMode = UITextFieldViewMode.Always
-        let paddingView6 = UIView(frame: CGRectMake(0, 0, 8, self.cityCountry.frame.height))
-        cityCountry.leftView = paddingView6
-        cityCountry.leftViewMode = UITextFieldViewMode.Always
-        let paddingView7 = UIView(frame: CGRectMake(0, 0, 8, self.previousWWDC.frame.height))
-        previousWWDC.leftView = paddingView7
-        previousWWDC.leftViewMode = UITextFieldViewMode.Always
-        let paddingView8 = UIView(frame: CGRectMake(0, 0, 8, self.appVideo.frame.height))
-        appVideo.leftView = paddingView8
-        appVideo.leftViewMode = UITextFieldViewMode.Always
-        let paddingView9 = UIView(frame: CGRectMake(0, 0, 8, self.githubLink.frame.height))
-        githubLink.leftView = paddingView9
-        githubLink.leftViewMode = UITextFieldViewMode.Always
-        let paddingView10 = UIView(frame: CGRectMake(0, 0, 8, self.email.frame.height))
-        email.leftView = paddingView10
-        email.leftViewMode = UITextFieldViewMode.Always
-        let paddingView11 = UIView(frame: CGRectMake(0, 0, 8, self.twitterUsername.frame.height))
-        twitterUsername.leftView = paddingView11
-        twitterUsername.leftViewMode = UITextFieldViewMode.Always
-        let paddingView12 = UIView(frame: CGRectMake(0, 0, 8, self.facebookUsername.frame.height))
-        facebookUsername.leftView = paddingView12
-        facebookUsername.leftViewMode = UITextFieldViewMode.Always
-        let paddingView13 = UIView(frame: CGRectMake(0, 0, 8, self.githubUsername.frame.height))
-        githubUsername.leftView = paddingView13
-        githubUsername.leftViewMode = UITextFieldViewMode.Always
-        let paddingView14 = UIView(frame: CGRectMake(0, 0, 8, self.linkedinUsername.frame.height))
-        linkedinUsername.leftView = paddingView14
-        linkedinUsername.leftViewMode = UITextFieldViewMode.Always
-        let paddingView15 = UIView(frame: CGRectMake(0, 0, 8, self.websiteLink.frame.height))
-        websiteLink.leftView = paddingView15
-        websiteLink.leftViewMode = UITextFieldViewMode.Always
-        let paddingView16 = UIView(frame: CGRectMake(0, 0, 8, self.itunesLink.frame.height))
-        itunesLink.leftView = paddingView16
-        itunesLink.leftViewMode = UITextFieldViewMode.Always
-        shortBio.delegate = self
+//        let paddingView3 = UIView(frame: CGRectMake(0, 0, 8, self.age.frame.height))
+//        age.leftView = paddingView3
+//        age.leftViewMode = UITextFieldViewMode.Always
+//        let paddingView4 = UIView(frame: CGRectMake(0, 0, 8, self.dateOfBirth.frame.height))
+//        dateOfBirth.leftView = paddingView4
+//        dateOfBirth.leftViewMode = UITextFieldViewMode.Always
+//        let paddingView5 = UIView(frame: CGRectMake(0, 0, 8, self.gender.frame.height))
+//        gender.leftView = paddingView5
+//        gender.leftViewMode = UITextFieldViewMode.Always
+//        let paddingView6 = UIView(frame: CGRectMake(0, 0, 8, self.cityCountry.frame.height))
+//        cityCountry.leftView = paddingView6
+//        cityCountry.leftViewMode = UITextFieldViewMode.Always
+//        let paddingView7 = UIView(frame: CGRectMake(0, 0, 8, self.previousWWDC.frame.height))
+//        previousWWDC.leftView = paddingView7
+//        previousWWDC.leftViewMode = UITextFieldViewMode.Always
+//        let paddingView8 = UIView(frame: CGRectMake(0, 0, 8, self.appVideo.frame.height))
+//        appVideo.leftView = paddingView8
+//        appVideo.leftViewMode = UITextFieldViewMode.Always
+//        let paddingView9 = UIView(frame: CGRectMake(0, 0, 8, self.githubLink.frame.height))
+//        githubLink.leftView = paddingView9
+//        githubLink.leftViewMode = UITextFieldViewMode.Always
+//        let paddingView10 = UIView(frame: CGRectMake(0, 0, 8, self.email.frame.height))
+//        email.leftView = paddingView10
+//        email.leftViewMode = UITextFieldViewMode.Always
+//        let paddingView11 = UIView(frame: CGRectMake(0, 0, 8, self.twitterUsername.frame.height))
+//        twitterUsername.leftView = paddingView11
+//        twitterUsername.leftViewMode = UITextFieldViewMode.Always
+//        let paddingView12 = UIView(frame: CGRectMake(0, 0, 8, self.facebookUsername.frame.height))
+//        facebookUsername.leftView = paddingView12
+//        facebookUsername.leftViewMode = UITextFieldViewMode.Always
+//        let paddingView13 = UIView(frame: CGRectMake(0, 0, 8, self.githubUsername.frame.height))
+//        githubUsername.leftView = paddingView13
+//        githubUsername.leftViewMode = UITextFieldViewMode.Always
+//        let paddingView14 = UIView(frame: CGRectMake(0, 0, 8, self.linkedinUsername.frame.height))
+//        linkedinUsername.leftView = paddingView14
+//        linkedinUsername.leftViewMode = UITextFieldViewMode.Always
+//        let paddingView15 = UIView(frame: CGRectMake(0, 0, 8, self.websiteLink.frame.height))
+//        websiteLink.leftView = paddingView15
+//        websiteLink.leftViewMode = UITextFieldViewMode.Always
+//        let paddingView16 = UIView(frame: CGRectMake(0, 0, 8, self.itunesLink.frame.height))
+//        itunesLink.leftView = paddingView16
+//        itunesLink.leftViewMode = UITextFieldViewMode.Always
+//        shortBio.delegate = self
+        
+        
+        
+        //Save Button
         saveButton.layer.cornerRadius = 7
         saveButton.layer.borderWidth = 0.5
-        saveButton.layer.borderColor = UIColor.purpleColor().CGColor
+        saveButton.layer.borderColor = UIColorFromRGB(0x593A8F).CGColor
         shortBio.text = ""
         shortBioCharactersLeft.text = "0/250 characters left"
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         let query = PFQuery(className: "scholars")
         //query.whereKey("user", equalTo: PFUser.currentUser()!)
