@@ -78,6 +78,7 @@ class DataManager: NSObject {
                             itunes:object.objectForKey("itunes") as? String,
                             smallPicture:(object.objectForKey("smallPicture") as! PFFile).url)
                         
+                        
                             self.scholarArray.append(scholar)
                             //println(scholar.smallPicture)
                     }

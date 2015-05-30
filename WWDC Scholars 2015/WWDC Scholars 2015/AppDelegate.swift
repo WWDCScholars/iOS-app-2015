@@ -10,6 +10,7 @@ import UIKit
 import Parse
 import ParseCrashReporting
 import Bolts
+import CoreLocation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -30,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Load all dem scholarship winners! :D
         DataManager.sharedInstance.loadStudents()
-        
+    
         // Override point for customization after application launch.
         return true
     }
@@ -57,6 +58,127 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func application(
+        application: UIApplication,
+        handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]?,
+        reply: (([NSObject : AnyObject]!) -> Void)!)
+    {
+        if let pfqueryRequest: AnyObject = (userInfo as? [String: AnyObject])?["pfquery_request"] {
+            println("Starting PFQuery") // won't print out to console since you're running the watch extension
+            
+            var male = 0
+            var female = 0
+            var totalAge = 0
+            var youngestAge = 0
+            var oldestAge = 0
+            var query = PFQuery(className:"scholars")
+            
+            var objects = query.findObjects()
 
+                    println("Successfully retrieved \(objects!.count) scholars.")
+                    if let objects = objects as? [PFObject] {
+                        for object in objects {
+                            var age = object.objectForKey("age") as! Int
+                            
+                            if (youngestAge == 0){
+                                youngestAge = age
+                            }
+                            if (oldestAge == 0){
+                                oldestAge = age
+                            }
+                            if (age > oldestAge){ oldestAge = age }
+                            if (age < youngestAge){ youngestAge = age }
+                            totalAge += (object.objectForKey("age") as! Int)
+                            if (object.objectForKey("gender") as? String == "Male"){
+                                male += 1
+                            }
+                            if (object.objectForKey("gender") as? String == "Female"){
+                                female += 1
+                            }
+                            
+                        }
+                        
+                        println(male)
+                        println(female)
+                        
+                        let averageAge = totalAge/objects.count
+                        reply(["success": true, "totalWinners":objects.count, "male": male, "female": female, "averageAge": averageAge, "oldest": oldestAge, "youngest": youngestAge])
+                        
+//                } else {
+//                    // Log details of the failure
+//                    println("Error: \(error!) \(error!.userInfo!)")
+//                }
+            }
+
+        }else if let pfqueryRequest: AnyObject = (userInfo as? [String: AnyObject])?["scholar_request"]{
+            if let containerURL = NSFileManager.defaultManager().containerURLForSecurityApplicationGroupIdentifier("group.wwdcscholars.2015") {
+            var scholarsArray = NSMutableArray()
+            var query = PFQuery(className:"scholars")
+            
+            var objects = query.findObjects()
+            
+            println("Successfully retrieved \(objects!.count) scholars.")
+            if let objects = objects as? [PFObject] {
+                for object in objects {
+            var scholar = Scholar(
+                name: NSString(format: "%@ %@", object.objectForKey("firstName") as! String, object.objectForKey("lastName") as! String) as String,
+                firstName: object.objectForKey("firstName") as! String,
+                age: object.objectForKey("age") as! Int,
+                birthdate: object.objectForKey("birthday") as? NSDate,
+                gender: object.objectForKey("gender") as? String,
+                latitude: (object.objectForKey("latitude") as? Double)!,
+                longitude: (object.objectForKey("longtitude") as? Double)!,
+                email: object.objectForKey("email") as? String,
+                picture: (object.objectForKey("smallPicture") as! PFFile).url!,
+                appScreenshots:nil,
+                shortBio: object.objectForKey("shortBio") as? String,
+                numberOfWWDCAttend: object.objectForKey("numberOfTimesWWDCScholar") as? Int,
+                appDemo: object.objectForKey("videoLink") as? String,
+                githubLinkToApp: object.objectForKey("githubLinkApp") as? String,
+                twitter: object.objectForKey("twitter") as? String,
+                facebook: object.objectForKey("facebook") as? String,
+                github: object.objectForKey("github") as? String,
+                linkedIn: object.objectForKey("linkedin") as? String,
+                website: object.objectForKey("website") as? String,
+                location:object.objectForKey("location") as? String,
+                user: nil,
+                itunes:object.objectForKey("itunes") as? String,
+                smallPicture: nil)
+                    scholarsArray.addObject(scholar.generateSimpleJson())
+                    
+                    if let imageUrl = NSURL(string: (object.objectForKey("smallPicture") as! PFFile).url!) {
+                        // create your document folder url
+                        let documentsUrl = self.applicationDocumentsDirectory!
+                        // your destination file url
+                        let destinationUrl = documentsUrl.URLByAppendingPathComponent(scholar.name!.stringByReplacingOccurrencesOfString(" ", withString: ""))
+                        println(destinationUrl)
+                        // check if it exists before downloading it
+                        if NSFileManager().fileExistsAtPath(destinationUrl.path!) {
+                            println("The file already exists at path")
+                        } else {
+                            //  if the file doesn't exist
+                            //  just download the data from your url
+                            if let myAudioDataFromUrl = NSData(contentsOfURL: imageUrl){
+                                // after downloading your data you need to save it to your destination url
+                                if myAudioDataFromUrl.writeToURL(destinationUrl, atomically: true) {
+                                    println("file saved")
+                                } else {
+                                    println("error saving file")
+                                }
+                            }
+                        }
+                    }
+                    
+            }
+                reply(["success": true, "scholars":scholarsArray as NSArray as! [NSDictionary]])
+            }
+            reply(["success": false, "scholars":[]])
+            }
+        }
+    }
+
+        lazy var applicationDocumentsDirectory: NSURL? = {
+            return NSFileManager.defaultManager().containerURLForSecurityApplicationGroupIdentifier("group.wwdcscholars.2015") ?? nil
+            }()
 }
 
