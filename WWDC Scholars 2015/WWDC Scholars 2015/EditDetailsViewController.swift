@@ -48,6 +48,7 @@ class EditDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
     var screenshot: NSInteger = 0
 
     
+    @IBOutlet weak var discardButton: UIButton!
     
     
     
@@ -222,6 +223,14 @@ func verifyAndSubmit(scholar: PFObject) {
     PFUser.logOutInBackground()
     }
 
+    
+    @IBAction func discardButtonPressed(sender: UIButton) {
+        self.performSegueWithIdentifier("backToMain", sender: self)
+         PFUser.logOutInBackground()
+    }
+    
+    
+    
 func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         if screenshot == 1 {
         var chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
@@ -339,6 +348,13 @@ func imagePickerController(picker: UIImagePickerController, didFinishPickingMedi
         saveButton.layer.cornerRadius = 7
         saveButton.layer.borderWidth = 0.5
         saveButton.layer.borderColor = UIColorFromRGB(0x593A8F).CGColor
+        
+        discardButton.layer.cornerRadius = 7
+        discardButton.layer.borderWidth = 0.5
+        discardButton.layer.borderColor = UIColorFromRGB(0x593A8F).CGColor
+
+        
+        
         shortBio.text = ""
         shortBioCharactersLeft.text = "0/250 characters left"
         
