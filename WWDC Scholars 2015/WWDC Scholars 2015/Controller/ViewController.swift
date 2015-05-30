@@ -88,7 +88,8 @@ class ViewController: UIViewController {
         anotheQuoteLabel.textAlignment = .Right
         contentView.addSubview(anotheQuoteLabel)
         
-        let startButton = UIButton(frame: CGRectMake(0, 0, imageView.frame.width, imageView.frame.height))
+        let startButton = DesignableButton(frame: CGRectMake(0, 0, imageView.frame.width, imageView.frame.height))
+        startButton.cornerRadius = 3
         startButton.center = CGPoint(x: screenSize.width * 5.5, y: screenSize.height / 1.2)
         startButton.backgroundColor = UIColorFromRGB(0x6C4FA0)
         startButton.setTitle("Welcome", forState: .Normal)
