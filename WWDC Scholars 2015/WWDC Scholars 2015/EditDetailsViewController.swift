@@ -13,10 +13,21 @@ class EditDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var screenshotScrollview: UIScrollView!
     var newImage = false
+    
+    //FIXED
     @IBOutlet var name: UILabel!
-    @IBOutlet var age: UITextField!
-    @IBOutlet var dateOfBirth: UITextField!
-    @IBOutlet var gender: UITextField!
+    @IBOutlet weak var ageLabel: UILabel!
+    @IBOutlet weak var birthdayLabel: UILabel!
+    @IBOutlet weak var genderLabel: UILabel!
+    
+    
+    //CAN BE CHANGED
+    
+    
+    
+//    @IBOutlet var age: UITextField!
+//    @IBOutlet var dateOfBirth: UITextField!
+//    @IBOutlet var gender: UITextField!
     @IBOutlet var cityCountry: UITextField!
     @IBOutlet var previousWWDC: UITextField!
     @IBOutlet var appVideo: UITextField!
@@ -29,12 +40,15 @@ class EditDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
     @IBOutlet var websiteLink: UITextField!
     @IBOutlet var itunesLink: UITextField!
     
+    
     @IBOutlet var saveButton: UIButton!
     @IBOutlet var shortBioCharactersLeft: UILabel!
     @IBOutlet var shortBio: UITextView!
     
     var screenshot: NSInteger = 0
 
+    
+    
     
     
     @IBOutlet var appScreenshot1: UIButton!
@@ -104,6 +118,8 @@ class EditDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
             }
         }
     }
+    
+    
     let picker = UIImagePickerController()
     func squareImage(image: UIImage) -> UIImage? {
         var height: CGFloat = 0
@@ -128,12 +144,12 @@ class EditDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
 
     
 func verifyAndSubmit(scholar: PFObject) {
-        if count(self.age.text) != 0 {
-            scholar["age"] = self.age.text.toInt()
-        }
-        if count(self.gender.text) != 0 {
-            scholar["gender"] = self.gender.text
-        }
+//        if count(self.age.text) != 0 {
+//            scholar["age"] = self.age.text.toInt()
+//        }
+//        if count(self.gender.text) != 0 {
+//            scholar["gender"] = self.gender.text
+//        }
         if count(self.cityCountry.text) != 0 {
             scholar["location"] = self.cityCountry.text
         }
@@ -172,9 +188,9 @@ func verifyAndSubmit(scholar: PFObject) {
             scholar["numberOfTimesWWDCScholar"] = arr.count
             scholar["batchWWDC"] = arr
         }
-    if count(self.dateOfBirth.text) != 0 {
-        scholar["birthday"] = self.dateOfBirth.text
-    }
+//    if count(self.dateOfBirth.text) != 0 {
+//        scholar["birthday"] = self.dateOfBirth.text
+//    }
     if newImage {
         let squaredimage = self.squareImage(self.profpic.currentBackgroundImage!)
         let file = PFFile(name: "profilePic", data: UIImagePNGRepresentation(squaredimage))
@@ -332,7 +348,7 @@ func imagePickerController(picker: UIImagePickerController, didFinishPickingMedi
         
         
         
-        
+        //PARSE PULLING OF OBJECTS
         
         
         let query = PFQuery(className: "scholars")
@@ -341,12 +357,24 @@ func imagePickerController(picker: UIImagePickerController, didFinishPickingMedi
             if let loadedUser = object {
                 self.user = loadedUser
                 self.name.text = (loadedUser["firstName"] as! String) + " " + (loadedUser["lastName"] as! String)
-                self.age.text = String(stringInterpolationSegment: loadedUser["age"] as! NSNumber)
+                self.ageLabel.text = String(stringInterpolationSegment: loadedUser["age"] as! NSNumber)
+                
+                
                 let date: NSDate = loadedUser["birthday"] as! NSDate
                 let formatter = NSDateFormatter()
                 formatter.dateFormat = "MM/DD/YYYY"
-                self.dateOfBirth.text = formatter.stringFromDate(date)
-                self.gender.text = loadedUser["gender"] as? String
+                self.birthdayLabel.text = formatter.stringFromDate(date)
+                
+                self.genderLabel.text = loadedUser["gender"] as? String
+                
+                
+                
+//                self.age.text = String(stringInterpolationSegment: loadedUser["age"] as! NSNumber)
+//                
+//                self.dateOfBirth.text = formatter.stringFromDate(date)
+//                self.gender.text = loadedUser["gender"] as? String
+                
+                
                 self.cityCountry.text = loadedUser["location"] as? String
                 self.shortBio.text = loadedUser["shortBio"] as? String
             self.previousWWDC.text = ", ".join((loadedUser["batchWWDC"] as! [String]))
