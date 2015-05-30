@@ -141,7 +141,7 @@ class ViewController: UIViewController {
         let defaultPartAttributes = AZTextFrameAttributes(string: first + "\n\n", width: screenSize.width - 16, font: UIFont(name: "HelveticaNeue-Thin", size: 18)!)
         
         let firstWidth = AZTextFrame(attributes: firstPartAttributes).width
-        let secondWidth = AZTextFrame(attributes: secondPartAttributes).width
+        let secondWidth = AZTextFrame(attributes: secondPartAttributes).width + 11
         let defaultPartHeight = AZTextFrame(attributes: defaultPartAttributes).height
         let sum = firstWidth + secondWidth
         
