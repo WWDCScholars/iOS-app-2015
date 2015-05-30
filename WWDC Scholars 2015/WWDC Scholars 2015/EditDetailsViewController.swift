@@ -287,7 +287,7 @@ func imagePickerController(picker: UIImagePickerController, didFinishPickingMedi
         
         // Do any additional setup after loading the view.
         scrollView.scrollEnabled = true
-        scrollView.contentSize = CGSizeMake(self.view.bounds.size.width, 1746)
+        scrollView.contentSize = CGSizeMake(self.view.bounds.size.width, 1650)
 //        scrollView.showsVerticalScrollIndicator = true
         
         screenshotScrollview.scrollEnabled = true
