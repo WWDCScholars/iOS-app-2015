@@ -5224,7 +5224,7 @@ Two times at WWDC!</string>
                             </scrollView>
                             <pageControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="gBZ-hX-PFk">
                                 <rect key="frame" x="280" y="555" width="39" height="37"/>
-                                <color key="pageIndicatorTintColor" patternImage="679FD46B-8732-49E5-96B8-6F52F0F2FCD2" colorSpace="pattern"/>
+                                <color key="pageIndicatorTintColor" patternImage="593D8B1F-35E7-4F59-BDDA-0048336EB7F2" colorSpace="pattern"/>
                                 <color key="currentPageIndicatorTintColor" red="0.0" green="0.0" blue="0.66825143909999996" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
                         </subviews>
@@ -5253,7 +5253,7 @@ Two times at WWDC!</string>
         </scene>
     </scenes>
     <resources>
-        <image name="679FD46B-8732-49E5-96B8-6F52F0F2FCD2" width="512" height="512">
+        <image name="593D8B1F-35E7-4F59-BDDA-0048336EB7F2" width="512" height="512">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
