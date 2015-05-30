@@ -67,7 +67,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate, DragDropBehavi
     // MARK: UITextFieldDelegate
     @IBAction func scrollViewPressed(sender: AnyObject) {
         view.endEditing(true)
-        println(sender.view)
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
