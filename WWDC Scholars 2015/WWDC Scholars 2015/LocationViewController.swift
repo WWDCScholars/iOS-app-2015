@@ -41,9 +41,6 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
     var qTree = QTree()
     var myLocation : CLLocationCoordinate2D?
     
-    
-    @IBOutlet weak var tableView: UITableView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -63,9 +60,9 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
         //The "Find me" button
         let button = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
         if DeviceType.IS_IPAD {
-            button.frame = CGRectMake(UIScreen.mainScreen().bounds.width - 105,UIScreen.mainScreen().bounds.height - self.bottomImageView.frame.size.height - 175, 100, 100)
+            button.frame = CGRectMake(UIScreen.mainScreen().bounds.width - 80,UIScreen.mainScreen().bounds.height - self.bottomImageView.frame.size.height - 100, 50, 50)
         } else {
-            button.frame = CGRectMake(UIScreen.mainScreen().bounds.width - 55,UIScreen.mainScreen().bounds.height - self.bottomImageView.frame.size.height - 25, 50, 50)
+            button.frame = CGRectMake(UIScreen.mainScreen().bounds.width - 55,UIScreen.mainScreen().bounds.height - self.bottomImageView.frame.size.height - 60, 50, 50)
         }
         
         button.setImage(UIImage(named: "MyLocation"), forState: .Normal)
