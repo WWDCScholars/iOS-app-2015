@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuickLook
 
 class CreditsViewController: UIViewController, UIScrollViewDelegate {
 
@@ -49,7 +50,11 @@ class CreditsViewController: UIViewController, UIScrollViewDelegate {
     }
 
     @IBAction func openWebsite(sender: AnyObject) {
-        UIApplication.sharedApplication().openURL(NSURL(string: "https://michieriffic.typeform.com/to/iLcHKn")!)
+        let url = "https://michieriffic.typeform.com/to/iLcHKn"
+        let browser : NGBrowserViewController = NGBrowserViewController(url: url)
+        let nav : UINavigationController = UINavigationController(rootViewController: browser)
+        self.presentViewController(nav, animated: true, completion: nil)
+
     }
     
     @IBAction func backButtonClicked(sender: UIButton) {
