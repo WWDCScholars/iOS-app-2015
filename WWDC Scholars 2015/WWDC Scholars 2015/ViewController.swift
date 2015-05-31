@@ -112,7 +112,7 @@ class ViewController: UIViewController {
 
             }, completion: { _ in
                 if (self.movingTimer != nil && !self.stopSwipeAnim){ self.animateSwipeImage() }
-                self.animateSwipeImage()
+//                self.animateSwipeImage()
         })
         self.view.addSubview(swipeLeftImage)
     }
