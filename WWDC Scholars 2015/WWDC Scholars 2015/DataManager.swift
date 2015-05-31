@@ -38,6 +38,7 @@ class DataManager: NSObject {
                         }
                         
                         
+                        
                         let screenshots = NSMutableArray()
                         if let screenshotOne = object.objectForKey("screenshotOne") as? PFFile{
                             screenshots.addObject(screenshotOne.url!)
@@ -51,7 +52,12 @@ class DataManager: NSObject {
                         if let screenshotFour = object.objectForKey("screenshotFour") as? PFFile{
                             screenshots.addObject(screenshotFour.url!)
                         }
-                  
+                        
+                       
+                        //prevent crashes
+                        let obj = object.objectForKey("user") as? PFUser
+                        obj?.fetchIfNeededInBackground()
+                        
                         var scholar = Scholar(
                             
                             name: NSString(format: "%@ %@", object.objectForKey("firstName") as! String, object.objectForKey("lastName") as! String) as String,
@@ -74,7 +80,7 @@ class DataManager: NSObject {
                             linkedIn: object.objectForKey("linkedin") as? String,
                             website: object.objectForKey("website") as? String,
                             location:object.objectForKey("location") as? String,
-                            user: object.objectForKey("user") as? PFUser,
+                            user: obj,
                             itunes:object.objectForKey("itunes") as? String,
                             smallPicture:(object.objectForKey("smallPicture") as! PFFile).url)
                         
