@@ -8,8 +8,9 @@
 
 import UIKit
 import QuickLook
+import MessageUI
 
-class DetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, URBMediaFocusViewControllerDelegate, UIGestureRecognizerDelegate,MKMapViewDelegate {
+class DetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, URBMediaFocusViewControllerDelegate, UIGestureRecognizerDelegate,MKMapViewDelegate, MFMailComposeViewControllerDelegate {
     
     @IBAction func pinched(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
@@ -138,7 +139,14 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     }
     
     func open_mail() {
-        UIApplication.sharedApplication().openURL(NSURL(string:"mailto:"+currentScholar!.email!)!)
+        var picker = MFMailComposeViewController()
+        picker.mailComposeDelegate = self
+        picker.setToRecipients([currentScholar!.email!])
+        presentViewController(picker, animated: true, completion: nil)
+    }
+    
+    func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     func open_gh() {
@@ -153,12 +161,12 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     func open_li() {
         self.openBrowserWithURL(currentScholar!.linkedIn!)
-        UIApplication.sharedApplication().openURL(NSURL(string:currentScholar!.linkedIn!)!)
+//        UIApplication.sharedApplication().openURL(NSURL(string:currentScholar!.linkedIn!)!)
     }
     
     func open_it() {
         self.openBrowserWithURL(currentScholar!.itunes!)
-        UIApplication.sharedApplication().openURL(NSURL(string:currentScholar!.itunes!)!)
+//        UIApplication.sharedApplication().openURL(NSURL(string:currentScholar!.itunes!)!)
     }
     
     func open_tw() {
