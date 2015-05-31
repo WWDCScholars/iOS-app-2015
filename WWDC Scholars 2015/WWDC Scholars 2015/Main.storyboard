@@ -5250,11 +5250,11 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYy-ZX-rYb">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="1600"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xYx-Fp-3wa">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="1328"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xYx-Fp-3wa">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="1326.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nicola Giancecchi" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hws-tT-QWB">
-                                                <rect key="frame" x="20" y="310" width="560" height="34"/>
+                                                <rect key="frame" x="20" y="310" width="560" height="33.5"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="28"/>
                                                 <color key="textColor" red="0.29019607843137257" green="0.6588235294117647" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -5267,15 +5267,15 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ksw-jJ-pI1">
-                                                <rect key="frame" x="20" y="359" width="560" height="38"/>
+                                                <rect key="frame" x="20" y="358" width="560" height="37.5"/>
                                                 <string key="text">22 from San Marino (SMR)
 Two times at WWDC!</string>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                 <color key="textColor" red="0.2901960784" green="0.6588235294" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lUn-7d-UaA">
-                                                <rect key="frame" x="160" y="416" width="280" height="1"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lUn-7d-UaA">
+                                                <rect key="frame" x="25" y="416" width="550" height="1"/>
                                                 <color key="backgroundColor" white="0.84776023384574406" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="1js-4w-E6R"/>
@@ -5304,19 +5304,19 @@ Two times at WWDC!</string>
                                                 </connections>
                                             </mapView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My WWDC App" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggs-oG-RhV">
-                                                <rect key="frame" x="20" y="823" width="560" height="27"/>
+                                                <rect key="frame" x="20" y="823" width="560" height="26.5"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
                                                 <color key="textColor" red="0.29019607843137257" green="0.6588235294117647" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect with me!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sh5-bD-Rnf">
-                                                <rect key="frame" x="20" y="1208" width="560" height="27"/>
+                                                <rect key="frame" x="20" y="1207" width="560" height="26.5"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
                                                 <color key="textColor" red="0.29019607843137257" green="0.6588235294117647" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5As-1u-SiI">
-                                                <rect key="frame" x="160" y="1255" width="280" height="1"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5As-1u-SiI">
+                                                <rect key="frame" x="25" y="1253.5" width="550" height="1"/>
                                                 <color key="backgroundColor" white="0.84776023384574406" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="BUR-z4-Fji"/>
@@ -5328,8 +5328,8 @@ Two times at WWDC!</string>
                                                     </mask>
                                                 </variation>
                                             </view>
-                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N64-7S-cFl">
-                                                <rect key="frame" x="160" y="927" width="280" height="1"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N64-7S-cFl">
+                                                <rect key="frame" x="25" y="926" width="550" height="1"/>
                                                 <color key="backgroundColor" white="0.84776023384574406" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="280" id="Y9u-uH-eW4"/>
@@ -5342,7 +5342,7 @@ Two times at WWDC!</string>
                                                 </variation>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAJ-6w-2xS">
-                                                <rect key="frame" x="200" y="870" width="200" height="37"/>
+                                                <rect key="frame" x="200" y="869" width="200" height="37"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="VGf-yx-bxw"/>
                                                     <constraint firstAttribute="height" constant="37" id="ofB-Nr-YEh"/>
@@ -5356,16 +5356,16 @@ Two times at WWDC!</string>
                                                     <action selector="didOpenGithubRepo:" destination="bj9-Te-WTq" eventType="touchUpInside" id="AOg-zL-2Jy"/>
                                                 </connections>
                                             </button>
-                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fv4-PN-J1m">
-                                                <rect key="frame" x="213" y="1276" width="175" height="30"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fv4-PN-J1m">
+                                                <rect key="frame" x="160" y="1273.5" width="280" height="30"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="175" id="IzD-K5-mhX"/>
+                                                    <constraint firstAttribute="width" constant="280" id="IzD-K5-mhX"/>
                                                     <constraint firstAttribute="height" constant="30" id="Tob-wp-uYa"/>
                                                 </constraints>
                                             </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ysb-Sj-6a1">
-                                                <rect key="frame" x="0.0" y="948" width="600" height="240"/>
+                                                <rect key="frame" x="0.0" y="947" width="600" height="240"/>
                                                 <color key="backgroundColor" white="0.95266062062937074" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Ysb-Sj-6a1" secondAttribute="height" multiplier="600:240" id="WuI-ut-2r6"/>
@@ -5459,7 +5459,7 @@ Two times at WWDC!</string>
                                             <constraint firstItem="N64-7S-cFl" firstAttribute="top" secondItem="HAJ-6w-2xS" secondAttribute="bottom" constant="20" id="ZCt-wC-ZLe"/>
                                             <constraint firstItem="wO1-9f-6LN" firstAttribute="leading" secondItem="xYx-Fp-3wa" secondAttribute="leading" constant="20" id="c1W-ns-jVr"/>
                                             <constraint firstItem="Ysb-Sj-6a1" firstAttribute="top" secondItem="N64-7S-cFl" secondAttribute="bottom" constant="20" id="cCw-BO-vFh"/>
-                                            <constraint firstItem="fv4-PN-J1m" firstAttribute="top" secondItem="5As-1u-SiI" secondAttribute="bottom" constant="20" id="cn2-CQ-H7V"/>
+                                            <constraint firstItem="fv4-PN-J1m" firstAttribute="top" secondItem="5As-1u-SiI" secondAttribute="bottom" constant="19" id="cn2-CQ-H7V"/>
                                             <constraint firstItem="pqL-kn-ipq" firstAttribute="centerY" secondItem="E5L-4Z-iEc" secondAttribute="centerY" id="crD-LD-OBV"/>
                                             <constraint firstAttribute="trailing" secondItem="N64-7S-cFl" secondAttribute="trailing" constant="25" id="eNw-mz-KSi"/>
                                             <constraint firstAttribute="trailing" secondItem="Ysb-Sj-6a1" secondAttribute="trailing" id="fYo-ZB-3NV"/>
@@ -5468,7 +5468,7 @@ Two times at WWDC!</string>
                                             <constraint firstAttribute="trailing" secondItem="Ksw-jJ-pI1" secondAttribute="trailing" constant="20" id="kI5-Og-9kO"/>
                                             <constraint firstAttribute="trailing" secondItem="Ggs-oG-RhV" secondAttribute="trailing" constant="20" id="npZ-vy-cRR"/>
                                             <constraint firstItem="Ggs-oG-RhV" firstAttribute="top" secondItem="g5u-IO-TJj" secondAttribute="bottom" constant="20" id="oiS-7S-FgE"/>
-                                            <constraint firstAttribute="bottom" secondItem="fv4-PN-J1m" secondAttribute="bottom" constant="22" id="qZw-jf-IJi"/>
+                                            <constraint firstAttribute="bottom" secondItem="fv4-PN-J1m" secondAttribute="bottom" constant="23" id="qZw-jf-IJi"/>
                                             <constraint firstAttribute="trailing" secondItem="hws-tT-QWB" secondAttribute="trailing" constant="20" id="sqP-h3-B3e"/>
                                             <constraint firstItem="E5L-4Z-iEc" firstAttribute="top" secondItem="xYx-Fp-3wa" secondAttribute="top" constant="15" id="tzi-JQ-xgV"/>
                                             <constraint firstItem="lUn-7d-UaA" firstAttribute="leading" secondItem="xYx-Fp-3wa" secondAttribute="leading" constant="25" id="vmP-X7-LxX"/>
@@ -6917,7 +6917,7 @@ Two times at WWDC!</string>
                             </scrollView>
                             <pageControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="gBZ-hX-PFk">
                                 <rect key="frame" x="280" y="555" width="39" height="37"/>
-                                <color key="pageIndicatorTintColor" patternImage="489D6CB2-5244-40CE-B516-B446EBBCFAAB" colorSpace="pattern"/>
+                                <color key="pageIndicatorTintColor" patternImage="4D8D688E-1908-4035-AB2B-0CDD82E9427E" colorSpace="pattern"/>
                                 <color key="currentPageIndicatorTintColor" red="0.0" green="0.0" blue="0.66825143909999996" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
                         </subviews>
@@ -6946,7 +6946,7 @@ Two times at WWDC!</string>
         </scene>
     </scenes>
     <resources>
-        <image name="489D6CB2-5244-40CE-B516-B446EBBCFAAB" width="512" height="512">
+        <image name="4D8D688E-1908-4035-AB2B-0CDD82E9427E" width="512" height="512">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
