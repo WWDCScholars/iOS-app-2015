@@ -142,18 +142,22 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     }
     
     func open_gh() {
-        UIApplication.sharedApplication().openURL(NSURL(string:currentScholar!.github!)!)
+        self.openBrowserWithURL(currentScholar!.github!)
+        //UIApplication.sharedApplication().openURL(NSURL(string:currentScholar!.github!)!)
     }
     
     func open_fb() {
-        UIApplication.sharedApplication().openURL(NSURL(string:currentScholar!.facebook!)!)
+        self.openBrowserWithURL(currentScholar!.facebook!)
+        //UIApplication.sharedApplication().openURL(NSURL(string:currentScholar!.facebook!)!)
     }
     
     func open_li() {
+        self.openBrowserWithURL(currentScholar!.linkedIn!)
         UIApplication.sharedApplication().openURL(NSURL(string:currentScholar!.linkedIn!)!)
     }
     
     func open_it() {
+        self.openBrowserWithURL(currentScholar!.itunes!)
         UIApplication.sharedApplication().openURL(NSURL(string:currentScholar!.itunes!)!)
     }
     
