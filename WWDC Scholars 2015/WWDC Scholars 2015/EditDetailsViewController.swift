@@ -17,7 +17,7 @@ class EditDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
     //FIXED
     @IBOutlet var name: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
-    @IBOutlet weak var birthdayLabel: UILabel!
+//    @IBOutlet weak var birthdayLabel: UILabel!
     @IBOutlet weak var genderLabel: UILabel!
     
     
@@ -42,7 +42,7 @@ class EditDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
     
     
     @IBOutlet var saveButton: UIButton!
-    @IBOutlet var shortBioCharactersLeft: UILabel!
+//    @IBOutlet var shortBioCharactersLeft: UILabel!
     @IBOutlet var shortBio: UITextView!
     
     var screenshot: NSInteger = 0
@@ -99,7 +99,7 @@ class EditDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
     func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
         let length = count(textView.text) + count(text) - range.length
         if length <= 250 {
-            shortBioCharactersLeft.text = "\(250-length)/250 characters left"
+//            shortBioCharactersLeft.text = "\(250-length)/250 characters left"
         }
         return (length <= 250)
     }
@@ -300,6 +300,9 @@ func imagePickerController(picker: UIImagePickerController, didFinishPickingMedi
         profpic.layer.cornerRadius = 10
         profpic.layer.masksToBounds = true
         
+        shortBio!.layer.borderWidth = 1
+        shortBio!.layer.borderColor = UIColorFromRGB(0x593A8F).CGColor
+        shortBio!.layer.cornerRadius = 5
         
 //        let paddingView3 = UIView(frame: CGRectMake(0, 0, 8, self.age.frame.height))
 //        age.leftView = paddingView3
@@ -359,7 +362,7 @@ func imagePickerController(picker: UIImagePickerController, didFinishPickingMedi
         
         
         shortBio.text = ""
-        shortBioCharactersLeft.text = "0/250 characters left"
+//        shortBioCharactersLeft.text = "0/250 characters left"
         
         
         
@@ -382,7 +385,7 @@ func imagePickerController(picker: UIImagePickerController, didFinishPickingMedi
                 let date: NSDate = loadedUser["birthday"] as! NSDate
                 let formatter = NSDateFormatter()
                 formatter.dateFormat = "MM/DD/YYYY"
-                self.birthdayLabel.text = formatter.stringFromDate(date)
+//                self.birthdayLabel.text = formatter.stringFromDate(date)
                 
                 self.genderLabel.text = loadedUser["gender"] as? String
                 
