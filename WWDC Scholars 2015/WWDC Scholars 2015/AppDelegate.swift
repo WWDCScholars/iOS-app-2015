@@ -23,8 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         ParseCrashReporting.enable();
 
-        Parse.setApplicationId("16ktYTkz6kuPyT81SZtxP4CXDV0POwVV5szF7kYP",
-            clientKey: "Ev89WaE9EVFmNXh6HB6LXLlJArnsG74PwiF8gbMT")
+        Parse.setApplicationId("***REMOVED***",
+            clientKey: "***REMOVED***")
         
         // Track statistics around application opens.
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
