@@ -17,6 +17,7 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
     //var cell : UICollectionViewCell?
     let transition = BubbleTransition()
     var index:Int?
+    var transitionManager = TransitionManager()
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ScholarshipCell", forIndexPath: indexPath) as! UICollectionViewCell
@@ -122,8 +123,12 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
             dest.currentScholar = DataManager.sharedInstance.scholarAtLocation(scholarsCollectionView.indexPathsForSelectedItems()[0].row)
             dest.transitioningDelegate = self
             dest.modalPresentationStyle = .Custom
+        } else if segue.identifier == "toCredits" {
+            let vc = segue.destinationViewController as! CreditsViewController
+            vc.transitioningDelegate = transitionManager
         }
     }
+
     // MARK: UIViewControllerTransitioningDelegate
     
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
