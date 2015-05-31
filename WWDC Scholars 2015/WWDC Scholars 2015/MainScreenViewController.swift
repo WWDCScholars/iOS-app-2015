@@ -155,6 +155,10 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
         if (DeviceType.IS_IPHONE_6P){
             return CGSizeMake(115,115)
         }
+        
+        if DeviceType.IS_IPAD {
+            return CGSizeMake(170, 170)
+        }
   
         return CGSizeMake(100,100)
     }
