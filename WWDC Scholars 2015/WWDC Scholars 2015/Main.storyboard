@@ -5767,6 +5767,9 @@ Two times at WWDC!</string>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="135" y="628" width="128" height="128"/>
                                 </variation>
+                                <connections>
+                                    <segue destination="dxU-Y8-xWh" kind="presentation" identifier="IntroSegue" modalTransitionStyle="crossDissolve" id="hmD-m3-jr5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -5782,7 +5785,9 @@ Two times at WWDC!</string>
                                 <variation key="heightClass=regular-widthClass=regular" constant="10"/>
                             </constraint>
                             <constraint firstItem="AGX-eF-uah" firstAttribute="height" secondItem="ygO-hE-WxG" secondAttribute="height" id="TBm-A0-ReO"/>
-                            <constraint firstItem="gJ8-sb-3Sl" firstAttribute="top" secondItem="AGX-eF-uah" secondAttribute="bottom" id="c2G-tM-77B"/>
+                            <constraint firstItem="gJ8-sb-3Sl" firstAttribute="top" secondItem="AGX-eF-uah" secondAttribute="bottom" id="c2G-tM-77B">
+                                <variation key="heightClass=regular-widthClass=regular" constant="-1"/>
+                            </constraint>
                             <constraint firstItem="xge-5f-XjS" firstAttribute="leading" secondItem="PpW-4n-Bat" secondAttribute="leading" id="c59-yg-wUe"/>
                             <constraint firstAttribute="centerX" secondItem="Og9-mf-g7l" secondAttribute="centerX" id="gbj-3S-gov"/>
                             <constraint firstAttribute="centerX" secondItem="cOV-in-jTf" secondAttribute="centerX" id="msS-E4-U8V"/>
@@ -6016,6 +6021,9 @@ Two times at WWDC!</string>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="135" y="628" width="128" height="128"/>
                                 </variation>
+                                <connections>
+                                    <segue destination="dxU-Y8-xWh" kind="presentation" identifier="IntroSegue" modalTransitionStyle="crossDissolve" id="ZP1-Fj-1Go"/>
+                                </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BbM-nF-pSR">
                                 <rect key="frame" x="26" y="15" width="548" height="29"/>
@@ -6243,7 +6251,7 @@ Two times at WWDC!</string>
                             </scrollView>
                             <pageControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="gBZ-hX-PFk">
                                 <rect key="frame" x="280" y="555" width="39" height="37"/>
-                                <color key="pageIndicatorTintColor" patternImage="BD9E936B-8C76-45A6-9F38-A9916E08AB6F" colorSpace="pattern"/>
+                                <color key="pageIndicatorTintColor" patternImage="35E73A22-D9F9-480D-9155-28CE1CC5F500" colorSpace="pattern"/>
                                 <color key="currentPageIndicatorTintColor" red="0.0" green="0.0" blue="0.66825143909999996" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
                         </subviews>
@@ -6272,10 +6280,7 @@ Two times at WWDC!</string>
         </scene>
     </scenes>
     <resources>
-        <image name="AlexanderZimin" width="83" height="83"/>
-        <image name="AmanJain" width="83" height="83"/>
-        <image name="AndrewWalker" width="83" height="83"/>
-        <image name="BD9E936B-8C76-45A6-9F38-A9916E08AB6F" width="512" height="512">
+        <image name="35E73A22-D9F9-480D-9155-28CE1CC5F500" width="512" height="512">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -23825,6 +23830,9 @@ EA65ABAOwQAQDs4AEA7TABAO1QAQDtcAEA7cABAO5AAQDucAEA7sABAO9AAQDvcAEA8JABAPDAAQDxEA
 AAAAAAAEAQAAAAAAAABCAAAAAAAAAAAAAAAAABAPEw
 </mutableData>
         </image>
+        <image name="AlexanderZimin" width="83" height="83"/>
+        <image name="AmanJain" width="83" height="83"/>
+        <image name="AndrewWalker" width="83" height="83"/>
         <image name="CharleyHutchison" width="83" height="83"/>
         <image name="CloseButton" width="35" height="35"/>
         <image name="Data" width="60" height="59"/>
@@ -23867,7 +23875,8 @@ AAAAAAAEAQAAAAAAAABCAAAAAAAAAAAAAAAAABAPEw
         <image name="wwdcscholars" width="395" height="160"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JZ3-vC-fi4"/>
-        <segue reference="DyR-D1-yrL"/>
+        <segue reference="ZP1-Fj-1Go"/>
+        <segue reference="dZ8-0W-jxb"/>
+        <segue reference="v9J-Tb-xJg"/>
     </inferredMetricsTieBreakers>
 </document>
