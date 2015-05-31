@@ -26,6 +26,7 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
     @IBOutlet weak var bottomImageView: UIImageView!
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
+    var transitionManager = TransitionManager()
     
     //init the model
     var scholarArray:[Scholar] = ((DataManager.sharedInstance.scholarArray) as NSArray) as! [Scholar]
@@ -277,6 +278,10 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
             dest.currentScholar = currentScholar
             dest.transitioningDelegate = self
             dest.modalPresentationStyle = .Custom
+        } else if segue.identifier == "toCredits" {
+            
+            let vc = segue.destinationViewController as! CreditsViewController
+            vc.transitioningDelegate = transitionManager
         }
         
     }
