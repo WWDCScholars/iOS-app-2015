@@ -64,7 +64,7 @@ class TutorialObjectActionContainer {
             action = TutorialObjectAction.Resize(size: CGSizeZero)
         }
         
-        if let index = find(actions, action) {
+        if let index = actions.indexOf(action) {
             return actions[index]
         }
         
@@ -126,7 +126,7 @@ class TutorialObject {
             actions[position] = []
         }
         
-        if let index = find(actions[position]!, action) {
+        if let index = (actions[position]!).indexOf(action) {
             actions[position]?.removeAtIndex(index)
         }
         
@@ -145,13 +145,13 @@ class TutorialObject {
                 actions[i] = []
             }
             
-            if let index = find(actions[i]!, preveousAlphaAction) {
+            if let index = (actions[i]!).indexOf(preveousAlphaAction) {
                 preveousAlphaAction = actions[i]![index]
             } else {
                 addActionAtPosition(preveousAlphaAction, position: i)
             }
             
-            if let index = find(actions[i]!, preveousSizeAction) {
+            if let index = (actions[i]!).indexOf(preveousSizeAction) {
                 preveousSizeAction = actions[i]![index]
             } else {
                 addActionAtPosition(preveousSizeAction, position: i)

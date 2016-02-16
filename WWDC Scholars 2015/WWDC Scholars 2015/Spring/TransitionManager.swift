@@ -33,10 +33,10 @@ public class TransitionManager: NSObject, UIViewControllerTransitioningDelegate,
         let toView = transitionContext.viewForKey(UITransitionContextToViewKey)!
         
         if isPresenting {
-            toView.frame = container.bounds
-            toView.transform = CGAffineTransformMakeTranslation(0, container.frame.size.height)
-            container.addSubview(fromView)
-            container.addSubview(toView)
+            toView.frame = container!.bounds
+            toView.transform = CGAffineTransformMakeTranslation(0, container!.frame.size.height)
+            container!.addSubview(fromView)
+            container!.addSubview(toView)
             springEaseInOut(duration) {
                 fromView.transform = CGAffineTransformMakeScale(0.8, 0.8)
                 fromView.alpha = 0.5
@@ -52,11 +52,11 @@ public class TransitionManager: NSObject, UIViewControllerTransitioningDelegate,
             // previous transformation when presenting
             let transform = toView.transform
             toView.transform = CGAffineTransformIdentity
-            toView.frame = container.bounds
+            toView.frame = container!.bounds
             toView.transform = transform
 
-            container.addSubview(toView)
-            container.addSubview(fromView)
+            container!.addSubview(toView)
+            container!.addSubview(fromView)
 
             springEaseInOut(duration) {
                 fromView.transform = CGAffineTransformMakeTranslation(0, fromView.frame.size.height)
@@ -65,12 +65,12 @@ public class TransitionManager: NSObject, UIViewControllerTransitioningDelegate,
             }
         }
         
-        delay(duration, {
+        delay(duration, closure: {
             transitionContext.completeTransition(true)
         })
     }
     
-    public func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
+    public func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return duration
     }
     

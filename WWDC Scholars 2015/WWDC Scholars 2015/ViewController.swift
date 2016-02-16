@@ -224,7 +224,7 @@ class ViewController: UIViewController {
             })
             
             if scrollView.contentOffset.x > screenSize.width * 1.0 {
-                println(0.5 - (scrollView.contentOffset.x - screenSize.width) / screenSize.width)
+                print(0.5 - (scrollView.contentOffset.x - screenSize.width) / screenSize.width)
                 self.swipeLeftImage.alpha = 0.5 - (scrollView.contentOffset.x - screenSize.width) / screenSize.width
             }
            // scrollView.scrollRectToVisible(CGRectMake(scrollView.contentOffset.x + screenSize.width, 0, screenSize.width, screenSize.height), animated: true)

@@ -58,7 +58,7 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
         mapView.mapType = MKMapType.Standard
         
         //The "Find me" button
-        let button = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+        let button = UIButton(type: UIButtonType.Custom)
         if DeviceType.IS_IPAD {
             button.frame = CGRectMake(UIScreen.mainScreen().bounds.width - 80,UIScreen.mainScreen().bounds.height - self.bottomImageView.frame.size.height - 100, 50, 50)
         } else {
@@ -103,11 +103,11 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
     
     func handleSwipes(sender:UISwipeGestureRecognizer) {
         if (sender.direction == .Left) {
-            println("Swipe Left")
+            print("Swipe Left")
         }
         
         if (sender.direction == .Right) {
-            println("Swipe Right")
+            print("Swipe Right")
         }
     }
     
@@ -134,7 +134,7 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
     }
     
     
-    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView! {
         if annotation.isKindOfClass(QCluster.classForCoder()) {
             let PinIdentifier = "PinIdentifier"
             var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(ClusterAnnotationView.reuseId()) as? ClusterAnnotationView
@@ -150,11 +150,11 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
             if pinView == nil {
                 pinView = MKAnnotationView(annotation: annotation, reuseIdentifier: "ScholarAnnotation")
                 pinView?.canShowCallout = true
-                pinView?.rightCalloutAccessoryView = UIButton.buttonWithType(UIButtonType.DetailDisclosure) as! UIButton
-                pinView?.rightCalloutAccessoryView.tintColor = UIColor.blackColor()
+                pinView?.rightCalloutAccessoryView = UIButton(type: UIButtonType.DetailDisclosure)
+                pinView?.rightCalloutAccessoryView!.tintColor = UIColor.blackColor()
                 
                 let imageView = AsyncImageView(image: UIImage(named: "noProfilePicSmall"))
-                let url = (DataManager.sharedInstance.getScholarByName(annotation.title!))?.smallPicture
+                let url = (DataManager.sharedInstance.getScholarByName(annotation.title!!))?.smallPicture
                 
                 
                 imageView.imageURL = NSURL(string:url!)
@@ -162,14 +162,14 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
                 //println(url)
                 
                 
-                pinView.leftCalloutAccessoryView = imageView
+                pinView!.leftCalloutAccessoryView = imageView
                 
                 pinView?.image = UIImage(named: "scholarMapAnnotation")
             } else {
                 pinView?.annotation = annotation
                 
                 let imageView = AsyncImageView(image: UIImage(named: "noProfilePicSmall"))
-                let url = (DataManager.sharedInstance.getScholarByName(annotation.title!))?.smallPicture
+                let url = (DataManager.sharedInstance.getScholarByName(annotation.title!!))?.smallPicture
                 
                 
                 imageView.imageURL = NSURL(string:url!)
@@ -177,7 +177,7 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
                 //println(url)
                 
                 
-                pinView.leftCalloutAccessoryView = imageView
+                pinView!.leftCalloutAccessoryView = imageView
                 
 
                 
@@ -187,11 +187,11 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
         return nil
     }
     
-    func mapView(mapView: MKMapView!, annotationView view: MKAnnotationView!, calloutAccessoryControlTapped control: UIControl!) {
+    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         if view.isKindOfClass(MKAnnotationView.classForCoder()) {
             //mapView.deselectAnnotation(view.annotation, animated: true)
-            let title = view.annotation.title
-            currentScholar = DataManager.sharedInstance.getScholarByName(title!)
+            let title = view.annotation!.title
+            currentScholar = DataManager.sharedInstance.getScholarByName(title!!)
             self.performSegueWithIdentifier("transformToScholarDetail", sender: self)
         }
     }
@@ -217,7 +217,7 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
                         return $0.name == (nei.title)!!
                     })
                   
-                    if find(self.cacheArray, tmp[0]) == nil {
+                    if self.cacheArray.indexOf(tmp[0]) == nil {
                         self.cacheArray.insert(tmp[0], atIndex: self.cacheArray.count)
                         //self.cacheImage?[tmp[0].picture!] = false
                     }
@@ -231,7 +231,7 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
                     return $0.name == (object.title)!!
                 })
                 
-                if find(self.cacheArray, tmp[0]) == nil {
+                if self.cacheArray.indexOf(tmp[0]) == nil {
                     self.cacheArray.insert(tmp[0], atIndex: self.cacheArray.count)
                     //self.cacheImage?[tmp[0].picture!] = false
                     
@@ -246,15 +246,15 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate,MKMapVi
         let annotationsToRemove = (self.mapView.annotations as NSArray).mutableCopy() as! NSMutableArray
         annotationsToRemove.removeObject(self.mapView.userLocation)
         annotationsToRemove.removeObjectsInArray(objects as [AnyObject])
-        self.mapView.removeAnnotations(annotationsToRemove as [AnyObject])
+        self.mapView.removeAnnotations(annotationsToRemove as [AnyObject] as! [MKAnnotation])
         let annotationsToAdd = objects.mutableCopy() as! NSMutableArray
         annotationsToAdd.removeObjectsInArray(self.mapView.annotations)
         
-        self.mapView.addAnnotations(annotationsToAdd as [AnyObject])
+        self.mapView.addAnnotations(annotationsToAdd as [AnyObject] as! [MKAnnotation])
         
         
     }
-    func mapView(mapView: MKMapView!, regionDidChangeAnimated animated: Bool) {
+    func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         viewChanged = true
         self.reloadAnnotations()
     }

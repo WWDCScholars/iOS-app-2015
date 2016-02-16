@@ -66,7 +66,7 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         mapView.setRegion(zoomRegion, animated: true)
         let anno = scholarAnnotation(coordinate: CLLocationCoordinate2D(latitude: (currentScholar!.latitude), longitude: (currentScholar!.longitude)), title: (currentScholar?.name)!, subtitle: (currentScholar?.location)!,profilePictureUrl:"")
         let pinView = MKAnnotationView(annotation: anno, reuseIdentifier: "ScholarAnnotation")
-        mapView.addAnnotation(pinView.annotation)
+        mapView.addAnnotation(pinView.annotation!)
 
         
         mapView.userInteractionEnabled = false
@@ -139,13 +139,13 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     }
     
     func open_mail() {
-        var picker = MFMailComposeViewController()
+        let picker = MFMailComposeViewController()
         picker.mailComposeDelegate = self
         picker.setToRecipients([currentScholar!.email!])
         presentViewController(picker, animated: true, completion: nil)
     }
     
-    func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -170,7 +170,7 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     }
     
     func open_tw() {
-        MRSocial.openTwitterProfile(currentScholar!.twitter!.lastPathComponent)
+        MRSocial.openTwitterProfile((currentScholar!.twitter! as NSString).lastPathComponent)
     }
     
     func edit() {
@@ -198,7 +198,7 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! UICollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) 
         
         var imageView: AsyncImageView = cell.viewWithTag(100) as! AsyncImageView
         
@@ -227,15 +227,15 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
             if (currentScholar?.appDemo != nil) {
                 count++
             }
-            println(count)
+            print(count)
             
             if currentScholar?.appScreenshots?.count == 0 && currentScholar?.appDemo == nil{
-                println("Test")
+                print("Test")
                 
-                var messageLabel = UILabel()
+                let messageLabel = UILabel()
                 messageLabel.frame = screenshotView.frame
                 messageLabel.frame.origin.y = 0
-                println(messageLabel.frame)
+                print(messageLabel.frame)
                 messageLabel.text = "No screenshots to display"
                 messageLabel.textAlignment = NSTextAlignment.Center
                 messageLabel.textColor = UIColor.darkGrayColor()
@@ -323,12 +323,12 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         self.presentViewController(nav, animated: true, completion: nil)
     }
     
-    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView! {
         let pinView = MKAnnotationView(annotation: annotation, reuseIdentifier: "ScholarAnnotation")
         //pinView?.canShowCallout = true
         //pinView?.rightCalloutAccessoryView = UIButton.buttonWithType(UIButtonType.DetailDisclosure) as! UIButton
         //pinView?.rightCalloutAccessoryView.tintColor = UIColor.blackColor()
-        pinView?.image = UIImage(named: "scholarMapAnnotation")
+        pinView.image = UIImage(named: "scholarMapAnnotation")
         return pinView
 
     }

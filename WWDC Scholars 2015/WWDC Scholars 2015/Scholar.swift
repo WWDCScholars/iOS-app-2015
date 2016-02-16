@@ -64,7 +64,7 @@ class Scholar:NSObject{
     }
     
     func generateSimpleJson() -> NSDictionary!{
-        var dict = NSMutableDictionary()
+        let dict = NSMutableDictionary()
         
         dict.setObject(self.name!, forKey: "name")
         dict.setObject(self.age!, forKey: "age")

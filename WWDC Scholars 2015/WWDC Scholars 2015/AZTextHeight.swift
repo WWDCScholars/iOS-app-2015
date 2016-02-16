@@ -8,7 +8,7 @@
 
 import Foundation
 
-@objc(AZTextFrameAttributes)
+//(AZTextFrameAttributes)
 class AZTextFrameAttributes {
     // Basic info
     private(set) var width: CGFloat = 0
@@ -51,7 +51,7 @@ class AZTextFrameAttributes {
     }
 }
 
-@objc(AZTextFrame)
+//(AZTextFrame)
 class AZTextFrame {
     private let attributes: AZTextFrameAttributes
     private(set) var width: CGFloat = 0
@@ -67,8 +67,13 @@ class AZTextFrame {
         let sizeForWidth = CGSize(width: CGFloat.max, height: CGFloat.max)
         
         if let string = attributes.string {
-            height = (string as NSString).boundingRectWithSize(sizeForHeight, options: .UsesLineFragmentOrigin, attributes: attributes.attributes, context: nil).height + 2
-            width = (string as NSString).boundingRectWithSize(sizeForWidth, options: .UsesLineFragmentOrigin, attributes: attributes.attributes, context: nil).width + 2
+            let attributesArray = attributes.attributes as! [String:AnyObject]
+            height = (string as NSString).boundingRectWithSize(sizeForHeight, options: .UsesLineFragmentOrigin, attributes:attributesArray , context: nil).height + 2
+            width = (string as NSString).boundingRectWithSize(sizeForWidth, options: .UsesLineFragmentOrigin, attributes: attributesArray, context: nil).width + 2
+            
+            
+            
+            
         } else if let attributedString = attributes.attributedString {
             height = attributedString.boundingRectWithSize(sizeForHeight, options: .UsesLineFragmentOrigin, context: nil).height
             width = attributedString.boundingRectWithSize(sizeForWidth, options: .UsesLineFragmentOrigin, context: nil).width

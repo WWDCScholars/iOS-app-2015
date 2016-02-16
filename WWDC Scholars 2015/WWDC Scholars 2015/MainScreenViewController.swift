@@ -8,9 +8,9 @@
 //
 
 import UIKit
-import ParseUI
+//import ParseUI
 
-class MainScreenViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, PFLogInViewControllerDelegate,UIViewControllerTransitioningDelegate  {
+class MainScreenViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout,UIViewControllerTransitioningDelegate  {
     
     @IBOutlet var scholarsCollectionView: UICollectionView!
 
@@ -20,7 +20,7 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
     var transitionManager = TransitionManager()
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ScholarshipCell", forIndexPath: indexPath) as! UICollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ScholarshipCell", forIndexPath: indexPath) 
         
         if let scholar = DataManager.sharedInstance.scholarAtLocation(indexPath.row) {
             
@@ -120,7 +120,7 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let dest = segue.destinationViewController as? DetailViewController {
-            dest.currentScholar = DataManager.sharedInstance.scholarAtLocation(scholarsCollectionView.indexPathsForSelectedItems()[0].row)
+            dest.currentScholar = DataManager.sharedInstance.scholarAtLocation(scholarsCollectionView.indexPathsForSelectedItems()![0].row)
             dest.transitioningDelegate = self
             dest.modalPresentationStyle = .Custom
         } else if segue.identifier == "toCredits" {

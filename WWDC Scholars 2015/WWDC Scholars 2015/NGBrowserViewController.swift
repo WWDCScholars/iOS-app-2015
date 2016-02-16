@@ -19,7 +19,7 @@ class NGBrowserViewController: UIViewController, UIWebViewDelegate {
         
     }
 
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -71,7 +71,7 @@ class NGBrowserViewController: UIViewController, UIWebViewDelegate {
         super.didReceiveMemoryWarning()
     }
     
-    func webView(webView: UIWebView, didFailLoadWithError error: NSError) {
+    func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
         self.navigationItem.title = "Error loading this content"
     }
     

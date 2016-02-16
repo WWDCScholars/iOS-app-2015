@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 WWDC-Scholars. All rights reserved.
 //
 
-import Parse
-import Bolts
+//import Parse
+//import Bolts
 
 class DataManager: NSObject {
     
@@ -28,10 +28,10 @@ class DataManager: NSObject {
             if error == nil {
                 self.scholarArray.removeAll(keepCapacity: false)
                 // The find succeeded.
-                println("Successfully retrieved \(objects!.count) scholars.")
+                print("Successfully retrieved \(objects!.count) scholars.")
                 // Do something with the found objects
-                if let objects = objects as? [PFObject] {
-                    for object in objects {
+                if objects != nil {
+                    for object in objects! {
                         
                         if (object.objectForKey("firstName")  == nil) || (object.objectForKey("lastName")  == nil)||(object.objectForKey("longtitude")  == nil)||(object.objectForKey("latitude")  == nil) {
                             continue
@@ -56,7 +56,7 @@ class DataManager: NSObject {
                        
                         //prevent crashes
                         let obj = object.objectForKey("user") as? PFUser
-                        obj?.fetchIfNeededInBackground()
+                        obj?.fetchIfNeededInBackgroundWithBlock(nil)
                         
                         var scholar = Scholar(
                             
@@ -90,11 +90,11 @@ class DataManager: NSObject {
                     }
                     
                     NSNotificationCenter.defaultCenter().postNotificationName("onScholarsLoadedNotification", object: self)
-                    println("The length of ScholarArray is \(self.scholarArray.count).")
+                    print("The length of ScholarArray is \(self.scholarArray.count).")
                 }
             } else {
                 // Log details of the failure
-                println("Error: \(error!) \(error!.userInfo!)")
+                print("Error: \(error!) \(error!.userInfo)")
             }
         }
         

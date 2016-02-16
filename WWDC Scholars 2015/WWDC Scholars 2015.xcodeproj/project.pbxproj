@@ -7,14 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		154395328B44BDF207F6A290 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89095DE5922B84432747501B /* libPods.a */; };
 		227687C71B16154E00AAB1E6 /* EditDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227687C61B16154E00AAB1E6 /* EditDetailsViewController.swift */; };
 		31BE00BE1B197DCA008503CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31BE00BD1B197DCA008503CF /* Main.storyboard */; };
 		31BE00C01B197DCF008503CF /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE00BF1B197DCF008503CF /* LocalStore.swift */; };
 		31BE00C21B197DE6008503CF /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE00C11B197DE6008503CF /* MainScreenViewController.swift */; };
 		31BE00C41B197DF2008503CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE00C31B197DF2008503CF /* ViewController.swift */; };
-		4057B9521B1351DB00CF1C92 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4057B9511B1351DB00CF1C92 /* FontAwesome.otf */; };
-		4057B9531B1351DB00CF1C92 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4057B9511B1351DB00CF1C92 /* FontAwesome.otf */; };
-		4057B9551B13520200CF1C92 /* FontAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057B9541B13520200CF1C92 /* FontAwesome.swift */; };
 		407911AD1B0E2AC400A582FF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407911AC1B0E2AC400A582FF /* AudioToolbox.framework */; };
 		407911B11B0E2AEE00A582FF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407911AE1B0E2AEE00A582FF /* CFNetwork.framework */; };
 		407911B21B0E2AEE00A582FF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407911AF1B0E2AEE00A582FF /* CoreGraphics.framework */; };
@@ -28,31 +26,14 @@
 		407911C31B0E2B2A00A582FF /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407911BC1B0E2B2A00A582FF /* Social.framework */; };
 		407911C51B0E2B2A00A582FF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407911BE1B0E2B2A00A582FF /* SystemConfiguration.framework */; };
 		407CDD951B0FBE4100350500 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 407CDD941B0FBE4100350500 /* AsyncImageView.m */; };
-		4082116F1B0E292300D567AC /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408211691B0E292300D567AC /* ParseUI.framework */; };
-		408211711B0E292300D567AC /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4082116B1B0E292300D567AC /* Bolts.framework */; };
 		408211761B0E296A00D567AC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408211751B0E296A00D567AC /* DataManager.swift */; };
 		4085BAE91B18E2A4009CB2B7 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4085BAE81B18E2A4009CB2B7 /* Utils.swift */; };
-		40A54CEA1B1349E9008DDDC6 /* StudentsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A54CE91B1349E9008DDDC6 /* StudentsInterfaceController.swift */; };
-		40CA931A1B125BEB006F3BEA /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4082116A1B0E292300D567AC /* ParseCrashReporting.framework */; };
 		40CA931C1B125C68006F3BEA /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CA931B1B125C68006F3BEA /* libstdc++.6.dylib */; };
-		40CA93261B126186006F3BEA /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA93251B126186006F3BEA /* InterfaceController.swift */; };
-		40CA93281B126186006F3BEA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40CA93271B126186006F3BEA /* Images.xcassets */; };
-		40CA932C1B126186006F3BEA /* WWDC Scholars 2015 WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 40CA932B1B126186006F3BEA /* WWDC Scholars 2015 WatchKit App.app */; };
-		40CA933A1B126186006F3BEA /* WWDC Scholars 2015 WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 40CA93211B126186006F3BEA /* WWDC Scholars 2015 WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		40CA93421B1261DE006F3BEA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40CA93411B1261DE006F3BEA /* Images.xcassets */; };
-		40CA93461B126224006F3BEA /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40CA93451B126224006F3BEA /* Interface.storyboard */; };
-		40CA93481B126303006F3BEA /* ScholarTableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA93471B126303006F3BEA /* ScholarTableRow.swift */; };
-		40CA93521B126433006F3BEA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40CA93511B126433006F3BEA /* Info.plist */; };
-		40CA93541B126A58006F3BEA /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA93531B126A58006F3BEA /* Utils.swift */; };
-		40CA93571B1275A9006F3BEA /* Scholar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA93561B1275A9006F3BEA /* Scholar.swift */; };
 		6E9ECAD01B13BD3D00289D2D /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9ECACF1B13BD3D00289D2D /* CreditsViewController.swift */; };
 		6EEA0A151B0ED45900B99130 /* MainScreenFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA0A141B0ED45900B99130 /* MainScreenFooter.swift */; };
 		7C00D58F1B0E867A00F9B3E7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C00D58E1B0E867A00F9B3E7 /* DetailViewController.swift */; };
 		7C10849F1B11526E00DCC52E /* NGBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C10849D1B11526E00DCC52E /* NGBrowserViewController.swift */; };
 		7C1084A01B11526E00DCC52E /* NGBrowserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C10849E1B11526E00DCC52E /* NGBrowserViewController.xib */; };
-		7C9A052A1B121CD300EC1F11 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C9A05291B121CD300EC1F11 /* Parse.framework */; };
-		7C9A052D1B121EA700EC1F11 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C9A052B1B121EA700EC1F11 /* ParseFacebookUtils.framework */; };
-		7C9A052E1B121EA700EC1F11 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C9A052C1B121EA700EC1F11 /* ParseFacebookUtilsV4.framework */; };
 		7C9A05D71B1226B800EC1F11 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C9A05D51B12268B00EC1F11 /* QuickLook.framework */; };
 		7C9A06961B12325E00EC1F11 /* video_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9A06951B12325E00EC1F11 /* video_placeholder.png */; };
 		7C9A06981B12535B00EC1F11 /* MRSocial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9A06971B12535B00EC1F11 /* MRSocial.swift */; };
@@ -66,6 +47,12 @@
 		C00C27781B0D5D9E008C19AE /* ClusterAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C00C27761B0D5D9E008C19AE /* ClusterAnnotationView.m */; };
 		C00C277B1B0D63CD008C19AE /* Scholar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C277A1B0D63CD008C19AE /* Scholar.swift */; };
 		C00C277E1B0D6A8D008C19AE /* ScholarAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C277D1B0D6A8D008C19AE /* ScholarAnnotation.swift */; };
+		C05176741C72D620002C4E92 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C051766E1C72D620002C4E92 /* Bolts.framework */; };
+		C05176751C72D620002C4E92 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C051766F1C72D620002C4E92 /* Parse.framework */; };
+		C05176761C72D620002C4E92 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C05176701C72D620002C4E92 /* ParseCrashReporting.framework */; };
+		C05176771C72D620002C4E92 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C05176711C72D620002C4E92 /* ParseFacebookUtils.framework */; };
+		C05176781C72D620002C4E92 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C05176721C72D620002C4E92 /* ParseFacebookUtilsV4.framework */; };
+		C05176791C72D620002C4E92 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C05176731C72D620002C4E92 /* ParseUI.framework */; };
 		C099FF4F1B10163D00ECAEE7 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C099FF4E1B10163D00ECAEE7 /* CustomTableViewCell.swift */; };
 		C0A078D91B1385B800EFCE6B /* BubbleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A078D81B1385B800EFCE6B /* BubbleTransition.swift */; };
 		C0B7F78D1B0E682600E74458 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0B7F78C1B0E682600E74458 /* Images.xcassets */; };
@@ -110,33 +97,15 @@
 		FDC821A81B1399C80083872D /* URBMediaFocusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC821A71B1399C80083872D /* URBMediaFocusViewController.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		40CA932D1B126186006F3BEA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C00C27321B0D5C9C008C19AE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 40CA932A1B126186006F3BEA;
-			remoteInfo = "WWDC Scholars 2015 WatchKit App";
-		};
-		40CA93371B126186006F3BEA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C00C27321B0D5C9C008C19AE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 40CA93201B126186006F3BEA;
-			remoteInfo = "WWDC Scholars 2015 WatchKit Extension";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
-		40CA93391B126186006F3BEA /* Embed App Extensions */ = {
+		C0779A9A1C72C9D500FF5191 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
 			files = (
-				40CA933A1B126186006F3BEA /* WWDC Scholars 2015 WatchKit Extension.appex in Embed App Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -147,8 +116,6 @@
 		31BE00BF1B197DCF008503CF /* LocalStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
 		31BE00C11B197DE6008503CF /* MainScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		31BE00C31B197DF2008503CF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4057B9511B1351DB00CF1C92 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
-		4057B9541B13520200CF1C92 /* FontAwesome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesome.swift; sourceTree = "<group>"; };
 		407911AC1B0E2AC400A582FF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		407911AE1B0E2AEE00A582FF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		407911AF1B0E2AEE00A582FF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -163,36 +130,18 @@
 		407911BE1B0E2B2A00A582FF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		407CDD931B0FBE4100350500 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
 		407CDD941B0FBE4100350500 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
-		408211691B0E292300D567AC /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
-		4082116A1B0E292300D567AC /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
-		4082116B1B0E292300D567AC /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		408211751B0E296A00D567AC /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		4085BAE81B18E2A4009CB2B7 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		40A54CE91B1349E9008DDDC6 /* StudentsInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentsInterfaceController.swift; sourceTree = "<group>"; };
 		40CA931B1B125C68006F3BEA /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
-		40CA93211B126186006F3BEA /* WWDC Scholars 2015 WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WWDC Scholars 2015 WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		40CA93241B126186006F3BEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		40CA93251B126186006F3BEA /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		40CA93271B126186006F3BEA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		40CA932B1B126186006F3BEA /* WWDC Scholars 2015 WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WWDC Scholars 2015 WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		40CA93411B1261DE006F3BEA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		40CA93451B126224006F3BEA /* Interface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
-		40CA93471B126303006F3BEA /* ScholarTableRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScholarTableRow.swift; sourceTree = "<group>"; };
-		40CA93511B126433006F3BEA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		40CA93531B126A58006F3BEA /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		40CA93551B12712F006F3BEA /* WWDC Scholars 2015 WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "WWDC Scholars 2015 WatchKit Extension.entitlements"; sourceTree = "<group>"; };
-		40CA93561B1275A9006F3BEA /* Scholar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scholar.swift; sourceTree = "<group>"; };
 		6E9ECACF1B13BD3D00289D2D /* CreditsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
 		6EEA0A141B0ED45900B99130 /* MainScreenFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenFooter.swift; sourceTree = "<group>"; };
 		7C00D58E1B0E867A00F9B3E7 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = Controller/DetailViewController.swift; sourceTree = "<group>"; };
 		7C10849D1B11526E00DCC52E /* NGBrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NGBrowserViewController.swift; sourceTree = "<group>"; };
 		7C10849E1B11526E00DCC52E /* NGBrowserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NGBrowserViewController.xib; sourceTree = "<group>"; };
-		7C9A05291B121CD300EC1F11 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		7C9A052B1B121EA700EC1F11 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
-		7C9A052C1B121EA700EC1F11 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		7C9A05D51B12268B00EC1F11 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
 		7C9A06951B12325E00EC1F11 /* video_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video_placeholder.png; sourceTree = "<group>"; };
 		7C9A06971B12535B00EC1F11 /* MRSocial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRSocial.swift; sourceTree = "<group>"; };
+		89095DE5922B84432747501B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C00C273A1B0D5C9C008C19AE /* WWDC Scholars 2015.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WWDC Scholars 2015.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C00C273E1B0D5C9C008C19AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C00C273F1B0D5C9C008C19AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -214,7 +163,14 @@
 		C00C27771B0D5D9E008C19AE /* ClusterAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClusterAnnotationView.h; sourceTree = "<group>"; };
 		C00C277A1B0D63CD008C19AE /* Scholar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scholar.swift; sourceTree = "<group>"; };
 		C00C277D1B0D6A8D008C19AE /* ScholarAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScholarAnnotation.swift; sourceTree = "<group>"; };
+		C051766E1C72D620002C4E92 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Parse/Bolts.framework; sourceTree = "<group>"; };
+		C051766F1C72D620002C4E92 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Parse/Parse.framework; sourceTree = "<group>"; };
+		C05176701C72D620002C4E92 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = Parse/ParseCrashReporting.framework; sourceTree = "<group>"; };
+		C05176711C72D620002C4E92 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = Parse/ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		C05176721C72D620002C4E92 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = Parse/ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		C05176731C72D620002C4E92 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = Parse/ParseUI.framework; sourceTree = "<group>"; };
 		C068DC261B0F5D890066221E /* WWDC Scholars 2015.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "WWDC Scholars 2015.entitlements"; sourceTree = "<group>"; };
+		C0779A9B1C72CD1200FF5191 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.1.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
 		C099FF4E1B10163D00ECAEE7 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		C0A078D81B1385B800EFCE6B /* BubbleTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleTransition.swift; sourceTree = "<group>"; };
 		C0B7F78C1B0E682600E74458 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -268,13 +224,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		40CA931E1B126186006F3BEA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C00C27371B0D5C9C008C19AE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -283,22 +232,23 @@
 				7C9A05D71B1226B800EC1F11 /* QuickLook.framework in Frameworks */,
 				407911BF1B0E2B2A00A582FF /* Accounts.framework in Frameworks */,
 				407911C01B0E2B2A00A582FF /* libsqlite3.dylib in Frameworks */,
-				7C9A052E1B121EA700EC1F11 /* ParseFacebookUtilsV4.framework in Frameworks */,
-				7C9A052D1B121EA700EC1F11 /* ParseFacebookUtils.framework in Frameworks */,
 				407911C11B0E2B2A00A582FF /* libz.dylib in Frameworks */,
+				C05176761C72D620002C4E92 /* ParseCrashReporting.framework in Frameworks */,
 				407911C21B0E2B2A00A582FF /* Security.framework in Frameworks */,
+				C05176791C72D620002C4E92 /* ParseUI.framework in Frameworks */,
 				407911C31B0E2B2A00A582FF /* Social.framework in Frameworks */,
 				407911C51B0E2B2A00A582FF /* SystemConfiguration.framework in Frameworks */,
 				407911B71B0E2AFC00A582FF /* QuartzCore.framework in Frameworks */,
-				40CA931A1B125BEB006F3BEA /* ParseCrashReporting.framework in Frameworks */,
+				C05176781C72D620002C4E92 /* ParseFacebookUtilsV4.framework in Frameworks */,
+				C05176771C72D620002C4E92 /* ParseFacebookUtils.framework in Frameworks */,
 				407911B51B0E2AF500A582FF /* MobileCoreServices.framework in Frameworks */,
 				407911B11B0E2AEE00A582FF /* CFNetwork.framework in Frameworks */,
 				407911B21B0E2AEE00A582FF /* CoreGraphics.framework in Frameworks */,
 				407911B31B0E2AEE00A582FF /* CoreLocation.framework in Frameworks */,
+				C05176751C72D620002C4E92 /* Parse.framework in Frameworks */,
 				407911AD1B0E2AC400A582FF /* AudioToolbox.framework in Frameworks */,
-				4082116F1B0E292300D567AC /* ParseUI.framework in Frameworks */,
-				7C9A052A1B121CD300EC1F11 /* Parse.framework in Frameworks */,
-				408211711B0E292300D567AC /* Bolts.framework in Frameworks */,
+				C05176741C72D620002C4E92 /* Bolts.framework in Frameworks */,
+				154395328B44BDF207F6A290 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,66 +313,15 @@
 		408211741B0E292800D567AC /* Parse */ = {
 			isa = PBXGroup;
 			children = (
-				7C9A052B1B121EA700EC1F11 /* ParseFacebookUtils.framework */,
-				7C9A052C1B121EA700EC1F11 /* ParseFacebookUtilsV4.framework */,
-				7C9A05291B121CD300EC1F11 /* Parse.framework */,
+				C051766E1C72D620002C4E92 /* Bolts.framework */,
+				C051766F1C72D620002C4E92 /* Parse.framework */,
+				C05176701C72D620002C4E92 /* ParseCrashReporting.framework */,
+				C05176711C72D620002C4E92 /* ParseFacebookUtils.framework */,
+				C05176721C72D620002C4E92 /* ParseFacebookUtilsV4.framework */,
+				C05176731C72D620002C4E92 /* ParseUI.framework */,
 				407911C61B0E2B3100A582FF /* iOS libs */,
-				408211691B0E292300D567AC /* ParseUI.framework */,
-				4082116A1B0E292300D567AC /* ParseCrashReporting.framework */,
-				4082116B1B0E292300D567AC /* Bolts.framework */,
 			);
 			name = Parse;
-			sourceTree = "<group>";
-		};
-		40A54CEF1B134D51008DDDC6 /* FontAwesome */ = {
-			isa = PBXGroup;
-			children = (
-				4057B9541B13520200CF1C92 /* FontAwesome.swift */,
-				4057B9511B1351DB00CF1C92 /* FontAwesome.otf */,
-			);
-			name = FontAwesome;
-			sourceTree = "<group>";
-		};
-		40CA93221B126186006F3BEA /* WWDC Scholars 2015 WatchKit Extension */ = {
-			isa = PBXGroup;
-			children = (
-				40A54CEF1B134D51008DDDC6 /* FontAwesome */,
-				40CA93561B1275A9006F3BEA /* Scholar.swift */,
-				40CA93551B12712F006F3BEA /* WWDC Scholars 2015 WatchKit Extension.entitlements */,
-				40CA93471B126303006F3BEA /* ScholarTableRow.swift */,
-				40CA93251B126186006F3BEA /* InterfaceController.swift */,
-				40CA93271B126186006F3BEA /* Images.xcassets */,
-				40CA93231B126186006F3BEA /* Supporting Files */,
-				40CA93531B126A58006F3BEA /* Utils.swift */,
-				40A54CE91B1349E9008DDDC6 /* StudentsInterfaceController.swift */,
-			);
-			path = "WWDC Scholars 2015 WatchKit Extension";
-			sourceTree = "<group>";
-		};
-		40CA93231B126186006F3BEA /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				40CA93241B126186006F3BEA /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		40CA932F1B126186006F3BEA /* WWDC Scholars 2015 WatchKit App */ = {
-			isa = PBXGroup;
-			children = (
-				40CA93411B1261DE006F3BEA /* Images.xcassets */,
-				40CA93301B126186006F3BEA /* Supporting Files */,
-				40CA93451B126224006F3BEA /* Interface.storyboard */,
-			);
-			path = "WWDC Scholars 2015 WatchKit App";
-			sourceTree = "<group>";
-		};
-		40CA93301B126186006F3BEA /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				40CA93511B126433006F3BEA /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		6E9ECAD11B13BD4400289D2D /* Credits */ = {
@@ -453,7 +352,9 @@
 		AA58B36BDE81C38F46C9476F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C0779A9B1C72CD1200FF5191 /* CoreText.framework */,
 				40CA931B1B125C68006F3BEA /* libstdc++.6.dylib */,
+				89095DE5922B84432747501B /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -463,8 +364,6 @@
 			children = (
 				C00C273C1B0D5C9C008C19AE /* WWDC Scholars 2015 */,
 				C00C27521B0D5C9C008C19AE /* WWDC Scholars 2015Tests */,
-				40CA93221B126186006F3BEA /* WWDC Scholars 2015 WatchKit Extension */,
-				40CA932F1B126186006F3BEA /* WWDC Scholars 2015 WatchKit App */,
 				C00C273B1B0D5C9C008C19AE /* Products */,
 				AA58B36BDE81C38F46C9476F /* Frameworks */,
 			);
@@ -474,8 +373,6 @@
 			isa = PBXGroup;
 			children = (
 				C00C273A1B0D5C9C008C19AE /* WWDC Scholars 2015.app */,
-				40CA93211B126186006F3BEA /* WWDC Scholars 2015 WatchKit Extension.appex */,
-				40CA932B1B126186006F3BEA /* WWDC Scholars 2015 WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -710,39 +607,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		40CA93201B126186006F3BEA /* WWDC Scholars 2015 WatchKit Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 40CA93401B126186006F3BEA /* Build configuration list for PBXNativeTarget "WWDC Scholars 2015 WatchKit Extension" */;
-			buildPhases = (
-				40CA931D1B126186006F3BEA /* Sources */,
-				40CA931E1B126186006F3BEA /* Frameworks */,
-				40CA931F1B126186006F3BEA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				40CA932E1B126186006F3BEA /* PBXTargetDependency */,
-			);
-			name = "WWDC Scholars 2015 WatchKit Extension";
-			productName = "WWDC Scholars 2015 WatchKit Extension";
-			productReference = 40CA93211B126186006F3BEA /* WWDC Scholars 2015 WatchKit Extension.appex */;
-			productType = "com.apple.product-type.watchkit-extension";
-		};
-		40CA932A1B126186006F3BEA /* WWDC Scholars 2015 WatchKit App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 40CA933F1B126186006F3BEA /* Build configuration list for PBXNativeTarget "WWDC Scholars 2015 WatchKit App" */;
-			buildPhases = (
-				40CA93291B126186006F3BEA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "WWDC Scholars 2015 WatchKit App";
-			productName = "WWDC Scholars 2015 WatchKit App";
-			productReference = 40CA932B1B126186006F3BEA /* WWDC Scholars 2015 WatchKit App.app */;
-			productType = "com.apple.product-type.application.watchapp";
-		};
 		C00C27391B0D5C9C008C19AE /* WWDC Scholars 2015 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C00C27591B0D5C9C008C19AE /* Build configuration list for PBXNativeTarget "WWDC Scholars 2015" */;
@@ -750,12 +614,11 @@
 				C00C27361B0D5C9C008C19AE /* Sources */,
 				C00C27371B0D5C9C008C19AE /* Frameworks */,
 				C00C27381B0D5C9C008C19AE /* Resources */,
-				40CA93391B126186006F3BEA /* Embed App Extensions */,
+				C0779A9A1C72C9D500FF5191 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				40CA93381B126186006F3BEA /* PBXTargetDependency */,
 			);
 			name = "WWDC Scholars 2015";
 			productName = "WWDC Scholars 2015";
@@ -768,28 +631,17 @@
 		C00C27321B0D5C9C008C19AE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "WWDC-Scholars";
 				TargetAttributes = {
-					40CA93201B126186006F3BEA = {
-						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = YQ3FQN6Z53;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
-							};
-						};
-					};
-					40CA932A1B126186006F3BEA = {
-						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = YQ3FQN6Z53;
-					};
 					C00C27391B0D5C9C008C19AE = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = YQ3FQN6Z53;
+						DevelopmentTeam = MA3FRWNL5H;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.InAppPurchase = {
 								enabled = 0;
@@ -812,34 +664,11 @@
 			projectRoot = "";
 			targets = (
 				C00C27391B0D5C9C008C19AE /* WWDC Scholars 2015 */,
-				40CA93201B126186006F3BEA /* WWDC Scholars 2015 WatchKit Extension */,
-				40CA932A1B126186006F3BEA /* WWDC Scholars 2015 WatchKit App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		40CA931F1B126186006F3BEA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				40CA932C1B126186006F3BEA /* WWDC Scholars 2015 WatchKit App.app in Resources */,
-				40CA93281B126186006F3BEA /* Images.xcassets in Resources */,
-				4057B9521B1351DB00CF1C92 /* FontAwesome.otf in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		40CA93291B126186006F3BEA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				40CA93461B126224006F3BEA /* Interface.storyboard in Resources */,
-				40CA93421B1261DE006F3BEA /* Images.xcassets in Resources */,
-				4057B9531B1351DB00CF1C92 /* FontAwesome.otf in Resources */,
-				40CA93521B126433006F3BEA /* Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C00C27381B0D5C9C008C19AE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -857,19 +686,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		40CA931D1B126186006F3BEA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				40CA93571B1275A9006F3BEA /* Scholar.swift in Sources */,
-				40CA93481B126303006F3BEA /* ScholarTableRow.swift in Sources */,
-				40CA93261B126186006F3BEA /* InterfaceController.swift in Sources */,
-				40CA93541B126A58006F3BEA /* Utils.swift in Sources */,
-				4057B9551B13520200CF1C92 /* FontAwesome.swift in Sources */,
-				40A54CEA1B1349E9008DDDC6 /* StudentsInterfaceController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C00C27361B0D5C9C008C19AE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -939,19 +755,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		40CA932E1B126186006F3BEA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 40CA932A1B126186006F3BEA /* WWDC Scholars 2015 WatchKit App */;
-			targetProxy = 40CA932D1B126186006F3BEA /* PBXContainerItemProxy */;
-		};
-		40CA93381B126186006F3BEA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 40CA93201B126186006F3BEA /* WWDC Scholars 2015 WatchKit Extension */;
-			targetProxy = 40CA93371B126186006F3BEA /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
 		C00C27481B0D5C9C008C19AE /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
@@ -964,81 +767,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		40CA933B1B126186006F3BEA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "WWDC Scholars 2015 WatchKit Extension/WWDC Scholars 2015 WatchKit Extension.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Johan Logemann (9RK2MKZQ3T)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Johan Logemann (9RK2MKZQ3T)";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "WWDC Scholars 2015 WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "6e6a46da-9b36-45c5-a4c7-d65665319d3e";
-				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		40CA933C1B126186006F3BEA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "WWDC Scholars 2015 WatchKit Extension/WWDC Scholars 2015 WatchKit Extension.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Johan Logemann (YQ3FQN6Z53)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Johan Logemann (YQ3FQN6Z53)";
-				INFOPLIST_FILE = "WWDC Scholars 2015 WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "2efb0eb3-df1b-42ea-9355-55c528c8090d";
-				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
-			};
-			name = Release;
-		};
-		40CA933D1B126186006F3BEA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Johan Logemann (9RK2MKZQ3T)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Johan Logemann (9RK2MKZQ3T)";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				IBSC_MODULE = WWDC_Scholars_2015_WatchKit_Extension;
-				INFOPLIST_FILE = "WWDC Scholars 2015 WatchKit App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d69793dc-39e4-44fa-998b-23c9e4897e68";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
-			};
-			name = Debug;
-		};
-		40CA933E1B126186006F3BEA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Johan Logemann (YQ3FQN6Z53)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Johan Logemann (YQ3FQN6Z53)";
-				IBSC_MODULE = WWDC_Scholars_2015_WatchKit_Extension;
-				INFOPLIST_FILE = "WWDC Scholars 2015 WatchKit App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "17254d6f-5d94-43c8-b9c0-27090bc7df23";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
-			};
-			name = Release;
-		};
 		C00C27571B0D5C9C008C19AE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1061,7 +789,8 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "./**";
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = .;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1109,7 +838,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "./**";
+				FRAMEWORK_SEARCH_PATHS = .;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1131,7 +860,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_ENTITLEMENTS = "WWDC Scholars 2015/WWDC Scholars 2015.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Johan Logemann (9RK2MKZQ3T)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Johan Logemann (9RK2MKZQ3T)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1148,18 +876,17 @@
 					"$(PROJECT_DIR)/WWDC",
 					Scholars,
 					2015,
+					"$(PROJECT_DIR)/WWDC",
+					Scholars,
+					2015/Parse,
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "WWDC Scholars 2015/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = (
-					"$(inherited)",
 					"-framework",
 					"\"AssetsLibrary\"",
 					"-framework",
@@ -1174,10 +901,13 @@
 					"\"QuartzCore\"",
 					"-framework",
 					"\"UIKit\"",
+					"$(inherited)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wwdcscholars.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "f0c8e63e-0790-48b7-96d9-c4bae0817c51";
 				SWIFT_OBJC_BRIDGING_HEADER = Header.h;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = Header.h;
 			};
 			name = Debug;
 		};
@@ -1186,7 +916,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_ENTITLEMENTS = "WWDC Scholars 2015/WWDC Scholars 2015.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Johan Logemann (YQ3FQN6Z53)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Johan Logemann (YQ3FQN6Z53)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1203,18 +932,17 @@
 					"$(PROJECT_DIR)/WWDC",
 					Scholars,
 					2015,
+					"$(PROJECT_DIR)/WWDC",
+					Scholars,
+					2015/Parse,
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "WWDC Scholars 2015/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = (
-					"$(inherited)",
 					"-framework",
 					"\"AssetsLibrary\"",
 					"-framework",
@@ -1229,34 +957,19 @@
 					"\"QuartzCore\"",
 					"-framework",
 					"\"UIKit\"",
+					"$(inherited)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wwdcscholars.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "69e60115-23f0-4ddc-abc1-16b7d240c2cf";
 				SWIFT_OBJC_BRIDGING_HEADER = Header.h;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = Header.h;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		40CA933F1B126186006F3BEA /* Build configuration list for PBXNativeTarget "WWDC Scholars 2015 WatchKit App" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				40CA933D1B126186006F3BEA /* Debug */,
-				40CA933E1B126186006F3BEA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		40CA93401B126186006F3BEA /* Build configuration list for PBXNativeTarget "WWDC Scholars 2015 WatchKit Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				40CA933B1B126186006F3BEA /* Debug */,
-				40CA933C1B126186006F3BEA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		C00C27351B0D5C9C008C19AE /* Build configuration list for PBXProject "WWDC Scholars 2015" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

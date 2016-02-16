@@ -39,7 +39,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, DragDropBehavi
     
     // MARK: Button
     @IBAction func signupButtonPressed(sender: AnyObject){
-        PFUser.logInWithUsernameInBackground(emailTextField.text, password: passwordTextField.text, block: { (user,error) in
+        PFUser.logInWithUsernameInBackground(emailTextField.text!, password: passwordTextField.text!, block: { (user,error) in
             if error != nil {
                 self.dialogView.animation = "shake"
                 self.dialogView.animate()

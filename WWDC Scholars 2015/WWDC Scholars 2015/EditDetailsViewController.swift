@@ -97,7 +97,7 @@ class EditDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
     }
     var user: PFObject!
     func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
-        let length = count(textView.text) + count(text) - range.length
+        let length = textView.text.characters.count + text.characters.count - range.length
         if length <= 250 {
 //            shortBioCharactersLeft.text = "\(250-length)/250 characters left"
         }
@@ -139,10 +139,10 @@ class EditDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
             height = image.size.width
             offsetY = (image.size.height - image.size.width) / 2
         }
-        var cropRect = CGRectMake(offsetX, offsetY, width, height)
-        var imageRef = CGImageCreateWithImageInRect(image.CGImage, cropRect)
+        let cropRect = CGRectMake(offsetX, offsetY, width, height)
+        let imageRef = CGImageCreateWithImageInRect(image.CGImage, cropRect)
         
-        return UIImage(CGImage: imageRef)
+        return UIImage(CGImage: imageRef!)
     }
     
 
@@ -154,37 +154,37 @@ func verifyAndSubmit(scholar: PFObject) {
 //        if count(self.gender.text) != 0 {
 //            scholar["gender"] = self.gender.text
 //        }
-        if count(self.cityCountry.text) != 0 {
+        if self.cityCountry.text!.characters.count != 0 {
             scholar["location"] = self.cityCountry.text
         }
-        if count(self.shortBio.text) != 0 {
+        if self.shortBio.text.characters.count != 0 {
             scholar["shortBio"] = self.shortBio.text
         }
-        if count(self.appVideo.text) != 0 {
+        if self.appVideo.text!.characters.count != 0 {
             scholar["videoLink"] = self.appVideo.text
         }
-        if count(self.githubUsername.text) != 0 {
+        if self.githubUsername.text!.characters.count != 0 {
             scholar["github"] = self.githubUsername.text
         }
-        if count(self.email.text) != 0 {
+        if self.email.text!.characters.count != 0 {
             scholar["email"] = self.email.text
         }
-        if count(self.twitterUsername.text) != 0 {
+        if self.twitterUsername.text!.characters.count != 0 {
             scholar["twitter"] = self.twitterUsername.text
         }
-        if count(self.facebookUsername.text) != 0 {
+        if self.facebookUsername.text!.characters.count != 0 {
             scholar["facebook"] = self.facebookUsername.text
         }
-        if count(self.githubLink.text) != 0 {
+        if self.githubLink.text!.characters.count != 0 {
             scholar["githubLinkApp"] = self.githubLink.text
         }
-        if count(self.linkedinUsername.text) != 0 {
+        if self.linkedinUsername.text!.characters.count != 0 {
             scholar["linkedin"] = self.linkedinUsername.text
         }
-        if count(self.websiteLink.text) != 0 {
+        if self.websiteLink.text!.characters.count != 0 {
             scholar["website"] = self.websiteLink.text
         }
-        if count(self.itunesLink.text) != 0 {
+        if self.itunesLink.text!.characters.count != 0 {
             scholar["itunes"] = self.itunesLink.text
         }
 //        if count(self.previousWWDC.text) != 0 {
@@ -197,46 +197,46 @@ func verifyAndSubmit(scholar: PFObject) {
 //    }
     if newImage {
         let squaredimage = self.squareImage(self.profpic.currentBackgroundImage!)
-        let file = PFFile(name: "profilePic", data: UIImagePNGRepresentation(squaredimage))
-        file.saveInBackground()
+        let file = PFFile(name: "profilePic", data: UIImagePNGRepresentation(squaredimage!)!)
+        file.saveInBackgroundWithBlock(nil)
         scholar["profilePic"] = file
     }
     if let image = appScreenshot1.currentBackgroundImage {
-        let file = PFFile(name: "screenshot1", data: UIImagePNGRepresentation(image))
-        file.saveInBackground()
+        let file = PFFile(name: "screenshot1", data: UIImagePNGRepresentation(image)!)
+        file.saveInBackgroundWithBlock(nil)
         scholar["screenshotOne"] = file
     }
     if let image = appScreenshot2.currentBackgroundImage {
-        let file = PFFile(name: "screenshot2", data: UIImagePNGRepresentation(image))
-        file.saveInBackground()
+        let file = PFFile(name: "screenshot2", data: UIImagePNGRepresentation(image)!)
+        file.saveInBackgroundWithBlock(nil)
         scholar["screenshotTwo"] = file
     }
     if let image = appScreenshot3.currentBackgroundImage {
-        let file = PFFile(name: "screenshot3", data: UIImagePNGRepresentation(image))
-        file.saveInBackground()
+        let file = PFFile(name: "screenshot3", data: UIImagePNGRepresentation(image)!)
+        file.saveInBackgroundWithBlock(nil)
         scholar["screenshotThree"] = file
     }
     if let image = appScreenshot4.currentBackgroundImage {
-        let file = PFFile(name: "screenshot4", data: UIImagePNGRepresentation(image))
-        file.saveInBackground()
+        let file = PFFile(name: "screenshot4", data: UIImagePNGRepresentation(image)!)
+        file.saveInBackgroundWithBlock(nil)
         scholar["screenshotFour"] = file
     }
         self.performSegueWithIdentifier("backToMain", sender: self)
-        scholar.saveInBackground()
-    PFUser.logOutInBackground()
+        scholar.saveInBackgroundWithBlock(nil)
+    PFUser.logOutInBackgroundWithBlock(nil)
     }
 
     
     @IBAction func discardButtonPressed(sender: UIButton) {
         self.performSegueWithIdentifier("backToMain", sender: self)
-         PFUser.logOutInBackground()
+         PFUser.logOutInBackgroundWithBlock(nil)
     }
     
     
     
-func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if screenshot == 1 {
-        var chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
+        let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
         appScreenshot1.contentMode = .ScaleAspectFit //3
         appScreenshot1.setBackgroundImage(chosenImage, forState: UIControlState.Normal) //4
             appScreenshot1.setTitle("", forState: UIControlState.Normal)
@@ -244,7 +244,7 @@ func imagePickerController(picker: UIImagePickerController, didFinishPickingMedi
         dismissViewControllerAnimated(true, completion: nil) //5
         }
         if screenshot == 2 {
-            var chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
+            let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
             appScreenshot2.contentMode = .ScaleAspectFit //3
             appScreenshot2.setBackgroundImage(chosenImage, forState: UIControlState.Normal) //4
             appScreenshot2.setTitle("", forState: UIControlState.Normal)
@@ -252,7 +252,7 @@ func imagePickerController(picker: UIImagePickerController, didFinishPickingMedi
             dismissViewControllerAnimated(true, completion: nil) //5
         }
         if screenshot == 3 {
-            var chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
+            let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
             appScreenshot3.contentMode = .ScaleAspectFit //3
             appScreenshot3.setBackgroundImage(chosenImage, forState: UIControlState.Normal) //4
             appScreenshot3.setTitle("", forState: UIControlState.Normal)
@@ -260,14 +260,14 @@ func imagePickerController(picker: UIImagePickerController, didFinishPickingMedi
             dismissViewControllerAnimated(true, completion: nil) //5
         }
         if screenshot == 4 {
-            var chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
+            let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
             appScreenshot4.contentMode = .ScaleAspectFit //3
             appScreenshot4.setBackgroundImage(chosenImage, forState: UIControlState.Normal) //4
             appScreenshot4.setTitle("", forState: UIControlState.Normal)
             dismissViewControllerAnimated(true, completion: nil) //5
         }
         if screenshot == 5 {
-            var chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
+            let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
             profpic.contentMode = .ScaleAspectFit //3
             profpic.setBackgroundImage(chosenImage, forState: UIControlState.Normal) //4
             profpic.setTitle("", forState: UIControlState.Normal)
